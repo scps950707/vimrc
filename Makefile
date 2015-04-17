@@ -6,6 +6,7 @@ install:
 	cat _vimrc > ${FILE_VIMRC}
 	cp -a _vim ${DIR_VIM} 
 	git clone git://github.com/Shougo/neobundle.vim ${DIR_VIM}/bundle/neobundle.vim
+	git clone https://github.com/eugeii/consolas-powerline-vim.git ${HOME}/.fonts/consolas-powerline-vim
 	@echo '--Done!--'
 
 update:
