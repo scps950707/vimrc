@@ -1,43 +1,47 @@
 ### Plugins Management
 - [neobundle.vim](https://github.com/Shougo/neobundle.vim) 
+- [vundle](https://github.com/gmarik/Vundle.vim)
 
 ###Auto complete
-- [vim-addon-mw-utils](https://github.com/MarcWeber/vim-addon-mw-utils) 
-- [vim-snipmate](https://github.com/garbas/vim-snipmate) 
-- [vim-snippets](https://github.com/honza/vim-snippets) 
-- [vim-snipmate](https://github.com/garbas/vim-snipmate) 
-- [vim-autocomplpop](https://github.com/othree/vim-autocomplpop) 
-- [tlib_vim](https://github.com/tomtom/tlib_vim) 
+- [X] [vim-addon-mw-utils](https://github.com/MarcWeber/vim-addon-mw-utils) 
+- [X] [tlib_vim](https://github.com/tomtom/tlib_vim) 
+- [X] [vim-snippets](https://github.com/honza/vim-snippets) 
+- [X] [vim-snipmate](https://github.com/garbas/vim-snipmate) 
+- [X] [vim-autocomplpop](https://github.com/othree/vim-autocomplpop)
+- [X] [L9](https://github.com/vim-scripts/L9)
+- [X] [c.vim](https://github.com/vim-scripts/c.vim) 
+- [X] [vim-autoclose](https://github.com/Townk/vim-autoclose)
 
 ###Development
-- [nerdtree](https://github.com/scrooloose/nerdtree) 
-- [editorconfig-vim](https://github.com/editorconfig/editorconfig-vim) 
-- [vim-gitgutter](https://github.com/airblade/vim-gitgutter) 
-- [indentLine](https://github.com/Yggdroot/indentLine) 
-- [vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors) 
-- [SrcExpl](https://github.com/wesleyche/SrcExpl) 
-- [tagbar](https://github.com/majutsushi/tagbar) 
-- [taglist.vim](https://github.com/vim-scripts/taglist.vim) 
-- [syntastic](https://github.com/scrooloose/syntastic) 
-- [vim-commentary](https://github.com/tpope/vim-commentary) 
-
-### Syntax highlight
-- [c.vim](https://github.com/vim-scripts/c.vim) 
+- [X] [nerdtree](https://github.com/scrooloose/nerdtree) 
+- [X] [editorconfig-vim](https://github.com/editorconfig/editorconfig-vim) 
+- [X] [vim-gitgutter](https://github.com/airblade/vim-gitgutter) 
+- [X] [indentLine](https://github.com/Yggdroot/indentLine) 
+- [X] [vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors) 
+- [X] [SrcExpl](https://github.com/wesleyche/SrcExpl) 
+- [X] [tagbar](https://github.com/majutsushi/tagbar) 
+- [ ] [taglist.vim](https://github.com/vim-scripts/taglist.vim) 
+- [X] [syntastic](https://github.com/scrooloose/syntastic) 
+- [X] [vim-commentary](https://github.com/tpope/vim-commentary) 
 
 ###Theme
-- [vim-airline](https://github.com/bling/vim-airline) 
-- [vim-powerline](https://github.com/Lokaltog/vim-powerline) 
-- [flazz/vim-colorschemes](https://github.com/flazz/vim-colorschemes) 
-- [tomorrow-theme](https://github.com/chriskempson/tomorrow-theme) 
-- [Apprentice](https://github.com/romainl/Apprentice) 
+- [ ] [vim-airline](https://github.com/bling/vim-airline) 
+- [X] [vim-powerline](https://github.com/Lokaltog/vim-powerline) 
+- [ ] [flazz/vim-colorschemes](https://github.com/flazz/vim-colorschemes) 
+- [ ] [tomorrow-theme](https://github.com/chriskempson/tomorrow-theme) 
+- [ ] [Apprentice](https://github.com/romainl/Apprentice) 
+
+###Other
+- [X] [consolas-powerline-vim](https://github.com/eugeii/consolas-powerline-vim)
 
 ###Mapping keys
-- tagbar:'F2' 
-- nerdtree:'F3' 
-- srcexpl:'F4'
-- gitgutter:'\g'
+- ```F2``` tagbar
+- ```F3``` nerdtree 
+- ```F4``` srcexpl
+- ```F5``` vim-commemtary-gcc
+- ```\g``` gitgutter
 - multiple-cursors
-	- g:multi_cursor_next_key:'Ctrl-n'
-	- g:multi_cursor_prev_key:'Ctrl-m'
-	- g:multi_cursor_skip_key:'Ctrl-q'
- 	- g:multi_cursor_quit_key:'ESC'
+	- ```Ctrl-n``` g:multi_cursor_next_key
+	- ```Ctrl-m``` g:multi_cursor_prev_key
+	- ```Ctrl-q``` g:multi_cursor_skip_key
+ 	- ```ESC``` g:multi_cursor_quit_key
