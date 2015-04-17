@@ -39,8 +39,10 @@ set cursorcolumn
 set nocompatible
 set number
 
-set t_Co=256
-colorscheme jellybeans
+if !has('gui')
+  set t_Co=256
+  colorscheme jellybeans
+endif
 
 set mouse=nv
 set showcmd
