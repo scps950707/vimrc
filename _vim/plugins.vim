@@ -37,7 +37,7 @@ let g:syntastic_enable_highlighting = 1
 let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
 NeoBundle 'tpope/vim-commentary'
 nmap <F5> gcc
-
+nmap <F6> gc
 " Theme
 " NeoBundle 'bling/vim-airline'
 NeoBundle 'Lokaltog/vim-powerline'
