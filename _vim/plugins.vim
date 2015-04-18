@@ -12,7 +12,7 @@ NeoBundle 'Townk/vim-autoclose'
 
 " Development
 NeoBundle 'scrooloose/nerdtree'
-nmap <F3> :<C-u>NERDTreeToggle<CR>
+nmap <F2> :<C-u>NERDTreeToggle<CR>
 NeoBundle 'editorconfig/editorconfig-vim'
 NeoBundle 'airblade/vim-gitgutter'
 nmap <leader>g	:GitGutterToggle<CR>
@@ -28,7 +28,7 @@ nmap <F4> :<C-u>SrcExplToggle<CR>
 NeoBundle 'majutsushi/tagbar'
 let g:tagbar_autofocus = 1
 let g:tagbar_sort = 0
-nmap <F2> :<C-u>TagbarToggle<CR>
+nmap <F3> :<C-u>TagbarToggle<CR>
 " NeoBundle 'taglist.vim'
 NeoBundle 'scrooloose/syntastic'
 let g:syntastic_error_symbol='✗'

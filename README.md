@@ -35,8 +35,8 @@
 - [X] [consolas-powerline-vim](https://github.com/eugeii/consolas-powerline-vim)
 
 ###Mapping keys
-- ```F2``` tagbar
-- ```F3``` nerdtree 
+- ```F2``` nerdtree
+- ```F3``` tagbar 
 - ```F4``` srcexpl
 - ```F5``` vim-commemtary-gcc
 - ```\g``` gitgutter
