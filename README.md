@@ -9,7 +9,7 @@
 - [X] [vim-snipmate](https://github.com/garbas/vim-snipmate) 
 - [X] [vim-autocomplpop](https://github.com/othree/vim-autocomplpop)
 - [X] [L9](https://github.com/vim-scripts/L9)
-- [X] [c.vim](https://github.com/vim-scripts/c.vim) 
+- [X] [c.vim](https://github.com/scps950707/c.vim) 
 - [X] [vim-autoclose](https://github.com/Townk/vim-autoclose)
 
 ###Development
