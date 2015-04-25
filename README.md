@@ -5,7 +5,7 @@
 ###Auto complete
 - [X] [vim-addon-mw-utils](https://github.com/MarcWeber/vim-addon-mw-utils) 
 - [X] [tlib_vim](https://github.com/tomtom/tlib_vim) 
-- [X] [vim-snippets](https://github.com/honza/vim-snippets) 
+- [X] [vim-snippets](https://github.com/scps950707/vim-snippets) 
 - [X] [vim-snipmate](https://github.com/garbas/vim-snipmate) 
 - [X] [vim-autocomplpop](https://github.com/othree/vim-autocomplpop)
 - [X] [L9](https://github.com/vim-scripts/L9)
@@ -24,6 +24,7 @@
 - [ ] [taglist.vim](https://github.com/vim-scripts/taglist.vim) 
 - [X] [syntastic](https://github.com/scrooloose/syntastic) 
 - [X] [vim-commentary](https://github.com/tpope/vim-commentary) 
+- [X] [minibufexpl](https://github.com/fholgado/minibufexpl.vim)
 
 ###Theme
 - [ ] [vim-airline](https://github.com/bling/vim-airline) 
@@ -40,9 +41,13 @@
 - ```F3``` tagbar 
 - ```F4``` srcexpl
 - ```F5``` vim-commemtary-gcc
+- ```F6``` vim-commemtary-gc
 - ```\g``` gitgutter
 - multiple-cursors
 	- ```Ctrl-n``` g:multi_cursor_next_key
 	- ```Ctrl-m``` g:multi_cursor_prev_key
 	- ```Ctrl-q``` g:multi_cursor_skip_key
  	- ```ESC``` g:multi_cursor_quit_key
+- ```F7``` minibufexpl
+	- ```\z``` MBEbn
+	- ```\x``` MBEbp

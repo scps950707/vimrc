@@ -1,7 +1,7 @@
 " Auto complete
 NeoBundle 'MarcWeber/vim-addon-mw-utils'
 NeoBundle 'tomtom/tlib_vim'
-NeoBundle 'honza/vim-snippets'
+NeoBundle 'scps950707/vim-snippets'
 NeoBundle 'garbas/vim-snipmate'
 NeoBundle 'othree/vim-autocomplpop'
 NeoBundle 'L9'
@@ -45,9 +45,12 @@ let g:syntastic_warning_symbol='⚠'
 let g:syntastic_enable_highlighting = 1
 let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
 NeoBundle 'tpope/vim-commentary'
-:map <F5> gcc
-:map <F6> gc
-NeoBundle 'Lokaltog/vim-easymotion'
+map <F5> gcc
+map <F6> gc
+NeoBundle 'fholgado/minibufexpl.vim'
+nmap <F7> :<C-u>MBEToggle<CR>
+nmap <leader>z :MBEbp<CR>
+nmap <leader>x :MBEbn<CR>
 
 " Theme
 " NeoBundle 'bling/vim-airline'

@@ -1,7 +1,7 @@
 FILE_VIMRC=${HOME}/.vimrc
 DIR_VIM=${HOME}/.vim
 
-install:
+install:clang
 	@echo "start install"
 	cat _vimrc > ${FILE_VIMRC}
 	mkdir ${DIR_VIM}
