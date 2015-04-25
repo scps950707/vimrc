@@ -21,3 +21,6 @@ set_default:
 
 help:
 	@echo "install update set_default"
+
+clang:
+	sudo apt-get -y install clang libclang-dev

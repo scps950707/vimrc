@@ -9,6 +9,15 @@ let g:acp_behaviorSnipmateLength = 1
 NeoBundle 'scps950707/c.vim'
 NeoBundleSource c.vim
 NeoBundle 'Townk/vim-autoclose'
+NeoBundle 'Rip-Rip/clang_complete'
+let g:clang_complete_copen=1
+let g:clang_periodic_quickfix=1
+let g:clang_snippets=1
+let g:clang_close_preview=1
+let g:clang_use_library=1
+let g:clang_user_options='-std=c++11'
+let g:neocomplcache_enable_at_startup = 1 
+let g:clang_library_path='/usr/lib/llvm-3.4/lib/'
 
 " Development
 NeoBundle 'scrooloose/nerdtree'
@@ -38,6 +47,7 @@ let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
 NeoBundle 'tpope/vim-commentary'
 :map <F5> gcc
 :map <F6> gc
+NeoBundle 'Lokaltog/vim-easymotion'
 
 " Theme
 " NeoBundle 'bling/vim-airline'

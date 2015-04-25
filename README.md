@@ -11,6 +11,7 @@
 - [X] [L9](https://github.com/vim-scripts/L9)
 - [X] [c.vim](https://github.com/scps950707/c.vim) 
 - [X] [vim-autoclose](https://github.com/Townk/vim-autoclose)
+- [X] [clang_complete](https://github.com/Rip-Rip/clang_complete)
 
 ###Development
 - [X] [nerdtree](https://github.com/scrooloose/nerdtree) 
