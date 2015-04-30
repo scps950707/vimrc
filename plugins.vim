@@ -11,7 +11,7 @@ NeoBundleSource c.vim
 NeoBundle 'Townk/vim-autoclose'
 NeoBundle 'Rip-Rip/clang_complete'
 let g:clang_complete_copen=1
-let g:clang_periodic_quickfix=1
+let g:clang_periodic_quickfix=0
 let g:clang_snippets=1
 let g:clang_close_preview=1
 let g:clang_use_library=1
