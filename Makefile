@@ -17,7 +17,6 @@ update:
 	cp -a _vimrc ${FILE_VIMRC}
 	cp -a plugins.vim ${DIR_VIM}/
 	cp -a keyword/ ${DIR_VIM}/bundle/keyword
-	sudo cp manC++/* /usr/share/man/man3/
 
 set_default:
 	rm -rf ~/.vim ~/.vimrc ~/.viminfo

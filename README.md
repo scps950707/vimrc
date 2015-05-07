@@ -26,6 +26,7 @@
 - [X] [vim-commentary](https://github.com/tpope/vim-commentary) 
 - [X] [minibufexpl](https://github.com/fholgado/minibufexpl.vim)
 - [X] man.vim 
+- [X] [wildfire.vim](https://github.com/gcmt/wildfire.vim)
 ###Theme
 - [ ] [vim-airline](https://github.com/bling/vim-airline) 
 - [X] [vim-powerline](https://github.com/Lokaltog/vim-powerline) 
@@ -53,3 +54,5 @@
 	- ```\x``` MBEbp
 - ```F8``` call Replace()
 - ```\m ``` Man
+- ```SPACE``` <Plug>(wildfire-fuel)
+- ```C-SPACE``` <Plug>(wildfire-water)

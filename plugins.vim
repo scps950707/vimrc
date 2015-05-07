@@ -52,6 +52,13 @@ NeoBundle 'fholgado/minibufexpl.vim'
 nmap <F7> :<C-u>MBEToggle<CR>
 nmap <leader>z :MBEbp<CR>
 nmap <leader>x :MBEbn<CR>
+map <F8> :<C-u>call Replace(input('Replace '.expand('<cword>').' with: '))<CR>
+source $VIMRUNTIME/ftplugin/man.vim
+nmap <Leader>m :Man 3 <cword><CR>
+NeoBundle 'gcmt/wildfire.vim'
+map <SPACE> <Plug>(wildfire-fuel)
+vmap <C-SPACE> <Plug>(wildfire-water)
+let g:wildfire_objects = ["i'", 'i"', "i)", "i]", "i}"]
 
 " Theme
 " NeoBundle 'bling/vim-airline'
@@ -62,7 +69,3 @@ let g:Powerline_symbols = 'fancy'
 " NeoBundle 'chriskempson/vim-tomorrow-theme'
 " NeoBundle 'romainl/Apprentice'
 
-map <F8> :<C-u>call Replace(input('Replace '.expand('<cword>').' with: '))<CR>
-
-source $VIMRUNTIME/ftplugin/man.vim
-nmap <Leader>m :Man 3 <cword><CR>
