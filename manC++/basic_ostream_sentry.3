@@ -1,0 +1,70 @@
+.TH "std::basic_ostream::sentry" 3 "Sun Oct 10 2010" "libstdc++" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+std::basic_ostream::sentry \- 
+.PP
+Performs setup work for output streams.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBsentry\fP (\fBbasic_ostream\fP< _CharT, _Traits > &__os)"
+.br
+.ti -1c
+.RI "\fB~sentry\fP ()"
+.br
+.ti -1c
+.RI "\fBoperator bool\fP () const "
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<typename _CharT, typename _Traits> class std::basic_ostream< _CharT, _Traits >::sentry"
+Performs setup work for output streams. 
+
+Objects of this class are created before all of the standard inserters are run. It is responsible for \fIexception-safe prefix and suffix operations\fP. 
+.PP
+Definition at line 377 of file ostream.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "template<typename _CharT, typename _Traits> \fBstd::basic_ostream\fP< _CharT, _Traits >::sentry::sentry (\fBbasic_ostream\fP< _CharT, _Traits > & __os)\fC [explicit]\fP"
+.PP
+The constructor performs preparatory work. \fBParameters:\fP
+.RS 4
+\fIos\fP The output stream to guard.
+.RE
+.PP
+If the stream state is good (\fIos.good()\fP is true), then if the stream is tied to another output stream, \fCis.tie()->\fBflush()\fP\fP is called to synchronize the output sequences.
+.PP
+If the stream state is still good, then the sentry state becomes true (\fIokay\fP). 
+.PP
+Definition at line 47 of file ostream.tcc.
+.SS "template<typename _CharT, typename _Traits> \fBstd::basic_ostream\fP< _CharT, _Traits >::sentry::~sentry ()\fC [inline]\fP"
+.PP
+Possibly flushes the stream. If \fC\fBios_base::unitbuf\fP\fP is set in \fCos.flags()\fP, and \fCstd::uncaught_exception()\fP is true, the sentry destructor calls \fC\fBflush()\fP\fP on the output stream. 
+.PP
+Definition at line 405 of file ostream.
+.PP
+References std::uncaught_exception().
+.SH "Member Function Documentation"
+.PP 
+.SS "template<typename _CharT, typename _Traits> \fBstd::basic_ostream\fP< _CharT, _Traits >::sentry::operator bool () const\fC [inline, explicit]\fP"
+.PP
+Quick status checking. \fBReturns:\fP
+.RS 4
+The sentry state.
+.RE
+.PP
+For ease of use, sentries may be converted to booleans. The return value is that of the sentry state (true == okay). 
+.PP
+Definition at line 426 of file ostream.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for libstdc++ from the source code.

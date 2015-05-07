@@ -1,0 +1,80 @@
+.TH "__gnu_parallel::_PseudoSequence" 3 "Sun Oct 10 2010" "libstdc++" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+__gnu_parallel::_PseudoSequence \- 
+.PP
+Sequence that conceptually consists of multiple copies of the same element. The copies are not stored explicitly, of course.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef _DifferenceTp \fB_DifferenceType\fP"
+.br
+.ti -1c
+.RI "typedef \fB_PseudoSequenceIterator\fP< _Tp, uint64_t > \fBiterator\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fB_PseudoSequence\fP (const _Tp &__val, _DifferenceType __count)"
+.br
+.ti -1c
+.RI "\fBiterator\fP \fBbegin\fP () const "
+.br
+.ti -1c
+.RI "\fBiterator\fP \fBend\fP () const "
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<typename _Tp, typename _DifferenceTp> class __gnu_parallel::_PseudoSequence< _Tp, _DifferenceTp >"
+Sequence that conceptually consists of multiple copies of the same element. The copies are not stored explicitly, of course. 
+
+\fBParameters:\fP
+.RS 4
+\fI_Tp\fP Sequence _M_value type. 
+.br
+\fI_DifferenceType\fP Sequence difference type. 
+.RE
+.PP
+
+.PP
+Definition at line 359 of file parallel/base.h.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "template<typename _Tp, typename _DifferenceTp> \fB__gnu_parallel::_PseudoSequence\fP< _Tp, _DifferenceTp >::\fB_PseudoSequence\fP (const _Tp & __val, _DifferenceType __count)\fC [inline]\fP"
+.PP
+Constructor. \fBParameters:\fP
+.RS 4
+\fI_M_val\fP Element of the sequence. 
+.br
+\fI__count\fP Number of (virtual) copies. 
+.RE
+.PP
+
+.PP
+Definition at line 371 of file parallel/base.h.
+.SH "Member Function Documentation"
+.PP 
+.SS "template<typename _Tp, typename _DifferenceTp> \fBiterator\fP \fB__gnu_parallel::_PseudoSequence\fP< _Tp, _DifferenceTp >::begin () const\fC [inline]\fP"
+.PP
+Begin iterator. 
+.PP
+Definition at line 376 of file parallel/base.h.
+.SS "template<typename _Tp, typename _DifferenceTp> \fBiterator\fP \fB__gnu_parallel::_PseudoSequence\fP< _Tp, _DifferenceTp >::end () const\fC [inline]\fP"
+.PP
+End iterator. 
+.PP
+Definition at line 381 of file parallel/base.h.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for libstdc++ from the source code.

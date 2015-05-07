@@ -1,0 +1,248 @@
+.TH "std::linear_congruential_engine" 3 "Sun Oct 10 2010" "libstdc++" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+std::linear_congruential_engine \- 
+.PP
+A model of a linear congruential random number generator.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef _UIntType \fBresult_type\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBlinear_congruential_engine\fP (\fBresult_type\fP __s=default_seed)"
+.br
+.ti -1c
+.RI "template<typename _Sseq , typename  = typename std::enable_if<!std::is_same<_Sseq, linear_congruential_engine>::value> ::type> \fBlinear_congruential_engine\fP (_Sseq &__q)"
+.br
+.ti -1c
+.RI "void \fBdiscard\fP (unsigned long long __z)"
+.br
+.ti -1c
+.RI "\fBresult_type\fP \fBmax\fP () const "
+.br
+.ti -1c
+.RI "\fBresult_type\fP \fBmin\fP () const "
+.br
+.ti -1c
+.RI "\fBresult_type\fP \fBoperator()\fP ()"
+.br
+.ti -1c
+.RI "void \fBseed\fP (\fBresult_type\fP __s=default_seed)"
+.br
+.ti -1c
+.RI "template<typename _Sseq > \fBstd::enable_if\fP< std::is_class< _Sseq >::value >::type \fBseed\fP (_Sseq &__q)"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static const \fBresult_type\fP \fBdefault_seed\fP"
+.br
+.ti -1c
+.RI "static const \fBresult_type\fP \fBincrement\fP"
+.br
+.ti -1c
+.RI "static const \fBresult_type\fP \fBmodulus\fP"
+.br
+.ti -1c
+.RI "static const \fBresult_type\fP \fBmultiplier\fP"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "template<typename _UIntType1 , _UIntType1 __a1, _UIntType1 __c1, _UIntType1 __m1, typename _CharT , typename _Traits > \fBstd::basic_ostream\fP< _CharT, _Traits > & \fBoperator<<\fP (\fBstd::basic_ostream\fP< _CharT, _Traits > &, const \fBstd::linear_congruential_engine\fP< _UIntType1, __a1, __c1, __m1 > &)"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBlinear_congruential_engine\fP &__lhs, const \fBlinear_congruential_engine\fP &__rhs)"
+.br
+.ti -1c
+.RI "template<typename _UIntType1 , _UIntType1 __a1, _UIntType1 __c1, _UIntType1 __m1, typename _CharT , typename _Traits > \fBstd::basic_istream\fP< _CharT, _Traits > & \fBoperator>>\fP (\fBstd::basic_istream\fP< _CharT, _Traits > &, \fBstd::linear_congruential_engine\fP< _UIntType1, __a1, __c1, __m1 > &)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<typename _UIntType, _UIntType __a, _UIntType __c, _UIntType __m> class std::linear_congruential_engine< _UIntType, __a, __c, __m >"
+A model of a linear congruential random number generator. 
+
+A random number generator that produces pseudorandom numbers via linear function: \[ x_{i+1}\leftarrow(ax_{i} + c) \bmod m \]
+.PP
+The template parameter \fC_UIntType\fP must be an unsigned integral type large enough to store values up to (__m-1). If the template parameter \fC__m\fP is 0, the modulus \fC__m\fP used is \fBstd::numeric_limits<_UIntType>::max()\fP plus 1. Otherwise, the template parameters \fC__a\fP and \fC__c\fP must be less than \fC__m\fP.
+.PP
+The size of the state is $1$. 
+.PP
+Definition at line 157 of file random.h.
+.SH "Member Typedef Documentation"
+.PP 
+.SS "template<typename _UIntType, _UIntType __a, _UIntType __c, _UIntType __m> typedef _UIntType \fBstd::linear_congruential_engine\fP< _UIntType, __a, __c, __m >::\fBresult_type\fP"The type of the generated random value. 
+.PP
+Definition at line 166 of file random.h.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "template<typename _UIntType, _UIntType __a, _UIntType __c, _UIntType __m> \fBstd::linear_congruential_engine\fP< _UIntType, __a, __c, __m >::\fBlinear_congruential_engine\fP (\fBresult_type\fP __s = \fCdefault_seed\fP)\fC [inline, explicit]\fP"
+.PP
+Constructs a linear_congruential_engine random number generator engine with seed \fC__s\fP. The default seed value is 1. \fBParameters:\fP
+.RS 4
+\fI__s\fP The initial seed value. 
+.RE
+.PP
+
+.PP
+Definition at line 184 of file random.h.
+.PP
+References std::linear_congruential_engine< _UIntType, __a, __c, __m >::seed().
+.SS "template<typename _UIntType, _UIntType __a, _UIntType __c, _UIntType __m> template<typename _Sseq , typename  = typename std::enable_if<!std::is_same<_Sseq, linear_congruential_engine>::value> ::type> \fBstd::linear_congruential_engine\fP< _UIntType, __a, __c, __m >::\fBlinear_congruential_engine\fP (_Sseq & __q)\fC [inline, explicit]\fP"
+.PP
+Constructs a linear_congruential_engine random number generator engine seeded from the seed sequence \fC__q\fP. \fBParameters:\fP
+.RS 4
+\fI__q\fP the seed sequence. 
+.RE
+.PP
+
+.PP
+Definition at line 197 of file random.h.
+.PP
+References std::linear_congruential_engine< _UIntType, __a, __c, __m >::seed().
+.SH "Member Function Documentation"
+.PP 
+.SS "template<typename _UIntType, _UIntType __a, _UIntType __c, _UIntType __m> void \fBstd::linear_congruential_engine\fP< _UIntType, __a, __c, __m >::discard (unsigned long long __z)\fC [inline]\fP"
+.PP
+Discard a sequence of random numbers. \fBTodo\fP
+.RS 4
+Look for a faster way to do discard. 
+.RE
+.PP
+
+.PP
+Definition at line 247 of file random.h.
+.SS "template<typename _UIntType, _UIntType __a, _UIntType __c, _UIntType __m> \fBresult_type\fP \fBstd::linear_congruential_engine\fP< _UIntType, __a, __c, __m >::max () const\fC [inline]\fP"
+.PP
+Gets the largest possible value in the output range. \fBTodo\fP
+.RS 4
+This should be constexpr. 
+.RE
+.PP
+
+.PP
+Definition at line 238 of file random.h.
+.SS "template<typename _UIntType, _UIntType __a, _UIntType __c, _UIntType __m> \fBresult_type\fP \fBstd::linear_congruential_engine\fP< _UIntType, __a, __c, __m >::min () const\fC [inline]\fP"
+.PP
+Gets the smallest possible value in the output range. The minimum depends on the \fC__c\fP parameter: if it is zero, the minimum generated must be > 0, otherwise 0 is allowed.
+.PP
+\fBTodo\fP
+.RS 4
+This should be constexpr. 
+.RE
+.PP
+
+.PP
+Definition at line 229 of file random.h.
+.SS "template<typename _UIntType, _UIntType __a, _UIntType __c, _UIntType __m> \fBresult_type\fP \fBstd::linear_congruential_engine\fP< _UIntType, __a, __c, __m >::operator() ()\fC [inline]\fP"
+.PP
+Gets the next random number in the sequence. 
+.PP
+Definition at line 257 of file random.h.
+.SS "template<typename _UIntType , _UIntType __a, _UIntType __c, _UIntType __m> template<typename _Sseq > \fBstd::enable_if\fP< std::is_class< _Sseq >::value >::type \fBstd::linear_congruential_engine\fP< _UIntType, __a, __c, __m >::seed (_Sseq & __q)"
+.PP
+Reseeds the linear_congruential_engine random number generator engine sequence using values from the seed sequence \fC__q\fP. \fBParameters:\fP
+.RS 4
+\fI__q\fP the seed sequence.
+.RE
+.PP
+Seeds the LCR engine with a value generated by \fC__q\fP. 
+.PP
+Definition at line 142 of file random.tcc.
+.PP
+References std::__lg(), and std::linear_congruential_engine< _UIntType, __a, __c, __m >::seed().
+.SS "template<typename _UIntType , _UIntType __a, _UIntType __c, _UIntType __m> void \fBstd::linear_congruential_engine\fP< _UIntType, __a, __c, __m >::seed (\fBresult_type\fP __s = \fCdefault_seed\fP)"
+.PP
+Reseeds the linear_congruential_engine random number generator engine sequence to the seed \fC__s\fP. \fBParameters:\fP
+.RS 4
+\fI__s\fP The new seed.
+.RE
+.PP
+Seeds the LCR with integral value \fC__s\fP, adjusted so that the ring identity is never a member of the convergence set. 
+.PP
+Definition at line 126 of file random.tcc.
+.PP
+Referenced by std::linear_congruential_engine< _UIntType, __a, __c, __m >::linear_congruential_engine(), and std::linear_congruential_engine< _UIntType, __a, __c, __m >::seed().
+.SH "Friends And Related Function Documentation"
+.PP 
+.SS "template<typename _UIntType, _UIntType __a, _UIntType __c, _UIntType __m> template<typename _UIntType1 , _UIntType1 __a1, _UIntType1 __c1, _UIntType1 __m1, typename _CharT , typename _Traits > \fBstd::basic_ostream\fP<_CharT, _Traits>& operator<< (\fBstd::basic_ostream\fP< _CharT, _Traits > &, const \fBstd::linear_congruential_engine\fP< _UIntType1, __a1, __c1, __m1 > &)\fC [friend]\fP"
+.PP
+Writes the textual representation of the state x(i) of x to \fC__os\fP. \fBParameters:\fP
+.RS 4
+\fI__os\fP The output stream. 
+.br
+\fI__lcr\fP A % \fBlinear_congruential_engine\fP random number generator. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+__os. 
+.RE
+.PP
+
+.SS "template<typename _UIntType, _UIntType __a, _UIntType __c, _UIntType __m> bool operator== (const \fBlinear_congruential_engine\fP< _UIntType, __a, __c, __m > & __lhs, const \fBlinear_congruential_engine\fP< _UIntType, __a, __c, __m > & __rhs)\fC [friend]\fP"
+.PP
+Compares two linear congruential random number generator objects of the same type for equality. \fBParameters:\fP
+.RS 4
+\fI__lhs\fP A linear congruential random number generator object. 
+.br
+\fI__rhs\fP Another linear congruential random number generator object.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true if the infinite sequences of generated values would be equal, false otherwise. 
+.RE
+.PP
+
+.PP
+Definition at line 275 of file random.h.
+.SS "template<typename _UIntType, _UIntType __a, _UIntType __c, _UIntType __m> template<typename _UIntType1 , _UIntType1 __a1, _UIntType1 __c1, _UIntType1 __m1, typename _CharT , typename _Traits > \fBstd::basic_istream\fP<_CharT, _Traits>& operator>> (\fBstd::basic_istream\fP< _CharT, _Traits > &, \fBstd::linear_congruential_engine\fP< _UIntType1, __a1, __c1, __m1 > &)\fC [friend]\fP"
+.PP
+Sets the state of the engine by reading its textual representation from \fC__is\fP. The textual representation must have been previously written using an output stream whose imbued locale and whose type's template specialization arguments _CharT and _Traits were the same as those of \fC__is\fP.
+.PP
+\fBParameters:\fP
+.RS 4
+\fI__is\fP The input stream. 
+.br
+\fI__lcr\fP A % \fBlinear_congruential_engine\fP random number generator. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+__is. 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "template<typename _UIntType, _UIntType __a, _UIntType __c, _UIntType __m> const _UIntType \fBstd::linear_congruential_engine\fP< _UIntType, __a, __c, __m >::\fBincrement\fP\fC [static]\fP"An increment. 
+.PP
+Definition at line 171 of file random.h.
+.SS "template<typename _UIntType, _UIntType __a, _UIntType __c, _UIntType __m> const _UIntType \fBstd::linear_congruential_engine\fP< _UIntType, __a, __c, __m >::\fBmodulus\fP\fC [static]\fP"The modulus. 
+.PP
+Definition at line 173 of file random.h.
+.SS "template<typename _UIntType, _UIntType __a, _UIntType __c, _UIntType __m> const _UIntType \fBstd::linear_congruential_engine\fP< _UIntType, __a, __c, __m >::\fBmultiplier\fP\fC [static]\fP"The multiplier. 
+.PP
+Definition at line 169 of file random.h.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for libstdc++ from the source code.

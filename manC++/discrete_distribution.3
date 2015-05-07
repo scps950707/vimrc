@@ -1,0 +1,175 @@
+.TH "std::discrete_distribution" 3 "Sun Oct 10 2010" "libstdc++" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+std::discrete_distribution \- 
+.PP
+A \fBdiscrete_distribution\fP random number distribution.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBparam_type\fP"
+.br
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef _IntType \fBresult_type\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename _InputIterator > \fBdiscrete_distribution\fP (_InputIterator __wbegin, _InputIterator __wend)"
+.br
+.ti -1c
+.RI "template<typename _Func > \fBdiscrete_distribution\fP (size_t __nw, double __xmin, double __xmax, _Func __fw)"
+.br
+.ti -1c
+.RI "\fBdiscrete_distribution\fP (const \fBparam_type\fP &__p)"
+.br
+.ti -1c
+.RI "\fBdiscrete_distribution\fP (\fBinitializer_list\fP< double > __wl)"
+.br
+.ti -1c
+.RI "\fBresult_type\fP \fBmax\fP () const "
+.br
+.ti -1c
+.RI "\fBresult_type\fP \fBmin\fP () const "
+.br
+.ti -1c
+.RI "template<typename _UniformRandomNumberGenerator > \fBresult_type\fP \fBoperator()\fP (_UniformRandomNumberGenerator &__urng, const \fBparam_type\fP &__p)"
+.br
+.ti -1c
+.RI "template<typename _UniformRandomNumberGenerator > \fBresult_type\fP \fBoperator()\fP (_UniformRandomNumberGenerator &__urng)"
+.br
+.ti -1c
+.RI "void \fBparam\fP (const \fBparam_type\fP &__param)"
+.br
+.ti -1c
+.RI "\fBparam_type\fP \fBparam\fP () const "
+.br
+.ti -1c
+.RI "\fBstd::vector\fP< double > \fBprobabilities\fP () const "
+.br
+.ti -1c
+.RI "void \fBreset\fP ()"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "template<typename _IntType1 , typename _CharT , typename _Traits > \fBstd::basic_ostream\fP< _CharT, _Traits > & \fBoperator<<\fP (\fBstd::basic_ostream\fP< _CharT, _Traits > &, const \fBstd::discrete_distribution\fP< _IntType1 > &)"
+.br
+.ti -1c
+.RI "template<typename _IntType1 , typename _CharT , typename _Traits > \fBstd::basic_istream\fP< _CharT, _Traits > & \fBoperator>>\fP (\fBstd::basic_istream\fP< _CharT, _Traits > &, \fBstd::discrete_distribution\fP< _IntType1 > &)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<typename _IntType = int> class std::discrete_distribution< _IntType >"
+A \fBdiscrete_distribution\fP random number distribution. 
+
+The formula for the discrete probability mass function is 
+.PP
+Definition at line 4682 of file random.h.
+.SH "Member Typedef Documentation"
+.PP 
+.SS "template<typename _IntType = int> typedef _IntType \fBstd::discrete_distribution\fP< _IntType >::\fBresult_type\fP"The type of the range of the distribution. 
+.PP
+Definition at line 4689 of file random.h.
+.SH "Member Function Documentation"
+.PP 
+.SS "template<typename _IntType = int> \fBresult_type\fP \fBstd::discrete_distribution\fP< _IntType >::max () const\fC [inline]\fP"
+.PP
+Returns the least upper bound value of the distribution. 
+.PP
+Definition at line 4795 of file random.h.
+.PP
+References std::vector< _Tp, _Alloc >::size().
+.SS "template<typename _IntType = int> \fBresult_type\fP \fBstd::discrete_distribution\fP< _IntType >::min () const\fC [inline]\fP"
+.PP
+Returns the greatest lower bound value of the distribution. 
+.PP
+Definition at line 4788 of file random.h.
+.SS "template<typename _IntType = int> template<typename _UniformRandomNumberGenerator > \fBresult_type\fP \fBstd::discrete_distribution\fP< _IntType >::operator() (_UniformRandomNumberGenerator & __urng)\fC [inline]\fP"
+.PP
+Generating functions. 
+.PP
+Definition at line 4803 of file random.h.
+.PP
+References std::discrete_distribution< _IntType >::operator()(), and std::discrete_distribution< _IntType >::param().
+.PP
+Referenced by std::discrete_distribution< _IntType >::operator()().
+.SS "template<typename _IntType = int> void \fBstd::discrete_distribution\fP< _IntType >::param (const \fBparam_type\fP & __param)\fC [inline]\fP"
+.PP
+Sets the parameter set of the distribution. \fBParameters:\fP
+.RS 4
+\fI__param\fP The new parameter set of the distribution. 
+.RE
+.PP
+
+.PP
+Definition at line 4781 of file random.h.
+.SS "template<typename _IntType = int> \fBparam_type\fP \fBstd::discrete_distribution\fP< _IntType >::param () const\fC [inline]\fP"
+.PP
+Returns the parameter set of the distribution. 
+.PP
+Definition at line 4773 of file random.h.
+.PP
+Referenced by std::discrete_distribution< _IntType >::operator()(), and std::operator==().
+.SS "template<typename _IntType = int> \fBstd::vector\fP<double> \fBstd::discrete_distribution\fP< _IntType >::probabilities () const\fC [inline]\fP"
+.PP
+Returns the probabilities of the distribution. 
+.PP
+Definition at line 4766 of file random.h.
+.SS "template<typename _IntType = int> void \fBstd::discrete_distribution\fP< _IntType >::reset ()\fC [inline]\fP"
+.PP
+Resets the distribution state. 
+.PP
+Definition at line 4759 of file random.h.
+.SH "Friends And Related Function Documentation"
+.PP 
+.SS "template<typename _IntType = int> template<typename _IntType1 , typename _CharT , typename _Traits > \fBstd::basic_ostream\fP<_CharT, _Traits>& operator<< (\fBstd::basic_ostream\fP< _CharT, _Traits > &, const \fBstd::discrete_distribution\fP< _IntType1 > &)\fC [friend]\fP"
+.PP
+Inserts a discrete_distribution random number distribution \fC__x\fP into the output stream \fC__os\fP. \fBParameters:\fP
+.RS 4
+\fI__os\fP An output stream. 
+.br
+\fI__x\fP A discrete_distribution random number distribution.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The output stream with the state of \fC__x\fP inserted or in an error state. 
+.RE
+.PP
+
+.SS "template<typename _IntType = int> template<typename _IntType1 , typename _CharT , typename _Traits > \fBstd::basic_istream\fP<_CharT, _Traits>& operator>> (\fBstd::basic_istream\fP< _CharT, _Traits > &, \fBstd::discrete_distribution\fP< _IntType1 > &)\fC [friend]\fP"
+.PP
+Extracts a discrete_distribution random number distribution \fC__x\fP from the input stream \fC__is\fP. \fBParameters:\fP
+.RS 4
+\fI__is\fP An input stream. 
+.br
+\fI__x\fP A discrete_distribution random number generator engine.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The input stream with \fC__x\fP extracted or in an error state. 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for libstdc++ from the source code.

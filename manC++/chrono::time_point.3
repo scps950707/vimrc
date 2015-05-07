@@ -1,0 +1,67 @@
+.TH "std::chrono::time_point" 3 "Sun Oct 10 2010" "libstdc++" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+std::chrono::time_point \- 
+.PP
+\fBtime_point\fP  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef _Clock \fBclock\fP"
+.br
+.ti -1c
+.RI "typedef _Duration \fBduration\fP"
+.br
+.ti -1c
+.RI "typedef duration::period \fBperiod\fP"
+.br
+.ti -1c
+.RI "typedef duration::rep \fBrep\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBtime_point\fP (const duration &__dur)"
+.br
+.ti -1c
+.RI "template<typename _Duration2 > \fBtime_point\fP (const \fBtime_point\fP< clock, _Duration2 > &__t)"
+.br
+.ti -1c
+.RI "\fBtime_point\fP & \fBoperator+=\fP (const duration &__dur)"
+.br
+.ti -1c
+.RI "\fBtime_point\fP & \fBoperator-=\fP (const duration &__dur)"
+.br
+.ti -1c
+.RI "duration \fBtime_since_epoch\fP () const "
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static const \fBtime_point\fP \fBmax\fP ()"
+.br
+.ti -1c
+.RI "static const \fBtime_point\fP \fBmin\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<typename _Clock, typename _Duration> struct std::chrono::time_point< _Clock, _Duration >"
+\fBtime_point\fP 
+.PP
+Definition at line 492 of file chrono.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for libstdc++ from the source code.

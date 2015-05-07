@@ -1,0 +1,681 @@
+.TH "std::multimap" 3 "Sun Oct 10 2010" "libstdc++" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+std::multimap \- 
+.PP
+A standard container made up of (key,value) pairs, which can be retrieved based on a key, in logarithmic time.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef _Alloc \fBallocator_type\fP"
+.br
+.ti -1c
+.RI "typedef _Rep_type::const_iterator \fBconst_iterator\fP"
+.br
+.ti -1c
+.RI "typedef _Pair_alloc_type::const_pointer \fBconst_pointer\fP"
+.br
+.ti -1c
+.RI "typedef _Pair_alloc_type::const_reference \fBconst_reference\fP"
+.br
+.ti -1c
+.RI "typedef \fB_Rep_type::const_reverse_iterator\fP \fBconst_reverse_iterator\fP"
+.br
+.ti -1c
+.RI "typedef _Rep_type::difference_type \fBdifference_type\fP"
+.br
+.ti -1c
+.RI "typedef _Rep_type::iterator \fBiterator\fP"
+.br
+.ti -1c
+.RI "typedef _Compare \fBkey_compare\fP"
+.br
+.ti -1c
+.RI "typedef _Key \fBkey_type\fP"
+.br
+.ti -1c
+.RI "typedef _Tp \fBmapped_type\fP"
+.br
+.ti -1c
+.RI "typedef _Pair_alloc_type::pointer \fBpointer\fP"
+.br
+.ti -1c
+.RI "typedef _Pair_alloc_type::reference \fBreference\fP"
+.br
+.ti -1c
+.RI "typedef \fB_Rep_type::reverse_iterator\fP \fBreverse_iterator\fP"
+.br
+.ti -1c
+.RI "typedef _Rep_type::size_type \fBsize_type\fP"
+.br
+.ti -1c
+.RI "typedef \fBstd::pair\fP< const _Key, _Tp > \fBvalue_type\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBmultimap\fP ()"
+.br
+.ti -1c
+.RI "\fBmultimap\fP (const _Compare &__comp, const allocator_type &__a=allocator_type())"
+.br
+.ti -1c
+.RI "\fBmultimap\fP (\fBmultimap\fP &&__x)"
+.br
+.ti -1c
+.RI "\fBmultimap\fP (\fBinitializer_list\fP< \fBvalue_type\fP > __l, const _Compare &__comp=_Compare(), const allocator_type &__a=allocator_type())"
+.br
+.ti -1c
+.RI "\fBmultimap\fP (const \fBmultimap\fP &__x)"
+.br
+.ti -1c
+.RI "template<typename _InputIterator > \fBmultimap\fP (_InputIterator __first, _InputIterator __last)"
+.br
+.ti -1c
+.RI "template<typename _InputIterator > \fBmultimap\fP (_InputIterator __first, _InputIterator __last, const _Compare &__comp, const allocator_type &__a=allocator_type())"
+.br
+.ti -1c
+.RI "iterator \fBbegin\fP ()"
+.br
+.ti -1c
+.RI "const_iterator \fBbegin\fP () const "
+.br
+.ti -1c
+.RI "const_iterator \fBcbegin\fP () const "
+.br
+.ti -1c
+.RI "const_iterator \fBcend\fP () const "
+.br
+.ti -1c
+.RI "void \fBclear\fP ()"
+.br
+.ti -1c
+.RI "size_type \fBcount\fP (const key_type &__x) const "
+.br
+.ti -1c
+.RI "\fBconst_reverse_iterator\fP \fBcrbegin\fP () const "
+.br
+.ti -1c
+.RI "\fBconst_reverse_iterator\fP \fBcrend\fP () const "
+.br
+.ti -1c
+.RI "bool \fBempty\fP () const "
+.br
+.ti -1c
+.RI "iterator \fBend\fP ()"
+.br
+.ti -1c
+.RI "const_iterator \fBend\fP () const "
+.br
+.ti -1c
+.RI "\fBstd::pair\fP< const_iterator, const_iterator > \fBequal_range\fP (const key_type &__x) const "
+.br
+.ti -1c
+.RI "\fBstd::pair\fP< iterator, iterator > \fBequal_range\fP (const key_type &__x)"
+.br
+.ti -1c
+.RI "iterator \fBerase\fP (iterator __first, iterator __last)"
+.br
+.ti -1c
+.RI "size_type \fBerase\fP (const key_type &__x)"
+.br
+.ti -1c
+.RI "iterator \fBerase\fP (iterator __position)"
+.br
+.ti -1c
+.RI "iterator \fBfind\fP (const key_type &__x)"
+.br
+.ti -1c
+.RI "const_iterator \fBfind\fP (const key_type &__x) const "
+.br
+.ti -1c
+.RI "allocator_type \fBget_allocator\fP () const "
+.br
+.ti -1c
+.RI "iterator \fBinsert\fP (const \fBvalue_type\fP &__x)"
+.br
+.ti -1c
+.RI "iterator \fBinsert\fP (iterator __position, const \fBvalue_type\fP &__x)"
+.br
+.ti -1c
+.RI "template<typename _InputIterator > void \fBinsert\fP (_InputIterator __first, _InputIterator __last)"
+.br
+.ti -1c
+.RI "void \fBinsert\fP (\fBinitializer_list\fP< \fBvalue_type\fP > __l)"
+.br
+.ti -1c
+.RI "key_compare \fBkey_comp\fP () const "
+.br
+.ti -1c
+.RI "const_iterator \fBlower_bound\fP (const key_type &__x) const "
+.br
+.ti -1c
+.RI "iterator \fBlower_bound\fP (const key_type &__x)"
+.br
+.ti -1c
+.RI "size_type \fBmax_size\fP () const "
+.br
+.ti -1c
+.RI "\fBmultimap\fP & \fBoperator=\fP (const \fBmultimap\fP &__x)"
+.br
+.ti -1c
+.RI "\fBmultimap\fP & \fBoperator=\fP (\fBmultimap\fP &&__x)"
+.br
+.ti -1c
+.RI "\fBmultimap\fP & \fBoperator=\fP (\fBinitializer_list\fP< \fBvalue_type\fP > __l)"
+.br
+.ti -1c
+.RI "\fBreverse_iterator\fP \fBrbegin\fP ()"
+.br
+.ti -1c
+.RI "\fBconst_reverse_iterator\fP \fBrbegin\fP () const "
+.br
+.ti -1c
+.RI "\fBreverse_iterator\fP \fBrend\fP ()"
+.br
+.ti -1c
+.RI "\fBconst_reverse_iterator\fP \fBrend\fP () const "
+.br
+.ti -1c
+.RI "size_type \fBsize\fP () const "
+.br
+.ti -1c
+.RI "void \fBswap\fP (\fBmultimap\fP &__x)"
+.br
+.ti -1c
+.RI "const_iterator \fBupper_bound\fP (const key_type &__x) const "
+.br
+.ti -1c
+.RI "iterator \fBupper_bound\fP (const key_type &__x)"
+.br
+.ti -1c
+.RI "value_compare \fBvalue_comp\fP () const "
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "template<typename _K1 , typename _T1 , typename _C1 , typename _A1 > bool \fBoperator<\fP (const \fBmultimap\fP< _K1, _T1, _C1, _A1 > &, const \fBmultimap\fP< _K1, _T1, _C1, _A1 > &)"
+.br
+.ti -1c
+.RI "template<typename _K1 , typename _T1 , typename _C1 , typename _A1 > bool \fBoperator==\fP (const \fBmultimap\fP< _K1, _T1, _C1, _A1 > &, const \fBmultimap\fP< _K1, _T1, _C1, _A1 > &)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<typename _Key, typename _Tp, typename _Compare = std::less<_Key>, typename _Alloc = std::allocator<std::pair<const _Key, _Tp> >> class std::multimap< _Key, _Tp, _Compare, _Alloc >"
+A standard container made up of (key,value) pairs, which can be retrieved based on a key, in logarithmic time. 
+
+Meets the requirements of a \fCcontainer\fP, a \fCreversible container\fP, and an \fCassociative container\fP (using equivalent keys). For a \fCmultimap<Key,T>\fP the key_type is Key, the mapped_type is T, and the value_type is std::pair<const Key,T>.
+.PP
+Multimaps support bidirectional iterators.
+.PP
+The private tree data is declared exactly the same way for map and multimap; the distinction is made entirely in how the tree functions are called (*_unique versus *_equal, same as the standard). 
+.PP
+Definition at line 86 of file stl_multimap.h.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "template<typename _Key, typename _Tp, typename _Compare = std::less<_Key>, typename _Alloc = std::allocator<std::pair<const _Key, _Tp> >> \fBstd::multimap\fP< _Key, _Tp, _Compare, _Alloc >::\fBmultimap\fP ()\fC [inline]\fP"
+.PP
+Default constructor creates no elements. 
+.PP
+Definition at line 148 of file stl_multimap.h.
+.SS "template<typename _Key, typename _Tp, typename _Compare = std::less<_Key>, typename _Alloc = std::allocator<std::pair<const _Key, _Tp> >> \fBstd::multimap\fP< _Key, _Tp, _Compare, _Alloc >::\fBmultimap\fP (const _Compare & __comp, const allocator_type & __a = \fCallocator_type()\fP)\fC [inline, explicit]\fP"
+.PP
+Creates a multimap with no elements. \fBParameters:\fP
+.RS 4
+\fIcomp\fP A comparison object. 
+.br
+\fIa\fP An allocator object. 
+.RE
+.PP
+
+.PP
+Definition at line 157 of file stl_multimap.h.
+.SS "template<typename _Key, typename _Tp, typename _Compare = std::less<_Key>, typename _Alloc = std::allocator<std::pair<const _Key, _Tp> >> \fBstd::multimap\fP< _Key, _Tp, _Compare, _Alloc >::\fBmultimap\fP (const \fBmultimap\fP< _Key, _Tp, _Compare, _Alloc > & __x)\fC [inline]\fP"
+.PP
+Multimap copy constructor. \fBParameters:\fP
+.RS 4
+\fIx\fP A multimap of identical element and allocator types.
+.RE
+.PP
+The newly-created multimap uses a copy of the allocation object used by \fIx\fP. 
+.PP
+Definition at line 168 of file stl_multimap.h.
+.SS "template<typename _Key, typename _Tp, typename _Compare = std::less<_Key>, typename _Alloc = std::allocator<std::pair<const _Key, _Tp> >> \fBstd::multimap\fP< _Key, _Tp, _Compare, _Alloc >::\fBmultimap\fP (\fBmultimap\fP< _Key, _Tp, _Compare, _Alloc > && __x)\fC [inline]\fP"
+.PP
+Multimap move constructor. \fBParameters:\fP
+.RS 4
+\fIx\fP A multimap of identical element and allocator types.
+.RE
+.PP
+The newly-created multimap contains the exact contents of \fIx\fP. The contents of \fIx\fP are a valid, but unspecified multimap. 
+.PP
+Definition at line 179 of file stl_multimap.h.
+.SS "template<typename _Key, typename _Tp, typename _Compare = std::less<_Key>, typename _Alloc = std::allocator<std::pair<const _Key, _Tp> >> \fBstd::multimap\fP< _Key, _Tp, _Compare, _Alloc >::\fBmultimap\fP (\fBinitializer_list\fP< \fBvalue_type\fP > __l, const _Compare & __comp = \fC_Compare()\fP, const allocator_type & __a = \fCallocator_type()\fP)\fC [inline]\fP"
+.PP
+Builds a multimap from an \fBinitializer_list\fP. \fBParameters:\fP
+.RS 4
+\fIl\fP An \fBinitializer_list\fP. 
+.br
+\fIcomp\fP A comparison functor. 
+.br
+\fIa\fP An allocator object.
+.RE
+.PP
+Create a multimap consisting of copies of the elements from the \fBinitializer_list\fP. This is linear in N if the list is already sorted, and NlogN otherwise (where N is \fI__l.size()\fP). 
+.PP
+Definition at line 192 of file stl_multimap.h.
+.SS "template<typename _Key, typename _Tp, typename _Compare = std::less<_Key>, typename _Alloc = std::allocator<std::pair<const _Key, _Tp> >> template<typename _InputIterator > \fBstd::multimap\fP< _Key, _Tp, _Compare, _Alloc >::\fBmultimap\fP (_InputIterator __first, _InputIterator __last)\fC [inline]\fP"
+.PP
+Builds a multimap from a range. \fBParameters:\fP
+.RS 4
+\fIfirst\fP An input iterator. 
+.br
+\fIlast\fP An input iterator.
+.RE
+.PP
+Create a multimap consisting of copies of the elements from [first,last). This is linear in N if the range is already sorted, and NlogN otherwise (where N is distance(first,last)). 
+.PP
+Definition at line 209 of file stl_multimap.h.
+.SS "template<typename _Key, typename _Tp, typename _Compare = std::less<_Key>, typename _Alloc = std::allocator<std::pair<const _Key, _Tp> >> template<typename _InputIterator > \fBstd::multimap\fP< _Key, _Tp, _Compare, _Alloc >::\fBmultimap\fP (_InputIterator __first, _InputIterator __last, const _Compare & __comp, const allocator_type & __a = \fCallocator_type()\fP)\fC [inline]\fP"
+.PP
+Builds a multimap from a range. \fBParameters:\fP
+.RS 4
+\fIfirst\fP An input iterator. 
+.br
+\fIlast\fP An input iterator. 
+.br
+\fIcomp\fP A comparison functor. 
+.br
+\fIa\fP An allocator object.
+.RE
+.PP
+Create a multimap consisting of copies of the elements from [first,last). This is linear in N if the range is already sorted, and NlogN otherwise (where N is distance(first,last)). 
+.PP
+Definition at line 225 of file stl_multimap.h.
+.SH "Member Function Documentation"
+.PP 
+.SS "template<typename _Key, typename _Tp, typename _Compare = std::less<_Key>, typename _Alloc = std::allocator<std::pair<const _Key, _Tp> >> iterator \fBstd::multimap\fP< _Key, _Tp, _Compare, _Alloc >::begin ()\fC [inline]\fP"Returns a read/write iterator that points to the first pair in the multimap. Iteration is done in ascending order according to the keys. 
+.PP
+Definition at line 304 of file stl_multimap.h.
+.SS "template<typename _Key, typename _Tp, typename _Compare = std::less<_Key>, typename _Alloc = std::allocator<std::pair<const _Key, _Tp> >> const_iterator \fBstd::multimap\fP< _Key, _Tp, _Compare, _Alloc >::begin () const\fC [inline]\fP"Returns a read-only (constant) iterator that points to the first pair in the multimap. Iteration is done in ascending order according to the keys. 
+.PP
+Definition at line 313 of file stl_multimap.h.
+.SS "template<typename _Key, typename _Tp, typename _Compare = std::less<_Key>, typename _Alloc = std::allocator<std::pair<const _Key, _Tp> >> const_iterator \fBstd::multimap\fP< _Key, _Tp, _Compare, _Alloc >::cbegin () const\fC [inline]\fP"Returns a read-only (constant) iterator that points to the first pair in the multimap. Iteration is done in ascending order according to the keys. 
+.PP
+Definition at line 377 of file stl_multimap.h.
+.SS "template<typename _Key, typename _Tp, typename _Compare = std::less<_Key>, typename _Alloc = std::allocator<std::pair<const _Key, _Tp> >> const_iterator \fBstd::multimap\fP< _Key, _Tp, _Compare, _Alloc >::cend () const\fC [inline]\fP"Returns a read-only (constant) iterator that points one past the last pair in the multimap. Iteration is done in ascending order according to the keys. 
+.PP
+Definition at line 386 of file stl_multimap.h.
+.SS "template<typename _Key, typename _Tp, typename _Compare = std::less<_Key>, typename _Alloc = std::allocator<std::pair<const _Key, _Tp> >> void \fBstd::multimap\fP< _Key, _Tp, _Compare, _Alloc >::clear ()\fC [inline]\fP"Erases all elements in a multimap. Note that this function only erases the elements, and that if the elements themselves are pointers, the pointed-to memory is not touched in any way. Managing the pointer is the user's responsibility. 
+.PP
+Definition at line 601 of file stl_multimap.h.
+.SS "template<typename _Key, typename _Tp, typename _Compare = std::less<_Key>, typename _Alloc = std::allocator<std::pair<const _Key, _Tp> >> size_type \fBstd::multimap\fP< _Key, _Tp, _Compare, _Alloc >::count (const key_type & __x) const\fC [inline]\fP"
+.PP
+Finds the number of elements with given key. \fBParameters:\fP
+.RS 4
+\fIx\fP Key of (key, value) pairs to be located. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Number of elements with specified key. 
+.RE
+.PP
+
+.PP
+Definition at line 658 of file stl_multimap.h.
+.SS "template<typename _Key, typename _Tp, typename _Compare = std::less<_Key>, typename _Alloc = std::allocator<std::pair<const _Key, _Tp> >> \fBconst_reverse_iterator\fP \fBstd::multimap\fP< _Key, _Tp, _Compare, _Alloc >::crbegin () const\fC [inline]\fP"Returns a read-only (constant) reverse iterator that points to the last pair in the multimap. Iteration is done in descending order according to the keys. 
+.PP
+Definition at line 395 of file stl_multimap.h.
+.SS "template<typename _Key, typename _Tp, typename _Compare = std::less<_Key>, typename _Alloc = std::allocator<std::pair<const _Key, _Tp> >> \fBconst_reverse_iterator\fP \fBstd::multimap\fP< _Key, _Tp, _Compare, _Alloc >::crend () const\fC [inline]\fP"Returns a read-only (constant) reverse iterator that points to one before the first pair in the multimap. Iteration is done in descending order according to the keys. 
+.PP
+Definition at line 404 of file stl_multimap.h.
+.SS "template<typename _Key, typename _Tp, typename _Compare = std::less<_Key>, typename _Alloc = std::allocator<std::pair<const _Key, _Tp> >> bool \fBstd::multimap\fP< _Key, _Tp, _Compare, _Alloc >::empty () const\fC [inline]\fP"Returns true if the multimap is empty. 
+.PP
+Definition at line 411 of file stl_multimap.h.
+.SS "template<typename _Key, typename _Tp, typename _Compare = std::less<_Key>, typename _Alloc = std::allocator<std::pair<const _Key, _Tp> >> const_iterator \fBstd::multimap\fP< _Key, _Tp, _Compare, _Alloc >::end () const\fC [inline]\fP"Returns a read-only (constant) iterator that points one past the last pair in the multimap. Iteration is done in ascending order according to the keys. 
+.PP
+Definition at line 331 of file stl_multimap.h.
+.SS "template<typename _Key, typename _Tp, typename _Compare = std::less<_Key>, typename _Alloc = std::allocator<std::pair<const _Key, _Tp> >> iterator \fBstd::multimap\fP< _Key, _Tp, _Compare, _Alloc >::end ()\fC [inline]\fP"Returns a read/write iterator that points one past the last pair in the multimap. Iteration is done in ascending order according to the keys. 
+.PP
+Definition at line 322 of file stl_multimap.h.
+.SS "template<typename _Key, typename _Tp, typename _Compare = std::less<_Key>, typename _Alloc = std::allocator<std::pair<const _Key, _Tp> >> \fBstd::pair\fP<iterator, iterator> \fBstd::multimap\fP< _Key, _Tp, _Compare, _Alloc >::equal_range (const key_type & __x)\fC [inline]\fP"
+.PP
+Finds a subsequence matching given key. \fBParameters:\fP
+.RS 4
+\fIx\fP Key of (key, value) pairs to be located. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Pair of iterators that possibly points to the subsequence matching given key.
+.RE
+.PP
+This function is equivalent to 
+.PP
+.nf
+    std::make_pair(c.lower_bound(val),
+                   c.upper_bound(val))
+
+.fi
+.PP
+ (but is faster than making the calls separately). 
+.PP
+Definition at line 725 of file stl_multimap.h.
+.SS "template<typename _Key, typename _Tp, typename _Compare = std::less<_Key>, typename _Alloc = std::allocator<std::pair<const _Key, _Tp> >> \fBstd::pair\fP<const_iterator, const_iterator> \fBstd::multimap\fP< _Key, _Tp, _Compare, _Alloc >::equal_range (const key_type & __x) const\fC [inline]\fP"
+.PP
+Finds a subsequence matching given key. \fBParameters:\fP
+.RS 4
+\fIx\fP Key of (key, value) pairs to be located. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Pair of read-only (constant) iterators that possibly points to the subsequence matching given key.
+.RE
+.PP
+This function is equivalent to 
+.PP
+.nf
+    std::make_pair(c.lower_bound(val),
+                   c.upper_bound(val))
+
+.fi
+.PP
+ (but is faster than making the calls separately). 
+.PP
+Definition at line 742 of file stl_multimap.h.
+.SS "template<typename _Key, typename _Tp, typename _Compare = std::less<_Key>, typename _Alloc = std::allocator<std::pair<const _Key, _Tp> >> iterator \fBstd::multimap\fP< _Key, _Tp, _Compare, _Alloc >::erase (iterator __position)\fC [inline]\fP"
+.PP
+Erases an element from a multimap. \fBParameters:\fP
+.RS 4
+\fIposition\fP An iterator pointing to the element to be erased. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+An iterator pointing to the element immediately following \fIposition\fP prior to the element being erased. If no such element exists, \fBend()\fP is returned.
+.RE
+.PP
+This function erases an element, pointed to by the given iterator, from a multimap. Note that this function only erases the element, and that if the element is itself a pointer, the pointed-to memory is not touched in any way. Managing the pointer is the user's responsibility. 
+.PP
+Definition at line 509 of file stl_multimap.h.
+.SS "template<typename _Key, typename _Tp, typename _Compare = std::less<_Key>, typename _Alloc = std::allocator<std::pair<const _Key, _Tp> >> size_type \fBstd::multimap\fP< _Key, _Tp, _Compare, _Alloc >::erase (const key_type & __x)\fC [inline]\fP"
+.PP
+Erases elements according to the provided key. \fBParameters:\fP
+.RS 4
+\fIx\fP Key of element to be erased. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The number of elements erased.
+.RE
+.PP
+This function erases all elements located by the given key from a multimap. Note that this function only erases the element, and that if the element is itself a pointer, the pointed-to memory is not touched in any way. Managing the pointer is the user's responsibility. 
+.PP
+Definition at line 539 of file stl_multimap.h.
+.SS "template<typename _Key, typename _Tp, typename _Compare = std::less<_Key>, typename _Alloc = std::allocator<std::pair<const _Key, _Tp> >> iterator \fBstd::multimap\fP< _Key, _Tp, _Compare, _Alloc >::erase (iterator __first, iterator __last)\fC [inline]\fP"
+.PP
+Erases a [first,last) range of elements from a multimap. \fBParameters:\fP
+.RS 4
+\fIfirst\fP Iterator pointing to the start of the range to be erased. 
+.br
+\fIlast\fP Iterator pointing to the end of the range to be erased. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The iterator \fIlast\fP.
+.RE
+.PP
+This function erases a sequence of elements from a multimap. Note that this function only erases the elements, and that if the elements themselves are pointers, the pointed-to memory is not touched in any way. Managing the pointer is the user's responsibility. 
+.PP
+Definition at line 558 of file stl_multimap.h.
+.SS "template<typename _Key, typename _Tp, typename _Compare = std::less<_Key>, typename _Alloc = std::allocator<std::pair<const _Key, _Tp> >> const_iterator \fBstd::multimap\fP< _Key, _Tp, _Compare, _Alloc >::find (const key_type & __x) const\fC [inline]\fP"
+.PP
+Tries to locate an element in a multimap. \fBParameters:\fP
+.RS 4
+\fIx\fP Key of (key, value) pair to be located. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Read-only (constant) iterator pointing to sought-after element, or \fBend()\fP if not found.
+.RE
+.PP
+This function takes a key and tries to locate the element with which the key matches. If successful the function returns a constant iterator pointing to the sought after pair. If unsuccessful it returns the past-the-end ( \fC\fBend()\fP\fP ) iterator. 
+.PP
+Definition at line 649 of file stl_multimap.h.
+.SS "template<typename _Key, typename _Tp, typename _Compare = std::less<_Key>, typename _Alloc = std::allocator<std::pair<const _Key, _Tp> >> iterator \fBstd::multimap\fP< _Key, _Tp, _Compare, _Alloc >::find (const key_type & __x)\fC [inline]\fP"
+.PP
+Tries to locate an element in a multimap. \fBParameters:\fP
+.RS 4
+\fIx\fP Key of (key, value) pair to be located. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Iterator pointing to sought-after element, or \fBend()\fP if not found.
+.RE
+.PP
+This function takes a key and tries to locate the element with which the key matches. If successful the function returns an iterator pointing to the sought after pair. If unsuccessful it returns the past-the-end ( \fC\fBend()\fP\fP ) iterator. 
+.PP
+Definition at line 634 of file stl_multimap.h.
+.SS "template<typename _Key, typename _Tp, typename _Compare = std::less<_Key>, typename _Alloc = std::allocator<std::pair<const _Key, _Tp> >> allocator_type \fBstd::multimap\fP< _Key, _Tp, _Compare, _Alloc >::get_allocator () const\fC [inline]\fP"
+.PP
+Get a copy of the memory allocation object. 
+.PP
+Definition at line 294 of file stl_multimap.h.
+.SS "template<typename _Key, typename _Tp, typename _Compare = std::less<_Key>, typename _Alloc = std::allocator<std::pair<const _Key, _Tp> >> iterator \fBstd::multimap\fP< _Key, _Tp, _Compare, _Alloc >::insert (const \fBvalue_type\fP & __x)\fC [inline]\fP"
+.PP
+Inserts a \fBstd::pair\fP into the multimap. \fBParameters:\fP
+.RS 4
+\fIx\fP Pair to be inserted (see std::make_pair for easy creation of pairs). 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+An iterator that points to the inserted (key,value) pair.
+.RE
+.PP
+This function inserts a (key, value) pair into the multimap. Contrary to a \fBstd::map\fP the multimap does not rely on unique keys and thus multiple pairs with the same key can be inserted.
+.PP
+Insertion requires logarithmic time. 
+.PP
+Definition at line 438 of file stl_multimap.h.
+.SS "template<typename _Key, typename _Tp, typename _Compare = std::less<_Key>, typename _Alloc = std::allocator<std::pair<const _Key, _Tp> >> iterator \fBstd::multimap\fP< _Key, _Tp, _Compare, _Alloc >::insert (iterator __position, const \fBvalue_type\fP & __x)\fC [inline]\fP"
+.PP
+Inserts a \fBstd::pair\fP into the multimap. \fBParameters:\fP
+.RS 4
+\fIposition\fP An iterator that serves as a hint as to where the pair should be inserted. 
+.br
+\fIx\fP Pair to be inserted (see std::make_pair for easy creation of pairs). 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+An iterator that points to the inserted (key,value) pair.
+.RE
+.PP
+This function inserts a (key, value) pair into the multimap. Contrary to a \fBstd::map\fP the multimap does not rely on unique keys and thus multiple pairs with the same key can be inserted. Note that the first parameter is only a hint and can potentially improve the performance of the insertion process. A bad hint would cause no gains in efficiency.
+.PP
+For more on \fIhinting\fP, see: http://gcc.gnu.org/onlinedocs/libstdc++/manual/bk01pt07ch17.html
+.PP
+Insertion requires logarithmic time (if the hint is not taken). 
+.PP
+Definition at line 462 of file stl_multimap.h.
+.SS "template<typename _Key, typename _Tp, typename _Compare = std::less<_Key>, typename _Alloc = std::allocator<std::pair<const _Key, _Tp> >> template<typename _InputIterator > void \fBstd::multimap\fP< _Key, _Tp, _Compare, _Alloc >::insert (_InputIterator __first, _InputIterator __last)\fC [inline]\fP"
+.PP
+A template function that attempts to insert a range of elements. \fBParameters:\fP
+.RS 4
+\fIfirst\fP Iterator pointing to the start of the range to be inserted. 
+.br
+\fIlast\fP Iterator pointing to the end of the range.
+.RE
+.PP
+Complexity similar to that of the range constructor. 
+.PP
+Definition at line 476 of file stl_multimap.h.
+.SS "template<typename _Key, typename _Tp, typename _Compare = std::less<_Key>, typename _Alloc = std::allocator<std::pair<const _Key, _Tp> >> void \fBstd::multimap\fP< _Key, _Tp, _Compare, _Alloc >::insert (\fBinitializer_list\fP< \fBvalue_type\fP > __l)\fC [inline]\fP"
+.PP
+Attempts to insert a list of std::pairs into the multimap. \fBParameters:\fP
+.RS 4
+\fIlist\fP A std::initializer_list<value_type> of pairs to be inserted.
+.RE
+.PP
+Complexity similar to that of the range constructor. 
+.PP
+Definition at line 488 of file stl_multimap.h.
+.PP
+References std::multimap< _Key, _Tp, _Compare, _Alloc >::insert().
+.PP
+Referenced by std::multimap< _Key, _Tp, _Compare, _Alloc >::insert().
+.SS "template<typename _Key, typename _Tp, typename _Compare = std::less<_Key>, typename _Alloc = std::allocator<std::pair<const _Key, _Tp> >> key_compare \fBstd::multimap\fP< _Key, _Tp, _Compare, _Alloc >::key_comp () const\fC [inline]\fP"Returns the key comparison object out of which the multimap was constructed. 
+.PP
+Definition at line 610 of file stl_multimap.h.
+.SS "template<typename _Key, typename _Tp, typename _Compare = std::less<_Key>, typename _Alloc = std::allocator<std::pair<const _Key, _Tp> >> const_iterator \fBstd::multimap\fP< _Key, _Tp, _Compare, _Alloc >::lower_bound (const key_type & __x) const\fC [inline]\fP"
+.PP
+Finds the beginning of a subsequence matching given key. \fBParameters:\fP
+.RS 4
+\fIx\fP Key of (key, value) pair to be located. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Read-only (constant) iterator pointing to first element equal to or greater than key, or \fBend()\fP.
+.RE
+.PP
+This function returns the first element of a subsequence of elements that matches the given key. If unsuccessful the iterator will point to the next greatest element or, if no such greater element exists, to \fBend()\fP. 
+.PP
+Definition at line 688 of file stl_multimap.h.
+.SS "template<typename _Key, typename _Tp, typename _Compare = std::less<_Key>, typename _Alloc = std::allocator<std::pair<const _Key, _Tp> >> iterator \fBstd::multimap\fP< _Key, _Tp, _Compare, _Alloc >::lower_bound (const key_type & __x)\fC [inline]\fP"
+.PP
+Finds the beginning of a subsequence matching given key. \fBParameters:\fP
+.RS 4
+\fIx\fP Key of (key, value) pair to be located. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Iterator pointing to first element equal to or greater than key, or \fBend()\fP.
+.RE
+.PP
+This function returns the first element of a subsequence of elements that matches the given key. If unsuccessful it returns an iterator pointing to the first element that has a greater value than given key or \fBend()\fP if no such element exists. 
+.PP
+Definition at line 673 of file stl_multimap.h.
+.SS "template<typename _Key, typename _Tp, typename _Compare = std::less<_Key>, typename _Alloc = std::allocator<std::pair<const _Key, _Tp> >> size_type \fBstd::multimap\fP< _Key, _Tp, _Compare, _Alloc >::max_size () const\fC [inline]\fP"Returns the maximum size of the multimap. 
+.PP
+Definition at line 421 of file stl_multimap.h.
+.SS "template<typename _Key, typename _Tp, typename _Compare = std::less<_Key>, typename _Alloc = std::allocator<std::pair<const _Key, _Tp> >> \fBmultimap\fP& \fBstd::multimap\fP< _Key, _Tp, _Compare, _Alloc >::operator= (\fBmultimap\fP< _Key, _Tp, _Compare, _Alloc > && __x)\fC [inline]\fP"
+.PP
+Multimap move assignment operator. \fBParameters:\fP
+.RS 4
+\fIx\fP A multimap of identical element and allocator types.
+.RE
+.PP
+The contents of \fIx\fP are moved into this multimap (without copying). \fIx\fP is a valid, but unspecified multimap. 
+.PP
+Definition at line 263 of file stl_multimap.h.
+.PP
+References std::swap().
+.SS "template<typename _Key, typename _Tp, typename _Compare = std::less<_Key>, typename _Alloc = std::allocator<std::pair<const _Key, _Tp> >> \fBmultimap\fP& \fBstd::multimap\fP< _Key, _Tp, _Compare, _Alloc >::operator= (const \fBmultimap\fP< _Key, _Tp, _Compare, _Alloc > & __x)\fC [inline]\fP"
+.PP
+Multimap assignment operator. The dtor only erases the elements, and note that if the elements themselves are pointers, the pointed-to memory is not touched in any way. Managing the pointer is the user's responsibility. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIx\fP A multimap of identical element and allocator types.
+.RE
+.PP
+All the elements of \fIx\fP are copied, but unlike the copy constructor, the allocator object is not copied. 
+.PP
+Definition at line 248 of file stl_multimap.h.
+.SS "template<typename _Key, typename _Tp, typename _Compare = std::less<_Key>, typename _Alloc = std::allocator<std::pair<const _Key, _Tp> >> \fBmultimap\fP& \fBstd::multimap\fP< _Key, _Tp, _Compare, _Alloc >::operator= (\fBinitializer_list\fP< \fBvalue_type\fP > __l)\fC [inline]\fP"
+.PP
+Multimap list assignment operator. \fBParameters:\fP
+.RS 4
+\fIl\fP An \fBinitializer_list\fP.
+.RE
+.PP
+This function fills a multimap with copies of the elements in the initializer list \fIl\fP.
+.PP
+Note that the assignment completely changes the multimap and that the resulting multimap's size is the same as the number of elements assigned. Old data may be lost. 
+.PP
+Definition at line 284 of file stl_multimap.h.
+.SS "template<typename _Key, typename _Tp, typename _Compare = std::less<_Key>, typename _Alloc = std::allocator<std::pair<const _Key, _Tp> >> \fBreverse_iterator\fP \fBstd::multimap\fP< _Key, _Tp, _Compare, _Alloc >::rbegin ()\fC [inline]\fP"Returns a read/write reverse iterator that points to the last pair in the multimap. Iteration is done in descending order according to the keys. 
+.PP
+Definition at line 340 of file stl_multimap.h.
+.SS "template<typename _Key, typename _Tp, typename _Compare = std::less<_Key>, typename _Alloc = std::allocator<std::pair<const _Key, _Tp> >> \fBconst_reverse_iterator\fP \fBstd::multimap\fP< _Key, _Tp, _Compare, _Alloc >::rbegin () const\fC [inline]\fP"Returns a read-only (constant) reverse iterator that points to the last pair in the multimap. Iteration is done in descending order according to the keys. 
+.PP
+Definition at line 349 of file stl_multimap.h.
+.SS "template<typename _Key, typename _Tp, typename _Compare = std::less<_Key>, typename _Alloc = std::allocator<std::pair<const _Key, _Tp> >> \fBreverse_iterator\fP \fBstd::multimap\fP< _Key, _Tp, _Compare, _Alloc >::rend ()\fC [inline]\fP"Returns a read/write reverse iterator that points to one before the first pair in the multimap. Iteration is done in descending order according to the keys. 
+.PP
+Definition at line 358 of file stl_multimap.h.
+.SS "template<typename _Key, typename _Tp, typename _Compare = std::less<_Key>, typename _Alloc = std::allocator<std::pair<const _Key, _Tp> >> \fBconst_reverse_iterator\fP \fBstd::multimap\fP< _Key, _Tp, _Compare, _Alloc >::rend () const\fC [inline]\fP"Returns a read-only (constant) reverse iterator that points to one before the first pair in the multimap. Iteration is done in descending order according to the keys. 
+.PP
+Definition at line 367 of file stl_multimap.h.
+.SS "template<typename _Key, typename _Tp, typename _Compare = std::less<_Key>, typename _Alloc = std::allocator<std::pair<const _Key, _Tp> >> size_type \fBstd::multimap\fP< _Key, _Tp, _Compare, _Alloc >::size () const\fC [inline]\fP"Returns the size of the multimap. 
+.PP
+Definition at line 416 of file stl_multimap.h.
+.SS "template<typename _Key, typename _Tp, typename _Compare = std::less<_Key>, typename _Alloc = std::allocator<std::pair<const _Key, _Tp> >> void \fBstd::multimap\fP< _Key, _Tp, _Compare, _Alloc >::swap (\fBmultimap\fP< _Key, _Tp, _Compare, _Alloc > & __x)\fC [inline]\fP"
+.PP
+Swaps data with another multimap. \fBParameters:\fP
+.RS 4
+\fIx\fP A multimap of the same element and allocator types.
+.RE
+.PP
+This exchanges the elements between two multimaps in constant time. (It is only swapping a pointer, an integer, and an instance of the \fCCompare\fP type (which itself is often stateless and empty), so it should be quite fast.) Note that the global \fBstd::swap()\fP function is specialized such that std::swap(m1,m2) will feed to this function. 
+.PP
+Definition at line 591 of file stl_multimap.h.
+.PP
+Referenced by std::swap().
+.SS "template<typename _Key, typename _Tp, typename _Compare = std::less<_Key>, typename _Alloc = std::allocator<std::pair<const _Key, _Tp> >> const_iterator \fBstd::multimap\fP< _Key, _Tp, _Compare, _Alloc >::upper_bound (const key_type & __x) const\fC [inline]\fP"
+.PP
+Finds the end of a subsequence matching given key. \fBParameters:\fP
+.RS 4
+\fIx\fP Key of (key, value) pair to be located. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Read-only (constant) iterator pointing to first iterator greater than key, or \fBend()\fP. 
+.RE
+.PP
+
+.PP
+Definition at line 708 of file stl_multimap.h.
+.SS "template<typename _Key, typename _Tp, typename _Compare = std::less<_Key>, typename _Alloc = std::allocator<std::pair<const _Key, _Tp> >> iterator \fBstd::multimap\fP< _Key, _Tp, _Compare, _Alloc >::upper_bound (const key_type & __x)\fC [inline]\fP"
+.PP
+Finds the end of a subsequence matching given key. \fBParameters:\fP
+.RS 4
+\fIx\fP Key of (key, value) pair to be located. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Iterator pointing to the first element greater than key, or \fBend()\fP. 
+.RE
+.PP
+
+.PP
+Definition at line 698 of file stl_multimap.h.
+.SS "template<typename _Key, typename _Tp, typename _Compare = std::less<_Key>, typename _Alloc = std::allocator<std::pair<const _Key, _Tp> >> value_compare \fBstd::multimap\fP< _Key, _Tp, _Compare, _Alloc >::value_comp () const\fC [inline]\fP"Returns a value comparison object, built from the key comparison object out of which the multimap was constructed. 
+.PP
+Definition at line 618 of file stl_multimap.h.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for libstdc++ from the source code.

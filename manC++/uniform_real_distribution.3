@@ -1,0 +1,137 @@
+.TH "std::uniform_real_distribution" 3 "Sun Oct 10 2010" "libstdc++" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+std::uniform_real_distribution \- 
+.PP
+Uniform continuous distribution for random numbers.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBparam_type\fP"
+.br
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef _RealType \fBresult_type\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBuniform_real_distribution\fP (_RealType __a=_RealType(0), _RealType __b=_RealType(1))"
+.br
+.ti -1c
+.RI "\fBuniform_real_distribution\fP (const \fBparam_type\fP &__p)"
+.br
+.ti -1c
+.RI "\fBresult_type\fP \fBa\fP () const "
+.br
+.ti -1c
+.RI "\fBresult_type\fP \fBb\fP () const "
+.br
+.ti -1c
+.RI "\fBresult_type\fP \fBmax\fP () const "
+.br
+.ti -1c
+.RI "\fBresult_type\fP \fBmin\fP () const "
+.br
+.ti -1c
+.RI "template<typename _UniformRandomNumberGenerator > \fBresult_type\fP \fBoperator()\fP (_UniformRandomNumberGenerator &__urng, const \fBparam_type\fP &__p)"
+.br
+.ti -1c
+.RI "template<typename _UniformRandomNumberGenerator > \fBresult_type\fP \fBoperator()\fP (_UniformRandomNumberGenerator &__urng)"
+.br
+.ti -1c
+.RI "void \fBparam\fP (const \fBparam_type\fP &__param)"
+.br
+.ti -1c
+.RI "\fBparam_type\fP \fBparam\fP () const "
+.br
+.ti -1c
+.RI "void \fBreset\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<typename _RealType = double> class std::uniform_real_distribution< _RealType >"
+Uniform continuous distribution for random numbers. 
+
+A continuous random distribution on the range [min, max) with equal probability throughout the range. The URNG should be real-valued and deliver number in the range [0, 1). 
+.PP
+Definition at line 1800 of file random.h.
+.SH "Member Typedef Documentation"
+.PP 
+.SS "template<typename _RealType = double> typedef _RealType \fBstd::uniform_real_distribution\fP< _RealType >::\fBresult_type\fP"The type of the range of the distribution. 
+.PP
+Definition at line 1807 of file random.h.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "template<typename _RealType = double> \fBstd::uniform_real_distribution\fP< _RealType >::\fBuniform_real_distribution\fP (_RealType __a = \fC_RealType(0)\fP, _RealType __b = \fC_RealType(1)\fP)\fC [inline, explicit]\fP"
+.PP
+Constructs a \fBuniform_real_distribution\fP object. \fBParameters:\fP
+.RS 4
+\fI__min\fP [IN] The lower bound of the distribution. 
+.br
+\fI__max\fP [IN] The upper bound of the distribution. 
+.RE
+.PP
+
+.PP
+Definition at line 1846 of file random.h.
+.SH "Member Function Documentation"
+.PP 
+.SS "template<typename _RealType = double> \fBresult_type\fP \fBstd::uniform_real_distribution\fP< _RealType >::max () const\fC [inline]\fP"
+.PP
+Returns the inclusive upper bound of the distribution range. 
+.PP
+Definition at line 1898 of file random.h.
+.SS "template<typename _RealType = double> \fBresult_type\fP \fBstd::uniform_real_distribution\fP< _RealType >::min () const\fC [inline]\fP"
+.PP
+Returns the inclusive lower bound of the distribution range. 
+.PP
+Definition at line 1891 of file random.h.
+.SS "template<typename _RealType = double> template<typename _UniformRandomNumberGenerator > \fBresult_type\fP \fBstd::uniform_real_distribution\fP< _RealType >::operator() (_UniformRandomNumberGenerator & __urng)\fC [inline]\fP"
+.PP
+Generating functions. 
+.PP
+Definition at line 1906 of file random.h.
+.PP
+References std::uniform_real_distribution< _RealType >::operator()(), and std::uniform_real_distribution< _RealType >::param().
+.PP
+Referenced by std::uniform_real_distribution< _RealType >::operator()().
+.SS "template<typename _RealType = double> void \fBstd::uniform_real_distribution\fP< _RealType >::param (const \fBparam_type\fP & __param)\fC [inline]\fP"
+.PP
+Sets the parameter set of the distribution. \fBParameters:\fP
+.RS 4
+\fI__param\fP The new parameter set of the distribution. 
+.RE
+.PP
+
+.PP
+Definition at line 1884 of file random.h.
+.SS "template<typename _RealType = double> \fBparam_type\fP \fBstd::uniform_real_distribution\fP< _RealType >::param () const\fC [inline]\fP"
+.PP
+Returns the parameter set of the distribution. 
+.PP
+Definition at line 1876 of file random.h.
+.PP
+Referenced by std::uniform_real_distribution< _RealType >::operator()(), std::operator==(), and std::operator>>().
+.SS "template<typename _RealType = double> void \fBstd::uniform_real_distribution\fP< _RealType >::reset ()\fC [inline]\fP"
+.PP
+Resets the distribution state. Does nothing for the uniform real distribution. 
+.PP
+Definition at line 1862 of file random.h.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for libstdc++ from the source code.

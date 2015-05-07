@@ -1,0 +1,38 @@
+.TH "__gnu_profile::__stack_info_base" 3 "Sun Oct 10 2010" "libstdc++" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+__gnu_profile::__stack_info_base \- 
+.PP
+Base class for a line in the stack table.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fB__stack_info_base\fP (const __object_info &__info)=0"
+.br
+.ti -1c
+.RI "virtual const char * \fB__get_id\fP () const =0"
+.br
+.ti -1c
+.RI "virtual float \fB__magnitude\fP () const =0"
+.br
+.ti -1c
+.RI "void \fB__merge\fP (const __object_info &__info)=0"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<typename __object_info> class __gnu_profile::__stack_info_base< __object_info >"
+Base class for a line in the stack table. 
+.PP
+Definition at line 160 of file profiler_node.h.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for libstdc++ from the source code.

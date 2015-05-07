@@ -1,0 +1,115 @@
+.TH "std::pair" 3 "Sun Oct 10 2010" "libstdc++" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+std::pair \- 
+.PP
+pair holds two objects of arbitrary type.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef _T1 \fBfirst_type\fP"
+.br
+.ti -1c
+.RI "typedef _T2 \fBsecond_type\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBpair\fP ()"
+.br
+.ti -1c
+.RI "\fBpair\fP (const _T1 &__a, const _T2 &__b)"
+.br
+.ti -1c
+.RI "template<class _U2 , class  = typename std::enable_if<std::is_convertible<_U2, _T2>::value>::type> \fBpair\fP (const _T1 &__x, _U2 &&__y)"
+.br
+.ti -1c
+.RI "template<class _U1 , class _U2 , class  = typename std::enable_if<std::is_convertible<_U1, _T1>::value			      && std::is_convertible<_U2, _T2>::value>::type> \fBpair\fP (_U1 &&__x, _U2 &&__y)"
+.br
+.ti -1c
+.RI "template<class _U1 , class _U2 > \fBpair\fP (\fBpair\fP< _U1, _U2 > &&__p)"
+.br
+.ti -1c
+.RI "template<class _U1 , class _U2 > \fBpair\fP (const \fBpair\fP< _U1, _U2 > &__p)"
+.br
+.ti -1c
+.RI "template<class _U1 , class  = typename std::enable_if<std::is_convertible<_U1, _T1>::value>::type> \fBpair\fP (_U1 &&__x, const _T2 &__y)"
+.br
+.ti -1c
+.RI "\fBpair\fP & \fBoperator=\fP (\fBpair\fP &&__p)"
+.br
+.ti -1c
+.RI "template<class _U1 , class _U2 > \fBpair\fP & \fBoperator=\fP (\fBpair\fP< _U1, _U2 > &&__p)"
+.br
+.ti -1c
+.RI "void \fBswap\fP (\fBpair\fP &__p)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "_T1 \fBfirst\fP"
+.br
+.ti -1c
+.RI "_T2 \fBsecond\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<class _T1, class _T2> struct std::pair< _T1, _T2 >"
+pair holds two objects of arbitrary type. 
+.PP
+Definition at line 71 of file stl_pair.h.
+.SH "Member Typedef Documentation"
+.PP 
+.SS "template<class _T1, class _T2> typedef _T1 \fBstd::pair\fP< _T1, _T2 >::\fBfirst_type\fP"
+.PP
+\fCfirst_type\fP is the first bound type 
+.PP
+Definition at line 73 of file stl_pair.h.
+.SS "template<class _T1, class _T2> typedef _T2 \fBstd::pair\fP< _T1, _T2 >::\fBsecond_type\fP"
+.PP
+\fCsecond_type\fP is the second bound type 
+.PP
+Definition at line 74 of file stl_pair.h.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "template<class _T1, class _T2> \fBstd::pair\fP< _T1, _T2 >::\fBpair\fP ()\fC [inline]\fP"The default constructor creates \fCfirst\fP and \fCsecond\fP using their respective default constructors. 
+.PP
+Definition at line 83 of file stl_pair.h.
+.SS "template<class _T1, class _T2> \fBstd::pair\fP< _T1, _T2 >::\fBpair\fP (const _T1 & __a, const _T2 & __b)\fC [inline]\fP"Two objects may be passed to a \fCpair\fP constructor to be copied. 
+.PP
+Definition at line 87 of file stl_pair.h.
+.SS "template<class _T1, class _T2> template<class _U1 , class _U2 > \fBstd::pair\fP< _T1, _T2 >::\fBpair\fP (const \fBpair\fP< _U1, _U2 > & __p)\fC [inline]\fP"There is also a templated copy ctor for the \fCpair\fP class itself. 
+.PP
+Definition at line 114 of file stl_pair.h.
+.SH "Member Data Documentation"
+.PP 
+.SS "template<class _T1, class _T2> _T1 \fBstd::pair\fP< _T1, _T2 >::\fBfirst\fP"
+.PP
+\fCfirst\fP is a copy of the first object 
+.PP
+Definition at line 76 of file stl_pair.h.
+.PP
+Referenced by std::_Temporary_buffer< _ForwardIterator, _Tp >::_Temporary_buffer(), std::set< _Key, _Compare, _Alloc >::insert(), and std::operator==().
+.SS "template<class _T1, class _T2> _T2 \fBstd::pair\fP< _T1, _T2 >::\fBsecond\fP"
+.PP
+\fCsecond\fP is a copy of the second object 
+.PP
+Definition at line 77 of file stl_pair.h.
+.PP
+Referenced by std::_Temporary_buffer< _ForwardIterator, _Tp >::_Temporary_buffer(), std::set< _Key, _Compare, _Alloc >::insert(), and std::operator==().
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for libstdc++ from the source code.

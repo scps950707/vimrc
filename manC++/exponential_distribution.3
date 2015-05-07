@@ -1,0 +1,134 @@
+.TH "std::exponential_distribution" 3 "Sun Oct 10 2010" "libstdc++" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+std::exponential_distribution \- 
+.PP
+An exponential continuous distribution for random numbers.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBparam_type\fP"
+.br
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef _RealType \fBresult_type\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBexponential_distribution\fP (const \fBresult_type\fP &__lambda=\fBresult_type\fP(1))"
+.br
+.ti -1c
+.RI "\fBexponential_distribution\fP (const \fBparam_type\fP &__p)"
+.br
+.ti -1c
+.RI "_RealType \fBlambda\fP () const "
+.br
+.ti -1c
+.RI "\fBresult_type\fP \fBmax\fP () const "
+.br
+.ti -1c
+.RI "\fBresult_type\fP \fBmin\fP () const "
+.br
+.ti -1c
+.RI "template<typename _UniformRandomNumberGenerator > \fBresult_type\fP \fBoperator()\fP (_UniformRandomNumberGenerator &__urng)"
+.br
+.ti -1c
+.RI "template<typename _UniformRandomNumberGenerator > \fBresult_type\fP \fBoperator()\fP (_UniformRandomNumberGenerator &__urng, const \fBparam_type\fP &__p)"
+.br
+.ti -1c
+.RI "\fBparam_type\fP \fBparam\fP () const "
+.br
+.ti -1c
+.RI "void \fBparam\fP (const \fBparam_type\fP &__param)"
+.br
+.ti -1c
+.RI "void \fBreset\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<typename _RealType = double> class std::exponential_distribution< _RealType >"
+An exponential continuous distribution for random numbers. 
+
+The formula for the exponential probability density function is $p(x|\lambda) = \lambda e^{-\lambda x}$.
+.PP
+Mean$\frac{1}{\lambda}$ Median$\frac{\ln 2}{\lambda}$ Mode$zero$ Range$[0, \infty]$ Standard Deviation$\frac{1}{\lambda}$ Distribution Statistics
+.PP
+Definition at line 4161 of file random.h.
+.SH "Member Typedef Documentation"
+.PP 
+.SS "template<typename _RealType = double> typedef _RealType \fBstd::exponential_distribution\fP< _RealType >::\fBresult_type\fP"The type of the range of the distribution. 
+.PP
+Definition at line 4168 of file random.h.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "template<typename _RealType = double> \fBstd::exponential_distribution\fP< _RealType >::\fBexponential_distribution\fP (const \fBresult_type\fP & __lambda = \fC\fBresult_type\fP(1)\fP)\fC [inline, explicit]\fP"
+.PP
+Constructs an exponential distribution with inverse scale parameter $\lambda$. 
+.PP
+Definition at line 4199 of file random.h.
+.SH "Member Function Documentation"
+.PP 
+.SS "template<typename _RealType = double> _RealType \fBstd::exponential_distribution\fP< _RealType >::lambda () const\fC [inline]\fP"
+.PP
+Returns the inverse scale parameter of the distribution. 
+.PP
+Definition at line 4220 of file random.h.
+.SS "template<typename _RealType = double> \fBresult_type\fP \fBstd::exponential_distribution\fP< _RealType >::max () const\fC [inline]\fP"
+.PP
+Returns the least upper bound value of the distribution. 
+.PP
+Definition at line 4249 of file random.h.
+.SS "template<typename _RealType = double> \fBresult_type\fP \fBstd::exponential_distribution\fP< _RealType >::min () const\fC [inline]\fP"
+.PP
+Returns the greatest lower bound value of the distribution. 
+.PP
+Definition at line 4242 of file random.h.
+.SS "template<typename _RealType = double> template<typename _UniformRandomNumberGenerator > \fBresult_type\fP \fBstd::exponential_distribution\fP< _RealType >::operator() (_UniformRandomNumberGenerator & __urng)\fC [inline]\fP"
+.PP
+Generating functions. 
+.PP
+Definition at line 4257 of file random.h.
+.PP
+References std::exponential_distribution< _RealType >::operator()(), and std::exponential_distribution< _RealType >::param().
+.PP
+Referenced by std::exponential_distribution< _RealType >::operator()().
+.SS "template<typename _RealType = double> \fBparam_type\fP \fBstd::exponential_distribution\fP< _RealType >::param () const\fC [inline]\fP"
+.PP
+Returns the parameter set of the distribution. 
+.PP
+Definition at line 4227 of file random.h.
+.PP
+Referenced by std::exponential_distribution< _RealType >::operator()(), std::operator==(), and std::operator>>().
+.SS "template<typename _RealType = double> void \fBstd::exponential_distribution\fP< _RealType >::param (const \fBparam_type\fP & __param)\fC [inline]\fP"
+.PP
+Sets the parameter set of the distribution. \fBParameters:\fP
+.RS 4
+\fI__param\fP The new parameter set of the distribution. 
+.RE
+.PP
+
+.PP
+Definition at line 4235 of file random.h.
+.SS "template<typename _RealType = double> void \fBstd::exponential_distribution\fP< _RealType >::reset ()\fC [inline]\fP"
+.PP
+Resets the distribution state. Has no effect on exponential distributions. 
+.PP
+Definition at line 4214 of file random.h.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for libstdc++ from the source code.

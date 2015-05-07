@@ -1,0 +1,136 @@
+.TH "__gnu_parallel::_LoserTree" 3 "Sun Oct 10 2010" "libstdc++" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+__gnu_parallel::_LoserTree \- 
+.PP
+Stable \fB_LoserTree\fP variant.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fB__gnu_parallel::_LoserTreeBase< _Tp, _Compare >\fP.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fB_LoserTree\fP (unsigned int __k, _Compare __comp)"
+.br
+.ti -1c
+.RI "void \fB__delete_min_insert\fP (_Tp __key, bool __sup)"
+.br
+.ti -1c
+.RI "int \fB__get_min_source\fP ()"
+.br
+.ti -1c
+.RI "void \fB__init\fP ()"
+.br
+.ti -1c
+.RI "unsigned int \fB__init_winner\fP (unsigned int __root)"
+.br
+.ti -1c
+.RI "void \fB__insert_start\fP (const _Tp &__key, int __source, bool __sup)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "_Compare \fB_M_comp\fP"
+.br
+.ti -1c
+.RI "bool \fB_M_first_insert\fP"
+.br
+.ti -1c
+.RI "unsigned int \fB_M_ik\fP"
+.br
+.ti -1c
+.RI "unsigned int \fB_M_k\fP"
+.br
+.ti -1c
+.RI "unsigned int \fB_M_log_k\fP"
+.br
+.ti -1c
+.RI "\fB_Loser\fP * \fB_M_losers\fP"
+.br
+.ti -1c
+.RI "unsigned int \fB_M_offset\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<bool __stable, typename _Tp, typename _Compare> class __gnu_parallel::_LoserTree< __stable, _Tp, _Compare >"
+Stable \fB_LoserTree\fP variant. 
+
+Provides the stable implementations of insert_start, __init_winner, __init and __delete_min_insert.
+.PP
+Unstable variant is done using partial specialisation below. 
+.PP
+Definition at line 165 of file losertree.h.
+.SH "Member Function Documentation"
+.PP 
+.SS "template<bool __stable, typename _Tp , typename _Compare > void \fB__gnu_parallel::_LoserTree\fP< __stable, _Tp, _Compare >::__delete_min_insert (_Tp __key, bool __sup)\fC [inline]\fP"
+.PP
+Delete the smallest element and insert a new element from the previously smallest element's sequence. This implementation is stable. 
+.PP
+Definition at line 217 of file losertree.h.
+.PP
+References std::swap().
+.SS "template<typename _Tp , typename _Compare > int \fB__gnu_parallel::_LoserTreeBase\fP< _Tp, _Compare >::__get_min_source ()\fC [inline, inherited]\fP"\fBReturns:\fP
+.RS 4
+the index of the sequence with the smallest element. 
+.RE
+.PP
+
+.PP
+Definition at line 151 of file losertree.h.
+.PP
+References __gnu_parallel::_LoserTreeBase< _Tp, _Compare >::_M_losers, and __gnu_parallel::_LoserTreeBase< _Tp, _Compare >::_Loser::_M_source.
+.SS "template<typename _Tp , typename _Compare > void \fB__gnu_parallel::_LoserTreeBase\fP< _Tp, _Compare >::__insert_start (const _Tp & __key, int __source, bool __sup)\fC [inline, inherited]\fP"
+.PP
+Initializes the sequence '_M_source' with the element '__key'. \fBParameters:\fP
+.RS 4
+\fI__key\fP the element to insert 
+.br
+\fI__source\fP __index of the __source __sequence 
+.br
+\fI__sup\fP flag that determines whether the value to insert is an explicit __supremum. 
+.RE
+.PP
+
+.PP
+Definition at line 130 of file losertree.h.
+.PP
+References __gnu_parallel::_LoserTreeBase< _Tp, _Compare >::_M_first_insert, __gnu_parallel::_LoserTreeBase< _Tp, _Compare >::_Loser::_M_key, __gnu_parallel::_LoserTreeBase< _Tp, _Compare >::_M_losers, __gnu_parallel::_LoserTreeBase< _Tp, _Compare >::_Loser::_M_source, and __gnu_parallel::_LoserTreeBase< _Tp, _Compare >::_Loser::_M_sup.
+.SH "Member Data Documentation"
+.PP 
+.SS "template<typename _Tp , typename _Compare > _Compare \fB__gnu_parallel::_LoserTreeBase\fP< _Tp, _Compare >::\fB_M_comp\fP\fC [protected, inherited]\fP"
+.PP
+_Compare to use. 
+.PP
+Definition at line 78 of file losertree.h.
+.SS "template<typename _Tp , typename _Compare > bool \fB__gnu_parallel::_LoserTreeBase\fP< _Tp, _Compare >::\fB_M_first_insert\fP\fC [protected, inherited]\fP"
+.PP
+State flag that determines whether the \fB_LoserTree\fP is empty. Only used for building the \fB_LoserTree\fP. 
+.PP
+Definition at line 85 of file losertree.h.
+.PP
+Referenced by __gnu_parallel::_LoserTreeBase< _Tp, _Compare >::__insert_start(), and __gnu_parallel::_LoserTreeBase< _Tp, _Compare >::_LoserTreeBase().
+.SS "template<typename _Tp , typename _Compare > unsigned int \fB__gnu_parallel::_LoserTreeBase\fP< _Tp, _Compare >::\fB_M_log_k\fP\fC [protected, inherited]\fP"log_2{_M_k} 
+.PP
+Definition at line 72 of file losertree.h.
+.PP
+Referenced by __gnu_parallel::_LoserTreeBase< _Tp, _Compare >::_LoserTreeBase().
+.SS "template<typename _Tp , typename _Compare > \fB_Loser\fP* \fB__gnu_parallel::_LoserTreeBase\fP< _Tp, _Compare >::\fB_M_losers\fP\fC [protected, inherited]\fP"
+.PP
+\fB_LoserTree\fP __elements. 
+.PP
+Definition at line 75 of file losertree.h.
+.PP
+Referenced by __gnu_parallel::_LoserTreeBase< _Tp, _Compare >::__get_min_source(), __gnu_parallel::_LoserTreeBase< _Tp, _Compare >::__insert_start(), __gnu_parallel::_LoserTreeBase< _Tp, _Compare >::_LoserTreeBase(), and __gnu_parallel::_LoserTreeBase< _Tp, _Compare >::~_LoserTreeBase().
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for libstdc++ from the source code.

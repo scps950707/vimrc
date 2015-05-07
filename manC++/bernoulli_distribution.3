@@ -1,0 +1,135 @@
+.TH "std::bernoulli_distribution" 3 "Sun Oct 10 2010" "libstdc++" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+std::bernoulli_distribution \- 
+.PP
+A Bernoulli random number distribution.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBparam_type\fP"
+.br
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef bool \fBresult_type\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBbernoulli_distribution\fP (double __p=0.5)"
+.br
+.ti -1c
+.RI "\fBbernoulli_distribution\fP (const \fBparam_type\fP &__p)"
+.br
+.ti -1c
+.RI "\fBresult_type\fP \fBmax\fP () const "
+.br
+.ti -1c
+.RI "\fBresult_type\fP \fBmin\fP () const "
+.br
+.ti -1c
+.RI "template<typename _UniformRandomNumberGenerator > \fBresult_type\fP \fBoperator()\fP (_UniformRandomNumberGenerator &__urng)"
+.br
+.ti -1c
+.RI "template<typename _UniformRandomNumberGenerator > \fBresult_type\fP \fBoperator()\fP (_UniformRandomNumberGenerator &__urng, const \fBparam_type\fP &__p)"
+.br
+.ti -1c
+.RI "double \fBp\fP () const "
+.br
+.ti -1c
+.RI "void \fBparam\fP (const \fBparam_type\fP &__param)"
+.br
+.ti -1c
+.RI "\fBparam_type\fP \fBparam\fP () const "
+.br
+.ti -1c
+.RI "void \fBreset\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+A Bernoulli random number distribution. 
+
+Generates a sequence of true and false values with likelihood $p$ that true will come up and $(1 - p)$ that false will appear. 
+.PP
+Definition at line 3240 of file random.h.
+.SH "Member Typedef Documentation"
+.PP 
+.SS "typedef bool \fBstd::bernoulli_distribution::result_type\fP"The type of the range of the distribution. 
+.PP
+Definition at line 3244 of file random.h.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "std::bernoulli_distribution::bernoulli_distribution (double __p = \fC0.5\fP)\fC [inline, explicit]\fP"
+.PP
+Constructs a Bernoulli distribution with likelihood \fCp\fP. \fBParameters:\fP
+.RS 4
+\fI__p\fP [IN] The likelihood of a true result being returned. Must be in the interval $[0, 1]$. 
+.RE
+.PP
+
+.PP
+Definition at line 3277 of file random.h.
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBresult_type\fP std::bernoulli_distribution::max () const\fC [inline]\fP"
+.PP
+Returns the least upper bound value of the distribution. 
+.PP
+Definition at line 3327 of file random.h.
+.SS "\fBresult_type\fP std::bernoulli_distribution::min () const\fC [inline]\fP"
+.PP
+Returns the greatest lower bound value of the distribution. 
+.PP
+Definition at line 3320 of file random.h.
+.SS "template<typename _UniformRandomNumberGenerator > \fBresult_type\fP std::bernoulli_distribution::operator() (_UniformRandomNumberGenerator & __urng)\fC [inline]\fP"
+.PP
+Generating functions. 
+.PP
+Definition at line 3335 of file random.h.
+.PP
+References operator()(), and param().
+.PP
+Referenced by operator()().
+.SS "double std::bernoulli_distribution::p () const\fC [inline]\fP"
+.PP
+Returns the \fCp\fP parameter of the distribution. 
+.PP
+Definition at line 3298 of file random.h.
+.SS "void std::bernoulli_distribution::param (const \fBparam_type\fP & __param)\fC [inline]\fP"
+.PP
+Sets the parameter set of the distribution. \fBParameters:\fP
+.RS 4
+\fI__param\fP The new parameter set of the distribution. 
+.RE
+.PP
+
+.PP
+Definition at line 3313 of file random.h.
+.SS "\fBparam_type\fP std::bernoulli_distribution::param () const\fC [inline]\fP"
+.PP
+Returns the parameter set of the distribution. 
+.PP
+Definition at line 3305 of file random.h.
+.PP
+Referenced by operator()(), std::operator==(), and std::operator>>().
+.SS "void std::bernoulli_distribution::reset ()\fC [inline]\fP"
+.PP
+Resets the distribution state. Does nothing for a Bernoulli distribution. 
+.PP
+Definition at line 3292 of file random.h.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for libstdc++ from the source code.

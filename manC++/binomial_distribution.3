@@ -1,0 +1,194 @@
+.TH "std::binomial_distribution" 3 "Sun Oct 10 2010" "libstdc++" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+std::binomial_distribution \- 
+.PP
+A discrete binomial random number distribution.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBparam_type\fP"
+.br
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef _IntType \fBresult_type\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBbinomial_distribution\fP (_IntType __t=_IntType(1), double __p=0.5)"
+.br
+.ti -1c
+.RI "\fBbinomial_distribution\fP (const \fBparam_type\fP &__p)"
+.br
+.ti -1c
+.RI "\fBresult_type\fP \fBmax\fP () const "
+.br
+.ti -1c
+.RI "\fBresult_type\fP \fBmin\fP () const "
+.br
+.ti -1c
+.RI "template<typename _UniformRandomNumberGenerator > \fBresult_type\fP \fBoperator()\fP (_UniformRandomNumberGenerator &__urng, const \fBparam_type\fP &__p)"
+.br
+.ti -1c
+.RI "template<typename _UniformRandomNumberGenerator > \fBresult_type\fP \fBoperator()\fP (_UniformRandomNumberGenerator &__urng)"
+.br
+.ti -1c
+.RI "double \fBp\fP () const "
+.br
+.ti -1c
+.RI "void \fBparam\fP (const \fBparam_type\fP &__param)"
+.br
+.ti -1c
+.RI "\fBparam_type\fP \fBparam\fP () const "
+.br
+.ti -1c
+.RI "void \fBreset\fP ()"
+.br
+.ti -1c
+.RI "_IntType \fBt\fP () const "
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "template<typename _IntType1 , typename _CharT , typename _Traits > \fBstd::basic_ostream\fP< _CharT, _Traits > & \fBoperator<<\fP (\fBstd::basic_ostream\fP< _CharT, _Traits > &, const \fBstd::binomial_distribution\fP< _IntType1 > &)"
+.br
+.ti -1c
+.RI "template<typename _IntType1 > bool \fBoperator==\fP (const \fBstd::binomial_distribution\fP< _IntType1 > &__d1, const \fBstd::binomial_distribution\fP< _IntType1 > &__d2)"
+.br
+.ti -1c
+.RI "template<typename _IntType1 , typename _CharT , typename _Traits > \fBstd::basic_istream\fP< _CharT, _Traits > & \fBoperator>>\fP (\fBstd::basic_istream\fP< _CharT, _Traits > &, \fBstd::binomial_distribution\fP< _IntType1 > &)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<typename _IntType = int> class std::binomial_distribution< _IntType >"
+A discrete binomial random number distribution. 
+
+The formula for the binomial probability density function is $p(i|t,p) = \binom{n}{i} p^i (1 - p)^{t - i}$ where $t$ and $p$ are the parameters of the distribution. 
+.PP
+Definition at line 3417 of file random.h.
+.SH "Member Typedef Documentation"
+.PP 
+.SS "template<typename _IntType = int> typedef _IntType \fBstd::binomial_distribution\fP< _IntType >::\fBresult_type\fP"The type of the range of the distribution. 
+.PP
+Definition at line 3424 of file random.h.
+.SH "Member Function Documentation"
+.PP 
+.SS "template<typename _IntType = int> \fBresult_type\fP \fBstd::binomial_distribution\fP< _IntType >::max () const\fC [inline]\fP"
+.PP
+Returns the least upper bound value of the distribution. 
+.PP
+Definition at line 3527 of file random.h.
+.PP
+Referenced by std::binomial_distribution< _IntType >::operator()().
+.SS "template<typename _IntType = int> \fBresult_type\fP \fBstd::binomial_distribution\fP< _IntType >::min () const\fC [inline]\fP"
+.PP
+Returns the greatest lower bound value of the distribution. 
+.PP
+Definition at line 3520 of file random.h.
+.SS "template<typename _IntType = int> template<typename _UniformRandomNumberGenerator > \fBresult_type\fP \fBstd::binomial_distribution\fP< _IntType >::operator() (_UniformRandomNumberGenerator & __urng)\fC [inline]\fP"
+.PP
+Generating functions. 
+.PP
+Definition at line 3535 of file random.h.
+.PP
+References std::binomial_distribution< _IntType >::operator()(), and std::binomial_distribution< _IntType >::param().
+.PP
+Referenced by std::binomial_distribution< _IntType >::operator()().
+.SS "template<typename _IntType > template<typename _UniformRandomNumberGenerator > \fBbinomial_distribution\fP< _IntType >::\fBresult_type\fP \fBstd::binomial_distribution\fP< _IntType >::operator() (_UniformRandomNumberGenerator & __urng, const \fBparam_type\fP & __param)"A rejection algorithm when t * p >= 8 and a simple waiting time method - the second in the referenced book - otherwise. NB: The former is available only if _GLIBCXX_USE_C99_MATH_TR1 is defined.
+.PP
+Reference: Devroye, L. Non-Uniform Random Variates Generation. Springer-Verlag, New York, 1986, Ch. X, Sect. 4 (+ Errata!). 
+.PP
+Definition at line 1390 of file random.tcc.
+.PP
+References std::abs(), std::log(), and std::binomial_distribution< _IntType >::max().
+.SS "template<typename _IntType = int> double \fBstd::binomial_distribution\fP< _IntType >::p () const\fC [inline]\fP"
+.PP
+Returns the distribution \fCp\fP parameter. 
+.PP
+Definition at line 3498 of file random.h.
+.SS "template<typename _IntType = int> void \fBstd::binomial_distribution\fP< _IntType >::param (const \fBparam_type\fP & __param)\fC [inline]\fP"
+.PP
+Sets the parameter set of the distribution. \fBParameters:\fP
+.RS 4
+\fI__param\fP The new parameter set of the distribution. 
+.RE
+.PP
+
+.PP
+Definition at line 3513 of file random.h.
+.SS "template<typename _IntType = int> \fBparam_type\fP \fBstd::binomial_distribution\fP< _IntType >::param () const\fC [inline]\fP"
+.PP
+Returns the parameter set of the distribution. 
+.PP
+Definition at line 3505 of file random.h.
+.PP
+Referenced by std::binomial_distribution< _IntType >::operator()().
+.SS "template<typename _IntType = int> void \fBstd::binomial_distribution\fP< _IntType >::reset ()\fC [inline]\fP"
+.PP
+Resets the distribution state. 
+.PP
+Definition at line 3484 of file random.h.
+.PP
+References std::normal_distribution< _RealType >::reset().
+.SS "template<typename _IntType = int> _IntType \fBstd::binomial_distribution\fP< _IntType >::t () const\fC [inline]\fP"
+.PP
+Returns the distribution \fCt\fP parameter. 
+.PP
+Definition at line 3491 of file random.h.
+.SH "Friends And Related Function Documentation"
+.PP 
+.SS "template<typename _IntType = int> template<typename _IntType1 , typename _CharT , typename _Traits > \fBstd::basic_ostream\fP<_CharT, _Traits>& operator<< (\fBstd::basic_ostream\fP< _CharT, _Traits > &, const \fBstd::binomial_distribution\fP< _IntType1 > &)\fC [friend]\fP"
+.PP
+Inserts a binomial_distribution random number distribution \fC__x\fP into the output stream \fC__os\fP. \fBParameters:\fP
+.RS 4
+\fI__os\fP An output stream. 
+.br
+\fI__x\fP A binomial_distribution random number distribution.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The output stream with the state of \fC__x\fP inserted or in an error state. 
+.RE
+.PP
+
+.SS "template<typename _IntType = int> template<typename _IntType1 > bool operator== (const \fBstd::binomial_distribution\fP< _IntType1 > & __d1, const \fBstd::binomial_distribution\fP< _IntType1 > & __d2)\fC [friend]\fP"
+.PP
+Return true if two binomial distributions have the same parameters and the sequences that would be generated are equal. 
+.PP
+Definition at line 3550 of file random.h.
+.SS "template<typename _IntType = int> template<typename _IntType1 , typename _CharT , typename _Traits > \fBstd::basic_istream\fP<_CharT, _Traits>& operator>> (\fBstd::basic_istream\fP< _CharT, _Traits > &, \fBstd::binomial_distribution\fP< _IntType1 > &)\fC [friend]\fP"
+.PP
+Extracts a binomial_distribution random number distribution \fC__x\fP from the input stream \fC__is\fP. \fBParameters:\fP
+.RS 4
+\fI__is\fP An input stream. 
+.br
+\fI__x\fP A binomial_distribution random number generator engine.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The input stream with \fC__x\fP extracted or in an error state. 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for libstdc++ from the source code.

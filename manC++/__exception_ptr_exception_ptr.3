@@ -1,0 +1,65 @@
+.TH "std::__exception_ptr::exception_ptr" 3 "Sun Oct 10 2010" "libstdc++" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+std::__exception_ptr::exception_ptr \- 
+.PP
+An opaque pointer to an arbitrary exception.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef void(exception_ptr::* \fB__safe_bool\fP )()"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBexception_ptr\fP (__safe_bool)  throw ()"
+.br
+.ti -1c
+.RI "\fBexception_ptr\fP (\fBexception_ptr\fP &&__o)  throw ()"
+.br
+.ti -1c
+.RI "\fBexception_ptr\fP (const \fBexception_ptr\fP &)  throw ()"
+.br
+.ti -1c
+.RI "const \fBtype_info\fP * \fB__cxa_exception_type\fP () const __attribute__((__pure__))  throw ()"
+.br
+.ti -1c
+.RI "\fBexception_ptr\fP & \fBoperator=\fP (const \fBexception_ptr\fP &)  throw ()"
+.br
+.ti -1c
+.RI "\fBexception_ptr\fP & \fBoperator=\fP (\fBexception_ptr\fP &&__o)  throw ()"
+.br
+.ti -1c
+.RI "void \fBswap\fP (\fBexception_ptr\fP &)  throw ()"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBexception_ptr\fP &, const \fBexception_ptr\fP &) __attribute__((__pure__))  throw ()"
+.br
+.ti -1c
+.RI "\fBexception_ptr\fP \fBstd::current_exception\fP ()  throw ()"
+.br
+.ti -1c
+.RI "void \fBstd::rethrow_exception\fP (\fBexception_ptr\fP)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+An opaque pointer to an arbitrary exception. 
+.PP
+Definition at line 73 of file exception_ptr.h.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for libstdc++ from the source code.

@@ -70,3 +70,12 @@ set foldcolumn=1
 set foldlevel=6
 
 set dictionary+=~/.vim/bundle/keyword/*.list
+
+function! Replace(replace)
+  let flag = ''
+  let flag .= 'ge'
+  let search = ''
+  let search .= '\<' . escape(expand('<cword>'), '/\.*$^~[') . '\>'
+  let replace = escape(a:replace, '/\&~')
+  execute 'argdo %s/' . search . '/' . replace . '/' . flag
+endfunction

@@ -1,0 +1,46 @@
+.TH "__gnu_profile::__warning_data" 3 "Sun Oct 10 2010" "libstdc++" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+__gnu_profile::__warning_data \- 
+.PP
+Representation of a warning.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fB__warning_data\fP (float __m, __stack_t __c, const char *__id, const char *__msg)"
+.br
+.ti -1c
+.RI "bool \fBoperator>\fP (const struct \fB__warning_data\fP &__other) const "
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "__stack_t \fB__context\fP"
+.br
+.ti -1c
+.RI "float \fB__magnitude\fP"
+.br
+.ti -1c
+.RI "const char * \fB__warning_id\fP"
+.br
+.ti -1c
+.RI "const char * \fB__warning_message\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Representation of a warning. 
+.PP
+Definition at line 82 of file profiler_trace.h.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for libstdc++ from the source code.

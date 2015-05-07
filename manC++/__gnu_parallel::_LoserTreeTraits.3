@@ -1,0 +1,55 @@
+.TH "__gnu_parallel::_LoserTreeTraits" 3 "Sun Oct 10 2010" "libstdc++" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+__gnu_parallel::_LoserTreeTraits \- 
+.PP
+Traits for determining whether the loser tree should use pointers or copies.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static const bool \fB_M_use_pointer\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<typename _Tp> struct __gnu_parallel::_LoserTreeTraits< _Tp >"
+Traits for determining whether the loser tree should use pointers or copies. 
+
+The field '_M_use_pointer' is used to determine whether to use pointers in he loser trees or whether to copy the values into the loser tree.
+.PP
+The default behavior is to use pointers if the data type is 4 times as big as the pointer to it.
+.PP
+Specialize for your data type to customize the behavior.
+.PP
+Example:
+.PP
+template<> struct _LoserTreeTraits<int> { static const bool _M_use_pointer = false; };
+.PP
+template<> struct _LoserTreeTraits<heavyweight_type> { static const bool _M_use_pointer = true; };
+.PP
+\fBParameters:\fP
+.RS 4
+\fI_Tp\fP type to give the loser tree traits for. 
+.RE
+.PP
+
+.PP
+Definition at line 727 of file multiway_merge.h.
+.SH "Member Data Documentation"
+.PP 
+.SS "template<typename _Tp > const bool \fB__gnu_parallel::_LoserTreeTraits\fP< _Tp >::\fB_M_use_pointer\fP\fC [static]\fP"
+.PP
+True iff to use pointers instead of values in loser trees. The default behavior is to use pointers if the data type is four times as big as the pointer to it. 
+.PP
+Definition at line 735 of file multiway_merge.h.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for libstdc++ from the source code.

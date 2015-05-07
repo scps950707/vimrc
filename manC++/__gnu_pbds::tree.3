@@ -1,0 +1,134 @@
+.TH "__gnu_pbds::tree" 3 "Sun Oct 10 2010" "libstdc++" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+__gnu_pbds::tree \- 
+.PP
+A concrete basic tree-based associative container.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBbasic_tree< Key, Mapped, Tag, detail::tree_traits< Key, Mapped, Cmp_Fn, Node_Update, Tag, Allocator >::node_update, __gnu_cxx::typelist::create2< Cmp_Fn, detail::tree_traits< Key, Mapped, Cmp_Fn, Node_Update, Tag, Allocator > >::type, Allocator >\fP.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef Allocator \fBallocator_type\fP"
+.br
+.ti -1c
+.RI "typedef Cmp_Fn \fBcmp_fn\fP"
+.br
+.ti -1c
+.RI "typedef base_type::const_iterator \fBconst_iterator\fP"
+.br
+.ti -1c
+.RI "typedef key_rebind::const_pointer \fBconst_key_pointer\fP"
+.br
+.ti -1c
+.RI "typedef key_rebind::const_reference \fBconst_key_reference\fP"
+.br
+.ti -1c
+.RI "typedef mapped_rebind::const_pointer \fBconst_mapped_pointer\fP"
+.br
+.ti -1c
+.RI "typedef mapped_rebind::const_reference \fBconst_mapped_reference\fP"
+.br
+.ti -1c
+.RI "typedef base_type::const_point_iterator \fBconst_point_iterator\fP"
+.br
+.ti -1c
+.RI "typedef value_rebind::const_pointer \fBconst_pointer\fP"
+.br
+.ti -1c
+.RI "typedef value_rebind::const_reference \fBconst_reference\fP"
+.br
+.ti -1c
+.RI "typedef Tag \fBcontainer_category\fP"
+.br
+.ti -1c
+.RI "typedef allocator_type::difference_type \fBdifference_type\fP"
+.br
+.ti -1c
+.RI "typedef base_type::iterator \fBiterator\fP"
+.br
+.ti -1c
+.RI "typedef key_rebind::pointer \fBkey_pointer\fP"
+.br
+.ti -1c
+.RI "typedef allocator_type::template rebind< key_type >::other \fBkey_rebind\fP"
+.br
+.ti -1c
+.RI "typedef key_rebind::reference \fBkey_reference\fP"
+.br
+.ti -1c
+.RI "typedef allocator_type::template rebind< Key >::other::value_type \fBkey_type\fP"
+.br
+.ti -1c
+.RI "typedef mapped_rebind::pointer \fBmapped_pointer\fP"
+.br
+.ti -1c
+.RI "typedef allocator_type::template rebind< mapped_type >::other \fBmapped_rebind\fP"
+.br
+.ti -1c
+.RI "typedef mapped_rebind::reference \fBmapped_reference\fP"
+.br
+.ti -1c
+.RI "typedef Mapped \fBmapped_type\fP"
+.br
+.ti -1c
+.RI "typedef detail::tree_traits< Key, Mapped, Cmp_Fn, Node_Update, Tag, Allocator >::node_update \fBnode_update\fP"
+.br
+.ti -1c
+.RI "typedef base_type::point_iterator \fBpoint_iterator\fP"
+.br
+.ti -1c
+.RI "typedef value_rebind::pointer \fBpointer\fP"
+.br
+.ti -1c
+.RI "typedef value_rebind::reference \fBreference\fP"
+.br
+.ti -1c
+.RI "typedef allocator_type::size_type \fBsize_type\fP"
+.br
+.ti -1c
+.RI "typedef allocator_type::template rebind< value_type >::other \fBvalue_rebind\fP"
+.br
+.ti -1c
+.RI "typedef base_type::value_type \fBvalue_type\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBtree\fP (const cmp_fn &c)"
+.br
+.ti -1c
+.RI "template<typename It > \fBtree\fP (It first, It last, const cmp_fn &c)"
+.br
+.ti -1c
+.RI "\fBtree\fP (const \fBtree\fP &other)"
+.br
+.ti -1c
+.RI "template<typename It > \fBtree\fP (It first, It last)"
+.br
+.ti -1c
+.RI "\fBtree\fP & \fBoperator=\fP (const \fBtree\fP &other)"
+.br
+.ti -1c
+.RI "void \fBswap\fP (\fBtree\fP &other)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<typename Key, typename Mapped, typename Cmp_Fn = std::less<Key>, typename Tag = rb_tree_tag, template< typename Const_Node_Iterator, typename Node_Iterator, typename Cmp_Fn_, typename Allocator_ > class Node_Update = __gnu_pbds::null_tree_node_update, typename Allocator = std::allocator<char>> class __gnu_pbds::tree< Key, Mapped, Cmp_Fn, Tag, Node_Update, Allocator >"
+A concrete basic tree-based associative container. 
+.PP
+Definition at line 509 of file assoc_container.hpp.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for libstdc++ from the source code.

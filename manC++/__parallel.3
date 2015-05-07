@@ -1,0 +1,1085 @@
+.TH "std::__parallel" 3 "Sun Oct 10 2010" "libstdc++" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+std::__parallel \- 
+.PP
+GNU parallel code, replaces standard behavior with parallel behavior.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fB_CRandNumber\fP"
+.br
+.RI "\fIFunctor wrapper for std::rand(). \fP"
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename _IIter , typename _Tp , typename _IteratorTag > _Tp \fB__accumulate_switch\fP (_IIter __begin, _IIter __end, _Tp __init, _IteratorTag)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _Tp , typename _BinaryOperation , typename _IteratorTag > _Tp \fB__accumulate_switch\fP (_IIter __begin, _IIter __end, _Tp __init, _BinaryOperation __binary_op, _IteratorTag)"
+.br
+.ti -1c
+.RI "template<typename __RAIter , typename _Tp , typename _BinaryOperation > _Tp \fB__accumulate_switch\fP (__RAIter __begin, __RAIter __end, _Tp __init, _BinaryOperation __binary_op, \fBrandom_access_iterator_tag\fP, \fB__gnu_parallel::_Parallelism\fP __parallelism_tag=__gnu_parallel::parallel_unbalanced)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _Tp , typename _Tag > _Tp \fB__accumulate_switch\fP (_IIter, _IIter, _Tp, _Tag)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _Tp , typename _BinaryOper , typename _Tag > _Tp \fB__accumulate_switch\fP (_IIter, _IIter, _Tp, _BinaryOper, _Tag)"
+.br
+.ti -1c
+.RI "template<typename _RAIter , typename _Tp , typename _BinaryOper > _Tp \fB__accumulate_switch\fP (_RAIter, _RAIter, _Tp, _BinaryOper, \fBrandom_access_iterator_tag\fP, \fB__gnu_parallel::_Parallelism\fP __parallelism=__gnu_parallel::parallel_unbalanced)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _OIter , typename _BinaryOper , typename _Tag1 , typename _Tag2 > _OIter \fB__adjacent_difference_switch\fP (_IIter, _IIter, _OIter, _BinaryOper, _Tag1, _Tag2)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _OIter , typename _BinaryOper > _OIter \fB__adjacent_difference_switch\fP (_IIter, _IIter, _OIter, _BinaryOper, \fBrandom_access_iterator_tag\fP, \fBrandom_access_iterator_tag\fP, \fB__gnu_parallel::_Parallelism\fP __parallelism=__gnu_parallel::parallel_unbalanced)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _OutputIterator , typename _BinaryOperation , typename _IteratorTag1 , typename _IteratorTag2 > _OutputIterator \fB__adjacent_difference_switch\fP (_IIter __begin, _IIter __end, _OutputIterator __result, _BinaryOperation __bin_op, _IteratorTag1, _IteratorTag2)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _OutputIterator , typename _BinaryOperation > _OutputIterator \fB__adjacent_difference_switch\fP (_IIter __begin, _IIter __end, _OutputIterator __result, _BinaryOperation __bin_op, \fBrandom_access_iterator_tag\fP, \fBrandom_access_iterator_tag\fP, \fB__gnu_parallel::_Parallelism\fP __parallelism_tag=__gnu_parallel::parallel_balanced)"
+.br
+.ti -1c
+.RI "template<typename _RAIter > _RAIter \fB__adjacent_find_switch\fP (_RAIter __begin, _RAIter __end, \fBrandom_access_iterator_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _FIterator , typename _IteratorTag > _FIterator \fB__adjacent_find_switch\fP (_FIterator __begin, _FIterator __end, _IteratorTag)"
+.br
+.ti -1c
+.RI "template<typename _FIterator , typename _BinaryPredicate , typename _IteratorTag > _FIterator \fB__adjacent_find_switch\fP (_FIterator __begin, _FIterator __end, _BinaryPredicate __pred, _IteratorTag)"
+.br
+.ti -1c
+.RI "template<typename _RAIter , typename _BinaryPredicate > _RAIter \fB__adjacent_find_switch\fP (_RAIter __begin, _RAIter __end, _BinaryPredicate __pred, \fBrandom_access_iterator_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _FIter , typename _IterTag > _FIter \fB__adjacent_find_switch\fP (_FIter, _FIter, _IterTag)"
+.br
+.ti -1c
+.RI "template<typename _FIter , typename _BiPredicate , typename _IterTag > _FIter \fB__adjacent_find_switch\fP (_FIter, _FIter, _BiPredicate, _IterTag)"
+.br
+.ti -1c
+.RI "template<typename _RAIter , typename _BiPredicate > _RAIter \fB__adjacent_find_switch\fP (_RAIter, _RAIter, _BiPredicate, \fBrandom_access_iterator_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _RAIter , typename _Predicate > \fBiterator_traits\fP< _RAIter >::difference_type \fB__count_if_switch\fP (_RAIter __begin, _RAIter __end, _Predicate __pred, \fBrandom_access_iterator_tag\fP, \fB__gnu_parallel::_Parallelism\fP __parallelism_tag=__gnu_parallel::parallel_unbalanced)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _Predicate , typename _IteratorTag > \fBiterator_traits\fP< _IIter >::difference_type \fB__count_if_switch\fP (_IIter __begin, _IIter __end, _Predicate __pred, _IteratorTag)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _Predicate , typename _IterTag > \fBiterator_traits\fP< _IIter >::difference_type \fB__count_if_switch\fP (_IIter, _IIter, _Predicate, _IterTag)"
+.br
+.ti -1c
+.RI "template<typename _RAIter , typename _Tp > \fBiterator_traits\fP< _RAIter >::difference_type \fB__count_switch\fP (_RAIter __begin, _RAIter __end, const _Tp &__value, \fBrandom_access_iterator_tag\fP, \fB__gnu_parallel::_Parallelism\fP __parallelism_tag=__gnu_parallel::parallel_unbalanced)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _Tp , typename _IteratorTag > \fBiterator_traits\fP< _IIter >::difference_type \fB__count_switch\fP (_IIter __begin, _IIter __end, const _Tp &__value, _IteratorTag)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _Tp , typename _IterTag > \fBiterator_traits\fP< _IIter >::difference_type \fB__count_switch\fP (_IIter, _IIter, const _Tp &, _IterTag)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _FIterator , typename _IteratorTag1 , typename _IteratorTag2 > _IIter \fB__find_first_of_switch\fP (_IIter __begin1, _IIter __end1, _FIterator __begin2, _FIterator __end2, _IteratorTag1, _IteratorTag2)"
+.br
+.ti -1c
+.RI "template<typename _RAIter , typename _FIterator , typename _BinaryPredicate , typename _IteratorTag > _RAIter \fB__find_first_of_switch\fP (_RAIter __begin1, _RAIter __end1, _FIterator __begin2, _FIterator __end2, _BinaryPredicate __comp, \fBrandom_access_iterator_tag\fP, _IteratorTag)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _FIterator , typename _BinaryPredicate , typename _IteratorTag1 , typename _IteratorTag2 > _IIter \fB__find_first_of_switch\fP (_IIter __begin1, _IIter __end1, _FIterator __begin2, _FIterator __end2, _BinaryPredicate __comp, _IteratorTag1, _IteratorTag2)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _FIter , typename _IterTag1 , typename _IterTag2 > _IIter \fB__find_first_of_switch\fP (_IIter, _IIter, _FIter, _FIter, _IterTag1, _IterTag2)"
+.br
+.ti -1c
+.RI "template<typename _RAIter , typename _FIter , typename _BiPredicate , typename _IterTag > _RAIter \fB__find_first_of_switch\fP (_RAIter, _RAIter, _FIter, _FIter, _BiPredicate, \fBrandom_access_iterator_tag\fP, _IterTag)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _FIter , typename _BiPredicate , typename _IterTag1 , typename _IterTag2 > _IIter \fB__find_first_of_switch\fP (_IIter, _IIter, _FIter, _FIter, _BiPredicate, _IterTag1, _IterTag2)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _Predicate , typename _IteratorTag > _IIter \fB__find_if_switch\fP (_IIter __begin, _IIter __end, _Predicate __pred, _IteratorTag)"
+.br
+.ti -1c
+.RI "template<typename _RAIter , typename _Predicate > _RAIter \fB__find_if_switch\fP (_RAIter __begin, _RAIter __end, _Predicate __pred, \fBrandom_access_iterator_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _Predicate , typename _IterTag > _IIter \fB__find_if_switch\fP (_IIter, _IIter, _Predicate, _IterTag)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _Tp , typename _IteratorTag > _IIter \fB__find_switch\fP (_IIter __begin, _IIter __end, const _Tp &__val, _IteratorTag)"
+.br
+.ti -1c
+.RI "template<typename _RAIter , typename _Tp > _RAIter \fB__find_switch\fP (_RAIter __begin, _RAIter __end, const _Tp &__val, \fBrandom_access_iterator_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _Tp , typename _IterTag > _IIter \fB__find_switch\fP (_IIter, _IIter, const _Tp &, _IterTag)"
+.br
+.ti -1c
+.RI "template<typename _RAIter , typename _Function > _Function \fB__for_each_switch\fP (_RAIter __begin, _RAIter __end, _Function __f, \fBrandom_access_iterator_tag\fP, \fB__gnu_parallel::_Parallelism\fP __parallelism_tag=__gnu_parallel::parallel_balanced)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _Function , typename _IteratorTag > _Function \fB__for_each_switch\fP (_IIter __begin, _IIter __end, _Function __f, _IteratorTag)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _Function , typename _IterTag > _Function \fB__for_each_switch\fP (_IIter, _IIter, _Function, _IterTag)"
+.br
+.ti -1c
+.RI "template<typename _OutputIterator , typename _Size , typename _Generator , typename _IteratorTag > _OutputIterator \fB__generate_n_switch\fP (_OutputIterator __begin, _Size __n, _Generator __gen, _IteratorTag)"
+.br
+.ti -1c
+.RI "template<typename _RAIter , typename _Size , typename _Generator > _RAIter \fB__generate_n_switch\fP (_RAIter __begin, _Size __n, _Generator __gen, \fBrandom_access_iterator_tag\fP, \fB__gnu_parallel::_Parallelism\fP __parallelism_tag=__gnu_parallel::parallel_balanced)"
+.br
+.ti -1c
+.RI "template<typename _OIter , typename _Size , typename _Generator , typename _IterTag > _OIter \fB__generate_n_switch\fP (_OIter, _Size, _Generator, _IterTag)"
+.br
+.ti -1c
+.RI "template<typename _FIterator , typename _Generator , typename _IteratorTag > void \fB__generate_switch\fP (_FIterator __begin, _FIterator __end, _Generator __gen, _IteratorTag)"
+.br
+.ti -1c
+.RI "template<typename _RAIter , typename _Generator > void \fB__generate_switch\fP (_RAIter __begin, _RAIter __end, _Generator __gen, \fBrandom_access_iterator_tag\fP, \fB__gnu_parallel::_Parallelism\fP __parallelism_tag=__gnu_parallel::parallel_balanced)"
+.br
+.ti -1c
+.RI "template<typename _FIter , typename _Generator , typename _IterTag > void \fB__generate_switch\fP (_FIter, _FIter, _Generator, _IterTag)"
+.br
+.ti -1c
+.RI "template<typename _RAIter1 , typename _RAIter2 , typename _Tp , typename BinaryFunction1 , typename BinaryFunction2 > _Tp \fB__inner_product_switch\fP (_RAIter1, _RAIter1, _RAIter2, _Tp, BinaryFunction1, BinaryFunction2, \fBrandom_access_iterator_tag\fP, \fBrandom_access_iterator_tag\fP, \fB__gnu_parallel::_Parallelism\fP=__gnu_parallel::parallel_unbalanced)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 , typename _Tp , typename _BinaryFunction1 , typename _BinaryFunction2 , typename _Tag1 , typename _Tag2 > _Tp \fB__inner_product_switch\fP (_IIter1, _IIter1, _IIter2, _Tp, _BinaryFunction1, _BinaryFunction2, _Tag1, _Tag2)"
+.br
+.ti -1c
+.RI "template<typename _RAIter1 , typename _RAIter2 , typename _Tp , typename _BinaryFunction1 , typename _BinaryFunction2 > _Tp \fB__inner_product_switch\fP (_RAIter1 __first1, _RAIter1 __last1, _RAIter2 __first2, _Tp __init, _BinaryFunction1 __binary_op1, _BinaryFunction2 __binary_op2, \fBrandom_access_iterator_tag\fP, \fBrandom_access_iterator_tag\fP, \fB__gnu_parallel::_Parallelism\fP __parallelism_tag=__gnu_parallel::parallel_unbalanced)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 , typename _Tp , typename _BinaryFunction1 , typename _BinaryFunction2 , typename _IteratorTag1 , typename _IteratorTag2 > _Tp \fB__inner_product_switch\fP (_IIter1 __first1, _IIter1 __last1, _IIter2 __first2, _Tp __init, _BinaryFunction1 __binary_op1, _BinaryFunction2 __binary_op2, _IteratorTag1, _IteratorTag2)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 , typename _Predicate , typename _IteratorTag1 , typename _IteratorTag2 > bool \fB__lexicographical_compare_switch\fP (_IIter1 __begin1, _IIter1 __end1, _IIter2 __begin2, _IIter2 __end2, _Predicate __pred, _IteratorTag1, _IteratorTag2)"
+.br
+.ti -1c
+.RI "template<typename _RAIter1 , typename _RAIter2 , typename _Predicate > bool \fB__lexicographical_compare_switch\fP (_RAIter1 __begin1, _RAIter1 __end1, _RAIter2 __begin2, _RAIter2 __end2, _Predicate __pred, \fBrandom_access_iterator_tag\fP, \fBrandom_access_iterator_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 , typename _Predicate , typename _IterTag1 , typename _IterTag2 > bool \fB__lexicographical_compare_switch\fP (_IIter1, _IIter1, _IIter2, _IIter2, _Predicate, _IterTag1, _IterTag2)"
+.br
+.ti -1c
+.RI "template<typename _FIter , typename _Compare , typename _IterTag > _FIter \fB__max_element_switch\fP (_FIter, _FIter, _Compare, _IterTag)"
+.br
+.ti -1c
+.RI "template<typename _FIterator , typename _Compare , typename _IteratorTag > _FIterator \fB__max_element_switch\fP (_FIterator __begin, _FIterator __end, _Compare __comp, _IteratorTag)"
+.br
+.ti -1c
+.RI "template<typename _RAIter , typename _Compare > _RAIter \fB__max_element_switch\fP (_RAIter __begin, _RAIter __end, _Compare __comp, \fBrandom_access_iterator_tag\fP, \fB__gnu_parallel::_Parallelism\fP __parallelism_tag=__gnu_parallel::parallel_balanced)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 , typename _OIter , typename _Compare , typename _IterTag1 , typename _IterTag2 , typename _IterTag3 > _OIter \fB__merge_switch\fP (_IIter1, _IIter1, _IIter2, _IIter2, _OIter, _Compare, _IterTag1, _IterTag2, _IterTag3)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 , typename _OIter , typename _Compare > _OIter \fB__merge_switch\fP (_IIter1, _IIter1, _IIter2, _IIter2, _OIter, _Compare, \fBrandom_access_iterator_tag\fP, \fBrandom_access_iterator_tag\fP, \fBrandom_access_iterator_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 , typename _OutputIterator , typename _Compare , typename _IteratorTag1 , typename _IteratorTag2 , typename _IteratorTag3 > _OutputIterator \fB__merge_switch\fP (_IIter1 __begin1, _IIter1 __end1, _IIter2 __begin2, _IIter2 __end2, _OutputIterator __result, _Compare __comp, _IteratorTag1, _IteratorTag2, _IteratorTag3)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 , typename _OutputIterator , typename _Compare > _OutputIterator \fB__merge_switch\fP (_IIter1 __begin1, _IIter1 __end1, _IIter2 __begin2, _IIter2 __end2, _OutputIterator __result, _Compare __comp, \fBrandom_access_iterator_tag\fP, \fBrandom_access_iterator_tag\fP, \fBrandom_access_iterator_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _FIter , typename _Compare , typename _IterTag > _FIter \fB__min_element_switch\fP (_FIter, _FIter, _Compare, _IterTag)"
+.br
+.ti -1c
+.RI "template<typename _FIterator , typename _Compare , typename _IteratorTag > _FIterator \fB__min_element_switch\fP (_FIterator __begin, _FIterator __end, _Compare __comp, _IteratorTag)"
+.br
+.ti -1c
+.RI "template<typename _RAIter , typename _Compare > _RAIter \fB__min_element_switch\fP (_RAIter __begin, _RAIter __end, _Compare __comp, \fBrandom_access_iterator_tag\fP, \fB__gnu_parallel::_Parallelism\fP __parallelism_tag=__gnu_parallel::parallel_balanced)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 , typename _Predicate , typename _IteratorTag1 , typename _IteratorTag2 > \fBpair\fP< _IIter1, _IIter2 > \fB__mismatch_switch\fP (_IIter1 __begin1, _IIter1 __end1, _IIter2 __begin2, _Predicate __pred, _IteratorTag1, _IteratorTag2)"
+.br
+.ti -1c
+.RI "template<typename _RAIter1 , typename _RAIter2 , typename _Predicate > \fBpair\fP< _RAIter1, _RAIter2 > \fB__mismatch_switch\fP (_RAIter1 __begin1, _RAIter1 __end1, _RAIter2 __begin2, _Predicate __pred, \fBrandom_access_iterator_tag\fP, \fBrandom_access_iterator_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 , typename _Predicate , typename _IterTag1 , typename _IterTag2 > \fBpair\fP< _IIter1, _IIter2 > \fB__mismatch_switch\fP (_IIter1, _IIter1, _IIter2, _Predicate, _IterTag1, _IterTag2)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _OutputIterator , typename _BinaryOperation > _OutputIterator \fB__partial_sum_switch\fP (_IIter __begin, _IIter __end, _OutputIterator __result, _BinaryOperation __bin_op, \fBrandom_access_iterator_tag\fP, \fBrandom_access_iterator_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _OutputIterator , typename _BinaryOperation , typename _IteratorTag1 , typename _IteratorTag2 > _OutputIterator \fB__partial_sum_switch\fP (_IIter __begin, _IIter __end, _OutputIterator __result, _BinaryOperation __bin_op, _IteratorTag1, _IteratorTag2)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _OIter , typename _BinaryOper , typename _Tag1 , typename _Tag2 > _OIter \fB__partial_sum_switch\fP (_IIter, _IIter, _OIter, _BinaryOper, _Tag1, _Tag2)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _OIter , typename _BinaryOper > _OIter \fB__partial_sum_switch\fP (_IIter, _IIter, _OIter, _BinaryOper, \fBrandom_access_iterator_tag\fP, \fBrandom_access_iterator_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _FIterator , typename _Predicate , typename _IteratorTag > _FIterator \fB__partition_switch\fP (_FIterator __begin, _FIterator __end, _Predicate __pred, _IteratorTag)"
+.br
+.ti -1c
+.RI "template<typename _RAIter , typename _Predicate > _RAIter \fB__partition_switch\fP (_RAIter __begin, _RAIter __end, _Predicate __pred, \fBrandom_access_iterator_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _FIter , typename _Predicate , typename _IterTag > _FIter \fB__partition_switch\fP (_FIter, _FIter, _Predicate, _IterTag)"
+.br
+.ti -1c
+.RI "template<typename _RAIter , typename _Predicate , typename _Tp > void \fB__replace_if_switch\fP (_RAIter __begin, _RAIter __end, _Predicate __pred, const _Tp &__new_value, \fBrandom_access_iterator_tag\fP, \fB__gnu_parallel::_Parallelism\fP __parallelism_tag=__gnu_parallel::parallel_balanced)"
+.br
+.ti -1c
+.RI "template<typename _FIterator , typename _Predicate , typename _Tp , typename _IteratorTag > void \fB__replace_if_switch\fP (_FIterator __begin, _FIterator __end, _Predicate __pred, const _Tp &__new_value, _IteratorTag)"
+.br
+.ti -1c
+.RI "template<typename _FIter , typename _Predicate , typename _Tp , typename _IterTag > void \fB__replace_if_switch\fP (_FIter, _FIter, _Predicate, const _Tp &, _IterTag)"
+.br
+.ti -1c
+.RI "template<typename _FIter , typename _Tp , typename _IterTag > void \fB__replace_switch\fP (_FIter, _FIter, const _Tp &, const _Tp &, _IterTag)"
+.br
+.ti -1c
+.RI "template<typename _FIterator , typename _Tp , typename _IteratorTag > void \fB__replace_switch\fP (_FIterator __begin, _FIterator __end, const _Tp &__old_value, const _Tp &__new_value, _IteratorTag)"
+.br
+.ti -1c
+.RI "template<typename _RAIter , typename _Tp > void \fB__replace_switch\fP (_RAIter __begin, _RAIter __end, const _Tp &__old_value, const _Tp &__new_value, \fBrandom_access_iterator_tag\fP, \fB__gnu_parallel::_Parallelism\fP __parallelism_tag=__gnu_parallel::parallel_balanced)"
+.br
+.ti -1c
+.RI "template<typename _RAIter , typename _Integer , typename _Tp , typename _BiPredicate > _RAIter \fB__search_n_switch\fP (_RAIter, _RAIter, _Integer, const _Tp &, _BiPredicate, \fBrandom_access_iterator_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _FIter , typename _Integer , typename _Tp , typename _BiPredicate , typename _IterTag > _FIter \fB__search_n_switch\fP (_FIter, _FIter, _Integer, const _Tp &, _BiPredicate, _IterTag)"
+.br
+.ti -1c
+.RI "template<typename _RAIter , typename _Integer , typename _Tp , typename _BinaryPredicate > _RAIter \fB__search_n_switch\fP (_RAIter __begin, _RAIter __end, _Integer __count, const _Tp &__val, _BinaryPredicate __binary_pred, \fBrandom_access_iterator_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _FIterator , typename _Integer , typename _Tp , typename _BinaryPredicate , typename _IteratorTag > _FIterator \fB__search_n_switch\fP (_FIterator __begin, _FIterator __end, _Integer __count, const _Tp &__val, _BinaryPredicate __binary_pred, _IteratorTag)"
+.br
+.ti -1c
+.RI "template<typename _FIter1 , typename _FIter2 , typename _BiPredicate , typename _IterTag1 , typename _IterTag2 > _FIter1 \fB__search_switch\fP (_FIter1, _FIter1, _FIter2, _FIter2, _BiPredicate, _IterTag1, _IterTag2)"
+.br
+.ti -1c
+.RI "template<typename _RAIter1 , typename _RAIter2 > _RAIter1 \fB__search_switch\fP (_RAIter1 __begin1, _RAIter1 __end1, _RAIter2 __begin2, _RAIter2 __end2, \fBrandom_access_iterator_tag\fP, \fBrandom_access_iterator_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _FIterator1 , typename _FIterator2 , typename _IteratorTag1 , typename _IteratorTag2 > _FIterator1 \fB__search_switch\fP (_FIterator1 __begin1, _FIterator1 __end1, _FIterator2 __begin2, _FIterator2 __end2, _IteratorTag1, _IteratorTag2)"
+.br
+.ti -1c
+.RI "template<typename _RAIter1 , typename _RAIter2 , typename _BinaryPredicate > _RAIter1 \fB__search_switch\fP (_RAIter1 __begin1, _RAIter1 __end1, _RAIter2 __begin2, _RAIter2 __end2, _BinaryPredicate __pred, \fBrandom_access_iterator_tag\fP, \fBrandom_access_iterator_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _FIterator1 , typename _FIterator2 , typename _BinaryPredicate , typename _IteratorTag1 , typename _IteratorTag2 > _FIterator1 \fB__search_switch\fP (_FIterator1 __begin1, _FIterator1 __end1, _FIterator2 __begin2, _FIterator2 __end2, _BinaryPredicate __pred, _IteratorTag1, _IteratorTag2)"
+.br
+.ti -1c
+.RI "template<typename _FIter1 , typename _FIter2 , typename _IterTag1 , typename _IterTag2 > _FIter1 \fB__search_switch\fP (_FIter1, _FIter1, _FIter2, _FIter2, _IterTag1, _IterTag2)"
+.br
+.ti -1c
+.RI "template<typename _RAIter1 , typename _RAIter2 , typename _BiPredicate > _RAIter1 \fB__search_switch\fP (_RAIter1, _RAIter1, _RAIter2, _RAIter2, _BiPredicate, \fBrandom_access_iterator_tag\fP, \fBrandom_access_iterator_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 , typename _Predicate , typename _OutputIterator , typename _IteratorTag1 , typename _IteratorTag2 , typename _IteratorTag3 > _OutputIterator \fB__set_difference_switch\fP (_IIter1 __begin1, _IIter1 __end1, _IIter2 __begin2, _IIter2 __end2, _OutputIterator __result, _Predicate __pred, _IteratorTag1, _IteratorTag2, _IteratorTag3)"
+.br
+.ti -1c
+.RI "template<typename _RAIter1 , typename _RAIter2 , typename _Output_RAIter , typename _Predicate > _Output_RAIter \fB__set_difference_switch\fP (_RAIter1 __begin1, _RAIter1 __end1, _RAIter2 __begin2, _RAIter2 __end2, _Output_RAIter __result, _Predicate __pred, \fBrandom_access_iterator_tag\fP, \fBrandom_access_iterator_tag\fP, \fBrandom_access_iterator_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 , typename _Predicate , typename _OIter , typename _IterTag1 , typename _IterTag2 , typename _IterTag3 > _OIter \fB__set_difference_switch\fP (_IIter1, _IIter1, _IIter2, _IIter2, _OIter, _Predicate, _IterTag1, _IterTag2, _IterTag3)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 , typename _Predicate , typename _OutputIterator , typename _IteratorTag1 , typename _IteratorTag2 , typename _IteratorTag3 > _OutputIterator \fB__set_intersection_switch\fP (_IIter1 __begin1, _IIter1 __end1, _IIter2 __begin2, _IIter2 __end2, _OutputIterator __result, _Predicate __pred, _IteratorTag1, _IteratorTag2, _IteratorTag3)"
+.br
+.ti -1c
+.RI "template<typename _RAIter1 , typename _RAIter2 , typename _Output_RAIter , typename _Predicate > _Output_RAIter \fB__set_intersection_switch\fP (_RAIter1 __begin1, _RAIter1 __end1, _RAIter2 __begin2, _RAIter2 __end2, _Output_RAIter __result, _Predicate __pred, \fBrandom_access_iterator_tag\fP, \fBrandom_access_iterator_tag\fP, \fBrandom_access_iterator_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 , typename _Predicate , typename _OIter , typename _IterTag1 , typename _IterTag2 , typename _IterTag3 > _OIter \fB__set_intersection_switch\fP (_IIter1, _IIter1, _IIter2, _IIter2, _OIter, _Predicate, _IterTag1, _IterTag2, _IterTag3)"
+.br
+.ti -1c
+.RI "template<typename _RAIter1 , typename _RAIter2 , typename _Output_RAIter , typename _Predicate > _Output_RAIter \fB__set_symmetric_difference_switch\fP (_RAIter1 __begin1, _RAIter1 __end1, _RAIter2 __begin2, _RAIter2 __end2, _Output_RAIter __result, _Predicate __pred, \fBrandom_access_iterator_tag\fP, \fBrandom_access_iterator_tag\fP, \fBrandom_access_iterator_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 , typename _Predicate , typename _OutputIterator , typename _IteratorTag1 , typename _IteratorTag2 , typename _IteratorTag3 > _OutputIterator \fB__set_symmetric_difference_switch\fP (_IIter1 __begin1, _IIter1 __end1, _IIter2 __begin2, _IIter2 __end2, _OutputIterator __result, _Predicate __pred, _IteratorTag1, _IteratorTag2, _IteratorTag3)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 , typename _Predicate , typename _OIter , typename _IterTag1 , typename _IterTag2 , typename _IterTag3 > _OIter \fB__set_symmetric_difference_switch\fP (_IIter1, _IIter1, _IIter2, _IIter2, _OIter, _Predicate, _IterTag1, _IterTag2, _IterTag3)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 , typename _Predicate , typename _OIter , typename _IterTag1 , typename _IterTag2 , typename _IterTag3 > _OIter \fB__set_union_switch\fP (_IIter1, _IIter1, _IIter2, _IIter2, _OIter, _Predicate, _IterTag1, _IterTag2, _IterTag3)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 , typename _Predicate , typename _OutputIterator , typename _IteratorTag1 , typename _IteratorTag2 , typename _IteratorTag3 > _OutputIterator \fB__set_union_switch\fP (_IIter1 __begin1, _IIter1 __end1, _IIter2 __begin2, _IIter2 __end2, _OutputIterator __result, _Predicate __pred, _IteratorTag1, _IteratorTag2, _IteratorTag3)"
+.br
+.ti -1c
+.RI "template<typename _RAIter1 , typename _RAIter2 , typename _Output_RAIter , typename _Predicate > _Output_RAIter \fB__set_union_switch\fP (_RAIter1 __begin1, _RAIter1 __end1, _RAIter2 __begin2, _RAIter2 __end2, _Output_RAIter __result, _Predicate __pred, \fBrandom_access_iterator_tag\fP, \fBrandom_access_iterator_tag\fP, \fBrandom_access_iterator_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _OIter , typename _UnaryOperation , typename _IterTag1 , typename _IterTag2 > _OIter \fB__transform1_switch\fP (_IIter, _IIter, _OIter, _UnaryOperation, _IterTag1, _IterTag2)"
+.br
+.ti -1c
+.RI "template<typename _RAIIter , typename _RAOIter , typename _UnaryOperation > _RAOIter \fB__transform1_switch\fP (_RAIIter, _RAIIter, _RAOIter, _UnaryOperation, \fBrandom_access_iterator_tag\fP, \fBrandom_access_iterator_tag\fP, \fB__gnu_parallel::_Parallelism\fP __parallelism=__gnu_parallel::parallel_balanced)"
+.br
+.ti -1c
+.RI "template<typename _RAIter1 , typename _RAIter2 , typename _UnaryOperation > _RAIter2 \fB__transform1_switch\fP (_RAIter1 __begin, _RAIter1 __end, _RAIter2 __result, _UnaryOperation __unary_op, \fBrandom_access_iterator_tag\fP, \fBrandom_access_iterator_tag\fP, \fB__gnu_parallel::_Parallelism\fP __parallelism_tag=__gnu_parallel::parallel_balanced)"
+.br
+.ti -1c
+.RI "template<typename _RAIter1 , typename _RAIter2 , typename _UnaryOperation , typename _IteratorTag1 , typename _IteratorTag2 > _RAIter2 \fB__transform1_switch\fP (_RAIter1 __begin, _RAIter1 __end, _RAIter2 __result, _UnaryOperation __unary_op, _IteratorTag1, _IteratorTag2)"
+.br
+.ti -1c
+.RI "template<typename _RAIter1 , typename _RAIter2 , typename _RAIter3 , typename _BiOperation > _RAIter3 \fB__transform2_switch\fP (_RAIter1, _RAIter1, _RAIter2, _RAIter3, _BiOperation, \fBrandom_access_iterator_tag\fP, \fBrandom_access_iterator_tag\fP, \fBrandom_access_iterator_tag\fP, \fB__gnu_parallel::_Parallelism\fP __parallelism=__gnu_parallel::parallel_balanced)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 , typename _OIter , typename _BiOperation , typename _Tag1 , typename _Tag2 , typename _Tag3 > _OIter \fB__transform2_switch\fP (_IIter1, _IIter1, _IIter2, _OIter, _BiOperation, _Tag1, _Tag2, _Tag3)"
+.br
+.ti -1c
+.RI "template<typename _RAIter1 , typename _RAIter2 , typename _RAIter3 , typename _BinaryOperation > _RAIter3 \fB__transform2_switch\fP (_RAIter1 __begin1, _RAIter1 __end1, _RAIter2 __begin2, _RAIter3 __result, _BinaryOperation __binary_op, \fBrandom_access_iterator_tag\fP, \fBrandom_access_iterator_tag\fP, \fBrandom_access_iterator_tag\fP, \fB__gnu_parallel::_Parallelism\fP __parallelism_tag=__gnu_parallel::parallel_balanced)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 , typename _OutputIterator , typename _BinaryOperation , typename _Tag1 , typename _Tag2 , typename _Tag3 > _OutputIterator \fB__transform2_switch\fP (_IIter1 __begin1, _IIter1 __end1, _IIter2 __begin2, _OutputIterator __result, _BinaryOperation __binary_op, _Tag1, _Tag2, _Tag3)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _OIter , typename _Predicate , typename _IterTag1 , typename _IterTag2 > _OIter \fB__unique_copy_switch\fP (_IIter, _IIter, _OIter, _Predicate, _IterTag1, _IterTag2)"
+.br
+.ti -1c
+.RI "template<typename _RAIter , typename _RandomAccess_OIter , typename _Predicate > _RandomAccess_OIter \fB__unique_copy_switch\fP (_RAIter, _RAIter, _RandomAccess_OIter, _Predicate, \fBrandom_access_iterator_tag\fP, \fBrandom_access_iterator_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _OutputIterator , typename _Predicate , typename _IteratorTag1 , typename _IteratorTag2 > _OutputIterator \fB__unique_copy_switch\fP (_IIter __begin, _IIter __last, _OutputIterator __out, _Predicate __pred, _IteratorTag1, _IteratorTag2)"
+.br
+.ti -1c
+.RI "template<typename _RAIter , typename RandomAccessOutputIterator , typename _Predicate > RandomAccessOutputIterator \fB__unique_copy_switch\fP (_RAIter __begin, _RAIter __last, RandomAccessOutputIterator __out, _Predicate __pred, \fBrandom_access_iterator_tag\fP, \fBrandom_access_iterator_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _Tp , typename _BinaryOperation > _Tp \fBaccumulate\fP (_IIter __begin, _IIter __end, _Tp __init, _BinaryOperation __binary_op, \fB__gnu_parallel::_Parallelism\fP __parallelism_tag)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _Tp , typename _BinaryOperation > _Tp \fBaccumulate\fP (_IIter __begin, _IIter __end, _Tp __init, _BinaryOperation __binary_op, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _Tp , typename _BinaryOperation > _Tp \fBaccumulate\fP (_IIter __begin, _IIter __end, _Tp __init, _BinaryOperation __binary_op)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _Tp , typename _BinaryOper > _Tp \fBaccumulate\fP (_IIter, _IIter, _Tp, _BinaryOper)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _Tp , typename _BinaryOper > _Tp \fBaccumulate\fP (_IIter, _IIter, _Tp, _BinaryOper, \fB__gnu_parallel::_Parallelism\fP)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _Tp , typename _BinaryOper > _Tp \fBaccumulate\fP (_IIter, _IIter, _Tp, _BinaryOper, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _Tp > _Tp \fBaccumulate\fP (_IIter __begin, _IIter __end, _Tp __init, \fB__gnu_parallel::_Parallelism\fP __parallelism_tag)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _Tp > _Tp \fBaccumulate\fP (_IIter __begin, _IIter __end, _Tp __init, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _Tp > _Tp \fBaccumulate\fP (_IIter __begin, _IIter __end, _Tp __init)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _OIter > _OIter \fBadjacent_difference\fP (_IIter, _IIter, _OIter)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _OIter , typename _BinaryOper > _OIter \fBadjacent_difference\fP (_IIter, _IIter, _OIter, _BinaryOper)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _OIter > _OIter \fBadjacent_difference\fP (_IIter, _IIter, _OIter, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _OIter > _OIter \fBadjacent_difference\fP (_IIter, _IIter, _OIter, \fB__gnu_parallel::_Parallelism\fP)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _OIter , typename _BinaryOper > _OIter \fBadjacent_difference\fP (_IIter, _IIter, _OIter, _BinaryOper, \fB__gnu_parallel::_Parallelism\fP)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _OutputIterator > _OutputIterator \fBadjacent_difference\fP (_IIter __begin, _IIter __end, _OutputIterator __result, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _OutputIterator , typename _BinaryOperation > _OutputIterator \fBadjacent_difference\fP (_IIter __begin, _IIter __end, _OutputIterator __result, _BinaryOperation __bin_op, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _OutputIterator > _OutputIterator \fBadjacent_difference\fP (_IIter __begin, _IIter __end, _OutputIterator __result, \fB__gnu_parallel::_Parallelism\fP __parallelism_tag)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _OIter , typename _BinaryOper > _OIter \fBadjacent_difference\fP (_IIter, _IIter, _OIter, _BinaryOper, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _OutputIterator > _OutputIterator \fBadjacent_difference\fP (_IIter __begin, _IIter __end, _OutputIterator __result)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _OutputIterator , typename _BinaryOperation > _OutputIterator \fBadjacent_difference\fP (_IIter __begin, _IIter __end, _OutputIterator __result, _BinaryOperation __binary_op, \fB__gnu_parallel::_Parallelism\fP __parallelism_tag)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _OutputIterator , typename _BinaryOperation > _OutputIterator \fBadjacent_difference\fP (_IIter __begin, _IIter __end, _OutputIterator __result, _BinaryOperation __binary_op)"
+.br
+.ti -1c
+.RI "template<typename _FIterator > _FIterator \fBadjacent_find\fP (_FIterator __begin, _FIterator __end, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _FIterator , typename _BinaryPredicate > _FIterator \fBadjacent_find\fP (_FIterator __begin, _FIterator __end, _BinaryPredicate __binary_pred, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _FIterator > _FIterator \fBadjacent_find\fP (_FIterator __begin, _FIterator __end)"
+.br
+.ti -1c
+.RI "template<typename _FIterator , typename _BinaryPredicate > _FIterator \fBadjacent_find\fP (_FIterator __begin, _FIterator __end, _BinaryPredicate __pred)"
+.br
+.ti -1c
+.RI "template<typename _FIter > _FIter \fBadjacent_find\fP (_FIter, _FIter)"
+.br
+.ti -1c
+.RI "template<typename _FIter > _FIter \fBadjacent_find\fP (_FIter, _FIter, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _FIter , typename _BiPredicate > _FIter \fBadjacent_find\fP (_FIter, _FIter, _BiPredicate)"
+.br
+.ti -1c
+.RI "template<typename _FIter , typename _BiPredicate > _FIter \fBadjacent_find\fP (_FIter, _FIter, _BiPredicate, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _Tp > \fBiterator_traits\fP< _IIter >::difference_type \fBcount\fP (_IIter __begin, _IIter __end, const _Tp &__value, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _Tp > \fBiterator_traits\fP< _IIter >::difference_type \fBcount\fP (_IIter __begin, _IIter __end, const _Tp &__value, \fB__gnu_parallel::_Parallelism\fP __parallelism_tag)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _Tp > \fBiterator_traits\fP< _IIter >::difference_type \fBcount\fP (_IIter __begin, _IIter __end, const _Tp &__value)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _Predicate > \fBiterator_traits\fP< _IIter >::difference_type \fBcount_if\fP (_IIter __begin, _IIter __end, _Predicate __pred, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _Predicate > \fBiterator_traits\fP< _IIter >::difference_type \fBcount_if\fP (_IIter __begin, _IIter __end, _Predicate __pred, \fB__gnu_parallel::_Parallelism\fP __parallelism_tag)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _Predicate > \fBiterator_traits\fP< _IIter >::difference_type \fBcount_if\fP (_IIter __begin, _IIter __end, _Predicate __pred)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 > bool \fBequal\fP (_IIter1 __begin1, _IIter1 __end1, _IIter2 __begin2, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 , typename _Predicate > bool \fBequal\fP (_IIter1 __begin1, _IIter1 __end1, _IIter2 __begin2, _Predicate __pred, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 > bool \fBequal\fP (_IIter1 __begin1, _IIter1 __end1, _IIter2 __begin2)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 , typename _Predicate > bool \fBequal\fP (_IIter1 __begin1, _IIter1 __end1, _IIter2 __begin2, _Predicate __pred)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _Tp > _IIter \fBfind\fP (_IIter __begin, _IIter __end, const _Tp &__val, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _Tp > _IIter \fBfind\fP (_IIter __begin, _IIter __end, const _Tp &__val)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _FIterator > _IIter \fBfind_first_of\fP (_IIter __begin1, _IIter __end1, _FIterator __begin2, _FIterator __end2, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _FIterator , typename _BinaryPredicate > _IIter \fBfind_first_of\fP (_IIter __begin1, _IIter __end1, _FIterator __begin2, _FIterator __end2, _BinaryPredicate __comp, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _FIterator , typename _BinaryPredicate > _IIter \fBfind_first_of\fP (_IIter __begin1, _IIter __end1, _FIterator __begin2, _FIterator __end2, _BinaryPredicate __comp)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _FIterator > _IIter \fBfind_first_of\fP (_IIter __begin1, _IIter __end1, _FIterator __begin2, _FIterator __end2)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _FIter > _IIter \fBfind_first_of\fP (_IIter, _IIter, _FIter, _FIter, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _FIter , typename _BiPredicate > _IIter \fBfind_first_of\fP (_IIter, _IIter, _FIter, _FIter, _BiPredicate, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _FIter , typename _BiPredicate > _IIter \fBfind_first_of\fP (_IIter, _IIter, _FIter, _FIter, _BiPredicate)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _FIter > _IIter \fBfind_first_of\fP (_IIter, _IIter, _FIter, _FIter)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _Predicate > _IIter \fBfind_if\fP (_IIter __begin, _IIter __end, _Predicate __pred)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _Predicate > _IIter \fBfind_if\fP (_IIter __begin, _IIter __end, _Predicate __pred, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _Function > _Function \fBfor_each\fP (_IIter __begin, _IIter __end, _Function __f, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _Iterator , typename _Function > _Function \fBfor_each\fP (_Iterator __begin, _Iterator __end, _Function __f, \fB__gnu_parallel::_Parallelism\fP __parallelism_tag)"
+.br
+.ti -1c
+.RI "template<typename _Iterator , typename _Function > _Function \fBfor_each\fP (_Iterator __begin, _Iterator __end, _Function __f)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _Function > _Function \fBfor_each\fP (_IIter, _IIter, _Function)"
+.br
+.ti -1c
+.RI "template<typename _FIterator , typename _Generator > void \fBgenerate\fP (_FIterator __begin, _FIterator __end, _Generator __gen, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _FIterator , typename _Generator > void \fBgenerate\fP (_FIterator __begin, _FIterator __end, _Generator __gen, \fB__gnu_parallel::_Parallelism\fP __parallelism_tag)"
+.br
+.ti -1c
+.RI "template<typename _FIterator , typename _Generator > void \fBgenerate\fP (_FIterator __begin, _FIterator __end, _Generator __gen)"
+.br
+.ti -1c
+.RI "template<typename _FIter , typename _Generator > void \fBgenerate\fP (_FIter, _FIter, _Generator)"
+.br
+.ti -1c
+.RI "template<typename _FIter , typename _Generator > void \fBgenerate\fP (_FIter, _FIter, _Generator, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _FIter , typename _Generator > void \fBgenerate\fP (_FIter, _FIter, _Generator, \fB__gnu_parallel::_Parallelism\fP)"
+.br
+.ti -1c
+.RI "template<typename _OutputIterator , typename _Size , typename _Generator > _OutputIterator \fBgenerate_n\fP (_OutputIterator __begin, _Size __n, _Generator __gen, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _OutputIterator , typename _Size , typename _Generator > _OutputIterator \fBgenerate_n\fP (_OutputIterator __begin, _Size __n, _Generator __gen, \fB__gnu_parallel::_Parallelism\fP __parallelism_tag)"
+.br
+.ti -1c
+.RI "template<typename _OutputIterator , typename _Size , typename _Generator > _OutputIterator \fBgenerate_n\fP (_OutputIterator __begin, _Size __n, _Generator __gen)"
+.br
+.ti -1c
+.RI "template<typename _OIter , typename _Size , typename _Generator > _OIter \fBgenerate_n\fP (_OIter, _Size, _Generator)"
+.br
+.ti -1c
+.RI "template<typename _OIter , typename _Size , typename _Generator > _OIter \fBgenerate_n\fP (_OIter, _Size, _Generator, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _OIter , typename _Size , typename _Generator > _OIter \fBgenerate_n\fP (_OIter, _Size, _Generator, \fB__gnu_parallel::_Parallelism\fP)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 , typename _Tp > _Tp \fBinner_product\fP (_IIter1 __first1, _IIter1 __last1, _IIter2 __first2, _Tp __init, \fB__gnu_parallel::_Parallelism\fP __parallelism_tag)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 , typename _Tp > _Tp \fBinner_product\fP (_IIter1 __first1, _IIter1 __last1, _IIter2 __first2, _Tp __init)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 , typename _Tp > _Tp \fBinner_product\fP (_IIter1 __first1, _IIter1 __last1, _IIter2 __first2, _Tp __init, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 , typename _Tp , typename _BinaryFunction1 , typename _BinaryFunction2 > _Tp \fBinner_product\fP (_IIter1 __first1, _IIter1 __last1, _IIter2 __first2, _Tp __init, _BinaryFunction1 __binary_op1, _BinaryFunction2 __binary_op2, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 , typename _Tp , typename BinaryFunction1 , typename BinaryFunction2 > _Tp \fBinner_product\fP (_IIter1, _IIter1, _IIter2, _Tp, BinaryFunction1, BinaryFunction2, \fB__gnu_parallel::_Parallelism\fP)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 , typename _Tp , typename _BinaryFunction1 , typename _BinaryFunction2 > _Tp \fBinner_product\fP (_IIter1 __first1, _IIter1 __last1, _IIter2 __first2, _Tp __init, _BinaryFunction1 __binary_op1, _BinaryFunction2 __binary_op2, \fB__gnu_parallel::_Parallelism\fP __parallelism_tag)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 , typename _Tp , typename _BinaryFunction1 , typename _BinaryFunction2 > _Tp \fBinner_product\fP (_IIter1 __first1, _IIter1 __last1, _IIter2 __first2, _Tp __init, _BinaryFunction1 __binary_op1, _BinaryFunction2 __binary_op2)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 , typename _Predicate > bool \fBlexicographical_compare\fP (_IIter1 __begin1, _IIter1 __end1, _IIter2 __begin2, _IIter2 __end2, _Predicate __pred, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 > bool \fBlexicographical_compare\fP (_IIter1 __begin1, _IIter1 __end1, _IIter2 __begin2, _IIter2 __end2, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 > bool \fBlexicographical_compare\fP (_IIter1 __begin1, _IIter1 __end1, _IIter2 __begin2, _IIter2 __end2)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 , typename _Predicate > bool \fBlexicographical_compare\fP (_IIter1 __begin1, _IIter1 __end1, _IIter2 __begin2, _IIter2 __end2, _Predicate __pred)"
+.br
+.ti -1c
+.RI "template<typename _FIter > _FIter \fBmax_element\fP (_FIter, _FIter, \fB__gnu_parallel::_Parallelism\fP)"
+.br
+.ti -1c
+.RI "template<typename _FIter > _FIter \fBmax_element\fP (_FIter, _FIter)"
+.br
+.ti -1c
+.RI "template<typename _FIter > _FIter \fBmax_element\fP (_FIter, _FIter, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _FIter , typename _Compare > _FIter \fBmax_element\fP (_FIter, _FIter, _Compare)"
+.br
+.ti -1c
+.RI "template<typename _FIter , typename _Compare > _FIter \fBmax_element\fP (_FIter, _FIter, _Compare, \fB__gnu_parallel::_Parallelism\fP)"
+.br
+.ti -1c
+.RI "template<typename _FIter , typename _Compare > _FIter \fBmax_element\fP (_FIter, _FIter, _Compare, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _FIterator > _FIterator \fBmax_element\fP (_FIterator __begin, _FIterator __end, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _FIterator , typename _Compare > _FIterator \fBmax_element\fP (_FIterator __begin, _FIterator __end, _Compare __comp, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _FIterator > _FIterator \fBmax_element\fP (_FIterator __begin, _FIterator __end, \fB__gnu_parallel::_Parallelism\fP __parallelism_tag)"
+.br
+.ti -1c
+.RI "template<typename _FIterator > _FIterator \fBmax_element\fP (_FIterator __begin, _FIterator __end)"
+.br
+.ti -1c
+.RI "template<typename _FIterator , typename _Compare > _FIterator \fBmax_element\fP (_FIterator __begin, _FIterator __end, _Compare __comp, \fB__gnu_parallel::_Parallelism\fP __parallelism_tag)"
+.br
+.ti -1c
+.RI "template<typename _FIterator , typename _Compare > _FIterator \fBmax_element\fP (_FIterator __begin, _FIterator __end, _Compare __comp)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 , typename _OIter > _OIter \fBmerge\fP (_IIter1, _IIter1, _IIter2, _IIter2, _OIter, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 , typename _OIter , typename _Compare > _OIter \fBmerge\fP (_IIter1, _IIter1, _IIter2, _IIter2, _OIter, _Compare, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 , typename _OIter , typename _Compare > _OIter \fBmerge\fP (_IIter1, _IIter1, _IIter2, _IIter2, _OIter, _Compare)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 , typename _OutputIterator > _OutputIterator \fBmerge\fP (_IIter1 __begin1, _IIter1 __end1, _IIter2 __begin2, _IIter2 __end2, _OutputIterator __result, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 , typename _OutputIterator , typename _Compare > _OutputIterator \fBmerge\fP (_IIter1 __begin1, _IIter1 __end1, _IIter2 __begin2, _IIter2 __end2, _OutputIterator __result, _Compare __comp)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 , typename _OutputIterator > _OutputIterator \fBmerge\fP (_IIter1 __begin1, _IIter1 __end1, _IIter2 __begin2, _IIter2 __end2, _OutputIterator __result)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 , typename _OutputIterator , typename _Compare > _OutputIterator \fBmerge\fP (_IIter1 __begin1, _IIter1 __end1, _IIter2 __begin2, _IIter2 __end2, _OutputIterator __result, _Compare __comp, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 , typename _OIter > _OIter \fBmerge\fP (_IIter1, _IIter1, _IIter2, _IIter2, _OIter)"
+.br
+.ti -1c
+.RI "template<typename _FIter > _FIter \fBmin_element\fP (_FIter, _FIter)"
+.br
+.ti -1c
+.RI "template<typename _FIter > _FIter \fBmin_element\fP (_FIter, _FIter, \fB__gnu_parallel::_Parallelism\fP __parallelism_tag)"
+.br
+.ti -1c
+.RI "template<typename _FIter , typename _Compare > _FIter \fBmin_element\fP (_FIter, _FIter, _Compare, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _FIter , typename _Compare > _FIter \fBmin_element\fP (_FIter, _FIter, _Compare, \fB__gnu_parallel::_Parallelism\fP)"
+.br
+.ti -1c
+.RI "template<typename _FIter > _FIter \fBmin_element\fP (_FIter, _FIter, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _FIter , typename _Compare > _FIter \fBmin_element\fP (_FIter, _FIter, _Compare)"
+.br
+.ti -1c
+.RI "template<typename _FIterator , typename _Compare > _FIterator \fBmin_element\fP (_FIterator __begin, _FIterator __end, _Compare __comp)"
+.br
+.ti -1c
+.RI "template<typename _FIterator > _FIterator \fBmin_element\fP (_FIterator __begin, _FIterator __end, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _FIterator , typename _Compare > _FIterator \fBmin_element\fP (_FIterator __begin, _FIterator __end, _Compare __comp, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _FIterator > _FIterator \fBmin_element\fP (_FIterator __begin, _FIterator __end, \fB__gnu_parallel::_Parallelism\fP __parallelism_tag)"
+.br
+.ti -1c
+.RI "template<typename _FIterator > _FIterator \fBmin_element\fP (_FIterator __begin, _FIterator __end)"
+.br
+.ti -1c
+.RI "template<typename _FIterator , typename _Compare > _FIterator \fBmin_element\fP (_FIterator __begin, _FIterator __end, _Compare __comp, \fB__gnu_parallel::_Parallelism\fP __parallelism_tag)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 > \fBpair\fP< _IIter1, _IIter2 > \fBmismatch\fP (_IIter1 __begin1, _IIter1 __end1, _IIter2 __begin2, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 , typename _Predicate > \fBpair\fP< _IIter1, _IIter2 > \fBmismatch\fP (_IIter1 __begin1, _IIter1 __end1, _IIter2 __begin2, _Predicate __pred, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 > \fBpair\fP< _IIter1, _IIter2 > \fBmismatch\fP (_IIter1 __begin1, _IIter1 __end1, _IIter2 __begin2)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 , typename _Predicate > \fBpair\fP< _IIter1, _IIter2 > \fBmismatch\fP (_IIter1 __begin1, _IIter1 __end1, _IIter2 __begin2, _Predicate __pred)"
+.br
+.ti -1c
+.RI "template<typename _RAIter > void \fBnth_element\fP (_RAIter __begin, _RAIter __nth, _RAIter __end, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _RAIter , typename _Compare > void \fBnth_element\fP (_RAIter __begin, _RAIter __nth, _RAIter __end, _Compare __comp, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _RAIter , typename _Compare > void \fBnth_element\fP (_RAIter __begin, _RAIter __nth, _RAIter __end, _Compare __comp)"
+.br
+.ti -1c
+.RI "template<typename _RAIter > void \fBnth_element\fP (_RAIter __begin, _RAIter __nth, _RAIter __end)"
+.br
+.ti -1c
+.RI "template<typename _RAIter , typename _Compare > void \fBpartial_sort\fP (_RAIter __begin, _RAIter __middle, _RAIter __end, _Compare __comp, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _RAIter > void \fBpartial_sort\fP (_RAIter __begin, _RAIter __middle, _RAIter __end, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _RAIter , typename _Compare > void \fBpartial_sort\fP (_RAIter __begin, _RAIter __middle, _RAIter __end, _Compare __comp)"
+.br
+.ti -1c
+.RI "template<typename _RAIter > void \fBpartial_sort\fP (_RAIter __begin, _RAIter __middle, _RAIter __end)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _OIter , typename _BinaryOper > _OIter \fBpartial_sum\fP (_IIter, _IIter, _OIter, _BinaryOper)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _OutputIterator , typename _BinaryOperation > _OutputIterator \fBpartial_sum\fP (_IIter __begin, _IIter __end, _OutputIterator __result, _BinaryOperation __binary_op)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _OutputIterator , typename _BinaryOperation > _OutputIterator \fBpartial_sum\fP (_IIter __begin, _IIter __end, _OutputIterator __result, _BinaryOperation __bin_op, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _OutputIterator > _OutputIterator \fBpartial_sum\fP (_IIter __begin, _IIter __end, _OutputIterator __result, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _OIter > _OIter \fBpartial_sum\fP (_IIter, _IIter, _OIter __result)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _OIter > _OIter \fBpartial_sum\fP (_IIter, _IIter, _OIter, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _OIter , typename _BinaryOper > _OIter \fBpartial_sum\fP (_IIter, _IIter, _OIter, _BinaryOper, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _OutputIterator > _OutputIterator \fBpartial_sum\fP (_IIter __begin, _IIter __end, _OutputIterator __result)"
+.br
+.ti -1c
+.RI "template<typename _FIter , typename _Predicate > _FIter \fBpartition\fP (_FIter, _FIter, _Predicate)"
+.br
+.ti -1c
+.RI "template<typename _FIter , typename _Predicate > _FIter \fBpartition\fP (_FIter, _FIter, _Predicate, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _FIterator , typename _Predicate > _FIterator \fBpartition\fP (_FIterator __begin, _FIterator __end, _Predicate __pred, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _FIterator , typename _Predicate > _FIterator \fBpartition\fP (_FIterator __begin, _FIterator __end, _Predicate __pred)"
+.br
+.ti -1c
+.RI "template<typename _RAIter > void \fBrandom_shuffle\fP (_RAIter __begin, _RAIter __end, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _RAIter > void \fBrandom_shuffle\fP (_RAIter __begin, _RAIter __end)"
+.br
+.ti -1c
+.RI "template<typename _RAIter , typename _RandomNumberGenerator > void \fBrandom_shuffle\fP (_RAIter __begin, _RAIter __end, _RandomNumberGenerator &&__rand)"
+.br
+.ti -1c
+.RI "template<typename _RAIter , typename _RandomNumberGenerator > void \fBrandom_shuffle\fP (_RAIter __begin, _RAIter __end, _RandomNumberGenerator &__rand, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _FIterator , typename _Tp > void \fBreplace\fP (_FIterator __begin, _FIterator __end, const _Tp &__old_value, const _Tp &__new_value)"
+.br
+.ti -1c
+.RI "template<typename _FIter , typename _Tp > void \fBreplace\fP (_FIter, _FIter, const _Tp &, const _Tp &)"
+.br
+.ti -1c
+.RI "template<typename _FIter , typename _Tp > void \fBreplace\fP (_FIter, _FIter, const _Tp &, const _Tp &, \fB__gnu_parallel::_Parallelism\fP)"
+.br
+.ti -1c
+.RI "template<typename _FIterator , typename _Tp > void \fBreplace\fP (_FIterator __begin, _FIterator __end, const _Tp &__old_value, const _Tp &__new_value, \fB__gnu_parallel::_Parallelism\fP __parallelism_tag)"
+.br
+.ti -1c
+.RI "template<typename _FIterator , typename _Tp > void \fBreplace\fP (_FIterator __begin, _FIterator __end, const _Tp &__old_value, const _Tp &__new_value, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _FIter , typename _Tp > void \fBreplace\fP (_FIter, _FIter, const _Tp &, const _Tp &, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _FIterator , typename _Predicate , typename _Tp > void \fBreplace_if\fP (_FIterator __begin, _FIterator __end, _Predicate __pred, const _Tp &__new_value, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _FIter , typename _Predicate , typename _Tp > void \fBreplace_if\fP (_FIter, _FIter, _Predicate, const _Tp &, \fB__gnu_parallel::_Parallelism\fP)"
+.br
+.ti -1c
+.RI "template<typename _FIterator , typename _Predicate , typename _Tp > void \fBreplace_if\fP (_FIterator __begin, _FIterator __end, _Predicate __pred, const _Tp &__new_value, \fB__gnu_parallel::_Parallelism\fP __parallelism_tag)"
+.br
+.ti -1c
+.RI "template<typename _FIter , typename _Predicate , typename _Tp > void \fBreplace_if\fP (_FIter, _FIter, _Predicate, const _Tp &)"
+.br
+.ti -1c
+.RI "template<typename _FIterator , typename _Predicate , typename _Tp > void \fBreplace_if\fP (_FIterator __begin, _FIterator __end, _Predicate __pred, const _Tp &__new_value)"
+.br
+.ti -1c
+.RI "template<typename _FIter , typename _Predicate , typename _Tp > void \fBreplace_if\fP (_FIter, _FIter, _Predicate, const _Tp &, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _FIter1 , typename _FIter2 , typename _BiPredicate > _FIter1 \fBsearch\fP (_FIter1, _FIter1, _FIter2, _FIter2, _BiPredicate)"
+.br
+.ti -1c
+.RI "template<typename _FIter1 , typename _FIter2 > _FIter1 \fBsearch\fP (_FIter1, _FIter1, _FIter2, _FIter2)"
+.br
+.ti -1c
+.RI "template<typename _FIter1 , typename _FIter2 , typename _BiPredicate > _FIter1 \fBsearch\fP (_FIter1, _FIter1, _FIter2, _FIter2, _BiPredicate, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _FIterator1 , typename _FIterator2 > _FIterator1 \fBsearch\fP (_FIterator1 __begin1, _FIterator1 __end1, _FIterator2 __begin2, _FIterator2 __end2, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _FIterator1 , typename _FIterator2 , typename _BinaryPredicate > _FIterator1 \fBsearch\fP (_FIterator1 __begin1, _FIterator1 __end1, _FIterator2 __begin2, _FIterator2 __end2, _BinaryPredicate __pred, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _FIterator1 , typename _FIterator2 > _FIterator1 \fBsearch\fP (_FIterator1 __begin1, _FIterator1 __end1, _FIterator2 __begin2, _FIterator2 __end2)"
+.br
+.ti -1c
+.RI "template<typename _FIterator1 , typename _FIterator2 , typename _BinaryPredicate > _FIterator1 \fBsearch\fP (_FIterator1 __begin1, _FIterator1 __end1, _FIterator2 __begin2, _FIterator2 __end2, _BinaryPredicate __pred)"
+.br
+.ti -1c
+.RI "template<typename _FIter1 , typename _FIter2 > _FIter1 \fBsearch\fP (_FIter1, _FIter1, _FIter2, _FIter2, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _FIterator , typename _Integer , typename _Tp , typename _BinaryPredicate > _FIterator \fBsearch_n\fP (_FIterator __begin, _FIterator __end, _Integer __count, const _Tp &__val, _BinaryPredicate __binary_pred, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _FIter , typename _Integer , typename _Tp > _FIter \fBsearch_n\fP (_FIter, _FIter, _Integer, const _Tp &)"
+.br
+.ti -1c
+.RI "template<typename _FIter , typename _Integer , typename _Tp , typename _BiPredicate > _FIter \fBsearch_n\fP (_FIter, _FIter, _Integer, const _Tp &, _BiPredicate, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _FIter , typename _Integer , typename _Tp > _FIter \fBsearch_n\fP (_FIter, _FIter, _Integer, const _Tp &, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _FIter , typename _Integer , typename _Tp , typename _BiPredicate > _FIter \fBsearch_n\fP (_FIter, _FIter, _Integer, const _Tp &, _BiPredicate)"
+.br
+.ti -1c
+.RI "template<typename _FIterator , typename _Integer , typename _Tp > _FIterator \fBsearch_n\fP (_FIterator __begin, _FIterator __end, _Integer __count, const _Tp &__val, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _FIterator , typename _Integer , typename _Tp > _FIterator \fBsearch_n\fP (_FIterator __begin, _FIterator __end, _Integer __count, const _Tp &__val)"
+.br
+.ti -1c
+.RI "template<typename _FIterator , typename _Integer , typename _Tp , typename _BinaryPredicate > _FIterator \fBsearch_n\fP (_FIterator __begin, _FIterator __end, _Integer __count, const _Tp &__val, _BinaryPredicate __binary_pred)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 , typename _OIter > _OIter \fBset_difference\fP (_IIter1, _IIter1, _IIter2, _IIter2, _OIter)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 , typename _OIter , typename _Predicate > _OIter \fBset_difference\fP (_IIter1, _IIter1, _IIter2, _IIter2, _OIter, _Predicate)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 , typename _OutputIterator > _OutputIterator \fBset_difference\fP (_IIter1 __begin1, _IIter1 __end1, _IIter2 __begin2, _IIter2 __end2, _OutputIterator __out, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 , typename _OutputIterator , typename _Predicate > _OutputIterator \fBset_difference\fP (_IIter1 __begin1, _IIter1 __end1, _IIter2 __begin2, _IIter2 __end2, _OutputIterator __out, _Predicate __pred, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 , typename _OIter , typename _Predicate > _OIter \fBset_difference\fP (_IIter1, _IIter1, _IIter2, _IIter2, _OIter, _Predicate, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 , typename _OutputIterator > _OutputIterator \fBset_difference\fP (_IIter1 __begin1, _IIter1 __end1, _IIter2 __begin2, _IIter2 __end2, _OutputIterator __out)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 , typename _OutputIterator , typename _Predicate > _OutputIterator \fBset_difference\fP (_IIter1 __begin1, _IIter1 __end1, _IIter2 __begin2, _IIter2 __end2, _OutputIterator __out, _Predicate __pred)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 , typename _OIter > _OIter \fBset_difference\fP (_IIter1, _IIter1, _IIter2, _IIter2, _OIter, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 , typename _OutputIterator > _OutputIterator \fBset_intersection\fP (_IIter1 __begin1, _IIter1 __end1, _IIter2 __begin2, _IIter2 __end2, _OutputIterator __out, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 , typename _OIter > _OIter \fBset_intersection\fP (_IIter1, _IIter1, _IIter2, _IIter2, _OIter)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 , typename _OIter > _OIter \fBset_intersection\fP (_IIter1, _IIter1, _IIter2, _IIter2, _OIter, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 , typename _OutputIterator > _OutputIterator \fBset_intersection\fP (_IIter1 __begin1, _IIter1 __end1, _IIter2 __begin2, _IIter2 __end2, _OutputIterator __out)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 , typename _OutputIterator , typename _Predicate > _OutputIterator \fBset_intersection\fP (_IIter1 __begin1, _IIter1 __end1, _IIter2 __begin2, _IIter2 __end2, _OutputIterator __out, _Predicate __pred)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 , typename _OIter , typename _Predicate > _OIter \fBset_intersection\fP (_IIter1, _IIter1, _IIter2, _IIter2, _OIter, _Predicate, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 , typename _OIter , typename _Predicate > _OIter \fBset_intersection\fP (_IIter1, _IIter1, _IIter2, _IIter2, _OIter, _Predicate)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 , typename _OutputIterator , typename _Predicate > _OutputIterator \fBset_intersection\fP (_IIter1 __begin1, _IIter1 __end1, _IIter2 __begin2, _IIter2 __end2, _OutputIterator __out, _Predicate __pred, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 , typename _OutputIterator > _OutputIterator \fBset_symmetric_difference\fP (_IIter1 __begin1, _IIter1 __end1, _IIter2 __begin2, _IIter2 __end2, _OutputIterator __out)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 , typename _OIter > _OIter \fBset_symmetric_difference\fP (_IIter1, _IIter1, _IIter2, _IIter2, _OIter)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 , typename _OutputIterator , typename _Predicate > _OutputIterator \fBset_symmetric_difference\fP (_IIter1 __begin1, _IIter1 __end1, _IIter2 __begin2, _IIter2 __end2, _OutputIterator __out, _Predicate __pred, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 , typename _OutputIterator , typename _Predicate > _OutputIterator \fBset_symmetric_difference\fP (_IIter1 __begin1, _IIter1 __end1, _IIter2 __begin2, _IIter2 __end2, _OutputIterator __out, _Predicate __pred)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 , typename _OIter , typename _Predicate > _OIter \fBset_symmetric_difference\fP (_IIter1, _IIter1, _IIter2, _IIter2, _OIter, _Predicate)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 , typename _OutputIterator > _OutputIterator \fBset_symmetric_difference\fP (_IIter1 __begin1, _IIter1 __end1, _IIter2 __begin2, _IIter2 __end2, _OutputIterator __out, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 , typename _OIter > _OIter \fBset_symmetric_difference\fP (_IIter1, _IIter1, _IIter2, _IIter2, _OIter, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 , typename _OIter , typename _Predicate > _OIter \fBset_symmetric_difference\fP (_IIter1, _IIter1, _IIter2, _IIter2, _OIter, _Predicate, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 , typename _OutputIterator , typename _Predicate > _OutputIterator \fBset_union\fP (_IIter1 __begin1, _IIter1 __end1, _IIter2 __begin2, _IIter2 __end2, _OutputIterator __out, _Predicate __pred)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 , typename _OIter > _OIter \fBset_union\fP (_IIter1, _IIter1, _IIter2, _IIter2, _OIter, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 , typename _OutputIterator > _OutputIterator \fBset_union\fP (_IIter1 __begin1, _IIter1 __end1, _IIter2 __begin2, _IIter2 __end2, _OutputIterator __out)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 , typename _OIter > _OIter \fBset_union\fP (_IIter1, _IIter1, _IIter2, _IIter2, _OIter)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 , typename _OutputIterator > _OutputIterator \fBset_union\fP (_IIter1 __begin1, _IIter1 __end1, _IIter2 __begin2, _IIter2 __end2, _OutputIterator __out, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 , typename _OutputIterator , typename _Predicate > _OutputIterator \fBset_union\fP (_IIter1 __begin1, _IIter1 __end1, _IIter2 __begin2, _IIter2 __end2, _OutputIterator __out, _Predicate __pred, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 , typename _OIter , typename _Predicate > _OIter \fBset_union\fP (_IIter1, _IIter1, _IIter2, _IIter2, _OIter, _Predicate, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 , typename _OIter , typename _Predicate > _OIter \fBset_union\fP (_IIter1, _IIter1, _IIter2, _IIter2, _OIter, _Predicate)"
+.br
+.ti -1c
+.RI "template<typename _RAIter > void \fBsort\fP (_RAIter __begin, _RAIter __end, \fB__gnu_parallel::multiway_mergesort_sampling_tag\fP __parallelism)"
+.br
+.ti -1c
+.RI "template<typename _RAIter > void \fBsort\fP (_RAIter __begin, _RAIter __end)"
+.br
+.ti -1c
+.RI "template<typename _RAIter > void \fBsort\fP (_RAIter __begin, _RAIter __end, \fB__gnu_parallel::default_parallel_tag\fP __parallelism)"
+.br
+.ti -1c
+.RI "template<typename _RAIter > void \fBsort\fP (_RAIter __begin, _RAIter __end, \fB__gnu_parallel::multiway_mergesort_exact_tag\fP __parallelism)"
+.br
+.ti -1c
+.RI "template<typename _RAIter > void \fBsort\fP (_RAIter __begin, _RAIter __end, \fB__gnu_parallel::multiway_mergesort_tag\fP __parallelism)"
+.br
+.ti -1c
+.RI "template<typename _RAIter > void \fBsort\fP (_RAIter __begin, _RAIter __end, \fB__gnu_parallel::quicksort_tag\fP __parallelism)"
+.br
+.ti -1c
+.RI "template<typename _RAIter , typename _Compare > void \fBsort\fP (_RAIter __begin, _RAIter __end, _Compare __comp, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _RAIter > void \fBsort\fP (_RAIter __begin, _RAIter __end, \fB__gnu_parallel::balanced_quicksort_tag\fP __parallelism)"
+.br
+.ti -1c
+.RI "template<typename _RAIter , typename _Compare > void \fBsort\fP (_RAIter __begin, _RAIter __end, _Compare __comp)"
+.br
+.ti -1c
+.RI "template<typename _RAIter > void \fBsort\fP (_RAIter __begin, _RAIter __end, \fB__gnu_parallel::parallel_tag\fP __parallelism)"
+.br
+.ti -1c
+.RI "template<typename _RAIter > void \fBsort\fP (_RAIter __begin, _RAIter __end, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _RAIter , typename _Compare , typename _Parallelism > void \fBsort\fP (_RAIter __begin, _RAIter __end, _Compare __comp, _Parallelism __parallelism)"
+.br
+.ti -1c
+.RI "template<typename _RAIter > void \fBstable_sort\fP (_RAIter __begin, _RAIter __end, \fB__gnu_parallel::balanced_quicksort_tag\fP __parallelism)"
+.br
+.ti -1c
+.RI "template<typename _RAIter > void \fBstable_sort\fP (_RAIter __begin, _RAIter __end, \fB__gnu_parallel::multiway_mergesort_tag\fP __parallelism)"
+.br
+.ti -1c
+.RI "template<typename _RAIter > void \fBstable_sort\fP (_RAIter __begin, _RAIter __end, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _RAIter > void \fBstable_sort\fP (_RAIter __begin, _RAIter __end)"
+.br
+.ti -1c
+.RI "template<typename _RAIter > void \fBstable_sort\fP (_RAIter __begin, _RAIter __end, \fB__gnu_parallel::quicksort_tag\fP __parallelism)"
+.br
+.ti -1c
+.RI "template<typename _RAIter , typename _Compare , typename _Parallelism > void \fBstable_sort\fP (_RAIter __begin, _RAIter __end, _Compare __comp, _Parallelism __parallelism)"
+.br
+.ti -1c
+.RI "template<typename _RAIter , typename _Compare > void \fBstable_sort\fP (_RAIter __begin, _RAIter __end, _Compare __comp, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _RAIter > void \fBstable_sort\fP (_RAIter __begin, _RAIter __end, \fB__gnu_parallel::default_parallel_tag\fP __parallelism)"
+.br
+.ti -1c
+.RI "template<typename _RAIter > void \fBstable_sort\fP (_RAIter __begin, _RAIter __end, \fB__gnu_parallel::parallel_tag\fP __parallelism)"
+.br
+.ti -1c
+.RI "template<typename _RAIter , typename _Compare > void \fBstable_sort\fP (_RAIter __begin, _RAIter __end, _Compare __comp)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 , typename _OIter , typename _BiOperation > _OIter \fBtransform\fP (_IIter1, _IIter1, _IIter2, _OIter, _BiOperation)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 , typename _OIter , typename _BiOperation > _OIter \fBtransform\fP (_IIter1, _IIter1, _IIter2, _OIter, _BiOperation, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 , typename _OutputIterator , typename _BinaryOperation > _OutputIterator \fBtransform\fP (_IIter1 __begin1, _IIter1 __end1, _IIter2 __begin2, _OutputIterator __result, _BinaryOperation __binary_op, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _OIter , typename _UnaryOperation > _OIter \fBtransform\fP (_IIter, _IIter, _OIter, _UnaryOperation, \fB__gnu_parallel::_Parallelism\fP)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _OutputIterator , typename _UnaryOperation > _OutputIterator \fBtransform\fP (_IIter __begin, _IIter __end, _OutputIterator __result, _UnaryOperation __unary_op, \fB__gnu_parallel::_Parallelism\fP __parallelism_tag)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 , typename _OutputIterator , typename _BinaryOperation > _OutputIterator \fBtransform\fP (_IIter1 __begin1, _IIter1 __end1, _IIter2 __begin2, _OutputIterator __result, _BinaryOperation __binary_op, \fB__gnu_parallel::_Parallelism\fP __parallelism_tag)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _OutputIterator , typename _UnaryOperation > _OutputIterator \fBtransform\fP (_IIter __begin, _IIter __end, _OutputIterator __result, _UnaryOperation __unary_op)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 , typename _OIter , typename _BiOperation > _OIter \fBtransform\fP (_IIter1, _IIter1, _IIter2, _OIter, _BiOperation, \fB__gnu_parallel::_Parallelism\fP)"
+.br
+.ti -1c
+.RI "template<typename _IIter1 , typename _IIter2 , typename _OutputIterator , typename _BinaryOperation > _OutputIterator \fBtransform\fP (_IIter1 __begin1, _IIter1 __end1, _IIter2 __begin2, _OutputIterator __result, _BinaryOperation __binary_op)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _OutputIterator , typename _UnaryOperation > _OutputIterator \fBtransform\fP (_IIter __begin, _IIter __end, _OutputIterator __result, _UnaryOperation __unary_op, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _OIter , typename _UnaryOperation > _OIter \fBtransform\fP (_IIter, _IIter, _OIter, _UnaryOperation, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _OIter , typename _UnaryOperation > _OIter \fBtransform\fP (_IIter, _IIter, _OIter, _UnaryOperation)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _OutputIterator , typename _Predicate > _OutputIterator \fBunique_copy\fP (_IIter __begin1, _IIter __end1, _OutputIterator __out, _Predicate __pred)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _OutputIterator > _OutputIterator \fBunique_copy\fP (_IIter __begin1, _IIter __end1, _OutputIterator __out, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _OIter > _OIter \fBunique_copy\fP (_IIter, _IIter, _OIter)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _OIter > _OIter \fBunique_copy\fP (_IIter, _IIter, _OIter, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _OutputIterator > _OutputIterator \fBunique_copy\fP (_IIter __begin1, _IIter __end1, _OutputIterator __out)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _OIter , typename _Predicate > _OIter \fBunique_copy\fP (_IIter, _IIter, _OIter, _Predicate, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _OIter , typename _Predicate > _OIter \fBunique_copy\fP (_IIter, _IIter, _OIter, _Predicate)"
+.br
+.ti -1c
+.RI "template<typename _IIter , typename _OutputIterator , typename _Predicate > _OutputIterator \fBunique_copy\fP (_IIter __begin1, _IIter __end1, _OutputIterator __out, _Predicate __pred, \fB__gnu_parallel::sequential_tag\fP)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+GNU parallel code, replaces standard behavior with parallel behavior. 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for libstdc++ from the source code.

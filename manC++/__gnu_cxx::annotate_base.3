@@ -1,0 +1,55 @@
+.TH "__gnu_cxx::annotate_base" 3 "Sun Oct 10 2010" "libstdc++" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+__gnu_cxx::annotate_base \- 
+.PP
+Base class for checking address and label information about allocations. Create a \fBstd::map\fP between the allocated address (void*) and a datum for annotations, which are a pair of numbers corresponding to label and allocated size.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherited by \fB__gnu_cxx::throw_allocator_base< _Tp, _Cond >\fP, \fB__gnu_cxx::throw_allocator_base< _Tp, limit_condition >\fP, and \fB__gnu_cxx::throw_allocator_base< _Tp, random_condition >\fP.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBcheck_allocated\fP (size_t label)"
+.br
+.ti -1c
+.RI "void \fBcheck_allocated\fP (void *p, size_t size)"
+.br
+.ti -1c
+.RI "void \fBerase\fP (void *p, size_t size)"
+.br
+.ti -1c
+.RI "void \fBinsert\fP (void *p, size_t size)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static size_t \fBget_label\fP ()"
+.br
+.ti -1c
+.RI "static void \fBset_label\fP (size_t l)"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "\fBstd::ostream\fP & \fBoperator<<\fP (\fBstd::ostream\fP &, const \fBannotate_base\fP &)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Base class for checking address and label information about allocations. Create a \fBstd::map\fP between the allocated address (void*) and a datum for annotations, which are a pair of numbers corresponding to label and allocated size. 
+.PP
+Definition at line 94 of file throw_allocator.h.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for libstdc++ from the source code.

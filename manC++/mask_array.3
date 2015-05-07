@@ -1,0 +1,161 @@
+.TH "std::mask_array" 3 "Sun Oct 10 2010" "libstdc++" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+std::mask_array \- 
+.PP
+Reference to selected subset of an array.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef _Tp \fBvalue_type\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBmask_array\fP (const \fBmask_array\fP &)"
+.br
+.ti -1c
+.RI "template<class _Dom > void \fBoperator%=\fP (const _Expr< _Dom, _Tp > &) const "
+.br
+.ti -1c
+.RI "void \fBoperator%=\fP (const \fBvalarray\fP< _Tp > &) const "
+.br
+.ti -1c
+.RI "void \fBoperator&=\fP (const \fBvalarray\fP< _Tp > &) const "
+.br
+.ti -1c
+.RI "template<class _Dom > void \fBoperator&=\fP (const _Expr< _Dom, _Tp > &) const "
+.br
+.ti -1c
+.RI "template<class _Dom > void \fBoperator*=\fP (const _Expr< _Dom, _Tp > &) const "
+.br
+.ti -1c
+.RI "void \fBoperator*=\fP (const \fBvalarray\fP< _Tp > &) const "
+.br
+.ti -1c
+.RI "template<class _Dom > void \fBoperator+=\fP (const _Expr< _Dom, _Tp > &) const "
+.br
+.ti -1c
+.RI "void \fBoperator+=\fP (const \fBvalarray\fP< _Tp > &) const "
+.br
+.ti -1c
+.RI "void \fBoperator-=\fP (const \fBvalarray\fP< _Tp > &) const "
+.br
+.ti -1c
+.RI "template<class _Dom > void \fBoperator-=\fP (const _Expr< _Dom, _Tp > &) const "
+.br
+.ti -1c
+.RI "template<class _Dom > void \fBoperator/=\fP (const _Expr< _Dom, _Tp > &) const "
+.br
+.ti -1c
+.RI "void \fBoperator/=\fP (const \fBvalarray\fP< _Tp > &) const "
+.br
+.ti -1c
+.RI "void \fBoperator<<=\fP (const \fBvalarray\fP< _Tp > &) const "
+.br
+.ti -1c
+.RI "template<class _Dom > void \fBoperator<<=\fP (const _Expr< _Dom, _Tp > &) const "
+.br
+.ti -1c
+.RI "template<class _Dom > void \fBoperator=\fP (const _Expr< _Dom, _Tp > &) const "
+.br
+.ti -1c
+.RI "\fBmask_array\fP & \fBoperator=\fP (const \fBmask_array\fP &)"
+.br
+.ti -1c
+.RI "void \fBoperator=\fP (const \fBvalarray\fP< _Tp > &) const "
+.br
+.ti -1c
+.RI "template<class _Ex > void \fBoperator=\fP (const _Expr< _Ex, _Tp > &__e) const "
+.br
+.ti -1c
+.RI "void \fBoperator=\fP (const _Tp &) const "
+.br
+.ti -1c
+.RI "void \fBoperator>>=\fP (const \fBvalarray\fP< _Tp > &) const "
+.br
+.ti -1c
+.RI "template<class _Dom > void \fBoperator>>=\fP (const _Expr< _Dom, _Tp > &) const "
+.br
+.ti -1c
+.RI "void \fBoperator^=\fP (const \fBvalarray\fP< _Tp > &) const "
+.br
+.ti -1c
+.RI "template<class _Dom > void \fBoperator^=\fP (const _Expr< _Dom, _Tp > &) const "
+.br
+.ti -1c
+.RI "void \fBoperator|=\fP (const \fBvalarray\fP< _Tp > &) const "
+.br
+.ti -1c
+.RI "template<class _Dom > void \fBoperator|=\fP (const _Expr< _Dom, _Tp > &) const "
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fBvalarray< _Tp >\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<class _Tp> class std::mask_array< _Tp >"
+Reference to selected subset of an array. 
+
+A \fBmask_array\fP is a reference to the actual elements of an array specified by a bitmask in the form of an array of bool. The way to get a \fBmask_array\fP is to call operator[](valarray<bool>) on a valarray. The returned \fBmask_array\fP then permits carrying operations out on the referenced subset of elements in the original valarray.
+.PP
+For example, if a \fBmask_array\fP is obtained using the array (false, true, false, true) as an argument, the mask array has two elements referring to array[1] and array[3] in the underlying array.
+.PP
+\fBParameters:\fP
+.RS 4
+\fITp\fP Element type. 
+.RE
+.PP
+
+.PP
+Definition at line 61 of file mask_array.h.
+.SH "Member Function Documentation"
+.PP 
+.SS "template<class _Tp> void \fBstd::mask_array\fP< _Tp >::operator%= (const \fBvalarray\fP< _Tp > &) const"
+.PP
+Modulo slice elements by corresponding elements of \fIv\fP. 
+.SS "template<class _Tp> void \fBstd::mask_array\fP< _Tp >::operator&= (const \fBvalarray\fP< _Tp > &) const"
+.PP
+Logical and slice elements with corresponding elements of \fIv\fP. 
+.SS "template<class _Tp> void \fBstd::mask_array\fP< _Tp >::operator*= (const \fBvalarray\fP< _Tp > &) const"
+.PP
+Multiply slice elements by corresponding elements of \fIv\fP. 
+.SS "template<class _Tp> void \fBstd::mask_array\fP< _Tp >::operator+= (const \fBvalarray\fP< _Tp > &) const"
+.PP
+Add corresponding elements of \fIv\fP to slice elements. 
+.SS "template<class _Tp> void \fBstd::mask_array\fP< _Tp >::operator-= (const \fBvalarray\fP< _Tp > &) const"
+.PP
+Subtract corresponding elements of \fIv\fP from slice elements. 
+.SS "template<class _Tp> void \fBstd::mask_array\fP< _Tp >::operator/= (const \fBvalarray\fP< _Tp > &) const"
+.PP
+Divide slice elements by corresponding elements of \fIv\fP. 
+.SS "template<class _Tp> void \fBstd::mask_array\fP< _Tp >::operator<<= (const \fBvalarray\fP< _Tp > &) const"
+.PP
+Left shift slice elements by corresponding elements of \fIv\fP. 
+.SS "template<class _Tp> void \fBstd::mask_array\fP< _Tp >::operator>>= (const \fBvalarray\fP< _Tp > &) const"
+.PP
+Right shift slice elements by corresponding elements of \fIv\fP. 
+.SS "template<class _Tp> void \fBstd::mask_array\fP< _Tp >::operator^= (const \fBvalarray\fP< _Tp > &) const"
+.PP
+Logical xor slice elements with corresponding elements of \fIv\fP. 
+.SS "template<class _Tp> void \fBstd::mask_array\fP< _Tp >::operator|= (const \fBvalarray\fP< _Tp > &) const"
+.PP
+Logical or slice elements with corresponding elements of \fIv\fP. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for libstdc++ from the source code.

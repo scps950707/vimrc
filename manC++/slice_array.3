@@ -1,0 +1,156 @@
+.TH "std::slice_array" 3 "Sun Oct 10 2010" "libstdc++" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+std::slice_array \- 
+.PP
+Reference to one-dimensional subset of an array.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef _Tp \fBvalue_type\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBslice_array\fP (const \fBslice_array\fP &)"
+.br
+.ti -1c
+.RI "template<class _Dom > void \fBoperator%=\fP (const _Expr< _Dom, _Tp > &) const "
+.br
+.ti -1c
+.RI "void \fBoperator%=\fP (const \fBvalarray\fP< _Tp > &) const "
+.br
+.ti -1c
+.RI "void \fBoperator&=\fP (const \fBvalarray\fP< _Tp > &) const "
+.br
+.ti -1c
+.RI "template<class _Dom > void \fBoperator&=\fP (const _Expr< _Dom, _Tp > &) const "
+.br
+.ti -1c
+.RI "template<class _Dom > void \fBoperator*=\fP (const _Expr< _Dom, _Tp > &) const "
+.br
+.ti -1c
+.RI "void \fBoperator*=\fP (const \fBvalarray\fP< _Tp > &) const "
+.br
+.ti -1c
+.RI "template<class _Dom > void \fBoperator+=\fP (const _Expr< _Dom, _Tp > &) const "
+.br
+.ti -1c
+.RI "void \fBoperator+=\fP (const \fBvalarray\fP< _Tp > &) const "
+.br
+.ti -1c
+.RI "void \fBoperator-=\fP (const \fBvalarray\fP< _Tp > &) const "
+.br
+.ti -1c
+.RI "template<class _Dom > void \fBoperator-=\fP (const _Expr< _Dom, _Tp > &) const "
+.br
+.ti -1c
+.RI "template<class _Dom > void \fBoperator/=\fP (const _Expr< _Dom, _Tp > &) const "
+.br
+.ti -1c
+.RI "void \fBoperator/=\fP (const \fBvalarray\fP< _Tp > &) const "
+.br
+.ti -1c
+.RI "void \fBoperator<<=\fP (const \fBvalarray\fP< _Tp > &) const "
+.br
+.ti -1c
+.RI "template<class _Dom > void \fBoperator<<=\fP (const _Expr< _Dom, _Tp > &) const "
+.br
+.ti -1c
+.RI "void \fBoperator=\fP (const _Tp &) const "
+.br
+.ti -1c
+.RI "\fBslice_array\fP & \fBoperator=\fP (const \fBslice_array\fP &)"
+.br
+.ti -1c
+.RI "template<class _Dom > void \fBoperator=\fP (const _Expr< _Dom, _Tp > &) const "
+.br
+.ti -1c
+.RI "void \fBoperator=\fP (const \fBvalarray\fP< _Tp > &) const "
+.br
+.ti -1c
+.RI "template<class _Dom > void \fBoperator>>=\fP (const _Expr< _Dom, _Tp > &) const "
+.br
+.ti -1c
+.RI "void \fBoperator>>=\fP (const \fBvalarray\fP< _Tp > &) const "
+.br
+.ti -1c
+.RI "template<class _Dom > void \fBoperator^=\fP (const _Expr< _Dom, _Tp > &) const "
+.br
+.ti -1c
+.RI "void \fBoperator^=\fP (const \fBvalarray\fP< _Tp > &) const "
+.br
+.ti -1c
+.RI "void \fBoperator|=\fP (const \fBvalarray\fP< _Tp > &) const "
+.br
+.ti -1c
+.RI "template<class _Dom > void \fBoperator|=\fP (const _Expr< _Dom, _Tp > &) const "
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fBvalarray< _Tp >\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<typename _Tp> class std::slice_array< _Tp >"
+Reference to one-dimensional subset of an array. 
+
+A \fBslice_array\fP is a reference to the actual elements of an array specified by a slice. The way to get a \fBslice_array\fP is to call operator[](slice) on a valarray. The returned \fBslice_array\fP then permits carrying operations out on the referenced subset of elements in the original valarray. For example, operator+=(valarray) will add values to the subset of elements in the underlying valarray this \fBslice_array\fP refers to.
+.PP
+\fBParameters:\fP
+.RS 4
+\fITp\fP Element type. 
+.RE
+.PP
+
+.PP
+Definition at line 122 of file slice_array.h.
+.SH "Member Function Documentation"
+.PP 
+.SS "template<typename _Tp> void \fBstd::slice_array\fP< _Tp >::operator%= (const \fBvalarray\fP< _Tp > &) const"
+.PP
+Modulo slice elements by corresponding elements of \fIv\fP. 
+.SS "template<typename _Tp> void \fBstd::slice_array\fP< _Tp >::operator&= (const \fBvalarray\fP< _Tp > &) const"
+.PP
+Logical and slice elements with corresponding elements of \fIv\fP. 
+.SS "template<typename _Tp> void \fBstd::slice_array\fP< _Tp >::operator*= (const \fBvalarray\fP< _Tp > &) const"
+.PP
+Multiply slice elements by corresponding elements of \fIv\fP. 
+.SS "template<typename _Tp> void \fBstd::slice_array\fP< _Tp >::operator+= (const \fBvalarray\fP< _Tp > &) const"
+.PP
+Add corresponding elements of \fIv\fP to slice elements. 
+.SS "template<typename _Tp> void \fBstd::slice_array\fP< _Tp >::operator-= (const \fBvalarray\fP< _Tp > &) const"
+.PP
+Subtract corresponding elements of \fIv\fP from slice elements. 
+.SS "template<typename _Tp> void \fBstd::slice_array\fP< _Tp >::operator/= (const \fBvalarray\fP< _Tp > &) const"
+.PP
+Divide slice elements by corresponding elements of \fIv\fP. 
+.SS "template<typename _Tp> void \fBstd::slice_array\fP< _Tp >::operator<<= (const \fBvalarray\fP< _Tp > &) const"
+.PP
+Left shift slice elements by corresponding elements of \fIv\fP. 
+.SS "template<typename _Tp> void \fBstd::slice_array\fP< _Tp >::operator>>= (const \fBvalarray\fP< _Tp > &) const"
+.PP
+Right shift slice elements by corresponding elements of \fIv\fP. 
+.SS "template<typename _Tp> void \fBstd::slice_array\fP< _Tp >::operator^= (const \fBvalarray\fP< _Tp > &) const"
+.PP
+Logical xor slice elements with corresponding elements of \fIv\fP. 
+.SS "template<typename _Tp> void \fBstd::slice_array\fP< _Tp >::operator|= (const \fBvalarray\fP< _Tp > &) const"
+.PP
+Logical or slice elements with corresponding elements of \fIv\fP. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for libstdc++ from the source code.

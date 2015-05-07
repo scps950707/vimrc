@@ -1,0 +1,120 @@
+.TH "__gnu_parallel::_IteratorPair" 3 "Sun Oct 10 2010" "libstdc++" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+__gnu_parallel::_IteratorPair \- 
+.PP
+A pair of iterators. The usual iterator operations are applied to both child iterators.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBpair< _Iterator1, _Iterator2 >\fP.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBstd::iterator_traits\fP< _Iterator1 > \fB_TraitsType\fP"
+.br
+.ti -1c
+.RI "typedef _TraitsType::difference_type \fBdifference_type\fP"
+.br
+.ti -1c
+.RI "typedef _Iterator1 \fBfirst_type\fP"
+.br
+.ti -1c
+.RI "typedef _IteratorCategory \fBiterator_category\fP"
+.br
+.ti -1c
+.RI "typedef \fB_IteratorPair\fP * \fBpointer\fP"
+.br
+.ti -1c
+.RI "typedef \fB_IteratorPair\fP & \fBreference\fP"
+.br
+.ti -1c
+.RI "typedef _Iterator2 \fBsecond_type\fP"
+.br
+.ti -1c
+.RI "typedef void \fBvalue_type\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fB_IteratorPair\fP (const _Iterator1 &__first, const _Iterator2 &__second)"
+.br
+.ti -1c
+.RI "\fBoperator _Iterator2\fP () const "
+.br
+.ti -1c
+.RI "\fB_IteratorPair\fP \fBoperator+\fP (difference_type __delta) const "
+.br
+.ti -1c
+.RI "const \fB_IteratorPair\fP \fBoperator++\fP (int)"
+.br
+.ti -1c
+.RI "\fB_IteratorPair\fP & \fBoperator++\fP ()"
+.br
+.ti -1c
+.RI "difference_type \fBoperator-\fP (const \fB_IteratorPair\fP &__other) const "
+.br
+.ti -1c
+.RI "const \fB_IteratorPair\fP \fBoperator--\fP (int)"
+.br
+.ti -1c
+.RI "\fB_IteratorPair\fP & \fBoperator--\fP ()"
+.br
+.ti -1c
+.RI "\fB_IteratorPair\fP & \fBoperator=\fP (const \fB_IteratorPair\fP &__other)"
+.br
+.ti -1c
+.RI "void \fBswap\fP (pair &__p)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "_Iterator1 \fBfirst\fP"
+.br
+.ti -1c
+.RI "_Iterator2 \fBsecond\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<typename _Iterator1, typename _Iterator2, typename _IteratorCategory> class __gnu_parallel::_IteratorPair< _Iterator1, _Iterator2, _IteratorCategory >"
+A pair of iterators. The usual iterator operations are applied to both child iterators. 
+.PP
+Definition at line 45 of file iterator.h.
+.SH "Member Typedef Documentation"
+.PP 
+.SS "typedef _Iterator1  \fBstd::pair\fP< _Iterator1 , _Iterator2  >::\fBfirst_type\fP\fC [inherited]\fP"
+.PP
+\fCfirst_type\fP is the first bound type 
+.PP
+Definition at line 73 of file stl_pair.h.
+.SS "typedef _Iterator2  \fBstd::pair\fP< _Iterator1 , _Iterator2  >::\fBsecond_type\fP\fC [inherited]\fP"
+.PP
+\fCsecond_type\fP is the second bound type 
+.PP
+Definition at line 74 of file stl_pair.h.
+.SH "Member Data Documentation"
+.PP 
+.SS "_Iterator1  \fBstd::pair\fP< _Iterator1 , _Iterator2  >::\fBfirst\fP\fC [inherited]\fP"
+.PP
+\fCfirst\fP is a copy of the first object 
+.PP
+Definition at line 76 of file stl_pair.h.
+.SS "_Iterator2  \fBstd::pair\fP< _Iterator1 , _Iterator2  >::\fBsecond\fP\fC [inherited]\fP"
+.PP
+\fCsecond\fP is a copy of the second object 
+.PP
+Definition at line 77 of file stl_pair.h.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for libstdc++ from the source code.

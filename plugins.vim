@@ -35,6 +35,7 @@ let g:multi_cursor_quit_key='<Esc>'
 NeoBundle 'wesleyche/SrcExpl'
 nmap <F4> :<C-u>SrcExplToggle<CR>
 NeoBundle 'majutsushi/tagbar'
+let g:tagbar_compact=1
 let g:tagbar_autofocus = 1
 let g:tagbar_sort = 0
 nmap <F3> :<C-u>TagbarToggle<CR>
@@ -60,3 +61,8 @@ let g:Powerline_symbols = 'fancy'
 " NeoBundle 'flazz/vim-colorschemes'
 " NeoBundle 'chriskempson/vim-tomorrow-theme'
 " NeoBundle 'romainl/Apprentice'
+
+map <F8> :<C-u>call Replace(input('Replace '.expand('<cword>').' with: '))<CR>
+
+source $VIMRUNTIME/ftplugin/man.vim
+nmap <Leader>m :Man 3 <cword><CR>

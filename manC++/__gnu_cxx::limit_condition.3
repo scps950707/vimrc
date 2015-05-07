@@ -1,0 +1,56 @@
+.TH "__gnu_cxx::limit_condition" 3 "Sun Oct 10 2010" "libstdc++" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+__gnu_cxx::limit_condition \- 
+.PP
+Base class for incremental control and throw.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fB__gnu_cxx::condition_base\fP.
+.PP
+Inherited by \fB__gnu_cxx::throw_allocator_base< _Tp, limit_condition >\fP, and \fB__gnu_cxx::throw_value_base< limit_condition >\fP.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBalways_adjustor\fP"
+.br
+.RI "\fIAlways enter the condition. \fP"
+.ti -1c
+.RI "struct \fBlimit_adjustor\fP"
+.br
+.RI "\fIEnter the nth condition. \fP"
+.ti -1c
+.RI "struct \fBnever_adjustor\fP"
+.br
+.RI "\fINever enter the condition. \fP"
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static size_t & \fBcount\fP ()"
+.br
+.ti -1c
+.RI "static size_t & \fBlimit\fP ()"
+.br
+.ti -1c
+.RI "static void \fBset_limit\fP (const size_t __l)"
+.br
+.ti -1c
+.RI "static void \fBthrow_conditionally\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Base class for incremental control and throw. 
+.PP
+Definition at line 262 of file throw_allocator.h.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for libstdc++ from the source code.

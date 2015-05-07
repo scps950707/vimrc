@@ -1,0 +1,123 @@
+.TH "__gnu_parallel::_DRandomShufflingGlobalData" 3 "Sun Oct 10 2010" "libstdc++" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+__gnu_parallel::_DRandomShufflingGlobalData \- 
+.PP
+Data known to every thread participating in \fB__gnu_parallel::__parallel_random_shuffle()\fP.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef _TraitsType::difference_type \fB_DifferenceType\fP"
+.br
+.ti -1c
+.RI "typedef \fBstd::iterator_traits\fP< _RAIter > \fB_TraitsType\fP"
+.br
+.ti -1c
+.RI "typedef _TraitsType::value_type \fB_ValueType\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fB_DRandomShufflingGlobalData\fP (_RAIter &__source)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fB_ThreadIndex\fP * \fB_M_bin_proc\fP"
+.br
+.ti -1c
+.RI "_DifferenceType ** \fB_M_dist\fP"
+.br
+.ti -1c
+.RI "int \fB_M_num_bins\fP"
+.br
+.ti -1c
+.RI "int \fB_M_num_bits\fP"
+.br
+.ti -1c
+.RI "_RAIter & \fB_M_source\fP"
+.br
+.ti -1c
+.RI "_DifferenceType * \fB_M_starts\fP"
+.br
+.ti -1c
+.RI "_ValueType ** \fB_M_temporaries\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<typename _RAIter> struct __gnu_parallel::_DRandomShufflingGlobalData< _RAIter >"
+Data known to every thread participating in \fB__gnu_parallel::__parallel_random_shuffle()\fP. 
+.PP
+Definition at line 52 of file random_shuffle.h.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "template<typename _RAIter> \fB__gnu_parallel::_DRandomShufflingGlobalData\fP< _RAIter >::\fB_DRandomShufflingGlobalData\fP (_RAIter & __source)\fC [inline]\fP"
+.PP
+Constructor. 
+.PP
+Definition at line 83 of file random_shuffle.h.
+.SH "Member Data Documentation"
+.PP 
+.SS "template<typename _RAIter> \fB_ThreadIndex\fP* \fB__gnu_parallel::_DRandomShufflingGlobalData\fP< _RAIter >::\fB_M_bin_proc\fP"
+.PP
+Number of the thread that will further process the corresponding bin. 
+.PP
+Definition at line 74 of file random_shuffle.h.
+.PP
+Referenced by __gnu_parallel::__parallel_random_shuffle_drs().
+.SS "template<typename _RAIter> _DifferenceType** \fB__gnu_parallel::_DRandomShufflingGlobalData\fP< _RAIter >::\fB_M_dist\fP"
+.PP
+Two-dimensional array to hold the thread-bin distribution. Dimensions (_M_num_threads + 1) __x (_M_num_bins + 1). 
+.PP
+Definition at line 67 of file random_shuffle.h.
+.PP
+Referenced by __gnu_parallel::__parallel_random_shuffle_drs(), and __gnu_parallel::__parallel_random_shuffle_drs_pu().
+.SS "template<typename _RAIter> int \fB__gnu_parallel::_DRandomShufflingGlobalData\fP< _RAIter >::\fB_M_num_bins\fP"
+.PP
+Number of bins to distribute to. 
+.PP
+Definition at line 77 of file random_shuffle.h.
+.PP
+Referenced by __gnu_parallel::__parallel_random_shuffle_drs(), and __gnu_parallel::__parallel_random_shuffle_drs_pu().
+.SS "template<typename _RAIter> int \fB__gnu_parallel::_DRandomShufflingGlobalData\fP< _RAIter >::\fB_M_num_bits\fP"
+.PP
+Number of bits needed to address the bins. 
+.PP
+Definition at line 80 of file random_shuffle.h.
+.PP
+Referenced by __gnu_parallel::__parallel_random_shuffle_drs(), and __gnu_parallel::__parallel_random_shuffle_drs_pu().
+.SS "template<typename _RAIter> _RAIter& \fB__gnu_parallel::_DRandomShufflingGlobalData\fP< _RAIter >::\fB_M_source\fP"
+.PP
+Begin iterator of the __source. 
+.PP
+Definition at line 59 of file random_shuffle.h.
+.SS "template<typename _RAIter> _DifferenceType* \fB__gnu_parallel::_DRandomShufflingGlobalData\fP< _RAIter >::\fB_M_starts\fP"
+.PP
+Start indexes of the threads' __chunks. 
+.PP
+Definition at line 70 of file random_shuffle.h.
+.PP
+Referenced by __gnu_parallel::__parallel_random_shuffle_drs(), and __gnu_parallel::__parallel_random_shuffle_drs_pu().
+.SS "template<typename _RAIter> _ValueType** \fB__gnu_parallel::_DRandomShufflingGlobalData\fP< _RAIter >::\fB_M_temporaries\fP"
+.PP
+Temporary arrays for each thread. 
+.PP
+Definition at line 62 of file random_shuffle.h.
+.PP
+Referenced by __gnu_parallel::__parallel_random_shuffle_drs().
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for libstdc++ from the source code.

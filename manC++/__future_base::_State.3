@@ -1,0 +1,66 @@
+.TH "std::__future_base::_State" 3 "Sun Oct 10 2010" "libstdc++" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+std::__future_base::_State \- 
+.PP
+Shared state between a promise and one or more associated futures.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherited by std::__future_base::_Async_state< _Res >, std::__future_base::_Deferred_state< _Res >, and std::__future_base::_Task_state< _Res(_Args...)>.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fB_State\fP (const \fB_State\fP &)"
+.br
+.ti -1c
+.RI "void \fB_M_break_promise\fP (_Ptr_type __res)"
+.br
+.ti -1c
+.RI "void \fB_M_set_result\fP (function< _Ptr_type()> __res, bool __ignore_failure=false)"
+.br
+.ti -1c
+.RI "void \fB_M_set_retrieved_flag\fP ()"
+.br
+.ti -1c
+.RI "\fB_State\fP & \fBoperator=\fP (const \fB_State\fP &)"
+.br
+.ti -1c
+.RI "\fB_Result_base\fP & \fBwait\fP ()"
+.br
+.ti -1c
+.RI "template<typename _Rep , typename _Period > bool \fBwait_for\fP (const \fBchrono::duration\fP< _Rep, _Period > &__rel)"
+.br
+.ti -1c
+.RI "template<typename _Clock , typename _Duration > bool \fBwait_until\fP (const \fBchrono::time_point\fP< _Clock, _Duration > &__abs)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename _Res , typename _Arg > static _Setter< _Res, _Arg && > \fB__setter\fP (\fBpromise\fP< _Res > *__prom, _Arg &&__arg)"
+.br
+.ti -1c
+.RI "template<typename _Res > static _Setter< _Res, __exception_ptr_tag > \fB__setter\fP (exception_ptr &__ex, \fBpromise\fP< _Res > *__prom)"
+.br
+.ti -1c
+.RI "static _Setter< void, void > \fB__setter\fP (\fBpromise\fP< void > *__prom)"
+.br
+.ti -1c
+.RI "template<typename _Tp > static bool \fB_S_check\fP (const \fBshared_ptr\fP< _Tp > &__p)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Shared state between a promise and one or more associated futures. 
+.PP
+Definition at line 262 of file future.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for libstdc++ from the source code.

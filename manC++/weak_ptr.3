@@ -1,0 +1,45 @@
+.TH "std::weak_ptr" 3 "Sun Oct 10 2010" "libstdc++" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+std::weak_ptr \- 
+.PP
+A smart pointer with weak semantics.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits __weak_ptr< _Tp >.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename _Tp1 > \fBweak_ptr\fP (const \fBweak_ptr\fP< _Tp1 > &__r)"
+.br
+.ti -1c
+.RI "template<typename _Tp1 > \fBweak_ptr\fP (const \fBshared_ptr\fP< _Tp1 > &__r)"
+.br
+.ti -1c
+.RI "\fBshared_ptr\fP< _Tp > \fBlock\fP () const "
+.br
+.ti -1c
+.RI "template<typename _Tp1 > \fBweak_ptr\fP & \fBoperator=\fP (const \fBshared_ptr\fP< _Tp1 > &__r)"
+.br
+.ti -1c
+.RI "template<typename _Tp1 > \fBweak_ptr\fP & \fBoperator=\fP (const \fBweak_ptr\fP< _Tp1 > &__r)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<typename _Tp> class std::weak_ptr< _Tp >"
+A smart pointer with weak semantics. 
+
+With forwarding constructors and assignment operators. 
+.PP
+Definition at line 321 of file shared_ptr.h.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for libstdc++ from the source code.

@@ -1,0 +1,103 @@
+.TH "__gnu_parallel::__inner_product_selector" 3 "Sun Oct 10 2010" "libstdc++" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+__gnu_parallel::__inner_product_selector \- 
+.PP
+\fBstd::inner_product()\fP selector.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fB__gnu_parallel::__generic_for_each_selector< _It >\fP.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fB__inner_product_selector\fP (_It __b1, _It2 __b2)"
+.br
+.ti -1c
+.RI "template<typename _Op > _Tp \fBoperator()\fP (_Op __mult, _It __current)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "_It \fB__begin1_iterator\fP"
+.br
+.ti -1c
+.RI "_It2 \fB__begin2_iterator\fP"
+.br
+.ti -1c
+.RI "_It \fB_M_finish_iterator\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<typename _It, typename _It2, typename _Tp> struct __gnu_parallel::__inner_product_selector< _It, _It2, _Tp >"
+\fBstd::inner_product()\fP selector. 
+.PP
+Definition at line 222 of file for_each_selectors.h.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "template<typename _It , typename _It2 , typename _Tp > \fB__gnu_parallel::__inner_product_selector\fP< _It, _It2, _Tp >::\fB__inner_product_selector\fP (_It __b1, _It2 __b2)\fC [inline, explicit]\fP"
+.PP
+Constructor. \fBParameters:\fP
+.RS 4
+\fIb1\fP Begin iterator of first sequence. 
+.br
+\fIb2\fP Begin iterator of second sequence. 
+.RE
+.PP
+
+.PP
+Definition at line 234 of file for_each_selectors.h.
+.SH "Member Function Documentation"
+.PP 
+.SS "template<typename _It , typename _It2 , typename _Tp > template<typename _Op > _Tp \fB__gnu_parallel::__inner_product_selector\fP< _It, _It2, _Tp >::operator() (_Op __mult, _It __current)\fC [inline]\fP"
+.PP
+Functor execution. \fBParameters:\fP
+.RS 4
+\fI__mult\fP Multiplication functor. 
+.br
+\fI__current\fP iterator referencing object. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Inner product elemental __result. 
+.RE
+.PP
+
+.PP
+Definition at line 243 of file for_each_selectors.h.
+.PP
+References __gnu_parallel::__inner_product_selector< _It, _It2, _Tp >::__begin1_iterator, and __gnu_parallel::__inner_product_selector< _It, _It2, _Tp >::__begin2_iterator.
+.SH "Member Data Documentation"
+.PP 
+.SS "template<typename _It , typename _It2 , typename _Tp > _It \fB__gnu_parallel::__inner_product_selector\fP< _It, _It2, _Tp >::\fB__begin1_iterator\fP"
+.PP
+Begin iterator of first sequence. 
+.PP
+Definition at line 225 of file for_each_selectors.h.
+.PP
+Referenced by __gnu_parallel::__inner_product_selector< _It, _It2, _Tp >::operator()().
+.SS "template<typename _It , typename _It2 , typename _Tp > _It2 \fB__gnu_parallel::__inner_product_selector\fP< _It, _It2, _Tp >::\fB__begin2_iterator\fP"
+.PP
+Begin iterator of second sequence. 
+.PP
+Definition at line 228 of file for_each_selectors.h.
+.PP
+Referenced by __gnu_parallel::__inner_product_selector< _It, _It2, _Tp >::operator()().
+.SS "template<typename _It > _It \fB__gnu_parallel::__generic_for_each_selector\fP< _It >::\fB_M_finish_iterator\fP\fC [inherited]\fP"
+.PP
+_Iterator on last element processed; needed for some algorithms (e. g. std::transform()). 
+.PP
+Definition at line 47 of file for_each_selectors.h.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for libstdc++ from the source code.

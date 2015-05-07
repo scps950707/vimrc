@@ -1,0 +1,136 @@
+.TH "__gnu_parallel::_GuardedIterator" 3 "Sun Oct 10 2010" "libstdc++" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+__gnu_parallel::_GuardedIterator \- 
+.PP
+_Iterator wrapper supporting an implicit supremum at the end of the sequence, dominating all comparisons.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fB_GuardedIterator\fP (_RAIter __begin, _RAIter __end, _Compare &__comp)"
+.br
+.ti -1c
+.RI "\fBoperator _RAIter\fP ()"
+.br
+.ti -1c
+.RI "\fBstd::iterator_traits\fP< _RAIter >::value_type & \fBoperator*\fP ()"
+.br
+.ti -1c
+.RI "\fB_GuardedIterator\fP< _RAIter, _Compare > & \fBoperator++\fP ()"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "bool \fBoperator<\fP (\fB_GuardedIterator\fP< _RAIter, _Compare > &__bi1, \fB_GuardedIterator\fP< _RAIter, _Compare > &__bi2)"
+.br
+.ti -1c
+.RI "bool \fBoperator<=\fP (\fB_GuardedIterator\fP< _RAIter, _Compare > &__bi1, \fB_GuardedIterator\fP< _RAIter, _Compare > &__bi2)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<typename _RAIter, typename _Compare> class __gnu_parallel::_GuardedIterator< _RAIter, _Compare >"
+_Iterator wrapper supporting an implicit supremum at the end of the sequence, dominating all comparisons. 
+
+The implicit supremum comes with a performance cost.
+.PP
+Deriving from _RAIter is not possible since _RAIter need not be a class. 
+.PP
+Definition at line 66 of file multiway_merge.h.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "template<typename _RAIter , typename _Compare > \fB__gnu_parallel::_GuardedIterator\fP< _RAIter, _Compare >::\fB_GuardedIterator\fP (_RAIter __begin, _RAIter __end, _Compare & __comp)\fC [inline]\fP"
+.PP
+Constructor. Sets iterator to beginning of sequence. \fBParameters:\fP
+.RS 4
+\fI__begin\fP Begin iterator of sequence. 
+.br
+\fI__end\fP End iterator of sequence. 
+.br
+\fI__comp\fP Comparator provided for associated overloaded compare operators. 
+.RE
+.PP
+
+.PP
+Definition at line 84 of file multiway_merge.h.
+.SH "Member Function Documentation"
+.PP 
+.SS "template<typename _RAIter , typename _Compare > \fB__gnu_parallel::_GuardedIterator\fP< _RAIter, _Compare >::operator _RAIter ()\fC [inline]\fP"
+.PP
+Convert to wrapped iterator. \fBReturns:\fP
+.RS 4
+Wrapped iterator. 
+.RE
+.PP
+
+.PP
+Definition at line 105 of file multiway_merge.h.
+.SS "template<typename _RAIter , typename _Compare > \fBstd::iterator_traits\fP<_RAIter>::value_type& \fB__gnu_parallel::_GuardedIterator\fP< _RAIter, _Compare >::operator* ()\fC [inline]\fP"
+.PP
+Dereference operator. \fBReturns:\fP
+.RS 4
+Referenced element. 
+.RE
+.PP
+
+.PP
+Definition at line 100 of file multiway_merge.h.
+.SS "template<typename _RAIter , typename _Compare > \fB_GuardedIterator\fP<_RAIter, _Compare>& \fB__gnu_parallel::_GuardedIterator\fP< _RAIter, _Compare >::operator++ ()\fC [inline]\fP"
+.PP
+Pre-increment operator. \fBReturns:\fP
+.RS 4
+This. 
+.RE
+.PP
+
+.PP
+Definition at line 91 of file multiway_merge.h.
+.SH "Friends And Related Function Documentation"
+.PP 
+.SS "template<typename _RAIter , typename _Compare > bool operator< (\fB_GuardedIterator\fP< _RAIter, _Compare > & __bi1, \fB_GuardedIterator\fP< _RAIter, _Compare > & __bi2)\fC [friend]\fP"
+.PP
+Compare two elements referenced by guarded iterators. \fBParameters:\fP
+.RS 4
+\fI__bi1\fP First iterator. 
+.br
+\fI__bi2\fP Second iterator. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+\fCtrue\fP if less. 
+.RE
+.PP
+
+.PP
+Definition at line 113 of file multiway_merge.h.
+.SS "template<typename _RAIter , typename _Compare > bool operator<= (\fB_GuardedIterator\fP< _RAIter, _Compare > & __bi1, \fB_GuardedIterator\fP< _RAIter, _Compare > & __bi2)\fC [friend]\fP"
+.PP
+Compare two elements referenced by guarded iterators. \fBParameters:\fP
+.RS 4
+\fI__bi1\fP First iterator. 
+.br
+\fI__bi2\fP Second iterator. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+\fCTrue\fP if less equal. 
+.RE
+.PP
+
+.PP
+Definition at line 128 of file multiway_merge.h.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for libstdc++ from the source code.

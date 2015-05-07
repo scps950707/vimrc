@@ -1,0 +1,197 @@
+.TH "std::normal_distribution" 3 "Sun Oct 10 2010" "libstdc++" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+std::normal_distribution \- 
+.PP
+A normal continuous distribution for random numbers.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBparam_type\fP"
+.br
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef _RealType \fBresult_type\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBnormal_distribution\fP (\fBresult_type\fP __mean=\fBresult_type\fP(0), \fBresult_type\fP __stddev=\fBresult_type\fP(1))"
+.br
+.ti -1c
+.RI "\fBnormal_distribution\fP (const \fBparam_type\fP &__p)"
+.br
+.ti -1c
+.RI "\fBresult_type\fP \fBmax\fP () const "
+.br
+.ti -1c
+.RI "_RealType \fBmean\fP () const "
+.br
+.ti -1c
+.RI "\fBresult_type\fP \fBmin\fP () const "
+.br
+.ti -1c
+.RI "template<typename _UniformRandomNumberGenerator > \fBresult_type\fP \fBoperator()\fP (_UniformRandomNumberGenerator &__urng, const \fBparam_type\fP &__p)"
+.br
+.ti -1c
+.RI "template<typename _UniformRandomNumberGenerator > \fBresult_type\fP \fBoperator()\fP (_UniformRandomNumberGenerator &__urng)"
+.br
+.ti -1c
+.RI "void \fBparam\fP (const \fBparam_type\fP &__param)"
+.br
+.ti -1c
+.RI "\fBparam_type\fP \fBparam\fP () const "
+.br
+.ti -1c
+.RI "void \fBreset\fP ()"
+.br
+.ti -1c
+.RI "_RealType \fBstddev\fP () const "
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "template<typename _RealType1 , typename _CharT , typename _Traits > \fBstd::basic_ostream\fP< _CharT, _Traits > & \fBoperator<<\fP (\fBstd::basic_ostream\fP< _CharT, _Traits > &, const \fBstd::normal_distribution\fP< _RealType1 > &)"
+.br
+.ti -1c
+.RI "template<typename _RealType1 > bool \fBoperator==\fP (const \fBstd::normal_distribution\fP< _RealType1 > &__d1, const \fBstd::normal_distribution\fP< _RealType1 > &__d2)"
+.br
+.ti -1c
+.RI "template<typename _RealType1 , typename _CharT , typename _Traits > \fBstd::basic_istream\fP< _CharT, _Traits > & \fBoperator>>\fP (\fBstd::basic_istream\fP< _CharT, _Traits > &, \fBstd::normal_distribution\fP< _RealType1 > &)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<typename _RealType = double> class std::normal_distribution< _RealType >"
+A normal continuous distribution for random numbers. 
+
+The formula for the normal probability density function is \[ p(x|\mu,\sigma) = \frac{1}{\sigma \sqrt{2 \pi}} e^{- \frac{{x - \mu}^ {2}}{2 \sigma ^ {2}} } \] 
+.PP
+Definition at line 1990 of file random.h.
+.SH "Member Typedef Documentation"
+.PP 
+.SS "template<typename _RealType = double> typedef _RealType \fBstd::normal_distribution\fP< _RealType >::\fBresult_type\fP"The type of the range of the distribution. 
+.PP
+Definition at line 1997 of file random.h.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "template<typename _RealType = double> \fBstd::normal_distribution\fP< _RealType >::\fBnormal_distribution\fP (\fBresult_type\fP __mean = \fC\fBresult_type\fP(0)\fP, \fBresult_type\fP __stddev = \fC\fBresult_type\fP(1)\fP)\fC [inline, explicit]\fP"Constructs a normal distribution with parameters $mean$ and standard deviation. 
+.PP
+Definition at line 2035 of file random.h.
+.SH "Member Function Documentation"
+.PP 
+.SS "template<typename _RealType = double> \fBresult_type\fP \fBstd::normal_distribution\fP< _RealType >::max () const\fC [inline]\fP"
+.PP
+Returns the least upper bound value of the distribution. 
+.PP
+Definition at line 2092 of file random.h.
+.PP
+Referenced by std::normal_distribution< result_type >::max().
+.SS "template<typename _RealType = double> _RealType \fBstd::normal_distribution\fP< _RealType >::mean () const\fC [inline]\fP"
+.PP
+Returns the mean of the distribution. 
+.PP
+Definition at line 2056 of file random.h.
+.SS "template<typename _RealType = double> \fBresult_type\fP \fBstd::normal_distribution\fP< _RealType >::min () const\fC [inline]\fP"
+.PP
+Returns the greatest lower bound value of the distribution. 
+.PP
+Definition at line 2085 of file random.h.
+.PP
+Referenced by std::normal_distribution< result_type >::min().
+.SS "template<typename _RealType = double> template<typename _UniformRandomNumberGenerator > \fBresult_type\fP \fBstd::normal_distribution\fP< _RealType >::operator() (_UniformRandomNumberGenerator & __urng)\fC [inline]\fP"
+.PP
+Generating functions. 
+.PP
+Definition at line 2100 of file random.h.
+.PP
+Referenced by std::normal_distribution< result_type >::operator()().
+.SS "template<typename _RealType > template<typename _UniformRandomNumberGenerator > \fBnormal_distribution\fP< _RealType >::\fBresult_type\fP \fBstd::normal_distribution\fP< _RealType >::operator() (_UniformRandomNumberGenerator & __urng, const \fBparam_type\fP & __param)"Polar method due to Marsaglia.
+.PP
+Devroye, L. Non-Uniform Random Variates Generation. Springer-Verlag, New York, 1986, Ch. V, Sect. 4.4. 
+.PP
+Definition at line 1607 of file random.tcc.
+.PP
+References std::log(), and std::sqrt().
+.SS "template<typename _RealType = double> void \fBstd::normal_distribution\fP< _RealType >::param (const \fBparam_type\fP & __param)\fC [inline]\fP"
+.PP
+Sets the parameter set of the distribution. \fBParameters:\fP
+.RS 4
+\fI__param\fP The new parameter set of the distribution. 
+.RE
+.PP
+
+.PP
+Definition at line 2078 of file random.h.
+.SS "template<typename _RealType = double> \fBparam_type\fP \fBstd::normal_distribution\fP< _RealType >::param () const\fC [inline]\fP"
+.PP
+Returns the parameter set of the distribution. 
+.PP
+Definition at line 2070 of file random.h.
+.PP
+Referenced by std::normal_distribution< result_type >::operator()().
+.SS "template<typename _RealType = double> void \fBstd::normal_distribution\fP< _RealType >::reset ()\fC [inline]\fP"
+.PP
+Resets the distribution state. 
+.PP
+Definition at line 2049 of file random.h.
+.PP
+Referenced by std::poisson_distribution< _IntType >::reset(), std::binomial_distribution< _IntType >::reset(), std::student_t_distribution< _RealType >::reset(), std::gamma_distribution< result_type >::reset(), and std::lognormal_distribution< _RealType >::reset().
+.SS "template<typename _RealType = double> _RealType \fBstd::normal_distribution\fP< _RealType >::stddev () const\fC [inline]\fP"
+.PP
+Returns the standard deviation of the distribution. 
+.PP
+Definition at line 2063 of file random.h.
+.SH "Friends And Related Function Documentation"
+.PP 
+.SS "template<typename _RealType = double> template<typename _RealType1 , typename _CharT , typename _Traits > \fBstd::basic_ostream\fP<_CharT, _Traits>& operator<< (\fBstd::basic_ostream\fP< _CharT, _Traits > &, const \fBstd::normal_distribution\fP< _RealType1 > &)\fC [friend]\fP"
+.PP
+Inserts a normal_distribution random number distribution \fC__x\fP into the output stream \fC__os\fP. \fBParameters:\fP
+.RS 4
+\fI__os\fP An output stream. 
+.br
+\fI__x\fP A normal_distribution random number distribution.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The output stream with the state of \fC__x\fP inserted or in an error state. 
+.RE
+.PP
+
+.SS "template<typename _RealType = double> template<typename _RealType1 > bool operator== (const \fBstd::normal_distribution\fP< _RealType1 > & __d1, const \fBstd::normal_distribution\fP< _RealType1 > & __d2)\fC [friend]\fP"
+.PP
+Return true if two normal distributions have the same parameters and the sequences that would be generated are equal. 
+.SS "template<typename _RealType = double> template<typename _RealType1 , typename _CharT , typename _Traits > \fBstd::basic_istream\fP<_CharT, _Traits>& operator>> (\fBstd::basic_istream\fP< _CharT, _Traits > &, \fBstd::normal_distribution\fP< _RealType1 > &)\fC [friend]\fP"
+.PP
+Extracts a normal_distribution random number distribution \fC__x\fP from the input stream \fC__is\fP. \fBParameters:\fP
+.RS 4
+\fI__is\fP An input stream. 
+.br
+\fI__x\fP A normal_distribution random number generator engine.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The input stream with \fC__x\fP extracted or in an error state. 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for libstdc++ from the source code.

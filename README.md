@@ -25,7 +25,7 @@
 - [X] [syntastic](https://github.com/scrooloose/syntastic) 
 - [X] [vim-commentary](https://github.com/tpope/vim-commentary) 
 - [X] [minibufexpl](https://github.com/fholgado/minibufexpl.vim)
-
+- [X] man.vim 
 ###Theme
 - [ ] [vim-airline](https://github.com/bling/vim-airline) 
 - [X] [vim-powerline](https://github.com/Lokaltog/vim-powerline) 
@@ -51,3 +51,5 @@
 - ```F7``` minibufexpl
 	- ```\z``` MBEbn
 	- ```\x``` MBEbp
+- ```F8``` call Replace()
+- ```\m ``` Man

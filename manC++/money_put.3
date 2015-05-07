@@ -1,0 +1,286 @@
+.TH "std::money_put" 3 "Sun Oct 10 2010" "libstdc++" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+std::money_put \- 
+.PP
+Primary class template \fBmoney_put\fP.
+.PP
+This facet encapsulates the code to format and output a monetary amount.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBstd::locale::facet\fP.
+.SS "Public Types"
+
+.PP
+.RI "\fB\fP"
+.br
+ 
+.PP
+.in +1c
+.in +1c
+.ti -1c
+.RI "typedef _CharT \fBchar_type\fP"
+.br
+.ti -1c
+.RI "typedef _OutIter \fBiter_type\fP"
+.br
+.ti -1c
+.RI "typedef \fBbasic_string\fP< _CharT > \fBstring_type\fP"
+.br
+.in -1c
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBmoney_put\fP (size_t __refs=0)"
+.br
+.ti -1c
+.RI "\fBiter_type\fP \fBput\fP (\fBiter_type\fP __s, bool __intl, \fBios_base\fP &__io, \fBchar_type\fP __fill, const \fBstring_type\fP &__digits) const "
+.br
+.ti -1c
+.RI "\fBiter_type\fP \fBput\fP (\fBiter_type\fP __s, bool __intl, \fBios_base\fP &__io, \fBchar_type\fP __fill, long double __units) const "
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static \fBlocale::id\fP \fBid\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual \fB~money_put\fP ()"
+.br
+.ti -1c
+.RI "template<bool _Intl> \fBiter_type\fP \fB_M_insert\fP (\fBiter_type\fP __s, \fBios_base\fP &__io, \fBchar_type\fP __fill, const \fBstring_type\fP &__digits) const "
+.br
+.ti -1c
+.RI "virtual \fBiter_type\fP \fBdo_put\fP (\fBiter_type\fP __s, bool __intl, \fBios_base\fP &__io, \fBchar_type\fP __fill, const \fBstring_type\fP &__digits) const "
+.br
+.ti -1c
+.RI "virtual \fBiter_type\fP \fBdo_put\fP (\fBiter_type\fP __s, bool __intl, \fBios_base\fP &__io, \fBchar_type\fP __fill, long double __units) const "
+.br
+.in -1c
+.SS "Static Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static __c_locale \fB_S_clone_c_locale\fP (__c_locale &__cloc)  throw ()"
+.br
+.ti -1c
+.RI "static void \fB_S_create_c_locale\fP (__c_locale &__cloc, const char *__s, __c_locale __old=0)"
+.br
+.ti -1c
+.RI "static void \fB_S_destroy_c_locale\fP (__c_locale &__cloc)"
+.br
+.ti -1c
+.RI "static __c_locale \fB_S_get_c_locale\fP ()"
+.br
+.ti -1c
+.RI "static _GLIBCXX_CONST const char * \fB_S_get_c_name\fP ()  throw ()"
+.br
+.ti -1c
+.RI "static __c_locale \fB_S_lc_ctype_c_locale\fP (__c_locale __cloc, const char *__s)"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fBlocale::_Impl\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<typename _CharT, typename _OutIter> class std::money_put< _CharT, _OutIter >"
+Primary class template \fBmoney_put\fP.
+.PP
+This facet encapsulates the code to format and output a monetary amount. 
+
+The \fBmoney_put\fP template uses protected virtual functions to provide the actual results. The public accessors forward the call to the virtual functions. These virtual functions are hooks for developers to implement the behavior they require from the \fBmoney_put\fP facet. 
+.PP
+Definition at line 1515 of file locale_facets_nonio.h.
+.SH "Member Typedef Documentation"
+.PP 
+.SS "template<typename _CharT , typename _OutIter > typedef _CharT \fBstd::money_put\fP< _CharT, _OutIter >::\fBchar_type\fP"
+.PP
+Public typedefs. 
+.PP
+Definition at line 1520 of file locale_facets_nonio.h.
+.SS "template<typename _CharT , typename _OutIter > typedef _OutIter \fBstd::money_put\fP< _CharT, _OutIter >::\fBiter_type\fP"
+.PP
+Public typedefs. 
+.PP
+Definition at line 1521 of file locale_facets_nonio.h.
+.SS "template<typename _CharT , typename _OutIter > typedef \fBbasic_string\fP<_CharT> \fBstd::money_put\fP< _CharT, _OutIter >::\fBstring_type\fP"
+.PP
+Public typedefs. 
+.PP
+Definition at line 1522 of file locale_facets_nonio.h.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "template<typename _CharT , typename _OutIter > \fBstd::money_put\fP< _CharT, _OutIter >::\fBmoney_put\fP (size_t __refs = \fC0\fP)\fC [inline, explicit]\fP"
+.PP
+Constructor performs initialization. This is the constructor provided by the standard.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIrefs\fP Passed to the base facet class. 
+.RE
+.PP
+
+.PP
+Definition at line 1536 of file locale_facets_nonio.h.
+.SS "template<typename _CharT , typename _OutIter > virtual \fBstd::money_put\fP< _CharT, _OutIter >::~\fBmoney_put\fP ()\fC [inline, protected, virtual]\fP"
+.PP
+Destructor. 
+.PP
+Definition at line 1586 of file locale_facets_nonio.h.
+.SH "Member Function Documentation"
+.PP 
+.SS "template<typename _CharT , typename _OutIter > _OutIter \fBstd::money_put\fP< _CharT, _OutIter >::do_put (\fBiter_type\fP __s, bool __intl, \fBios_base\fP & __io, \fBchar_type\fP __fill, long double __units) const\fC [protected, virtual]\fP"
+.PP
+Format and output a monetary value. This function formats \fIunits\fP as a monetary value according to moneypunct and ctype facets retrieved from io.getloc(), and writes the resulting characters to \fIs\fP. For example, the value 1001 in a US locale would write \fC$10.01\fP to \fIs\fP.
+.PP
+This function is a hook for derived classes to change the value returned. 
+.PP
+\fBSee also:\fP
+.RS 4
+\fBput()\fP.
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIs\fP The stream to write to. 
+.br
+\fIintl\fP Parameter to use_facet<moneypunct<CharT,intl> >. 
+.br
+\fIio\fP Source of facets and io state. 
+.br
+\fIfill\fP char_type to use for padding. 
+.br
+\fIunits\fP Place to store result of parsing. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Iterator after writing. 
+.RE
+.PP
+
+.PP
+Definition at line 568 of file locale_facets_nonio.tcc.
+.PP
+References std::ios_base::getloc(), and std::__ctype_abstract_base< _CharT >::widen().
+.PP
+Referenced by std::money_put< _CharT, _OutIter >::put().
+.SS "template<typename _CharT , typename _OutIter > _OutIter \fBstd::money_put\fP< _CharT, _OutIter >::do_put (\fBiter_type\fP __s, bool __intl, \fBios_base\fP & __io, \fBchar_type\fP __fill, const \fBstring_type\fP & __digits) const\fC [protected, virtual]\fP"
+.PP
+Format and output a monetary value. This function formats \fIdigits\fP as a monetary value according to moneypunct and ctype facets retrieved from io.getloc(), and writes the resulting characters to \fIs\fP. For example, the string \fC1001\fP in a US locale would write \fC$10.01\fP to \fIs\fP.
+.PP
+This function is a hook for derived classes to change the value returned. 
+.PP
+\fBSee also:\fP
+.RS 4
+\fBput()\fP.
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIs\fP The stream to write to. 
+.br
+\fIintl\fP Parameter to use_facet<moneypunct<CharT,intl> >. 
+.br
+\fIio\fP Source of facets and io state. 
+.br
+\fIfill\fP char_type to use for padding. 
+.br
+\fIunits\fP Place to store result of parsing. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Iterator after writing. 
+.RE
+.PP
+
+.PP
+Definition at line 606 of file locale_facets_nonio.tcc.
+.SS "template<typename _CharT , typename _OutIter > \fBiter_type\fP \fBstd::money_put\fP< _CharT, _OutIter >::put (\fBiter_type\fP __s, bool __intl, \fBios_base\fP & __io, \fBchar_type\fP __fill, const \fBstring_type\fP & __digits) const\fC [inline]\fP"
+.PP
+Format and output a monetary value. This function formats \fIdigits\fP as a monetary value according to moneypunct and ctype facets retrieved from io.getloc(), and writes the resulting characters to \fIs\fP. For example, the string \fC1001\fP in a US locale would write \fC$10.01\fP to \fIs\fP.
+.PP
+This function works by returning the result of \fBdo_put()\fP.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIs\fP The stream to write to. 
+.br
+\fIintl\fP Parameter to use_facet<moneypunct<CharT,intl> >. 
+.br
+\fIio\fP Source of facets and io state. 
+.br
+\fIfill\fP char_type to use for padding. 
+.br
+\fIunits\fP Place to store result of parsing. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Iterator after writing. 
+.RE
+.PP
+
+.PP
+Definition at line 1579 of file locale_facets_nonio.h.
+.PP
+References std::money_put< _CharT, _OutIter >::do_put().
+.SS "template<typename _CharT , typename _OutIter > \fBiter_type\fP \fBstd::money_put\fP< _CharT, _OutIter >::put (\fBiter_type\fP __s, bool __intl, \fBios_base\fP & __io, \fBchar_type\fP __fill, long double __units) const\fC [inline]\fP"
+.PP
+Format and output a monetary value. This function formats \fIunits\fP as a monetary value according to moneypunct and ctype facets retrieved from io.getloc(), and writes the resulting characters to \fIs\fP. For example, the value 1001 in a US locale would write \fC$10.01\fP to \fIs\fP.
+.PP
+This function works by returning the result of \fBdo_put()\fP.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIs\fP The stream to write to. 
+.br
+\fIintl\fP Parameter to use_facet<moneypunct<CharT,intl> >. 
+.br
+\fIio\fP Source of facets and io state. 
+.br
+\fIfill\fP char_type to use for padding. 
+.br
+\fIunits\fP Place to store result of parsing. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Iterator after writing. 
+.RE
+.PP
+
+.PP
+Definition at line 1556 of file locale_facets_nonio.h.
+.PP
+References std::money_put< _CharT, _OutIter >::do_put().
+.SH "Member Data Documentation"
+.PP 
+.SS "template<typename _CharT , typename _OutIter > \fBlocale::id\fP \fBstd::money_put\fP< _CharT, _OutIter >::\fBid\fP\fC [static]\fP"
+.PP
+Numpunct facet id. 
+.PP
+Definition at line 1526 of file locale_facets_nonio.h.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for libstdc++ from the source code.

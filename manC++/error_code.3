@@ -1,0 +1,61 @@
+.TH "std::error_code" 3 "Sun Oct 10 2010" "libstdc++" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+std::error_code \- 
+.PP
+\fBerror_code\fP  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBerror_code\fP (int __v, const \fBerror_category\fP &__cat)"
+.br
+.ti -1c
+.RI "template<typename _ErrorCodeEnum > \fBerror_code\fP (_ErrorCodeEnum __e, typename \fBenable_if\fP< \fBis_error_code_enum\fP< _ErrorCodeEnum >::value >::type *=0)"
+.br
+.ti -1c
+.RI "void \fBassign\fP (int __v, const \fBerror_category\fP &__cat)"
+.br
+.ti -1c
+.RI "const \fBerror_category\fP & \fBcategory\fP () const "
+.br
+.ti -1c
+.RI "void \fBclear\fP ()"
+.br
+.ti -1c
+.RI "\fBerror_condition\fP \fBdefault_error_condition\fP () const "
+.br
+.ti -1c
+.RI "\fBstring\fP \fBmessage\fP () const "
+.br
+.ti -1c
+.RI "\fBoperator bool\fP () const "
+.br
+.ti -1c
+.RI "template<typename _ErrorCodeEnum > \fBenable_if\fP< \fBis_error_code_enum\fP< _ErrorCodeEnum >::value, \fBerror_code\fP & >::type \fBoperator=\fP (_ErrorCodeEnum __e)"
+.br
+.ti -1c
+.RI "int \fBvalue\fP () const "
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fBhash< error_code >\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBerror_code\fP 
+.PP
+Definition at line 116 of file system_error.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for libstdc++ from the source code.

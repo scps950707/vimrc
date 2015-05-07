@@ -1,0 +1,103 @@
+.TH "__gnu_cxx::throw_allocator_base" 3 "Sun Oct 10 2010" "libstdc++" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+__gnu_cxx::throw_allocator_base \- 
+.PP
+Allocator class with logging and exception generation control. Intended to be used as an allocator_type in templatized code.
+.PP
+Note: Deallocate not allowed to throw.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fB__gnu_cxx::annotate_base\fP, and __gnu_cxx::_Cond.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef const value_type * \fBconst_pointer\fP"
+.br
+.ti -1c
+.RI "typedef const value_type & \fBconst_reference\fP"
+.br
+.ti -1c
+.RI "typedef ptrdiff_t \fBdifference_type\fP"
+.br
+.ti -1c
+.RI "typedef value_type * \fBpointer\fP"
+.br
+.ti -1c
+.RI "typedef value_type & \fBreference\fP"
+.br
+.ti -1c
+.RI "typedef size_t \fBsize_type\fP"
+.br
+.ti -1c
+.RI "typedef _Tp \fBvalue_type\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "pointer \fBallocate\fP (size_type __n, \fBstd::allocator\fP< void >::const_pointer hint=0)"
+.br
+.ti -1c
+.RI "void \fBcheck_allocated\fP (size_type __n)"
+.br
+.ti -1c
+.RI "void \fBcheck_allocated\fP (void *p, size_t size)"
+.br
+.ti -1c
+.RI "void \fBcheck_allocated\fP (pointer __p, size_type __n)"
+.br
+.ti -1c
+.RI "void \fBcheck_allocated\fP (size_t label)"
+.br
+.ti -1c
+.RI "template<typename... _Args> void \fBconstruct\fP (pointer __p, _Args &&...__args)"
+.br
+.ti -1c
+.RI "void \fBconstruct\fP (pointer __p, const value_type &val)"
+.br
+.ti -1c
+.RI "void \fBdeallocate\fP (pointer __p, size_type __n)"
+.br
+.ti -1c
+.RI "void \fBdestroy\fP (pointer __p)"
+.br
+.ti -1c
+.RI "void \fBerase\fP (void *p, size_t size)"
+.br
+.ti -1c
+.RI "void \fBinsert\fP (void *p, size_t size)"
+.br
+.ti -1c
+.RI "size_type \fBmax_size\fP () const   throw ()"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static size_t \fBget_label\fP ()"
+.br
+.ti -1c
+.RI "static void \fBset_label\fP (size_t l)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<typename _Tp, typename _Cond> class __gnu_cxx::throw_allocator_base< _Tp, _Cond >"
+Allocator class with logging and exception generation control. Intended to be used as an allocator_type in templatized code.
+.PP
+Note: Deallocate not allowed to throw. 
+.PP
+Definition at line 598 of file throw_allocator.h.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for libstdc++ from the source code.

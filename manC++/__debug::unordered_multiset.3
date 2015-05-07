@@ -1,0 +1,229 @@
+.TH "std::__debug::unordered_multiset" 3 "Sun Oct 10 2010" "libstdc++" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+std::__debug::unordered_multiset \- 
+.PP
+Class \fBstd::unordered_multiset\fP with safety/checking/debug instrumentation.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits unordered_multiset< _Value, _Hash, _Pred, _Alloc >, and \fB_Safe_sequence< unordered_multiset< _Value, _Hash, _Pred, _Alloc > >\fP.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef _Base::allocator_type \fBallocator_type\fP"
+.br
+.ti -1c
+.RI "typedef \fB__gnu_debug::_Safe_iterator\fP< typename \fB_Base::const_iterator\fP, \fBunordered_multiset\fP > \fBconst_iterator\fP"
+.br
+.ti -1c
+.RI "typedef _Base::hasher \fBhasher\fP"
+.br
+.ti -1c
+.RI "typedef \fB__gnu_debug::_Safe_iterator\fP< typename \fB_Base::iterator\fP, \fBunordered_multiset\fP > \fBiterator\fP"
+.br
+.ti -1c
+.RI "typedef _Base::key_equal \fBkey_equal\fP"
+.br
+.ti -1c
+.RI "typedef _Base::key_type \fBkey_type\fP"
+.br
+.ti -1c
+.RI "typedef _Base::size_type \fBsize_type\fP"
+.br
+.ti -1c
+.RI "typedef _Base::value_type \fBvalue_type\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBunordered_multiset\fP (size_type __n=10, const hasher &__hf=hasher(), const key_equal &__eql=key_equal(), const allocator_type &__a=allocator_type())"
+.br
+.ti -1c
+.RI "template<typename _InputIterator > \fBunordered_multiset\fP (_InputIterator __f, _InputIterator __l, size_type __n=10, const hasher &__hf=hasher(), const key_equal &__eql=key_equal(), const allocator_type &__a=allocator_type())"
+.br
+.ti -1c
+.RI "\fBunordered_multiset\fP (const \fB_Base\fP &__x)"
+.br
+.ti -1c
+.RI "\fBunordered_multiset\fP (\fBunordered_multiset\fP &&__x)"
+.br
+.ti -1c
+.RI "\fBunordered_multiset\fP (const \fBunordered_multiset\fP &__x)"
+.br
+.ti -1c
+.RI "\fBunordered_multiset\fP (\fBinitializer_list\fP< value_type > __l, size_type __n=10, const hasher &__hf=hasher(), const key_equal &__eql=key_equal(), const allocator_type &__a=allocator_type())"
+.br
+.ti -1c
+.RI "\fB_Base\fP & \fB_M_base\fP ()"
+.br
+.ti -1c
+.RI "const \fB_Base\fP & \fB_M_base\fP () const "
+.br
+.ti -1c
+.RI "void \fB_M_invalidate_all\fP () const "
+.br
+.ti -1c
+.RI "void \fB_M_invalidate_if\fP (_Predicate __pred)"
+.br
+.ti -1c
+.RI "void \fB_M_transfer_iter\fP (const _Safe_iterator< _Iterator, \fBunordered_multiset\fP< _Value, _Hash, _Pred, _Alloc > > &__x)"
+.br
+.ti -1c
+.RI "\fBiterator\fP \fBbegin\fP ()"
+.br
+.ti -1c
+.RI "\fBconst_iterator\fP \fBbegin\fP () const "
+.br
+.ti -1c
+.RI "\fBconst_iterator\fP \fBcbegin\fP () const "
+.br
+.ti -1c
+.RI "\fBconst_iterator\fP \fBcend\fP () const "
+.br
+.ti -1c
+.RI "void \fBclear\fP ()"
+.br
+.ti -1c
+.RI "\fBconst_iterator\fP \fBend\fP () const "
+.br
+.ti -1c
+.RI "\fBiterator\fP \fBend\fP ()"
+.br
+.ti -1c
+.RI "\fBstd::pair\fP< \fBiterator\fP, \fBiterator\fP > \fBequal_range\fP (const key_type &__key)"
+.br
+.ti -1c
+.RI "\fBstd::pair\fP< \fBconst_iterator\fP, \fBconst_iterator\fP > \fBequal_range\fP (const key_type &__key) const "
+.br
+.ti -1c
+.RI "size_type \fBerase\fP (const key_type &__key)"
+.br
+.ti -1c
+.RI "\fBiterator\fP \fBerase\fP (\fBconst_iterator\fP __it)"
+.br
+.ti -1c
+.RI "\fBiterator\fP \fBerase\fP (\fBconst_iterator\fP __first, \fBconst_iterator\fP __last)"
+.br
+.ti -1c
+.RI "\fBiterator\fP \fBfind\fP (const key_type &__key)"
+.br
+.ti -1c
+.RI "\fBconst_iterator\fP \fBfind\fP (const key_type &__key) const "
+.br
+.ti -1c
+.RI "\fBiterator\fP \fBinsert\fP (\fBconst_iterator\fP, const value_type &__obj)"
+.br
+.ti -1c
+.RI "\fBiterator\fP \fBinsert\fP (const value_type &__obj)"
+.br
+.ti -1c
+.RI "void \fBinsert\fP (\fBstd::initializer_list\fP< value_type > __l)"
+.br
+.ti -1c
+.RI "template<typename _InputIterator > void \fBinsert\fP (_InputIterator __first, _InputIterator __last)"
+.br
+.ti -1c
+.RI "\fBunordered_multiset\fP & \fBoperator=\fP (\fBunordered_multiset\fP &&__x)"
+.br
+.ti -1c
+.RI "\fBunordered_multiset\fP & \fBoperator=\fP (\fBinitializer_list\fP< value_type > __l)"
+.br
+.ti -1c
+.RI "\fBunordered_multiset\fP & \fBoperator=\fP (const \fBunordered_multiset\fP &__x)"
+.br
+.ti -1c
+.RI "void \fBswap\fP (\fBunordered_multiset\fP &__x)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "_Safe_iterator_base * \fB_M_const_iterators\fP"
+.br
+.ti -1c
+.RI "_Safe_iterator_base * \fB_M_iterators\fP"
+.br
+.ti -1c
+.RI "unsigned int \fB_M_version\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fB_M_detach_all\fP ()"
+.br
+.ti -1c
+.RI "void \fB_M_detach_singular\fP ()"
+.br
+.ti -1c
+.RI "__gnu_cxx::__mutex & \fB_M_get_mutex\fP ()  throw ()"
+.br
+.ti -1c
+.RI "void \fB_M_revalidate_singular\fP ()"
+.br
+.ti -1c
+.RI "void \fB_M_swap\fP (_Safe_sequence_base &__x)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<typename _Value, typename _Hash = std::hash<_Value>, typename _Pred = std::equal_to<_Value>, typename _Alloc = std::allocator<_Value>> class std::__debug::unordered_multiset< _Value, _Hash, _Pred, _Alloc >"
+Class \fBstd::unordered_multiset\fP with safety/checking/debug instrumentation. 
+.PP
+Definition at line 305 of file debug/unordered_set.
+.SH "Member Function Documentation"
+.PP 
+.SS "void __gnu_debug::_Safe_sequence_base::_M_detach_all ()\fC [protected, inherited]\fP"Detach all iterators, leaving them singular. 
+.SS "void __gnu_debug::_Safe_sequence_base::_M_detach_singular ()\fC [protected, inherited]\fP"Detach all singular iterators. 
+.PP
+\fBPostcondition:\fP
+.RS 4
+for all iterators i attached to this sequence, i->_M_version == _M_version. 
+.RE
+.PP
+
+.SS "__gnu_cxx::__mutex& __gnu_debug::_Safe_sequence_base::_M_get_mutex ()  throw ()\fC [protected, inherited]\fP"For use in \fB_Safe_sequence\fP. 
+.PP
+Referenced by __gnu_debug::_Safe_sequence< _Sequence >::_M_invalidate_if(), and __gnu_debug::_Safe_sequence< _Sequence >::_M_transfer_iter().
+.SS "void __gnu_debug::_Safe_sequence_base::_M_invalidate_all () const\fC [inline, inherited]\fP"Invalidates all iterators. 
+.PP
+Definition at line 215 of file safe_base.h.
+.SS "void \fB__gnu_debug::_Safe_sequence\fP< \fBunordered_multiset\fP< _Value, _Hash, _Pred, _Alloc >  >::_M_invalidate_if (_Predicate __pred)\fC [inherited]\fP"Invalidates all iterators \fCx\fP that reference this sequence, are not singular, and for which \fCpred(x)\fP returns \fCtrue\fP. The user of this routine should be careful not to make copies of the iterators passed to \fCpred\fP, as the copies may interfere with the invalidation. 
+.SS "void __gnu_debug::_Safe_sequence_base::_M_revalidate_singular ()\fC [protected, inherited]\fP"Revalidates all attached singular iterators. This method may be used to validate iterators that were invalidated before (but for some reason, such as an exception, need to become valid again). 
+.SS "void __gnu_debug::_Safe_sequence_base::_M_swap (\fB_Safe_sequence_base\fP & __x)\fC [protected, inherited]\fP"Swap this sequence with the given sequence. This operation also swaps ownership of the iterators, so that when the operation is complete all iterators that originally referenced one container now reference the other container. 
+.SS "void \fB__gnu_debug::_Safe_sequence\fP< \fBunordered_multiset\fP< _Value, _Hash, _Pred, _Alloc >  >::_M_transfer_iter (const \fB_Safe_iterator\fP< _Iterator, \fBunordered_multiset\fP< _Value, _Hash, _Pred, _Alloc >  > & __x)\fC [inherited]\fP"Transfers all iterators that reference this memory location to this sequence from whatever sequence they are attached to. 
+.SH "Member Data Documentation"
+.PP 
+.SS "_Safe_iterator_base* \fB__gnu_debug::_Safe_sequence_base::_M_const_iterators\fP\fC [inherited]\fP"
+.PP
+The list of constant iterators that reference this container. 
+.PP
+Definition at line 166 of file safe_base.h.
+.PP
+Referenced by __gnu_debug::_Safe_sequence< _Sequence >::_M_invalidate_if(), __gnu_debug::_Safe_iterator< _Iterator, _Sequence >::_M_invalidate_single(), and __gnu_debug::_Safe_sequence< _Sequence >::_M_transfer_iter().
+.SS "_Safe_iterator_base* \fB__gnu_debug::_Safe_sequence_base::_M_iterators\fP\fC [inherited]\fP"
+.PP
+The list of mutable iterators that reference this container. 
+.PP
+Definition at line 163 of file safe_base.h.
+.PP
+Referenced by __gnu_debug::_Safe_sequence< _Sequence >::_M_invalidate_if(), __gnu_debug::_Safe_iterator< _Iterator, _Sequence >::_M_invalidate_single(), and __gnu_debug::_Safe_sequence< _Sequence >::_M_transfer_iter().
+.SS "unsigned int \fB__gnu_debug::_Safe_sequence_base::_M_version\fP\fC [mutable, inherited]\fP"
+.PP
+The container version number. This number may never be 0. 
+.PP
+Definition at line 169 of file safe_base.h.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for libstdc++ from the source code.

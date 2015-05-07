@@ -1,0 +1,54 @@
+.TH "std::random_device" 3 "Sun Oct 10 2010" "libstdc++" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+std::random_device \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef unsigned int \fBresult_type\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBrandom_device\fP (const \fBstd::string\fP &__token='mt19937')"
+.br
+.ti -1c
+.RI "\fBrandom_device\fP (const \fBrandom_device\fP &)"
+.br
+.ti -1c
+.RI "double \fBentropy\fP () const "
+.br
+.ti -1c
+.RI "\fBresult_type\fP \fBmax\fP () const "
+.br
+.ti -1c
+.RI "\fBresult_type\fP \fBmin\fP () const "
+.br
+.ti -1c
+.RI "\fBresult_type\fP \fBoperator()\fP ()"
+.br
+.ti -1c
+.RI "void \fBoperator=\fP (const \fBrandom_device\fP &)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+A standard interface to a platform-specific non-deterministic random number generator (if any are available). 
+.PP
+Definition at line 1521 of file random.h.
+.SH "Member Typedef Documentation"
+.PP 
+.SS "typedef unsigned int \fBstd::random_device::result_type\fP"The type of the generated random value. 
+.PP
+Definition at line 1525 of file random.h.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for libstdc++ from the source code.
