@@ -6,8 +6,8 @@ NeoBundle 'garbas/vim-snipmate'
 NeoBundle 'othree/vim-autocomplpop'
 NeoBundle 'L9'
 let g:acp_behaviorSnipmateLength = 1
-NeoBundle 'scps950707/c.vim'
-NeoBundleSource c.vim
+" NeoBundle 'scps950707/c.vim'
+" NeoBundleSource c.vim
 NeoBundle 'Townk/vim-autoclose'
 NeoBundle 'Rip-Rip/clang_complete'
 let g:clang_complete_copen=1

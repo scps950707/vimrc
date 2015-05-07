@@ -1,0 +1,14 @@
+clock
+difftime
+mktime
+time
+
+asctime
+ctime
+gmtime
+localtime
+strftime
+
+CLOCKS_PER_SEC
+clock_t
+time_t

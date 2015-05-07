@@ -6,6 +6,7 @@ install:clang
 	cat _vimrc > ${FILE_VIMRC}
 	mkdir ${DIR_VIM}
 	cp -a colors/ ${DIR_VIM}/colors
+	cp -a keyword/ ${DIR_VIM}/keyword
 	cp plugins.vim ${DIR_VIM} 
 	git clone git://github.com/Shougo/neobundle.vim ${DIR_VIM}/bundle/neobundle.vim
 	git clone https://github.com/eugeii/consolas-powerline-vim.git ${HOME}/.fonts/consolas-powerline-vim

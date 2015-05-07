@@ -68,3 +68,5 @@ set foldenable
 set foldmethod=indent
 set foldcolumn=1
 set foldlevel=6
+
+set dictionary+=~/.vim/bundle/keyword/*.list
