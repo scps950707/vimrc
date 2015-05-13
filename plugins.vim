@@ -45,6 +45,9 @@ let g:syntastic_error_symbol='✗'
 let g:syntastic_warning_symbol='⚠'
 let g:syntastic_enable_highlighting = 1
 let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
+let g:syntastic_cpp_compiler = "g++"
+let g:syntastic_cpp_compiler_options = "-std=c++11"
+let g:syntastic_cpp_check_header = 1
 NeoBundle 'tpope/vim-commentary'
 map <F5> gcc
 map <F6> gc
@@ -52,7 +55,8 @@ NeoBundle 'fholgado/minibufexpl.vim'
 nmap <F7> :<C-u>MBEToggle<CR>
 nmap <leader>z :MBEbp<CR>
 nmap <leader>x :MBEbn<CR>
-map <F8> :<C-u>call Replace(input('Replace '.expand('<cword>').' with: '))<CR>
+map <F8> :<C-u>call Replace(0,input('Replace '.expand('<cword>').' with: '))<CR>
+map <F9> :<C-u>call Replace(1,input('Replace '.expand('<cword>').' with: '))<CR>
 source $VIMRUNTIME/ftplugin/man.vim
 nmap <Leader>m :Man 3 <cword><CR>
 NeoBundle 'gcmt/wildfire.vim'

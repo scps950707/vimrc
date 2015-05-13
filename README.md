@@ -53,6 +53,7 @@
 	- ```\z``` MBEbn
 	- ```\x``` MBEbp
 - ```F8``` call Replace()
+- ```F9``` call Replace(confirm)
 - ```\m ``` Man
 - ```SPACE``` <Plug>(wildfire-fuel)
 - ```C-SPACE``` <Plug>(wildfire-water)

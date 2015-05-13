@@ -6,6 +6,7 @@ install:clang
 	cat _vimrc > ${FILE_VIMRC}
 	mkdir ${DIR_VIM}
 	cp -a colors/ ${DIR_VIM}/colors
+	mkdir ${DIR_VIM}/bundle
 	cp -a keyword/ ${DIR_VIM}/bundle/keyword
 	sudo cp manC++/* /usr/share/man/man3/
 	cp plugins.vim ${DIR_VIM} 

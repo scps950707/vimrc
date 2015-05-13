@@ -71,11 +71,15 @@ set foldlevel=6
 
 set dictionary+=~/.vim/bundle/keyword/*.list
 
-function! Replace(replace)
+function! Replace(confirm,replace)
   let flag = ''
-  let flag .= 'ge'
+  if a:confirm
+    let flag.='gc'
+  else
+    let flag.='g'
+  endif
   let search = ''
   let search .= '\<' . escape(expand('<cword>'), '/\.*$^~[') . '\>'
   let replace = escape(a:replace, '/\&~')
-  execute 'argdo %s/' . search . '/' . replace . '/' . flag
+  execute '%s/'.search.'/'.replace.'/'.flag
 endfunction
