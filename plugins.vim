@@ -55,8 +55,6 @@ NeoBundle 'fholgado/minibufexpl.vim'
 nmap <F7> :<C-u>MBEToggle<CR>
 nmap <leader>z :MBEbp<CR>
 nmap <leader>x :MBEbn<CR>
-map <F8> :<C-u>call Replace(0,input('Replace '.expand('<cword>').' with: '))<CR>
-map <F9> :<C-u>call Replace(1,input('Replace '.expand('<cword>').' with: '))<CR>
 source $VIMRUNTIME/ftplugin/man.vim
 nmap <Leader>m :Man 3 <cword><CR>
 NeoBundle 'gcmt/wildfire.vim'
