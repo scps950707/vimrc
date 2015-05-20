@@ -63,11 +63,10 @@ set wildmode=longest,list "命令模式自動補齊的型態
 set wildignore+=*.o,*.a,*.so,*.obj,*.exe,*.lib,*.ncb,*.opt,*.plg,.svn,.git
 set wildignore+=*.png,*.jpg,*.gif,*.svg,*.xpm
 set wrap "程式碼折行
-set linebreak(lbr) "避免折行時英文單字被拆成兩半
 set foldenable "程式碼折疊
 set foldmethod=syntax "偵測程式碼格式來折疊
 set foldcolumn=1 "VIM最左邊預留一塊foldcolumn的空間顯示折疊情形
-" set foldlevel=6
+set foldlevel=4 "到第幾層開始自動折疊
 
 set dictionary+=~/.vim/bundle/keyword/*.list
 
