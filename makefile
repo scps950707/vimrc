@@ -12,7 +12,7 @@ install:clang
 	sudo apt-get install curl
 	curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 	https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-	git clone https://github.com/eugeii/consolas-powerline-vim.git ${HOME}/.fonts/consolas-powerline-vim
+	# git clone https://github.com/eugeii/consolas-powerline-vim.git ${HOME}/.fonts/consolas-powerline-vim
 	@echo "finish"
 
 update:
@@ -22,7 +22,7 @@ update:
 
 set_default:
 	rm -rf ~/.vim ~/.vimrc ~/.viminfo
-	rm -rf ${HOME}/.fonts/consolas-powerline-vim
+	# rm -rf ${HOME}/.fonts/consolas-powerline-vim
 
 help:
 	@echo "install update set_default"
