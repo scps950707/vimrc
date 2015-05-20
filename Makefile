@@ -6,18 +6,19 @@ install:clang
 	cat _vimrc > ${FILE_VIMRC}
 	mkdir ${DIR_VIM}
 	cp -a colors/ ${DIR_VIM}/colors
-	mkdir ${DIR_VIM}/bundle
-	cp -a keyword/ ${DIR_VIM}/bundle/keyword
+	cp -a keyword/ ${DIR_VIM}/keyword
 	sudo cp manC++/* /usr/share/man/man3/
 	cp plugins.vim ${DIR_VIM} 
-	git clone git://github.com/Shougo/neobundle.vim ${DIR_VIM}/bundle/neobundle.vim
+	sudo apt-get install curl
+	curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+	https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 	git clone https://github.com/eugeii/consolas-powerline-vim.git ${HOME}/.fonts/consolas-powerline-vim
 	@echo "finish"
 
 update:
 	cp -a _vimrc ${FILE_VIMRC}
 	cp -a plugins.vim ${DIR_VIM}/
-	cp -a keyword/ ${DIR_VIM}/bundle/keyword
+	cp -a keyword/ ${DIR_VIM}/keyword
 
 set_default:
 	rm -rf ~/.vim ~/.vimrc ~/.viminfo

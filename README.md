@@ -1,6 +1,8 @@
 ### Plugins Management
-- [neobundle.vim](https://github.com/Shougo/neobundle.vim) 
-- [vundle](https://github.com/gmarik/Vundle.vim)
+- [ ] [neobundle.vim](https://github.com/Shougo/neobundle.vim) 
+- [ ] [vundle](https://github.com/gmarik/Vundle.vim)
+- [X] [vim-plug](https://github.com/junegunn/vim-plug)
+
 
 ###Auto complete
 - [X] [vim-addon-mw-utils](https://github.com/MarcWeber/vim-addon-mw-utils) 
@@ -12,6 +14,7 @@
 - [ ] [c.vim](https://github.com/scps950707/c.vim) 
 - [X] [vim-autoclose](https://github.com/Townk/vim-autoclose)
 - [X] [clang_complete](https://github.com/Rip-Rip/clang_complete)
+
 
 ###Development
 - [X] [nerdtree](https://github.com/scrooloose/nerdtree) 
@@ -27,15 +30,19 @@
 - [X] [minibufexpl](https://github.com/fholgado/minibufexpl.vim)
 - [X] man.vim 
 - [X] [wildfire.vim](https://github.com/gcmt/wildfire.vim)
+
+
 ###Theme
-- [ ] [vim-airline](https://github.com/bling/vim-airline) 
-- [X] [vim-powerline](https://github.com/Lokaltog/vim-powerline) 
+- [X] [vim-airline](https://github.com/bling/vim-airline) 
+- [ ] [vim-powerline](https://github.com/Lokaltog/vim-powerline) 
 - [ ] [flazz/vim-colorschemes](https://github.com/flazz/vim-colorschemes) 
 - [ ] [tomorrow-theme](https://github.com/chriskempson/tomorrow-theme) 
 - [ ] [Apprentice](https://github.com/romainl/Apprentice) 
 
+
 ###Other
 - [X] [consolas-powerline-vim](https://github.com/eugeii/consolas-powerline-vim)
+
 
 ###Mapping keys
 - ```F2``` nerdtree

@@ -1,48 +1,16 @@
-" Note: Skip initialization for vim-tiny or vim-small.
-if !1 | finish | endif
-
-if has('vim_starting')
-  if &compatible
-    set nocompatible               " Be iMproved
-  endif
-
-  " Required:
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
-endif
-
-" Required:
-call neobundle#begin(expand('~/.vim/bundle/'))
-
-" Let NeoBundle manage NeoBundle
-" Required:
-NeoBundleFetch 'Shougo/neobundle.vim'
-
-" My Bundles here:
-" Refer to |:NeoBundle-examples|.
-" Note: You don't set neobundle setting in .gvimrc!
-
+call plug#begin('~/.vim/plugged')
 source ${HOME}/.vim/plugins.vim
+call plug#end()
 
-call neobundle#end()
-
-" Required:
-filetype plugin indent on
-
-" If there are uninstalled bundles found on startup,
-" this will conveniently prompt you to install them.
-
-
-NeoBundleCheck
-
-set cursorline "顯示當前游標行
+" set cursorline "顯示當前游標行
 set cursorcolumn "顯示當前游標列
 set nocompatible "VIM 不使用和VI相容的模式
 set number
+set laststatus=2
 
-if !has('gui')
-  set t_Co=256
-  colorscheme jellybeans
-endif
+
+set t_Co=256
+colorscheme jellybeans
 
 set mouse=nv
 set showcmd "在狀態列顯示目前所執行的指令
@@ -68,7 +36,7 @@ set foldmethod=syntax "偵測程式碼格式來折疊
 set foldcolumn=1 "VIM最左邊預留一塊foldcolumn的空間顯示折疊情形
 set foldlevel=4 "到第幾層開始自動折疊
 
-set dictionary+=~/.vim/bundle/keyword/*.list
+set dictionary+=~/.vim/keyword/*.list
 
 function! Replace(confirm,replace)
   let flag = ''
