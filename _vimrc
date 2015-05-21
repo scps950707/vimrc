@@ -2,8 +2,8 @@ call plug#begin('~/.vim/plugged')
 source ${HOME}/.vim/plugins.vim
 call plug#end()
 
-" set cursorline "顯示當前游標行
-set cursorcolumn "顯示當前游標列
+set cursorline "顯示當前游標列
+" set cursorcolumn "顯示當前游標行
 set nocompatible "VIM 不使用和VI相容的模式
 set number
 set laststatus=2
