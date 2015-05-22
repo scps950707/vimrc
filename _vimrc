@@ -52,3 +52,4 @@ function! Replace(confirm,replace)
 endfunction
 map <F8> :<C-u>call Replace(0,input('Replace '.expand('<cword>').' with: '))<CR>
 map <F9> :<C-u>call Replace(1,input('Replace '.expand('<cword>').' with: '))<CR>
+vmap <F10> "hy:%s/<C-r>h//g<left><left>
