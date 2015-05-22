@@ -61,7 +61,7 @@
 	- ```\x``` MBEbp
 - ```F8``` call Replace()
 - ```F9``` call Replace(confirm)
-  ```F10``` visual selection replace
+- ```F10``` visual selection replace
 - ```\m ``` Man
 - ```SPACE``` <Plug>(wildfire-fuel)
 - ```C-SPACE``` <Plug>(wildfire-water)
