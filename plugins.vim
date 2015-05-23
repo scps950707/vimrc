@@ -2,7 +2,7 @@
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
 Plug 'scps950707/vim-snippets'
-Plug 'scps950707/vim-snipmate'
+Plug 'garbas/vim-snipmate'
 Plug 'othree/vim-autocomplpop'
 let g:acp_completeOption = '.,w,b,u,t,i,k'
 let g:acp_behaviorSnipmateLength = 1
