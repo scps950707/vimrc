@@ -30,8 +30,9 @@
 - [X] [minibufexpl](https://github.com/fholgado/minibufexpl.vim)
 - [X] man.vim 
 - [X] [wildfire.vim](https://github.com/gcmt/wildfire.vim)
-
-
+- [X] [Mizuchi/STL-Syntax](https://github.com/Mizuchi/STL-Syntax)
+- [X] [vim-protodef](https://github.com/derekwyatt/vim-protodef)
+- [X] [vim-fswitch](https://github.com/derekwyatt/vim-fswitch)
 ###Theme
 - [X] [vim-airline](https://github.com/bling/vim-airline) 
 - [ ] [vim-powerline](https://github.com/Lokaltog/vim-powerline) 
@@ -65,3 +66,4 @@
 - ```\m ``` Man
 - ```SPACE``` <Plug>(wildfire-fuel)
 - ```C-SPACE``` <Plug>(wildfire-water)
+- ```Ctrl-c paste from vim to system's clipboard

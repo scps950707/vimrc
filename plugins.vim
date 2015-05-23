@@ -18,6 +18,10 @@ let g:clang_use_library=1
 let g:clang_user_options='-std=c++11'
 let g:neocomplcache_enable_at_startup = 1 
 let g:clang_library_path='/usr/lib/llvm-3.4/lib/'
+Plug 'derekwyatt/vim-protodef'
+let g:protodefprotogetter='~/.vim/plugged/vim-protodef/pullproto.pl'
+let g:disable_protodef_sorting=1
+Plug 'derekwyatt/vim-fswitch'
 
 " Development
 Plug 'scrooloose/nerdtree'
@@ -61,6 +65,7 @@ Plug 'gcmt/wildfire.vim'
 map <SPACE> <Plug>(wildfire-fuel)
 vmap <C-SPACE> <Plug>(wildfire-water)
 let g:wildfire_objects = ["i'", 'i"', "i)", "i]", "i}"]
+Plug 'Mizuchi/STL-Syntax'
 
 " Theme
 Plug 'bling/vim-airline'
