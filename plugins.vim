@@ -2,12 +2,12 @@
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
 Plug 'scps950707/vim-snippets'
-Plug 'garbas/vim-snipmate'
+Plug 'scps950707/vim-snipmate'
 Plug 'othree/vim-autocomplpop'
-Plug 'L9'
+let g:acp_completeOption = '.,w,b,u,t,i,k'
 let g:acp_behaviorSnipmateLength = 1
+Plug 'L9'
 " Plug 'scps950707/c.vim'
-" PlugSource c.vim
 Plug 'Townk/vim-autoclose'
 Plug 'Rip-Rip/clang_complete'
 let g:clang_complete_copen=1
@@ -15,10 +15,10 @@ let g:clang_periodic_quickfix=0
 let g:clang_snippets=1
 let g:clang_close_preview=1
 let g:clang_use_library=1
-let g:clang_user_options='-std=c++11'
+let g:clang_user_options = '-std=gnu99 -std=libc -std=c+11 -I/usr/include'
 let g:neocomplcache_enable_at_startup = 1 
 let g:clang_library_path='/usr/lib/llvm-3.4/lib/'
-Plug 'derekwyatt/vim-protodef'
+Plug 'scps950707/vim-protodef'
 let g:protodefprotogetter='~/.vim/plugged/vim-protodef/pullproto.pl'
 let g:disable_protodef_sorting=1
 Plug 'derekwyatt/vim-fswitch'
@@ -66,13 +66,17 @@ map <SPACE> <Plug>(wildfire-fuel)
 vmap <C-SPACE> <Plug>(wildfire-water)
 let g:wildfire_objects = ["i'", 'i"', "i)", "i]", "i}"]
 Plug 'Mizuchi/STL-Syntax'
+Plug 'kien/ctrlp.vim'
+Plug 'godlygeek/tabular'
+
 
 " Theme
 Plug 'bling/vim-airline'
 let g:airline_theme='base16'
 " Plug 'Lokaltog/vim-powerline'
-set laststatus=2
-let g:Powerline_symbols = 'fancy'
+" let g:Powerline_symbols = 'fancy'
 " Plug 'flazz/vim-colorschemes'
+" Plug 'altercation/vim-colors-solarized'
 " Plug 'chriskempson/vim-tomorrow-theme'
 " Plug 'romainl/Apprentice'
+Plug 'c9s/colorselector.vim'

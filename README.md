@@ -14,6 +14,8 @@
 - [ ] [c.vim](https://github.com/scps950707/c.vim) 
 - [X] [vim-autoclose](https://github.com/Townk/vim-autoclose)
 - [X] [clang_complete](https://github.com/Rip-Rip/clang_complete)
+- [X] [vim-protodef](https://github.com/scps950707/vim-protodef)
+- [X] [vim-fswitch](https://github.com/derekwyatt/vim-fswitch)
 
 
 ###Development
@@ -31,18 +33,20 @@
 - [X] man.vim 
 - [X] [wildfire.vim](https://github.com/gcmt/wildfire.vim)
 - [X] [Mizuchi/STL-Syntax](https://github.com/Mizuchi/STL-Syntax)
-- [X] [vim-protodef](https://github.com/derekwyatt/vim-protodef)
-- [X] [vim-fswitch](https://github.com/derekwyatt/vim-fswitch)
+- [X] [ctrlp](https://github.com/kien/ctrlp.vim)
+- [X] [tabular](https://github.com/godlygeek/tabular)
+
 ###Theme
 - [X] [vim-airline](https://github.com/bling/vim-airline) 
 - [ ] [vim-powerline](https://github.com/Lokaltog/vim-powerline) 
-- [ ] [flazz/vim-colorschemes](https://github.com/flazz/vim-colorschemes) 
-- [ ] [tomorrow-theme](https://github.com/chriskempson/tomorrow-theme) 
-- [ ] [Apprentice](https://github.com/romainl/Apprentice) 
+- [  ] [flazz/vim-colorschemes](https://github.com/flazz/vim-colorschemes) 
+- [  ] [tomorrow-theme](https://github.com/chriskempson/tomorrow-theme) 
+- [  ] [Apprentice](https://github.com/romainl/Apprentice) 
+- [X] [colorselecor](https://github.com/c9s/colorselector.vim)
 
 
 ###Other
-- [X] [consolas-powerline-vim](https://github.com/eugeii/consolas-powerline-vim)
+- [ ] [consolas-powerline-vim](https://github.com/eugeii/consolas-powerline-vim)
 
 
 ###Mapping keys
@@ -66,4 +70,5 @@
 - ```\m ``` Man
 - ```SPACE``` <Plug>(wildfire-fuel)
 - ```C-SPACE``` <Plug>(wildfire-water)
-- ```Ctrl-c paste from vim to system's clipboard
+- ```Ctrl-c``` paste from vim to system's clipboard
+- ```\c``` vim-protodef
