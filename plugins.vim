@@ -4,24 +4,26 @@ Plug 'tomtom/tlib_vim'
 Plug 'scps950707/vim-snippets'
 Plug 'garbas/vim-snipmate'
 Plug 'othree/vim-autocomplpop'
-let g:acp_completeOption = '.,w,b,u,t,i,k'
+let g:acp_completeOption = '.,t,i,b,d'
 let g:acp_behaviorSnipmateLength = 1
 Plug 'L9'
 " Plug 'scps950707/c.vim'
 Plug 'Townk/vim-autoclose'
 Plug 'Rip-Rip/clang_complete'
 let g:clang_complete_copen=1
-let g:clang_periodic_quickfix=0
+let g:clang_periodic_quickfix=1
 let g:clang_snippets=1
 let g:clang_close_preview=1
 let g:clang_use_library=1
-let g:clang_user_options = '-std=gnu99 -std=libc -std=c+11 -I/usr/include'
+" let g:clang_user_options = '-std=gnu99 -std=libc -stdlib=libc++ -std=c++11 -I/usr/include'
+let g:clang_user_options = '-stdlib=libc++ -std=c++11 -IIncludePath'
 let g:neocomplcache_enable_at_startup = 1 
 let g:clang_library_path='/usr/lib/llvm-3.4/lib/'
 Plug 'scps950707/vim-protodef'
 let g:protodefprotogetter='~/.vim/plugged/vim-protodef/pullproto.pl'
 let g:disable_protodef_sorting=1
 Plug 'derekwyatt/vim-fswitch'
+
 
 " Development
 Plug 'scrooloose/nerdtree'
@@ -68,6 +70,8 @@ let g:wildfire_objects = ["i'", 'i"', "i)", "i]", "i}"]
 Plug 'Mizuchi/STL-Syntax'
 Plug 'kien/ctrlp.vim'
 Plug 'godlygeek/tabular'
+Plug 'tpope/vim-fugitive'
+Plug 'xuhdev/SingleCompile'
 
 
 " Theme

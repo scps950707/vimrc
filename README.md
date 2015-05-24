@@ -35,6 +35,10 @@
 - [X] [Mizuchi/STL-Syntax](https://github.com/Mizuchi/STL-Syntax)
 - [X] [ctrlp](https://github.com/kien/ctrlp.vim)
 - [X] [tabular](https://github.com/godlygeek/tabular)
+- [X] [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive)
+- [X] [SingleCompile](https://github.com/xuhdev/SingleCompile)
+
+
 
 ###Theme
 - [X] [vim-airline](https://github.com/bling/vim-airline) 

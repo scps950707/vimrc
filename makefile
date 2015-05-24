@@ -3,7 +3,7 @@ DIR_VIM=${HOME}/.vim
 
 install:clang
 	@echo "start install"
-	cat _vimrc > ${FILE_VIMRC}
+	cat vimrc > ${FILE_VIMRC}
 	mkdir ${DIR_VIM}
 	cp -a colors/ ${DIR_VIM}/colors
 	cp -a keyword/ ${DIR_VIM}/keyword
