@@ -16,7 +16,7 @@ install:clang
 	@echo "finish"
 
 update:
-	cp -a _vimrc ${FILE_VIMRC}
+	cp -a vimrc ${FILE_VIMRC}
 	cp -a plugins.vim ${DIR_VIM}/
 	cp -a keyword/ ${DIR_VIM}/keyword
 

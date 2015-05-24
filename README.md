@@ -43,9 +43,9 @@
 ###Theme
 - [X] [vim-airline](https://github.com/bling/vim-airline) 
 - [ ] [vim-powerline](https://github.com/Lokaltog/vim-powerline) 
-- [  ] [flazz/vim-colorschemes](https://github.com/flazz/vim-colorschemes) 
-- [  ] [tomorrow-theme](https://github.com/chriskempson/tomorrow-theme) 
-- [  ] [Apprentice](https://github.com/romainl/Apprentice) 
+- [ ] [flazz/vim-colorschemes](https://github.com/flazz/vim-colorschemes) 
+- [ ] [tomorrow-theme](https://github.com/chriskempson/tomorrow-theme) 
+- [ ] [Apprentice](https://github.com/romainl/Apprentice) 
 - [X] [colorselecor](https://github.com/c9s/colorselector.vim)
 
 
