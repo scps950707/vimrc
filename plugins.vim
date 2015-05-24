@@ -4,7 +4,8 @@ Plug 'tomtom/tlib_vim'
 Plug 'scps950707/vim-snippets'
 Plug 'garbas/vim-snipmate'
 Plug 'othree/vim-autocomplpop'
-let g:acp_completeOption = '.,t,i,b,d'
+" let g:acp_completeOption = '.,w,b,k,d,u,t,i'
+let g:acp_completeOption = '.,w,b,k,i'
 let g:acp_behaviorSnipmateLength = 1
 Plug 'L9'
 " Plug 'scps950707/c.vim'
@@ -16,7 +17,7 @@ let g:clang_snippets=1
 let g:clang_close_preview=1
 let g:clang_use_library=1
 " let g:clang_user_options = '-std=gnu99 -std=libc -stdlib=libc++ -std=c++11 -I/usr/include'
-let g:clang_user_options = '-stdlib=libc++ -std=c++11 -IIncludePath'
+let g:clang_user_options = '-std=c++11'
 let g:neocomplcache_enable_at_startup = 1 
 let g:clang_library_path='/usr/lib/llvm-3.4/lib/'
 Plug 'scps950707/vim-protodef'
