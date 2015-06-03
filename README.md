@@ -34,9 +34,9 @@
 - [X] [wildfire.vim](https://github.com/gcmt/wildfire.vim)
 - [X] [Mizuchi/STL-Syntax](https://github.com/Mizuchi/STL-Syntax)
 - [X] [ctrlp](https://github.com/kien/ctrlp.vim)
-- [X] [tabular](https://github.com/godlygeek/tabular)
+- [ ] [tabular](https://github.com/godlygeek/tabular)
 - [X] [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive)
-- [X] [SingleCompile](https://github.com/xuhdev/SingleCompile)
+- [ ] [SingleCompile](https://github.com/xuhdev/SingleCompile)
 
 
 
@@ -65,12 +65,12 @@
 	- ```Ctrl-m``` g:multi_cursor_prev_key
 	- ```Ctrl-q``` g:multi_cursor_skip_key
  	- ```ESC``` g:multi_cursor_quit_key
-- ```F7``` minibufexpl
+- minibufexpl
 	- ```\z``` MBEbn
 	- ```\x``` MBEbp
-- ```F8``` call Replace()
-- ```F9``` call Replace(confirm)
-- ```F10``` visual selection replace
+- ```F7``` call Replace()
+- ```F8``` call Replace(confirm)
+- ```F9``` visual selection replace
 - ```\m ``` Man
 - ```SPACE``` <Plug>(wildfire-fuel)
 - ```C-SPACE``` <Plug>(wildfire-water)
