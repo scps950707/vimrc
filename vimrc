@@ -36,8 +36,6 @@ set nofoldenable "程式碼預設不折疊
 set foldmethod=syntax "偵測程式碼格式來折疊
 set foldcolumn=1 "VIM最左邊預留一塊foldcolumn的空間顯示折疊情形
 
-set dictionary+=~/.vim/keyword/*.list
-
 function! Replace(confirm,replace)
   let flag = ''
   if a:confirm

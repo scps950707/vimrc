@@ -6,13 +6,13 @@ Plug 'garbas/vim-snipmate'
 Plug 'othree/vim-autocomplpop'
 " let g:acp_completeOption = '.,w,b,k,d,u,t,i'
 let g:acp_completeOption = '.,w,b,k,i'
-let g:acp_behaviorSnipmateLength = 1
+let g:acp_behaviorSnipmateLength=1
 Plug 'L9'
 " Plug 'scps950707/c.vim'
 Plug 'Townk/vim-autoclose'
 Plug 'Rip-Rip/clang_complete'
 let g:clang_complete_copen=1
-let g:clang_periodic_quickfix=1
+let g:clang_periodic_quickfix=0
 let g:clang_snippets=1
 let g:clang_close_preview=1
 let g:clang_use_library=1
@@ -24,7 +24,7 @@ Plug 'scps950707/vim-protodef'
 let g:protodefprotogetter='~/.vim/plugged/vim-protodef/pullproto.pl'
 let g:disable_protodef_sorting=1
 Plug 'derekwyatt/vim-fswitch'
-
+autocmd FileType c,cpp set dictionary+=~/.vim/keyword/*.list
 
 " Development
 Plug 'scrooloose/nerdtree'
@@ -55,6 +55,13 @@ let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
 let g:syntastic_cpp_compiler = "g++"
 let g:syntastic_cpp_compiler_options = "-std=c++11"
 let g:syntastic_cpp_check_header = 1
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 Plug 'tpope/vim-commentary'
 map <F5> gcc
 map <F6> gc
