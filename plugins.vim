@@ -17,10 +17,10 @@ let g:clang_use_library=1
 autocmd FileType cpp let g:clang_user_options = '-std=c++11'
 autocmd FileType c let g:clang_user_options = '-std=c99'
 let g:clang_library_path='/usr/lib/llvm-3.4/lib/'
-Plug 'scps950707/vim-protodef'
-let g:protodefprotogetter='~/.vim/plugged/vim-protodef/pullproto.pl'
-let g:disable_protodef_sorting=1
-Plug 'derekwyatt/vim-fswitch'
+" Plug 'scps950707/vim-protodef'
+" let g:protodefprotogetter='~/.vim/plugged/vim-protodef/pullproto.pl'
+" let g:disable_protodef_sorting=1
+" Plug 'derekwyatt/vim-fswitch'
 autocmd FileType c,cpp set dictionary+=~/.vim/keyword/*.list
 
 
@@ -39,28 +39,26 @@ let g:multi_cursor_next_key='<C-n>'
 let g:multi_cursor_prev_key='<C-m>'
 let g:multi_cursor_skip_key='<C-q>'
 let g:multi_cursor_quit_key='<Esc>'
-Plug 'wesleyche/SrcExpl'
-nmap <F4> :<C-u>SrcExplToggle<CR>
+" Plug 'wesleyche/SrcExpl'
+" nmap <F4> :<C-u>SrcExplToggle<CR>
 Plug 'majutsushi/tagbar'
 let g:tagbar_width = 30
 let g:tagbar_compact=1
 let g:tagbar_sort = 0
 nmap <F3> :<C-u>TagbarToggle<CR>
-Plug 'scrooloose/syntastic'
+" Plug 'scrooloose/syntastic'
+Plug 'scrooloose/syntastic',{ 'branch': 'loclist_state' }
 let g:syntastic_error_symbol='✗'
 let g:syntastic_warning_symbol='⚠'
 let g:syntastic_enable_highlighting = 1
-let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
+let g:syntastic_stl_format = '[%E{Errors:%e}%B{, }%W{Warnings:%w}]'
 let g:syntastic_cpp_compiler_options = '-std=c++11'
 let g:syntastic_cpp_check_header = 1
 let g:syntastic_c_compiler_options = '-std=c99'
 let g:syntastic_c_check_header = 1
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-" let g:syntastic_always_populate_loc_list = 1
-" let g:syntastic_loc_list_height = 5
-" let g:syntastic_auto_loc_list = 1
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_loc_list_height = 5
+let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 Plug 'tpope/vim-commentary'

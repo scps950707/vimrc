@@ -14,8 +14,8 @@
 - [ ] [c.vim](https://github.com/scps950707/c.vim) 
 - [X] [vim-autoclose](https://github.com/Townk/vim-autoclose)
 - [X] [clang_complete](https://github.com/Rip-Rip/clang_complete)
-- [X] [vim-protodef](https://github.com/scps950707/vim-protodef)
-- [X] [vim-fswitch](https://github.com/derekwyatt/vim-fswitch)
+- [ ] [vim-protodef](https://github.com/scps950707/vim-protodef)
+- [ ] [vim-fswitch](https://github.com/derekwyatt/vim-fswitch)
 
 
 ###Development
@@ -24,10 +24,11 @@
 - [X] [vim-gitgutter](https://github.com/airblade/vim-gitgutter) 
 - [X] [indentLine](https://github.com/Yggdroot/indentLine) 
 - [X] [vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors) 
-- [X] [SrcExpl](https://github.com/wesleyche/SrcExpl) 
+- [ ] [SrcExpl](https://github.com/wesleyche/SrcExpl) 
 - [X] [tagbar](https://github.com/majutsushi/tagbar) 
 - [ ] [taglist.vim](https://github.com/vim-scripts/taglist.vim) 
-- [X] [syntastic](https://github.com/scrooloose/syntastic) 
+- [ ] [syntastic](https://github.com/scrooloose/syntastic) 
+- [X] [syntastic(loclist_state)](https://github.com/scrooloose/syntastic/tree/loclist_state) 
 - [X] [vim-commentary](https://github.com/tpope/vim-commentary) 
 - [X] [minibufexpl](https://github.com/fholgado/minibufexpl.vim)
 - [X] man.vim 
@@ -56,7 +57,7 @@
 ###Mapping keys
 - ```F2``` nerdtree
 - ```F3``` tagbar 
-- ```F4``` srcexpl
+- ```F4``` code automatic typesetting
 - ```F5``` vim-commemtary-gcc
 - ```F6``` vim-commemtary-gc
 - ```\g``` gitgutter
@@ -71,7 +72,6 @@
 - ```F7``` call Replace()
 - ```F8``` call Replace(confirm)
 - ```F9``` visual selection replace
-- ```F10``` code automatic typesetting
 - ```\m ``` Man
 - ```SPACE``` <Plug>(wildfire-fuel)
 - ```C-SPACE``` <Plug>(wildfire-water)

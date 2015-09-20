@@ -48,8 +48,8 @@ function! Replace(confirm,replace)
   let replace = escape(a:replace, '/\&~')
   execute '%s/'.search.'/'.replace.'/'.flag
 endfunction
+nmap <F4> <C-u>0ggVG=<CR>
 map <F7> :<C-u>call Replace(0,input('Replace '.expand('<cword>').' with: '))<CR>
 map <F8> :<C-u>call Replace(1,input('Replace '.expand('<cword>').' with: '))<CR>
 vmap <F9> "hy:%s/<C-r>h//g<left><left>
 vnoremap <C-c> "+y
-nmap <F10> <C-u>0ggVG=<CR>
