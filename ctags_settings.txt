@@ -1,0 +1,28 @@
+stdio.h
+ctags -f stdio.h --c-kinds=dfptvx --sort=yes /usr/include/stdio.h
+
+stdlib.h
+ctags -f stdlib.h --c-kinds=dftv --sort=yes /usr/include/stdlib.h
+
+
+
+
+
+
+
+
+
+
+
+
+
+d = macros
+f = functions
+m = struct?
+p = prototypes
+t = type
+v = virtual
+x = external variable declarations
+
+
+dfmptvx
