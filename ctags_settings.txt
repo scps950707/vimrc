@@ -4,11 +4,12 @@ ctags -f stdio.h --c-kinds=dfptvx --sort=yes /usr/include/stdio.h
 stdlib.h
 ctags -f stdlib.h --c-kinds=dftv --sort=yes /usr/include/stdlib.h
 
+string.h
+ctags -f string.h --c-kinds=p --sort=yes /usr/include/string.h
 
+math.h
 
-
-
-
+ctags -f math.h --c-kinds=dfmptvx --sort=yes /usr/include/math.h
 
 
 
@@ -18,11 +19,13 @@ ctags -f stdlib.h --c-kinds=dftv --sort=yes /usr/include/stdlib.h
 
 d = macros
 f = functions
-m = struct?
+m = member
 p = prototypes
-t = type
-v = virtual
-x = external variable declarations
+t = typedef
+v = variable
+x = externvar
 
 
 dfmptvx
+
+ctags -f alltags --c-kinds=dfmptvx --sort=yes /usr/include/*.h

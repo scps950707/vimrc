@@ -22,8 +22,10 @@ let g:clang_library_path='/usr/lib/llvm-3.4/lib/'
 " let g:disable_protodef_sorting=1
 " Plug 'derekwyatt/vim-fswitch'
 " autocmd FileType c,cpp set dictionary+=~/.vim/keyword/*.list
-autocmd FileType c,cpp set dictionary+=~/.vim/ctags/stdio.h
-autocmd FileType c,cpp set dictionary+=~/.vim/ctags/stdlib.h
+" autocmd FileType c,cpp set dictionary+=~/.vim/ctags/stdio.h
+" autocmd FileType c,cpp set dictionary+=~/.vim/ctags/stdlib.h
+" autocmd FileType c,cpp set dictionary+=~/.vim/ctags/string.h
+autocmd FileType c,cpp set dictionary+=~/.vim/ctags/alltags
 
 
 " ---Development---
