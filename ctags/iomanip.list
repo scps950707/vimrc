@@ -1,6 +1,0 @@
-setiosflags
-resetiosflags
-setbase
-setfill
-setprecision
-setw
