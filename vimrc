@@ -49,8 +49,12 @@ function! Replace(confirm,replace)
   execute '%s/'.search.'/'.replace.'/'.flag
 endfunction
 " nmap <F4> <C-u>0ggVG=<CR>
-nmap <F4> <C-u>gg=G<CR>
+" nmap <F4> <C-u>gg=G<CR>
+nmap <F4> <C-u>gggqG<CR>
 map <F7> :<C-u>call Replace(0,input('Replace '.expand('<cword>').' with: '))<CR>
 map <F8> :<C-u>call Replace(1,input('Replace '.expand('<cword>').' with: '))<CR>
 vmap <F9> "hy:%s/<C-r>h//g<left><left>
 vnoremap <C-c> "+y
+
+autocmd FileType c set formatprg=astyle\ -s2A1k3W3j
+autocmd FileType cpp set formatprg=astyle\ -s2A1xlk3W3j

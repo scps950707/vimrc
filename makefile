@@ -14,6 +14,7 @@ install:clang
 	sudo cp manC++/* ${DIR_MANUAL}
 	cp plugins.vim ${DIR_VIM} 
 	sudo apt-get install curl
+	sudo apt-get install astyle
 	curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 	https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 	vim -c "PlugInstall"
