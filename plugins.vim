@@ -30,7 +30,7 @@ Plug 'scrooloose/nerdtree'
 nmap <F2> :<C-u>NERDTreeToggle<CR>
 Plug 'editorconfig/editorconfig-vim'
 Plug 'airblade/vim-gitgutter'
-nmap <leader>g	:GitGutterToggle<CR>
+nmap ,g :GitGutterToggle<CR>
 Plug 'Yggdroot/indentLine'
 let g:indentLine_char = '|'
 Plug 'terryma/vim-multiple-cursors'
@@ -65,10 +65,10 @@ Plug 'tpope/vim-commentary'
 map <F5> gcc
 map <F6> gc
 Plug 'fholgado/minibufexpl.vim'
-nmap <leader>z :MBEbp<CR>
-nmap <leader>x :MBEbn<CR>
+nmap ,z :MBEbp<CR>
+nmap ,x :MBEbn<CR>
 source $VIMRUNTIME/ftplugin/man.vim
-nmap <Leader>m :Man 3 <cword><CR>
+nmap ,m :Man 3 <cword><CR>
 Plug 'gcmt/wildfire.vim'
 map <SPACE> <Plug>(wildfire-fuel)
 let g:wildfire_objects = ["i'", 'i"', "i)", "i]", "i}"]

@@ -38,6 +38,7 @@
 - [ ] [tabular](https://github.com/godlygeek/tabular)
 - [X] [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive)
 - [ ] [SingleCompile](https://github.com/xuhdev/SingleCompile)
+- [X] [astyle](http://astyle.sourceforge.net/)
 
 
 
@@ -57,18 +58,18 @@
 ###Mapping keys
 - ```F2``` nerdtree
 - ```F3``` tagbar 
-- ```F4``` code automatic typesetting
+- ```F4``` autoformat (astyle)
 - ```F5``` vim-commemtary-gcc
 - ```F6``` vim-commemtary-gc
-- ```\g``` gitgutter
+- ```,g``` gitgutter
 - multiple-cursors
 	- ```Ctrl-n``` g:multi_cursor_next_key
 	- ```Ctrl-m``` g:multi_cursor_prev_key
 	- ```Ctrl-q``` g:multi_cursor_skip_key
  	- ```ESC``` g:multi_cursor_quit_key
 - minibufexpl
-	- ```\z``` MBEbn
-	- ```\x``` MBEbp
+	- ```,z``` MBEbn
+	- ```,x``` MBEbp
 - ```F7``` call Replace()
 - ```F8``` call Replace(confirm)
 - ```F9``` visual selection replace
@@ -76,4 +77,3 @@
 - ```SPACE``` <Plug>(wildfire-fuel)
 - ```C-SPACE``` <Plug>(wildfire-water)
 - ```Ctrl-c``` paste from vim to system's clipboard
-- ```\c``` vim-protodef
