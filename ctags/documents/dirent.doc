@@ -1,0 +1,71 @@
+DIR              typedef     127 /usr/include/dirent.h typedef struct __dirstream DIR;
+DTTOIF           macro       121 /usr/include/dirent.h # define DTTOIF(dirtype) ((dirtype) << 12)
+DT_BLK           enumerator  107 /usr/include/dirent.h DT_BLK = 6,
+DT_BLK           macro       108 /usr/include/dirent.h # define DT_BLK DT_BLK
+DT_CHR           enumerator  103 /usr/include/dirent.h DT_CHR = 2,
+DT_CHR           macro       104 /usr/include/dirent.h # define DT_CHR DT_CHR
+DT_DIR           enumerator  105 /usr/include/dirent.h DT_DIR = 4,
+DT_DIR           macro       106 /usr/include/dirent.h # define DT_DIR DT_DIR
+DT_FIFO          enumerator  101 /usr/include/dirent.h DT_FIFO = 1,
+DT_FIFO          macro       102 /usr/include/dirent.h # define DT_FIFO DT_FIFO
+DT_LNK           enumerator  111 /usr/include/dirent.h DT_LNK = 10,
+DT_LNK           macro       112 /usr/include/dirent.h # define DT_LNK DT_LNK
+DT_REG           enumerator  109 /usr/include/dirent.h DT_REG = 8,
+DT_REG           macro       110 /usr/include/dirent.h # define DT_REG DT_REG
+DT_SOCK          enumerator  113 /usr/include/dirent.h DT_SOCK = 12,
+DT_SOCK          macro       114 /usr/include/dirent.h # define DT_SOCK DT_SOCK
+DT_UNKNOWN       enumerator   99 /usr/include/dirent.h DT_UNKNOWN = 0,
+DT_UNKNOWN       macro       100 /usr/include/dirent.h # define DT_UNKNOWN DT_UNKNOWN
+DT_WHT           enumerator  115 /usr/include/dirent.h DT_WHT = 14
+DT_WHT           macro       116 /usr/include/dirent.h # define DT_WHT DT_WHT
+IFTODT           macro       120 /usr/include/dirent.h # define IFTODT(mode) (((mode) & 0170000) >> 12)
+MAXNAMLEN        macro       236 /usr/include/dirent.h # define MAXNAMLEN NAME_MAX
+MAXNAMLEN        macro       238 /usr/include/dirent.h # define MAXNAMLEN 255
+_DIRENT_H        macro        23 /usr/include/dirent.h #define _DIRENT_H 1
+_D_ALLOC_NAMLEN  macro        83 /usr/include/dirent.h # define _D_ALLOC_NAMLEN(d) (_D_EXACT_NAMLEN (d) + 1)
+_D_ALLOC_NAMLEN  macro        87 /usr/include/dirent.h # define _D_ALLOC_NAMLEN(d) (((char *) (d) + (d)->d_reclen) - &(d)->d_name[0])
+_D_ALLOC_NAMLEN  macro        89 /usr/include/dirent.h # define _D_ALLOC_NAMLEN(d) (sizeof (d)->d_name > 1 ? sizeof (d)->d_name : \
+_D_EXACT_NAMLEN  macro        82 /usr/include/dirent.h # define _D_EXACT_NAMLEN(d) ((d)->d_namlen)
+_D_EXACT_NAMLEN  macro        85 /usr/include/dirent.h # define _D_EXACT_NAMLEN(d) (strlen ((d)->d_name))
+__REDIRECT       prototype   165 /usr/include/dirent.h extern struct dirent *__REDIRECT (readdir, (DIR *__dirp), readdir64)
+__REDIRECT       prototype   189 /usr/include/dirent.h extern int __REDIRECT (readdir_r,
+__REDIRECT       prototype   262 /usr/include/dirent.h extern int __REDIRECT (scandir,
+__REDIRECT       prototype   300 /usr/include/dirent.h extern int __REDIRECT (scandirat,
+__REDIRECT_NTH   prototype   329 /usr/include/dirent.h extern int __REDIRECT_NTH (alphasort,
+__REDIRECT_NTH   prototype   358 /usr/include/dirent.h extern __ssize_t __REDIRECT_NTH (getdirentries,
+__REDIRECT_NTH   prototype   384 /usr/include/dirent.h extern int __REDIRECT_NTH (versionsort,
+__ino64_t_defined macro        42 /usr/include/dirent.h # define __ino64_t_defined
+__ino_t_defined  macro        38 /usr/include/dirent.h # define __ino_t_defined
+__need_size_t    macro       243 /usr/include/dirent.h # define __need_size_t
+alphasort        macro       334 /usr/include/dirent.h # define alphasort alphasort64
+alphasort        prototype   324 /usr/include/dirent.h extern int alphasort (const struct dirent **__e1,
+alphasort64      prototype   339 /usr/include/dirent.h extern int alphasort64 (const struct dirent64 **__e1,
+closedir         prototype   149 /usr/include/dirent.h extern int closedir (DIR *__dirp) __nonnull ((1));
+d_ino            macro        64 /usr/include/dirent.h # define d_ino d_fileno /* Backward compatibility. */
+dirfd            macro       226 /usr/include/dirent.h # define dirfd(dirp) _DIR_dirfd (dirp)
+dirfd            prototype   223 /usr/include/dirent.h extern int dirfd (DIR *__dirp) __THROW __nonnull ((1));
+fdopendir        prototype   141 /usr/include/dirent.h extern DIR *fdopendir (int __fd);
+getdirentries    macro       364 /usr/include/dirent.h # define getdirentries getdirentries64
+getdirentries    prototype   352 /usr/include/dirent.h extern __ssize_t getdirentries (int __fd, char *__restrict __buf,
+getdirentries64  prototype   369 /usr/include/dirent.h extern __ssize_t getdirentries64 (int __fd, char *__restrict __buf,
+ino64_t          typedef      41 /usr/include/dirent.h typedef __ino64_t ino64_t;
+ino_t            typedef      34 /usr/include/dirent.h typedef __ino_t ino_t;
+opendir          prototype   134 /usr/include/dirent.h extern DIR *opendir (const char *__name) __nonnull ((1));
+readdir          macro       168 /usr/include/dirent.h # define readdir readdir64
+readdir          prototype   162 /usr/include/dirent.h extern struct dirent *readdir (DIR *__dirp) __nonnull ((1));
+readdir64        prototype   173 /usr/include/dirent.h extern struct dirent64 *readdir64 (DIR *__dirp) __nonnull ((1));
+readdir64_r      prototype   200 /usr/include/dirent.h extern int readdir64_r (DIR *__restrict __dirp,
+readdir_r        macro       195 /usr/include/dirent.h # define readdir_r readdir64_r
+readdir_r        prototype   183 /usr/include/dirent.h extern int readdir_r (DIR *__restrict __dirp,
+rewinddir        prototype   208 /usr/include/dirent.h extern void rewinddir (DIR *__dirp) __THROW __nonnull ((1));
+scandir          macro       270 /usr/include/dirent.h # define scandir scandir64
+scandir          prototype   254 /usr/include/dirent.h extern int scandir (const char *__restrict __dir,
+scandir64        prototype   277 /usr/include/dirent.h extern int scandir64 (const char *__restrict __dir,
+scandirat        macro       308 /usr/include/dirent.h # define scandirat scandirat64
+scandirat        prototype   292 /usr/include/dirent.h extern int scandirat (int __dfd, const char *__restrict __dir,
+scandirat64      prototype   314 /usr/include/dirent.h extern int scandirat64 (int __dfd, const char *__restrict __dir,
+seekdir          prototype   214 /usr/include/dirent.h extern void seekdir (DIR *__dirp, long int __pos) __THROW __nonnull ((1));
+telldir          prototype   217 /usr/include/dirent.h extern long int telldir (DIR *__dirp) __THROW __nonnull ((1));
+versionsort      macro       390 /usr/include/dirent.h # define versionsort versionsort64
+versionsort      prototype   379 /usr/include/dirent.h extern int versionsort (const struct dirent **__e1,
+versionsort64    prototype   395 /usr/include/dirent.h extern int versionsort64 (const struct dirent64 **__e1,

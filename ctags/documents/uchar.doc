@@ -1,0 +1,11 @@
+_UCHAR_H         macro        24 /usr/include/uchar.h #define _UCHAR_H 1
+__mbstate_t_defined macro        38 /usr/include/uchar.h # define __mbstate_t_defined 1
+__need_mbstate_t macro        30 /usr/include/uchar.h #define __need_mbstate_t
+__need_size_t    macro        28 /usr/include/uchar.h #define __need_size_t
+c16rtomb         prototype    66 /usr/include/uchar.h extern size_t c16rtomb (char *__restrict __s, char16_t __c16,
+c32rtomb         prototype    78 /usr/include/uchar.h extern size_t c32rtomb (char *__restrict __s, char32_t __c32,
+char16_t         typedef      52 /usr/include/uchar.h typedef __CHAR16_TYPE__ char16_t;
+char32_t         typedef      53 /usr/include/uchar.h typedef __CHAR32_TYPE__ char32_t;
+mbrtoc16         prototype    61 /usr/include/uchar.h extern size_t mbrtoc16 (char16_t *__restrict __pc16,
+mbrtoc32         prototype    73 /usr/include/uchar.h extern size_t mbrtoc32 (char32_t *__restrict __pc32,
+mbstate_t        typedef      36 /usr/include/uchar.h typedef __mbstate_t mbstate_t;

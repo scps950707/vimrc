@@ -1,0 +1,147 @@
+WCHAR_MAX        macro       118 /usr/include/wchar.h # define WCHAR_MAX __WCHAR_MAX
+WCHAR_MIN        macro       117 /usr/include/wchar.h # define WCHAR_MIN __WCHAR_MIN
+WEOF             macro       122 /usr/include/wchar.h # define WEOF (0xffffffffu)
+_WCHAR_H         macro        26 /usr/include/wchar.h # define _WCHAR_H 1
+_WINT_T          macro        60 /usr/include/wchar.h # define _WINT_T
+__CORRECT_ISO_CPP_WCHAR_H_PROTO macro        75 /usr/include/wchar.h # define __CORRECT_ISO_CPP_WCHAR_H_PROTO
+__REDIRECT       prototype   656 /usr/include/wchar.h extern int __REDIRECT (fwscanf, (__FILE *__restrict __stream,
+__REDIRECT       prototype   660 /usr/include/wchar.h extern int __REDIRECT (wscanf, (const wchar_t *__restrict __format, ...),
+__REDIRECT       prototype   710 /usr/include/wchar.h extern int __REDIRECT (vfwscanf, (__FILE *__restrict __s,
+__REDIRECT       prototype   714 /usr/include/wchar.h extern int __REDIRECT (vwscanf, (const wchar_t *__restrict __format,
+__REDIRECT_NTH   prototype   663 /usr/include/wchar.h extern int __REDIRECT_NTH (swscanf, (const wchar_t *__restrict __s,
+__REDIRECT_NTH   prototype   717 /usr/include/wchar.h extern int __REDIRECT_NTH (vswscanf, (const wchar_t *__restrict __s,
+____mbstate_t_defined macro        80 /usr/include/wchar.h # define ____mbstate_t_defined 1
+__anon1::__anon2::__wch member       88 /usr/include/wchar.h __WINT_TYPE__ __wch;
+__anon1::__anon2::__wchb member       92 /usr/include/wchar.h char __wchb[4];
+__anon1::__count member       84 /usr/include/wchar.h int __count;
+__anon1::__value member       93 /usr/include/wchar.h } __value; /* Value so far. */
+__count          member       84 /usr/include/wchar.h int __count;
+__isoc99_fwscanf prototype   668 /usr/include/wchar.h extern int __isoc99_fwscanf (__FILE *__restrict __stream,
+__isoc99_swscanf prototype   671 /usr/include/wchar.h extern int __isoc99_swscanf (const wchar_t *__restrict __s,
+__isoc99_vfwscanf prototype   722 /usr/include/wchar.h extern int __isoc99_vfwscanf (__FILE *__restrict __s,
+__isoc99_vswscanf prototype   727 /usr/include/wchar.h extern int __isoc99_vswscanf (const wchar_t *__restrict __s,
+__isoc99_vwscanf prototype   725 /usr/include/wchar.h extern int __isoc99_vwscanf (const wchar_t *__restrict __format,
+__isoc99_wscanf  prototype   670 /usr/include/wchar.h extern int __isoc99_wscanf (const wchar_t *__restrict __format, ...);
+__mbrlen         prototype   374 /usr/include/wchar.h extern size_t __mbrlen (const char *__restrict __s, size_t __n,
+__mbstate_t      typedef      94 /usr/include/wchar.h } __mbstate_t;
+__mbstate_t_defined macro       108 /usr/include/wchar.h # define __mbstate_t_defined 1
+__need_FILE      macro        34 /usr/include/wchar.h # define __need_FILE
+__need_NULL      macro        46 /usr/include/wchar.h # define __need_NULL
+__need___FILE    macro        32 /usr/include/wchar.h # define __need___FILE
+__need___va_list macro        38 /usr/include/wchar.h # define __need___va_list
+__need_iswxxx    macro       878 /usr/include/wchar.h # define __need_iswxxx
+__need_mbstate_t macro        96 /usr/include/wchar.h #undef __need_mbstate_t
+__need_mbstate_t macro       899 /usr/include/wchar.h #undef __need_mbstate_t
+__need_size_t    macro        44 /usr/include/wchar.h # define __need_size_t
+__need_wchar_t   macro        45 /usr/include/wchar.h # define __need_wchar_t
+__need_wint_t    macro        49 /usr/include/wchar.h # undef __need_wint_t
+__need_wint_t    macro        50 /usr/include/wchar.h # define __need_wint_t
+__need_wint_t    macro       900 /usr/include/wchar.h #undef __need_wint_t
+__value          member       93 /usr/include/wchar.h } __value; /* Value so far. */
+__wch            member       88 /usr/include/wchar.h __WINT_TYPE__ __wch;
+__wchb           member       92 /usr/include/wchar.h char __wchb[4];
+btowc            function    388 /usr/include/wchar.h __NTH (btowc (int __c))
+btowc            prototype   353 /usr/include/wchar.h extern wint_t btowc (int __c) __THROW;
+fgetwc           prototype   745 /usr/include/wchar.h extern wint_t fgetwc (__FILE *__stream);
+fgetwc_unlocked  prototype   810 /usr/include/wchar.h extern wint_t fgetwc_unlocked (__FILE *__stream);
+fgetws           prototype   774 /usr/include/wchar.h extern wchar_t *fgetws (wchar_t *__restrict __ws, int __n,
+fgetws_unlocked  prototype   837 /usr/include/wchar.h extern wchar_t *fgetws_unlocked (wchar_t *__restrict __ws, int __n,
+fputwc           prototype   759 /usr/include/wchar.h extern wint_t fputwc (wchar_t __wc, __FILE *__stream);
+fputwc_unlocked  prototype   818 /usr/include/wchar.h extern wint_t fputwc_unlocked (wchar_t __wc, __FILE *__stream);
+fputws           prototype   781 /usr/include/wchar.h extern int fputws (const wchar_t *__restrict __ws,
+fputws_unlocked  prototype   846 /usr/include/wchar.h extern int fputws_unlocked (const wchar_t *__restrict __ws,
+fwide            prototype   587 /usr/include/wchar.h extern int fwide (__FILE *__fp, int __mode) __THROW;
+fwprintf         prototype   594 /usr/include/wchar.h extern int fwprintf (__FILE *__restrict __stream,
+fwscanf          macro       674 /usr/include/wchar.h # define fwscanf __isoc99_fwscanf
+fwscanf          prototype   635 /usr/include/wchar.h extern int fwscanf (__FILE *__restrict __stream,
+getwc            prototype   746 /usr/include/wchar.h extern wint_t getwc (__FILE *__stream);
+getwc_unlocked   prototype   801 /usr/include/wchar.h extern wint_t getwc_unlocked (__FILE *__stream);
+getwchar         prototype   752 /usr/include/wchar.h extern wint_t getwchar (void);
+getwchar_unlocked prototype   802 /usr/include/wchar.h extern wint_t getwchar_unlocked (void);
+mbrlen           function    399 /usr/include/wchar.h __NTH (mbrlen (const char *__restrict __s, size_t __n,
+mbrlen           prototype   376 /usr/include/wchar.h extern size_t mbrlen (const char *__restrict __s, size_t __n,
+mbrtowc          prototype   365 /usr/include/wchar.h extern size_t mbrtowc (wchar_t *__restrict __pwc,
+mbsinit          prototype   361 /usr/include/wchar.h extern int mbsinit (const mbstate_t *__ps) __THROW __attribute_pure__;
+mbsnrtowcs       prototype   423 /usr/include/wchar.h extern size_t mbsnrtowcs (wchar_t *__restrict __dst,
+mbsrtowcs        prototype   408 /usr/include/wchar.h extern size_t mbsrtowcs (wchar_t *__restrict __dst,
+mbstate_t        typedef     106 /usr/include/wchar.h typedef __mbstate_t mbstate_t;
+open_wmemstream  prototype   580 /usr/include/wchar.h extern __FILE *open_wmemstream (wchar_t **__bufloc, size_t *__sizeloc) __THROW;
+putwc            prototype   760 /usr/include/wchar.h extern wint_t putwc (wchar_t __wc, __FILE *__stream);
+putwc_unlocked   prototype   827 /usr/include/wchar.h extern wint_t putwc_unlocked (wchar_t __wc, __FILE *__stream);
+putwchar         prototype   766 /usr/include/wchar.h extern wint_t putwchar (wchar_t __wc);
+putwchar_unlocked prototype   828 /usr/include/wchar.h extern wint_t putwchar_unlocked (wchar_t __wc);
+swprintf         prototype   604 /usr/include/wchar.h extern int swprintf (wchar_t *__restrict __s, size_t __n,
+swscanf          macro       676 /usr/include/wchar.h # define swscanf __isoc99_swscanf
+swscanf          prototype   645 /usr/include/wchar.h extern int swscanf (const wchar_t *__restrict __s,
+tm               externvar   137 /usr/include/wchar.h struct tm;
+ungetwc          prototype   789 /usr/include/wchar.h extern wint_t ungetwc (wint_t __wc, __FILE *__stream);
+vfwprintf        prototype   612 /usr/include/wchar.h extern int vfwprintf (__FILE *__restrict __s,
+vfwscanf         macro       730 /usr/include/wchar.h # define vfwscanf __isoc99_vfwscanf
+vfwscanf         prototype   689 /usr/include/wchar.h extern int vfwscanf (__FILE *__restrict __s,
+vswprintf        prototype   625 /usr/include/wchar.h extern int vswprintf (wchar_t *__restrict __s, size_t __n,
+vswscanf         macro       732 /usr/include/wchar.h # define vswscanf __isoc99_vswscanf
+vswscanf         prototype   701 /usr/include/wchar.h extern int vswscanf (const wchar_t *__restrict __s,
+vwprintf         prototype   620 /usr/include/wchar.h extern int vwprintf (const wchar_t *__restrict __format,
+vwscanf          macro       731 /usr/include/wchar.h # define vwscanf __isoc99_vwscanf
+vwscanf          prototype   697 /usr/include/wchar.h extern int vwscanf (const wchar_t *__restrict __format,
+wcpcpy           prototype   566 /usr/include/wchar.h extern wchar_t *wcpcpy (wchar_t *__restrict __dest,
+wcpncpy          prototype   571 /usr/include/wchar.h extern wchar_t *wcpncpy (wchar_t *__restrict __dest,
+wcrtomb          prototype   370 /usr/include/wchar.h extern size_t wcrtomb (char *__restrict __s, wchar_t __wc,
+wcscasecmp       prototype   172 /usr/include/wchar.h extern int wcscasecmp (const wchar_t *__s1, const wchar_t *__s2) __THROW;
+wcscasecmp_l     prototype   182 /usr/include/wchar.h extern int wcscasecmp_l (const wchar_t *__s1, const wchar_t *__s2,
+wcscat           prototype   155 /usr/include/wchar.h extern wchar_t *wcscat (wchar_t *__restrict __dest,
+wcschrnul        prototype   245 /usr/include/wchar.h extern wchar_t *wcschrnul (const wchar_t *__s, wchar_t __wc)
+wcscmp           prototype   163 /usr/include/wchar.h extern int wcscmp (const wchar_t *__s1, const wchar_t *__s2)
+wcscoll          prototype   192 /usr/include/wchar.h extern int wcscoll (const wchar_t *__s1, const wchar_t *__s2) __THROW;
+wcscoll_l        prototype   206 /usr/include/wchar.h extern int wcscoll_l (const wchar_t *__s1, const wchar_t *__s2,
+wcscpy           prototype   147 /usr/include/wchar.h extern wchar_t *wcscpy (wchar_t *__restrict __dest,
+wcscspn          prototype   252 /usr/include/wchar.h extern size_t wcscspn (const wchar_t *__wcs, const wchar_t *__reject)
+wcsdup           prototype   216 /usr/include/wchar.h extern wchar_t *wcsdup (const wchar_t *__s) __THROW __attribute_malloc__;
+wcsftime         prototype   855 /usr/include/wchar.h extern size_t wcsftime (wchar_t *__restrict __s, size_t __maxsize,
+wcsftime_l       prototype   865 /usr/include/wchar.h extern size_t wcsftime_l (wchar_t *__restrict __s, size_t __maxsize,
+wcslen           prototype   287 /usr/include/wchar.h extern size_t wcslen (const wchar_t *__s) __THROW __attribute_pure__;
+wcsncasecmp      prototype   175 /usr/include/wchar.h extern int wcsncasecmp (const wchar_t *__s1, const wchar_t *__s2,
+wcsncasecmp_l    prototype   185 /usr/include/wchar.h extern int wcsncasecmp_l (const wchar_t *__s1, const wchar_t *__s2,
+wcsncat          prototype   158 /usr/include/wchar.h extern wchar_t *wcsncat (wchar_t *__restrict __dest,
+wcsncmp          prototype   166 /usr/include/wchar.h extern int wcsncmp (const wchar_t *__s1, const wchar_t *__s2, size_t __n)
+wcsncpy          prototype   150 /usr/include/wchar.h extern wchar_t *wcsncpy (wchar_t *__restrict __dest,
+wcsnlen          prototype   306 /usr/include/wchar.h extern size_t wcsnlen (const wchar_t *__s, size_t __maxlen)
+wcsnrtombs       prototype   429 /usr/include/wchar.h extern size_t wcsnrtombs (char *__restrict __dst,
+wcspbrk          prototype   266 /usr/include/wchar.h extern wchar_t *wcspbrk (const wchar_t *__wcs, const wchar_t *__accept)
+wcsrchr          prototype   237 /usr/include/wchar.h extern wchar_t *wcsrchr (const wchar_t *__wcs, wchar_t __wc)
+wcsrtombs        prototype   414 /usr/include/wchar.h extern size_t wcsrtombs (char *__restrict __dst,
+wcsspn           prototype   256 /usr/include/wchar.h extern size_t wcsspn (const wchar_t *__wcs, const wchar_t *__accept)
+wcsstr           prototype   277 /usr/include/wchar.h extern wchar_t *wcsstr (const wchar_t *__haystack, const wchar_t *__needle)
+wcstod           prototype   450 /usr/include/wchar.h extern double wcstod (const wchar_t *__restrict __nptr,
+wcstod_l         prototype   549 /usr/include/wchar.h extern double wcstod_l (const wchar_t *__restrict __nptr,
+wcstof           prototype   457 /usr/include/wchar.h extern float wcstof (const wchar_t *__restrict __nptr,
+wcstof_l         prototype   553 /usr/include/wchar.h extern float wcstof_l (const wchar_t *__restrict __nptr,
+wcstok           prototype   282 /usr/include/wchar.h extern wchar_t *wcstok (wchar_t *__restrict __s,
+wcstol           prototype   468 /usr/include/wchar.h extern long int wcstol (const wchar_t *__restrict __nptr,
+wcstol_l         prototype   530 /usr/include/wchar.h extern long int wcstol_l (const wchar_t *__restrict __nptr,
+wcstold          prototype   459 /usr/include/wchar.h extern long double wcstold (const wchar_t *__restrict __nptr,
+wcstold_l        prototype   557 /usr/include/wchar.h extern long double wcstold_l (const wchar_t *__restrict __nptr,
+wcstoll          prototype   483 /usr/include/wchar.h extern long long int wcstoll (const wchar_t *__restrict __nptr,
+wcstoll_l        prototype   539 /usr/include/wchar.h extern long long int wcstoll_l (const wchar_t *__restrict __nptr,
+wcstoq           prototype   500 /usr/include/wchar.h extern long long int wcstoq (const wchar_t *__restrict __nptr,
+wcstoul          prototype   473 /usr/include/wchar.h extern unsigned long int wcstoul (const wchar_t *__restrict __nptr,
+wcstoul_l        prototype   534 /usr/include/wchar.h extern unsigned long int wcstoul_l (const wchar_t *__restrict __nptr,
+wcstoull         prototype   490 /usr/include/wchar.h extern unsigned long long int wcstoull (const wchar_t *__restrict __nptr,
+wcstoull_l       prototype   544 /usr/include/wchar.h extern unsigned long long int wcstoull_l (const wchar_t *__restrict __nptr,
+wcstouq          prototype   507 /usr/include/wchar.h extern unsigned long long int wcstouq (const wchar_t *__restrict __nptr,
+wcswidth         prototype   443 /usr/include/wchar.h extern int wcswidth (const wchar_t *__s, size_t __n) __THROW;
+wcsxfrm          prototype   196 /usr/include/wchar.h extern size_t wcsxfrm (wchar_t *__restrict __s1,
+wcsxfrm_l        prototype   212 /usr/include/wchar.h extern size_t wcsxfrm_l (wchar_t *__s1, const wchar_t *__s2,
+wctob            function    394 /usr/include/wchar.h __NTH (wctob (wint_t __wc))
+wctob            prototype   357 /usr/include/wchar.h extern int wctob (wint_t __c) __THROW;
+wcwidth          prototype   439 /usr/include/wchar.h extern int wcwidth (wchar_t __c) __THROW;
+wint_t           typedef      61 /usr/include/wchar.h typedef unsigned int wint_t;
+wint_t           typedef      68 /usr/include/wchar.h typedef __WINT_TYPE__ wint_t;
+wmemcmp          prototype   325 /usr/include/wchar.h extern int wmemcmp (const wchar_t *__s1, const wchar_t *__s2, size_t __n)
+wmemcpy          prototype   329 /usr/include/wchar.h extern wchar_t *wmemcpy (wchar_t *__restrict __s1,
+wmemmove         prototype   334 /usr/include/wchar.h extern wchar_t *wmemmove (wchar_t *__s1, const wchar_t *__s2, size_t __n)
+wmempcpy         prototype   344 /usr/include/wchar.h extern wchar_t *wmempcpy (wchar_t *__restrict __s1,
+wmemset          prototype   338 /usr/include/wchar.h extern wchar_t *wmemset (wchar_t *__s, wchar_t __c, size_t __n) __THROW;
+wprintf          prototype   601 /usr/include/wchar.h extern int wprintf (const wchar_t *__restrict __format, ...)
+wscanf           macro       675 /usr/include/wchar.h # define wscanf __isoc99_wscanf
+wscanf           prototype   642 /usr/include/wchar.h extern int wscanf (const wchar_t *__restrict __format, ...)

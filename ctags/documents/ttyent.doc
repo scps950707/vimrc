@@ -1,0 +1,25 @@
+TTY_ON           macro        48 /usr/include/ttyent.h #define TTY_ON 0x01 /* enable logins (start ty_getty program) */
+TTY_SECURE       macro        49 /usr/include/ttyent.h #define TTY_SECURE 0x02 /* allow uid of 0 to login */
+_PATH_TTYS       macro        37 /usr/include/ttyent.h #define _PATH_TTYS "/etc/ttys"
+_TTYENT_H        macro        33 /usr/include/ttyent.h #define _TTYENT_H 1
+_TTYS_OFF        macro        39 /usr/include/ttyent.h #define _TTYS_OFF "off"
+_TTYS_ON         macro        40 /usr/include/ttyent.h #define _TTYS_ON "on"
+_TTYS_SECURE     macro        41 /usr/include/ttyent.h #define _TTYS_SECURE "secure"
+_TTYS_WINDOW     macro        42 /usr/include/ttyent.h #define _TTYS_WINDOW "window"
+endttyent        prototype    61 /usr/include/ttyent.h extern int endttyent (void) __THROW;
+getttyent        prototype    58 /usr/include/ttyent.h extern struct ttyent *getttyent (void) __THROW;
+getttynam        prototype    59 /usr/include/ttyent.h extern struct ttyent *getttynam (const char *__tty) __THROW;
+setttyent        prototype    60 /usr/include/ttyent.h extern int setttyent (void) __THROW;
+ttyent           struct       44 /usr/include/ttyent.h struct ttyent {
+ttyent::ty_comment member       52 /usr/include/ttyent.h char *ty_comment; /* comment field */
+ttyent::ty_getty member       46 /usr/include/ttyent.h char *ty_getty; /* command to execute, usually getty */
+ttyent::ty_name  member       45 /usr/include/ttyent.h char *ty_name; /* terminal device name */
+ttyent::ty_status member       50 /usr/include/ttyent.h int ty_status; /* status flags */
+ttyent::ty_type  member       47 /usr/include/ttyent.h char *ty_type; /* terminal type for termcap */
+ttyent::ty_window member       51 /usr/include/ttyent.h char *ty_window; /* command to start up window manager */
+ty_comment       member       52 /usr/include/ttyent.h char *ty_comment; /* comment field */
+ty_getty         member       46 /usr/include/ttyent.h char *ty_getty; /* command to execute, usually getty */
+ty_name          member       45 /usr/include/ttyent.h char *ty_name; /* terminal device name */
+ty_status        member       50 /usr/include/ttyent.h int ty_status; /* status flags */
+ty_type          member       47 /usr/include/ttyent.h char *ty_type; /* terminal type for termcap */
+ty_window        member       51 /usr/include/ttyent.h char *ty_window; /* command to start up window manager */

@@ -1,0 +1,17 @@
+_STRINGS_H       macro        19 /usr/include/strings.h #define _STRINGS_H 1
+__CORRECT_ISO_CPP_STRINGS_H_PROTO macro        36 /usr/include/strings.h # define __CORRECT_ISO_CPP_STRINGS_H_PROTO
+__need_size_t    macro        27 /usr/include/strings.h # define __need_size_t
+bcmp             prototype    43 /usr/include/strings.h extern int bcmp (const void *__s1, const void *__s2, size_t __n)
+bcopy            prototype    47 /usr/include/strings.h extern void bcopy (const void *__src, void *__dest, size_t __n) __THROW;
+bzero            prototype    50 /usr/include/strings.h extern void bzero (void *__s, size_t __n) __THROW;
+ffs              prototype   112 /usr/include/strings.h extern int ffs (int __i) __THROW __attribute__ ((const));
+index            function     63 /usr/include/strings.h index (char *__s, int __c) __THROW
+index            function     69 /usr/include/strings.h index (const char *__s, int __c) __THROW
+index            prototype    76 /usr/include/strings.h extern char *index (const char *__s, int __c)
+rindex           function     91 /usr/include/strings.h rindex (char *__s, int __c) __THROW
+rindex           function     97 /usr/include/strings.h rindex (const char *__s, int __c) __THROW
+rindex           prototype   104 /usr/include/strings.h extern char *rindex (const char *__s, int __c)
+strcasecmp       prototype   116 /usr/include/strings.h extern int strcasecmp (const char *__s1, const char *__s2)
+strcasecmp_l     prototype   131 /usr/include/strings.h extern int strcasecmp_l (const char *__s1, const char *__s2, __locale_t __loc)
+strncasecmp      prototype   120 /usr/include/strings.h extern int strncasecmp (const char *__s1, const char *__s2, size_t __n)
+strncasecmp_l    prototype   134 /usr/include/strings.h extern int strncasecmp_l (const char *__s1, const char *__s2,

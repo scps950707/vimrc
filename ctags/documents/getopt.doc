@@ -1,0 +1,28 @@
+_GETOPT_H        macro        22 /usr/include/getopt.h # define _GETOPT_H 1
+__GNUC_PREREQ    macro        38 /usr/include/getopt.h # define __GNUC_PREREQ(maj, min) (0)
+__REDIRECT_NTH   prototype   159 /usr/include/getopt.h extern int __REDIRECT_NTH (getopt, (int ___argc, char *const *___argv,
+__THROW          macro        41 /usr/include/getopt.h # define __THROW throw ()
+__THROW          macro        43 /usr/include/getopt.h # define __THROW
+__need_getopt    macro       189 /usr/include/getopt.h #undef __need_getopt
+__posix_getopt   prototype   163 /usr/include/getopt.h extern int __posix_getopt (int ___argc, char *const *___argv,
+flag             member      110 /usr/include/getopt.h int *flag;
+getopt           macro       165 /usr/include/getopt.h # define getopt __posix_getopt
+getopt           prototype   150 /usr/include/getopt.h extern int getopt (int ___argc, char *const *___argv, const char *__shortopts)
+getopt           prototype   169 /usr/include/getopt.h extern int getopt ();
+getopt_long      prototype   173 /usr/include/getopt.h extern int getopt_long (int ___argc, char *const *___argv,
+getopt_long_only prototype   177 /usr/include/getopt.h extern int getopt_long_only (int ___argc, char *const *___argv,
+has_arg          member      109 /usr/include/getopt.h int has_arg;
+name             member      106 /usr/include/getopt.h const char *name;
+no_argument      macro       116 /usr/include/getopt.h # define no_argument 0
+optarg           externvar    57 /usr/include/getopt.h extern char *optarg;
+opterr           externvar    76 /usr/include/getopt.h extern int opterr;
+optind           externvar    71 /usr/include/getopt.h extern int optind;
+option           struct      104 /usr/include/getopt.h struct option
+option::flag     member      110 /usr/include/getopt.h int *flag;
+option::has_arg  member      109 /usr/include/getopt.h int has_arg;
+option::name     member      106 /usr/include/getopt.h const char *name;
+option::val      member      111 /usr/include/getopt.h int val;
+optional_argument macro       118 /usr/include/getopt.h # define optional_argument 2
+optopt           externvar    80 /usr/include/getopt.h extern int optopt;
+required_argument macro       117 /usr/include/getopt.h # define required_argument 1
+val              member      111 /usr/include/getopt.h int val;

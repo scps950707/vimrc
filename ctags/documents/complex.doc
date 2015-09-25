@@ -1,0 +1,31 @@
+CMPLX            macro        53 /usr/include/complex.h # define CMPLX(x, y) __builtin_complex ((double) (x), (double) (y))
+CMPLXF           macro        54 /usr/include/complex.h # define CMPLXF(x, y) __builtin_complex ((float) (x), (float) (y))
+CMPLXL           macro        55 /usr/include/complex.h # define CMPLXL(x, y) __builtin_complex ((long double) (x), (long double) (y))
+I                macro        48 /usr/include/complex.h #undef I
+I                macro        49 /usr/include/complex.h #define I _Complex_I
+_COMPLEX_H       macro        23 /usr/include/complex.h #define _COMPLEX_H 1
+_Complex         macro        36 /usr/include/complex.h # define _Complex __complex__
+_Complex_I       macro        44 /usr/include/complex.h #define _Complex_I (__extension__ 1.0iF)
+_Mdouble_        macro        71 /usr/include/complex.h #define _Mdouble_ double
+_Mdouble_        macro        74 /usr/include/complex.h #undef _Mdouble_
+_Mdouble_        macro        81 /usr/include/complex.h #define _Mdouble_ _Mfloat_
+_Mdouble_        macro        84 /usr/include/complex.h #undef _Mdouble_
+_Mdouble_        macro       100 /usr/include/complex.h # define _Mdouble_ _Mlong_double_
+_Mdouble_        macro       104 /usr/include/complex.h #undef _Mdouble_
+_Mfloat_         macro        79 /usr/include/complex.h # define _Mfloat_ float
+_Mlong_double_   macro        98 /usr/include/complex.h # define _Mlong_double_ long double
+__MATHCALL       macro        63 /usr/include/complex.h #define __MATHCALL(function, args) \
+__MATHCALL       macro       108 /usr/include/complex.h #undef __MATHCALL
+__MATHDECL       macro        65 /usr/include/complex.h #define __MATHDECL(type, function, args) \
+__MATHDECL       macro       107 /usr/include/complex.h #undef __MATHDECL
+__MATHDECL_1     macro        68 /usr/include/complex.h #define __MATHDECL_1(type, function, args) \
+__MATHDECL_1     macro        92 /usr/include/complex.h # undef __MATHDECL_1
+__MATHDECL_1     macro        93 /usr/include/complex.h # define __MATHDECL_1(type, function, args) \
+__MATHDECL_1     macro       106 /usr/include/complex.h #undef __MATHDECL_1
+__MATH_PRECNAME  macro        72 /usr/include/complex.h #define __MATH_PRECNAME(name) name
+__MATH_PRECNAME  macro        75 /usr/include/complex.h #undef __MATH_PRECNAME
+__MATH_PRECNAME  macro        82 /usr/include/complex.h #define __MATH_PRECNAME(name) name##f
+__MATH_PRECNAME  macro        85 /usr/include/complex.h #undef __MATH_PRECNAME
+__MATH_PRECNAME  macro       101 /usr/include/complex.h # define __MATH_PRECNAME(name) name##l
+__MATH_PRECNAME  macro       105 /usr/include/complex.h #undef __MATH_PRECNAME
+complex          macro        39 /usr/include/complex.h #define complex _Complex

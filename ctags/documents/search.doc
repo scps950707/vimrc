@@ -1,0 +1,52 @@
+ACTION           typedef      67 /usr/include/search.h ACTION;
+ENTER            enumerator   65 /usr/include/search.h ENTER
+ENTRY            typedef      74 /usr/include/search.h ENTRY;
+FIND             enumerator   64 /usr/include/search.h FIND,
+VISIT            typedef     125 /usr/include/search.h VISIT;
+_ENTRY           externvar    77 /usr/include/search.h struct _ENTRY;
+_SEARCH_H        macro        20 /usr/include/search.h #define _SEARCH_H 1
+__ACTION_FN_T    macro       143 /usr/include/search.h # define __ACTION_FN_T
+__COMPAR_FN_T    macro        53 /usr/include/search.h # define __COMPAR_FN_T
+__action_fn_t    typedef     144 /usr/include/search.h typedef void (*__action_fn_t) (const void *__nodep, VISIT __value,
+__compar_fn_t    typedef      54 /usr/include/search.h typedef int (*__compar_fn_t) (const void *, const void *);
+__free_fn_t      typedef     155 /usr/include/search.h typedef void (*__free_fn_t) (void *__nodep);
+__need_size_t    macro        24 /usr/include/search.h #define __need_size_t
+comparison_fn_t  typedef      57 /usr/include/search.h typedef __compar_fn_t comparison_fn_t;
+data             member       72 /usr/include/search.h void *data;
+endorder         enumerator  122 /usr/include/search.h endorder,
+entry            struct       69 /usr/include/search.h typedef struct entry
+entry::data      member       72 /usr/include/search.h void *data;
+entry::key       member       71 /usr/include/search.h char *key;
+filled           member      101 /usr/include/search.h unsigned int filled;
+hcreate          prototype    90 /usr/include/search.h extern int hcreate (size_t __nel) __THROW;
+hcreate_r        prototype   108 /usr/include/search.h extern int hcreate_r (size_t __nel, struct hsearch_data *__htab) __THROW;
+hdestroy         prototype    93 /usr/include/search.h extern void hdestroy (void) __THROW;
+hdestroy_r       prototype   109 /usr/include/search.h extern void hdestroy_r (struct hsearch_data *__htab) __THROW;
+hsearch          prototype    87 /usr/include/search.h extern ENTRY *hsearch (ENTRY __item, ACTION __action) __THROW;
+hsearch_data     struct       97 /usr/include/search.h struct hsearch_data
+hsearch_data::filled member      101 /usr/include/search.h unsigned int filled;
+hsearch_data::size member      100 /usr/include/search.h unsigned int size;
+hsearch_data::table member       99 /usr/include/search.h struct _ENTRY *table;
+hsearch_r        prototype   106 /usr/include/search.h extern int hsearch_r (ENTRY __item, ACTION __action, ENTRY **__retval,
+insque           prototype    44 /usr/include/search.h extern void insque (void *__elem, void *__prev) __THROW;
+key              member       71 /usr/include/search.h char *key;
+leaf             enumerator  123 /usr/include/search.h leaf
+lfind            prototype   164 /usr/include/search.h extern void *lfind (const void *__key, const void *__base,
+lsearch          prototype   169 /usr/include/search.h extern void *lsearch (const void *__key, void *__base,
+postorder        enumerator  121 /usr/include/search.h postorder,
+preorder         enumerator  120 /usr/include/search.h preorder,
+q_back           member       37 /usr/include/search.h struct qelem *q_back;
+q_data           member       38 /usr/include/search.h char q_data[1];
+q_forw           member       36 /usr/include/search.h struct qelem *q_forw;
+qelem            struct       34 /usr/include/search.h struct qelem
+qelem::q_back    member       37 /usr/include/search.h struct qelem *q_back;
+qelem::q_data    member       38 /usr/include/search.h char q_data[1];
+qelem::q_forw    member       36 /usr/include/search.h struct qelem *q_forw;
+remque           prototype    47 /usr/include/search.h extern void remque (void *__elem) __THROW;
+size             member      100 /usr/include/search.h unsigned int size;
+table            member       99 /usr/include/search.h struct _ENTRY *table;
+tdelete          prototype   138 /usr/include/search.h extern void *tdelete (const void *__restrict __key,
+tdestroy         prototype   158 /usr/include/search.h extern void tdestroy (void *__root, __free_fn_t __freefct);
+tfind            prototype   134 /usr/include/search.h extern void *tfind (const void *__key, void *const *__rootp,
+tsearch          prototype   129 /usr/include/search.h extern void *tsearch (const void *__key, void **__rootp,
+twalk            prototype   150 /usr/include/search.h extern void twalk (const void *__root, __action_fn_t __action);

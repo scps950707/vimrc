@@ -9,8 +9,8 @@ install:clang
 	mkdir ${DIR_VIM}
 	mkdir ${DIR_VIM}/${DIR_COLORS}
 	mkdir ${DIR_VIM}/${DIR_CTAGS}
-	cp ${DIR_COLORS}/* ${DIR_VIM}/${DIR_COLORS}
-	cp ${DIR_CTAGS}/* ${DIR_VIM}/${DIR_CTAGS}
+	cp -r ${DIR_COLORS} ${DIR_VIM}
+	cp -r ${DIR_CTAGS} ${DIR_VIM}
 	sudo cp manC++/* ${DIR_MANUAL}
 	cp plugins.vim ${DIR_VIM} 
 	sudo apt-get install curl
@@ -22,8 +22,8 @@ install:clang
 update:
 	cp vimrc ${FILE_VIMRC}
 	cp plugins.vim ${DIR_VIM}
-	cp ${DIR_COLORS}/* ${DIR_VIM}/${DIR_COLORS}
-	cp ${DIR_CTAGS}/* ${DIR_VIM}/${DIR_CTAGS}
+	cp -r ${DIR_COLORS} ${DIR_VIM}
+	cp -r ${DIR_CTAGS} ${DIR_VIM}
 
 set_default:
 	rm -rf ~/.vim ~/.vimrc ~/.viminfo

@@ -1,0 +1,143 @@
+REGS_FIXED       macro       411 /usr/include/regex.h # define REGS_FIXED 2
+REGS_REALLOCATE  macro       410 /usr/include/regex.h # define REGS_REALLOCATE 1
+REGS_UNALLOCATED macro       409 /usr/include/regex.h # define REGS_UNALLOCATED 0
+REG_BADBR        enumerator  338 /usr/include/regex.h REG_BADBR, /* Invalid contents of \{\}. */
+REG_BADPAT       enumerator  330 /usr/include/regex.h REG_BADPAT, /* Invalid pattern. */
+REG_BADRPT       enumerator  341 /usr/include/regex.h REG_BADRPT, /* No preceding re for repetition op. */
+REG_EBRACE       enumerator  337 /usr/include/regex.h REG_EBRACE, /* Unmatched \{. */
+REG_EBRACK       enumerator  335 /usr/include/regex.h REG_EBRACK, /* Unmatched left bracket. */
+REG_ECOLLATE     enumerator  331 /usr/include/regex.h REG_ECOLLATE, /* Inalid collating element. */
+REG_ECTYPE       enumerator  332 /usr/include/regex.h REG_ECTYPE, /* Invalid character class name. */
+REG_EEND         enumerator  344 /usr/include/regex.h REG_EEND, /* Premature end. */
+REG_EESCAPE      enumerator  333 /usr/include/regex.h REG_EESCAPE, /* Trailing backslash. */
+REG_ENOSYS       enumerator  322 /usr/include/regex.h REG_ENOSYS = -1, /* This will never happen for this implementation. */
+REG_EPAREN       enumerator  336 /usr/include/regex.h REG_EPAREN, /* Parenthesis imbalance. */
+REG_ERANGE       enumerator  339 /usr/include/regex.h REG_ERANGE, /* Invalid range end. */
+REG_ERPAREN      enumerator  346 /usr/include/regex.h REG_ERPAREN /* Unmatched ) or \); not returned from regcomp. */
+REG_ESIZE        enumerator  345 /usr/include/regex.h REG_ESIZE, /* Compiled pattern bigger than 2^16 bytes. */
+REG_ESPACE       enumerator  340 /usr/include/regex.h REG_ESPACE, /* Ran out of memory. */
+REG_ESUBREG      enumerator  334 /usr/include/regex.h REG_ESUBREG, /* Invalid back reference. */
+REG_EXTENDED     macro       282 /usr/include/regex.h #define REG_EXTENDED 1
+REG_ICASE        macro       286 /usr/include/regex.h #define REG_ICASE (REG_EXTENDED << 1)
+REG_NEWLINE      macro       291 /usr/include/regex.h #define REG_NEWLINE (REG_ICASE << 1)
+REG_NOERROR      enumerator  325 /usr/include/regex.h REG_NOERROR = 0, /* Success. */
+REG_NOMATCH      enumerator  326 /usr/include/regex.h REG_NOMATCH, /* Didn't find a match (for regexec). */
+REG_NOSUB        macro       295 /usr/include/regex.h #define REG_NOSUB (REG_NEWLINE << 1)
+REG_NOTBOL       macro       305 /usr/include/regex.h #define REG_NOTBOL 1
+REG_NOTEOL       macro       308 /usr/include/regex.h #define REG_NOTEOL (1 << 1)
+REG_STARTEND     macro       313 /usr/include/regex.h #define REG_STARTEND (1 << 2)
+RE_BACKSLASH_ESCAPE_IN_LISTS macro        48 /usr/include/regex.h # define RE_BACKSLASH_ESCAPE_IN_LISTS ((unsigned long int) 1)
+RE_BK_PLUS_QM    macro        53 /usr/include/regex.h # define RE_BK_PLUS_QM (RE_BACKSLASH_ESCAPE_IN_LISTS << 1)
+RE_CARET_ANCHORS_HERE macro       169 /usr/include/regex.h # define RE_CARET_ANCHORS_HERE (RE_ICASE << 1)
+RE_CHAR_CLASSES  macro        59 /usr/include/regex.h # define RE_CHAR_CLASSES (RE_BK_PLUS_QM << 1)
+RE_CONTEXT_INDEP_ANCHORS macro        73 /usr/include/regex.h # define RE_CONTEXT_INDEP_ANCHORS (RE_CHAR_CLASSES << 1)
+RE_CONTEXT_INDEP_OPS macro        81 /usr/include/regex.h # define RE_CONTEXT_INDEP_OPS (RE_CONTEXT_INDEP_ANCHORS << 1)
+RE_CONTEXT_INVALID_DUP macro       173 /usr/include/regex.h # define RE_CONTEXT_INVALID_DUP (RE_CARET_ANCHORS_HERE << 1)
+RE_CONTEXT_INVALID_OPS macro        85 /usr/include/regex.h # define RE_CONTEXT_INVALID_OPS (RE_CONTEXT_INDEP_OPS << 1)
+RE_DEBUG         macro       153 /usr/include/regex.h # define RE_DEBUG (RE_NO_GNU_OPS << 1)
+RE_DOT_NEWLINE   macro        89 /usr/include/regex.h # define RE_DOT_NEWLINE (RE_CONTEXT_INVALID_OPS << 1)
+RE_DOT_NOT_NULL  macro        93 /usr/include/regex.h # define RE_DOT_NOT_NULL (RE_DOT_NEWLINE << 1)
+RE_DUP_MAX       macro       271 /usr/include/regex.h # undef RE_DUP_MAX
+RE_DUP_MAX       macro       274 /usr/include/regex.h # define RE_DUP_MAX (0x7fff)
+RE_HAT_LISTS_NOT_NEWLINE macro        97 /usr/include/regex.h # define RE_HAT_LISTS_NOT_NEWLINE (RE_DOT_NOT_NULL << 1)
+RE_ICASE         macro       164 /usr/include/regex.h # define RE_ICASE (RE_INVALID_INTERVAL_ORD << 1)
+RE_INTERVALS     macro       102 /usr/include/regex.h # define RE_INTERVALS (RE_HAT_LISTS_NOT_NEWLINE << 1)
+RE_INVALID_INTERVAL_ORD macro       158 /usr/include/regex.h # define RE_INVALID_INTERVAL_ORD (RE_DEBUG << 1)
+RE_LIMITED_OPS   macro       106 /usr/include/regex.h # define RE_LIMITED_OPS (RE_INTERVALS << 1)
+RE_NEWLINE_ALT   macro       110 /usr/include/regex.h # define RE_NEWLINE_ALT (RE_LIMITED_OPS << 1)
+RE_NO_BK_BRACES  macro       115 /usr/include/regex.h # define RE_NO_BK_BRACES (RE_NEWLINE_ALT << 1)
+RE_NO_BK_PARENS  macro       119 /usr/include/regex.h # define RE_NO_BK_PARENS (RE_NO_BK_BRACES << 1)
+RE_NO_BK_REFS    macro       123 /usr/include/regex.h # define RE_NO_BK_REFS (RE_NO_BK_PARENS << 1)
+RE_NO_BK_VBAR    macro       127 /usr/include/regex.h # define RE_NO_BK_VBAR (RE_NO_BK_REFS << 1)
+RE_NO_EMPTY_RANGES macro       133 /usr/include/regex.h # define RE_NO_EMPTY_RANGES (RE_NO_BK_VBAR << 1)
+RE_NO_GNU_OPS    macro       145 /usr/include/regex.h # define RE_NO_GNU_OPS (RE_NO_POSIX_BACKTRACKING << 1)
+RE_NO_POSIX_BACKTRACKING macro       141 /usr/include/regex.h # define RE_NO_POSIX_BACKTRACKING (RE_UNMATCHED_RIGHT_PAREN_ORD << 1)
+RE_NO_SUB        macro       177 /usr/include/regex.h # define RE_NO_SUB (RE_CONTEXT_INVALID_DUP << 1)
+RE_NREGS         macro       455 /usr/include/regex.h # define RE_NREGS 30
+RE_SYNTAX_AWK    macro       194 /usr/include/regex.h #define RE_SYNTAX_AWK \
+RE_SYNTAX_ED     macro       229 /usr/include/regex.h #define RE_SYNTAX_ED RE_SYNTAX_POSIX_BASIC
+RE_SYNTAX_EGREP  macro       218 /usr/include/regex.h #define RE_SYNTAX_EGREP \
+RE_SYNTAX_EMACS  macro       192 /usr/include/regex.h #define RE_SYNTAX_EMACS 0
+RE_SYNTAX_GNU_AWK macro       202 /usr/include/regex.h #define RE_SYNTAX_GNU_AWK \
+RE_SYNTAX_GREP   macro       213 /usr/include/regex.h #define RE_SYNTAX_GREP \
+RE_SYNTAX_POSIX_AWK macro       208 /usr/include/regex.h #define RE_SYNTAX_POSIX_AWK \
+RE_SYNTAX_POSIX_BASIC macro       239 /usr/include/regex.h #define RE_SYNTAX_POSIX_BASIC \
+RE_SYNTAX_POSIX_BASIC macro       242 /usr/include/regex.h #define RE_SYNTAX_POSIX_BASIC \
+RE_SYNTAX_POSIX_EGREP macro       224 /usr/include/regex.h #define RE_SYNTAX_POSIX_EGREP \
+RE_SYNTAX_POSIX_EXTENDED macro       252 /usr/include/regex.h #define RE_SYNTAX_POSIX_EXTENDED \
+RE_SYNTAX_POSIX_MINIMAL_BASIC macro       249 /usr/include/regex.h #define RE_SYNTAX_POSIX_MINIMAL_BASIC \
+RE_SYNTAX_POSIX_MINIMAL_EXTENDED macro       260 /usr/include/regex.h #define RE_SYNTAX_POSIX_MINIMAL_EXTENDED \
+RE_SYNTAX_SED    macro       231 /usr/include/regex.h #define RE_SYNTAX_SED RE_SYNTAX_POSIX_BASIC
+RE_TRANSLATE_TYPE macro       358 /usr/include/regex.h # define RE_TRANSLATE_TYPE __RE_TRANSLATE_TYPE
+RE_UNMATCHED_RIGHT_PAREN_ORD macro       137 /usr/include/regex.h # define RE_UNMATCHED_RIGHT_PAREN_ORD (RE_NO_EMPTY_RANGES << 1)
+_REGEX_H         macro        21 /usr/include/regex.h #define _REGEX_H 1
+_RE_SYNTAX_POSIX_COMMON macro       234 /usr/include/regex.h #define _RE_SYNTAX_POSIX_COMMON \
+__REPB_PREFIX    macro       363 /usr/include/regex.h # define __REPB_PREFIX(name) name
+__REPB_PREFIX    macro       365 /usr/include/regex.h # define __REPB_PREFIX(name) __##name
+__REPB_PREFIX    prototype   373 /usr/include/regex.h unsigned char *__REPB_PREFIX(buffer);
+__REPB_PREFIX    prototype   376 /usr/include/regex.h unsigned long int __REPB_PREFIX(allocated);
+__REPB_PREFIX    prototype   379 /usr/include/regex.h unsigned long int __REPB_PREFIX(used);
+__REPB_PREFIX    prototype   382 /usr/include/regex.h reg_syntax_t __REPB_PREFIX(syntax);
+__REPB_PREFIX    prototype   387 /usr/include/regex.h char *__REPB_PREFIX(fastmap);
+__REPB_PREFIX    prototype   393 /usr/include/regex.h __RE_TRANSLATE_TYPE __REPB_PREFIX(translate);
+__REPB_PREFIX    prototype   402 /usr/include/regex.h unsigned __REPB_PREFIX(can_be_null) : 1;
+__REPB_PREFIX    prototype   413 /usr/include/regex.h unsigned __REPB_PREFIX(regs_allocated) : 2;
+__REPB_PREFIX    prototype   417 /usr/include/regex.h unsigned __REPB_PREFIX(fastmap_accurate) : 1;
+__REPB_PREFIX    prototype   421 /usr/include/regex.h unsigned __REPB_PREFIX(no_sub) : 1;
+__REPB_PREFIX    prototype   425 /usr/include/regex.h unsigned __REPB_PREFIX(not_bol) : 1;
+__REPB_PREFIX    prototype   428 /usr/include/regex.h unsigned __REPB_PREFIX(not_eol) : 1;
+__REPB_PREFIX    prototype   431 /usr/include/regex.h unsigned __REPB_PREFIX(newline_anchor) : 1;
+__RE_TRANSLATE_TYPE macro       356 /usr/include/regex.h # define __RE_TRANSLATE_TYPE unsigned char *
+__anon2::rm_eo   member      466 /usr/include/regex.h regoff_t rm_eo; /* Byte offset from string's start to substring's end. */
+__anon2::rm_so   member      465 /usr/include/regex.h regoff_t rm_so; /* Byte offset from string's start to substring's start. */
+__restrict       macro       556 /usr/include/regex.h # define __restrict restrict
+__restrict       macro       558 /usr/include/regex.h # define __restrict
+__restrict_arr   macro       566 /usr/include/regex.h # define __restrict_arr __restrict
+__restrict_arr   macro       568 /usr/include/regex.h # define __restrict_arr
+active_reg_t     typedef      36 /usr/include/regex.h typedef unsigned long int active_reg_t;
+end              member      447 /usr/include/regex.h regoff_t *end;
+num_regs         member      445 /usr/include/regex.h unsigned num_regs;
+re_comp          prototype   546 /usr/include/regex.h extern char *re_comp (const char *);
+re_compile_fastmap prototype   491 /usr/include/regex.h extern int re_compile_fastmap (struct re_pattern_buffer *__buffer);
+re_compile_pattern prototype   484 /usr/include/regex.h extern const char *re_compile_pattern (const char *__pattern, size_t __length,
+re_exec          prototype   547 /usr/include/regex.h extern int re_exec (const char *);
+re_match         prototype   514 /usr/include/regex.h extern int re_match (struct re_pattern_buffer *__buffer, const char *__string,
+re_match_2       prototype   519 /usr/include/regex.h extern int re_match_2 (struct re_pattern_buffer *__buffer,
+re_nsub          member      396 /usr/include/regex.h size_t re_nsub;
+re_pattern_buffer struct      368 /usr/include/regex.h struct re_pattern_buffer
+re_pattern_buffer::__REPB_PREFIX prototype   373 /usr/include/regex.h unsigned char *__REPB_PREFIX(buffer);
+re_pattern_buffer::__REPB_PREFIX prototype   376 /usr/include/regex.h unsigned long int __REPB_PREFIX(allocated);
+re_pattern_buffer::__REPB_PREFIX prototype   379 /usr/include/regex.h unsigned long int __REPB_PREFIX(used);
+re_pattern_buffer::__REPB_PREFIX prototype   382 /usr/include/regex.h reg_syntax_t __REPB_PREFIX(syntax);
+re_pattern_buffer::__REPB_PREFIX prototype   387 /usr/include/regex.h char *__REPB_PREFIX(fastmap);
+re_pattern_buffer::__REPB_PREFIX prototype   393 /usr/include/regex.h __RE_TRANSLATE_TYPE __REPB_PREFIX(translate);
+re_pattern_buffer::__REPB_PREFIX prototype   402 /usr/include/regex.h unsigned __REPB_PREFIX(can_be_null) : 1;
+re_pattern_buffer::__REPB_PREFIX prototype   413 /usr/include/regex.h unsigned __REPB_PREFIX(regs_allocated) : 2;
+re_pattern_buffer::__REPB_PREFIX prototype   417 /usr/include/regex.h unsigned __REPB_PREFIX(fastmap_accurate) : 1;
+re_pattern_buffer::__REPB_PREFIX prototype   421 /usr/include/regex.h unsigned __REPB_PREFIX(no_sub) : 1;
+re_pattern_buffer::__REPB_PREFIX prototype   425 /usr/include/regex.h unsigned __REPB_PREFIX(not_bol) : 1;
+re_pattern_buffer::__REPB_PREFIX prototype   428 /usr/include/regex.h unsigned __REPB_PREFIX(not_eol) : 1;
+re_pattern_buffer::__REPB_PREFIX prototype   431 /usr/include/regex.h unsigned __REPB_PREFIX(newline_anchor) : 1;
+re_pattern_buffer::re_nsub member      396 /usr/include/regex.h size_t re_nsub;
+re_registers     struct      443 /usr/include/regex.h struct re_registers
+re_registers::end member      447 /usr/include/regex.h regoff_t *end;
+re_registers::num_regs member      445 /usr/include/regex.h unsigned num_regs;
+re_registers::start member      446 /usr/include/regex.h regoff_t *start;
+re_search        prototype   499 /usr/include/regex.h extern int re_search (struct re_pattern_buffer *__buffer, const char *__string,
+re_search_2      prototype   506 /usr/include/regex.h extern int re_search_2 (struct re_pattern_buffer *__buffer,
+re_set_registers prototype   537 /usr/include/regex.h extern void re_set_registers (struct re_pattern_buffer *__buffer,
+re_set_syntax    prototype   474 /usr/include/regex.h extern reg_syntax_t re_set_syntax (reg_syntax_t __syntax);
+re_syntax_options externvar   185 /usr/include/regex.h extern reg_syntax_t re_syntax_options;
+reg_errcode_t    typedef     347 /usr/include/regex.h } reg_errcode_t;
+reg_syntax_t     typedef      43 /usr/include/regex.h typedef unsigned long int reg_syntax_t;
+regcomp          prototype   573 /usr/include/regex.h extern int regcomp (regex_t *__restrict __preg,
+regerror         prototype   582 /usr/include/regex.h extern size_t regerror (int __errcode, const regex_t *__restrict __preg,
+regex_t          typedef     434 /usr/include/regex.h typedef struct re_pattern_buffer regex_t;
+regexec          prototype   577 /usr/include/regex.h extern int regexec (const regex_t *__restrict __preg,
+regfree          prototype   585 /usr/include/regex.h extern void regfree (regex_t *__preg);
+regmatch_t       typedef     467 /usr/include/regex.h } regmatch_t;
+regoff_t         typedef     437 /usr/include/regex.h typedef int regoff_t;
+rm_eo            member      466 /usr/include/regex.h regoff_t rm_eo; /* Byte offset from string's start to substring's end. */
+rm_so            member      465 /usr/include/regex.h regoff_t rm_so; /* Byte offset from string's start to substring's start. */
+s_reg_t          typedef      35 /usr/include/regex.h typedef long int s_reg_t;
+start            member      446 /usr/include/regex.h regoff_t *start;

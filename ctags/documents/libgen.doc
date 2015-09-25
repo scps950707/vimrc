@@ -1,0 +1,4 @@
+_LIBGEN_H        macro        19 /usr/include/libgen.h #define _LIBGEN_H 1
+__xpg_basename   prototype    34 /usr/include/libgen.h extern char *__xpg_basename (char *__path) __THROW;
+basename         macro        35 /usr/include/libgen.h #define basename __xpg_basename
+dirname          prototype    26 /usr/include/libgen.h extern char *dirname (char *__path) __THROW;

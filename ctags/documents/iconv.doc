@@ -1,0 +1,6 @@
+_ICONV_H         macro        19 /usr/include/iconv.h #define _ICONV_H 1
+__need_size_t    macro        22 /usr/include/iconv.h #define __need_size_t
+iconv            prototype    42 /usr/include/iconv.h extern size_t iconv (iconv_t __cd, char **__restrict __inbuf,
+iconv_close      prototype    51 /usr/include/iconv.h extern int iconv_close (iconv_t __cd);
+iconv_open       prototype    37 /usr/include/iconv.h extern iconv_t iconv_open (const char *__tocode, const char *__fromcode);
+iconv_t          typedef      29 /usr/include/iconv.h typedef void *iconv_t;

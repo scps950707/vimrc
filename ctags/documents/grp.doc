@@ -1,0 +1,30 @@
+NSS_BUFLEN_GROUP macro       118 /usr/include/grp.h # define NSS_BUFLEN_GROUP 1024
+_GRP_H           macro        23 /usr/include/grp.h #define _GRP_H 1
+__gid_t_defined  macro        38 /usr/include/grp.h # define __gid_t_defined
+__need_FILE      macro        52 /usr/include/grp.h # define __need_FILE
+__need_size_t    macro        31 /usr/include/grp.h #define __need_size_t
+__need_size_t    macro       176 /usr/include/grp.h # define __need_size_t
+endgrent         prototype    71 /usr/include/grp.h extern void endgrent (void);
+fgetgrent        prototype    87 /usr/include/grp.h extern struct group *fgetgrent (FILE *__stream);
+fgetgrent_r      prototype   165 /usr/include/grp.h extern int fgetgrent_r (FILE *__restrict __stream,
+getgrent         prototype    77 /usr/include/grp.h extern struct group *getgrent (void);
+getgrent_r       prototype   135 /usr/include/grp.h extern int getgrent_r (struct group *__restrict __resultbuf,
+getgrgid         prototype   105 /usr/include/grp.h extern struct group *getgrgid (__gid_t __gid);
+getgrgid_r       prototype   144 /usr/include/grp.h extern int getgrgid_r (__gid_t __gid, struct group *__restrict __resultbuf,
+getgrnam         prototype   111 /usr/include/grp.h extern struct group *getgrnam (const char *__name);
+getgrnam_r       prototype   152 /usr/include/grp.h extern int getgrnam_r (const char *__restrict __name,
+getgrouplist     prototype   190 /usr/include/grp.h extern int getgrouplist (const char *__user, __gid_t __group,
+gid_t            typedef      37 /usr/include/grp.h typedef __gid_t gid_t;
+gr_gid           member       46 /usr/include/grp.h __gid_t gr_gid; /* Group ID. */
+gr_mem           member       47 /usr/include/grp.h char **gr_mem; /* Member list. */
+gr_name          member       44 /usr/include/grp.h char *gr_name; /* Group name. */
+gr_passwd        member       45 /usr/include/grp.h char *gr_passwd; /* Password. */
+group            struct       42 /usr/include/grp.h struct group
+group::gr_gid    member       46 /usr/include/grp.h __gid_t gr_gid; /* Group ID. */
+group::gr_mem    member       47 /usr/include/grp.h char **gr_mem; /* Member list. */
+group::gr_name   member       44 /usr/include/grp.h char *gr_name; /* Group name. */
+group::gr_passwd member       45 /usr/include/grp.h char *gr_passwd; /* Password. */
+initgroups       prototype   201 /usr/include/grp.h extern int initgroups (const char *__user, __gid_t __group);
+putgrent         prototype    97 /usr/include/grp.h extern int putgrent (const struct group *__restrict __p,
+setgrent         prototype    62 /usr/include/grp.h extern void setgrent (void);
+setgroups        prototype   180 /usr/include/grp.h extern int setgroups (size_t __n, const __gid_t *__groups) __THROW;

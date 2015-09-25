@@ -1,0 +1,157 @@
+ARGP_EI          macro       556 /usr/include/argp.h # define ARGP_EI __extern_inline
+ARGP_ERR_UNKNOWN macro       155 /usr/include/argp.h #define ARGP_ERR_UNKNOWN E2BIG /* Hurd should never need E2BIG. XXX */
+ARGP_HELP_BUG_ADDR macro       450 /usr/include/argp.h #define ARGP_HELP_BUG_ADDR 0x40 /* bug report address */
+ARGP_HELP_DOC    macro       449 /usr/include/argp.h #define ARGP_HELP_DOC (ARGP_HELP_PRE_DOC | ARGP_HELP_POST_DOC)
+ARGP_HELP_EXIT_ERR macro       455 /usr/include/argp.h #define ARGP_HELP_EXIT_ERR 0x100 /* Call exit(1) instead of returning. */
+ARGP_HELP_EXIT_OK macro       456 /usr/include/argp.h #define ARGP_HELP_EXIT_OK 0x200 /* Call exit(0) instead of returning. */
+ARGP_HELP_LONG   macro       446 /usr/include/argp.h #define ARGP_HELP_LONG 0x08 /* a long help message. */
+ARGP_HELP_LONG_ONLY macro       451 /usr/include/argp.h #define ARGP_HELP_LONG_ONLY 0x80 /* modify output appropriately to
+ARGP_HELP_POST_DOC macro       448 /usr/include/argp.h #define ARGP_HELP_POST_DOC 0x20 /* doc string following long help. */
+ARGP_HELP_PRE_DOC macro       447 /usr/include/argp.h #define ARGP_HELP_PRE_DOC 0x10 /* doc string preceding long help. */
+ARGP_HELP_SEE    macro       445 /usr/include/argp.h #define ARGP_HELP_SEE 0x04 /* a `Try ... for more help' message. */
+ARGP_HELP_SHORT_USAGE macro       444 /usr/include/argp.h #define ARGP_HELP_SHORT_USAGE 0x02 /* " but don't actually print options. */
+ARGP_HELP_STD_ERR macro       460 /usr/include/argp.h #define ARGP_HELP_STD_ERR \
+ARGP_HELP_STD_HELP macro       467 /usr/include/argp.h #define ARGP_HELP_STD_HELP \
+ARGP_HELP_STD_USAGE macro       464 /usr/include/argp.h #define ARGP_HELP_STD_USAGE \
+ARGP_HELP_USAGE  macro       443 /usr/include/argp.h #define ARGP_HELP_USAGE 0x01 /* a Usage: message. */
+ARGP_IN_ORDER    macro       382 /usr/include/argp.h #define ARGP_IN_ORDER 0x08
+ARGP_KEY_ARG     macro       183 /usr/include/argp.h #define ARGP_KEY_ARG 0
+ARGP_KEY_ARGS    macro       189 /usr/include/argp.h #define ARGP_KEY_ARGS 0x1000006
+ARGP_KEY_END     macro       191 /usr/include/argp.h #define ARGP_KEY_END 0x1000001
+ARGP_KEY_ERROR   macro       208 /usr/include/argp.h #define ARGP_KEY_ERROR 0x1000005
+ARGP_KEY_FINI    macro       203 /usr/include/argp.h #define ARGP_KEY_FINI 0x1000007
+ARGP_KEY_HELP_ARGS_DOC macro       278 /usr/include/argp.h #define ARGP_KEY_HELP_ARGS_DOC 0x2000006 /* Argument doc string. */
+ARGP_KEY_HELP_DUP_ARGS_NOTE macro       277 /usr/include/argp.h #define ARGP_KEY_HELP_DUP_ARGS_NOTE 0x2000005
+ARGP_KEY_HELP_EXTRA macro       273 /usr/include/argp.h #define ARGP_KEY_HELP_EXTRA 0x2000004 /* After all other documentation;
+ARGP_KEY_HELP_HEADER macro       272 /usr/include/argp.h #define ARGP_KEY_HELP_HEADER 0x2000003 /* Option header string. */
+ARGP_KEY_HELP_POST_DOC macro       271 /usr/include/argp.h #define ARGP_KEY_HELP_POST_DOC 0x2000002 /* Help text following options. */
+ARGP_KEY_HELP_PRE_DOC macro       270 /usr/include/argp.h #define ARGP_KEY_HELP_PRE_DOC 0x2000001 /* Help text preceeding options. */
+ARGP_KEY_INIT    macro       201 /usr/include/argp.h #define ARGP_KEY_INIT 0x1000003
+ARGP_KEY_NO_ARGS macro       197 /usr/include/argp.h #define ARGP_KEY_NO_ARGS 0x1000002
+ARGP_KEY_SUCCESS macro       206 /usr/include/argp.h #define ARGP_KEY_SUCCESS 0x1000004
+ARGP_LONG_ONLY   macro       392 /usr/include/argp.h #define ARGP_LONG_ONLY 0x40
+ARGP_NO_ARGS     macro       378 /usr/include/argp.h #define ARGP_NO_ARGS 0x04
+ARGP_NO_ERRS     macro       366 /usr/include/argp.h #define ARGP_NO_ERRS 0x02
+ARGP_NO_EXIT     macro       389 /usr/include/argp.h #define ARGP_NO_EXIT 0x20
+ARGP_NO_HELP     macro       386 /usr/include/argp.h #define ARGP_NO_HELP 0x10
+ARGP_PARSE_ARGV0 macro       360 /usr/include/argp.h #define ARGP_PARSE_ARGV0 0x01
+ARGP_SILENT      macro       395 /usr/include/argp.h #define ARGP_SILENT (ARGP_NO_EXIT | ARGP_NO_ERRS | ARGP_NO_HELP)
+OPTION_ALIAS     macro       119 /usr/include/argp.h #define OPTION_ALIAS 0x4
+OPTION_ARG_OPTIONAL macro       111 /usr/include/argp.h #define OPTION_ARG_OPTIONAL 0x1
+OPTION_DOC       macro       131 /usr/include/argp.h #define OPTION_DOC 0x8
+OPTION_HIDDEN    macro       114 /usr/include/argp.h #define OPTION_HIDDEN 0x2
+OPTION_NO_USAGE  macro       140 /usr/include/argp.h #define OPTION_NO_USAGE 0x10
+_ARGP_H          macro        21 /usr/include/argp.h #define _ARGP_H
+__NTH            macro        35 /usr/include/argp.h # define __NTH(fct) fct __THROW
+__THROW          macro        32 /usr/include/argp.h # define __THROW
+__argp_error     prototype   507 /usr/include/argp.h extern void __argp_error (const struct argp_state *__restrict __state,
+__argp_failure   prototype   523 /usr/include/argp.h extern void __argp_failure (const struct argp_state *__restrict __state,
+__argp_help      prototype   476 /usr/include/argp.h extern void __argp_help (const struct argp *__restrict __argp,
+__argp_input     prototype   542 /usr/include/argp.h extern void *__argp_input (const struct argp *__restrict __argp,
+__argp_parse     prototype   408 /usr/include/argp.h extern error_t __argp_parse (const struct argp *__restrict __argp,
+__argp_state_help macro       550 /usr/include/argp.h # define __argp_state_help argp_state_help
+__argp_state_help macro       585 /usr/include/argp.h # undef __argp_state_help
+__argp_state_help prototype   493 /usr/include/argp.h extern void __argp_state_help (const struct argp_state *__restrict __state,
+__argp_usage     function    560 /usr/include/argp.h __argp_usage (const struct argp_state *__state)
+__argp_usage     macro       549 /usr/include/argp.h # define __argp_usage argp_usage
+__argp_usage     macro       584 /usr/include/argp.h # undef __argp_usage
+__argp_usage     prototype   499 /usr/include/argp.h extern void __argp_usage (const struct argp_state *__state);
+__attribute__    macro        41 /usr/include/argp.h # define __attribute__(Spec) /* empty */
+__error_t_defined macro        65 /usr/include/argp.h # define __error_t_defined
+__format__       macro        46 /usr/include/argp.h # define __format__ format
+__need_error_t   macro        28 /usr/include/argp.h #define __need_error_t
+__option_is_end  function    578 /usr/include/argp.h __NTH (__option_is_end (const struct argp_option *__opt))
+__option_is_end  macro       552 /usr/include/argp.h # define __option_is_end _option_is_end
+__option_is_end  macro       587 /usr/include/argp.h # undef __option_is_end
+__option_is_end  prototype   535 /usr/include/argp.h extern int __option_is_end (const struct argp_option *__opt) __THROW;
+__option_is_short function    566 /usr/include/argp.h __NTH (__option_is_short (const struct argp_option *__opt))
+__option_is_short macro       551 /usr/include/argp.h # define __option_is_short _option_is_short
+__option_is_short macro       586 /usr/include/argp.h # undef __option_is_short
+__option_is_short prototype   530 /usr/include/argp.h extern int __option_is_short (const struct argp_option *__opt) __THROW;
+__printf__       macro        47 /usr/include/argp.h # define __printf__ printf
+__restrict       macro        56 /usr/include/argp.h # define __restrict restrict
+__restrict       macro        58 /usr/include/argp.h # define __restrict
+_argp_input      prototype   539 /usr/include/argp.h extern void *_argp_input (const struct argp *__restrict __argp,
+_option_is_end   prototype   534 /usr/include/argp.h extern int _option_is_end (const struct argp_option *__opt) __THROW;
+_option_is_short prototype   529 /usr/include/argp.h extern int _option_is_short (const struct argp_option *__opt) __THROW;
+arg              member       89 /usr/include/argp.h const char *arg;
+arg_num          member      326 /usr/include/argp.h unsigned arg_num;
+argc             member      313 /usr/include/argp.h int argc;
+argp             externvar   142 /usr/include/argp.h struct argp; /* fwd declare this type */
+argp             member      285 /usr/include/argp.h const struct argp *argp;
+argp             struct      216 /usr/include/argp.h struct argp
+argp::argp_domain member      266 /usr/include/argp.h const char *argp_domain;
+argp::args_doc   member      236 /usr/include/argp.h const char *args_doc;
+argp::children   member      249 /usr/include/argp.h const struct argp_child *children;
+argp::doc        member      241 /usr/include/argp.h const char *doc;
+argp::help_filter member      261 /usr/include/argp.h char *(*help_filter) (int __key, const char *__text, void *__input);
+argp::options    member      220 /usr/include/argp.h const struct argp_option *options;
+argp::parser     member      229 /usr/include/argp.h argp_parser_t parser;
+argp_child       externvar   144 /usr/include/argp.h struct argp_child; /* " */
+argp_child       struct      282 /usr/include/argp.h struct argp_child
+argp_child::argp member      285 /usr/include/argp.h const struct argp *argp;
+argp_child::flags member      288 /usr/include/argp.h int flags;
+argp_child::group member      302 /usr/include/argp.h int group;
+argp_child::header member      294 /usr/include/argp.h const char *header;
+argp_domain      member      266 /usr/include/argp.h const char *argp_domain;
+argp_err_exit_status externvar   440 /usr/include/argp.h extern error_t argp_err_exit_status;
+argp_error       prototype   504 /usr/include/argp.h extern void argp_error (const struct argp_state *__restrict __state,
+argp_failure     prototype   519 /usr/include/argp.h extern void argp_failure (const struct argp_state *__restrict __state,
+argp_help        prototype   473 /usr/include/argp.h extern void argp_help (const struct argp *__restrict __argp,
+argp_option      struct       77 /usr/include/argp.h struct argp_option
+argp_option::arg member       89 /usr/include/argp.h const char *arg;
+argp_option::doc member       98 /usr/include/argp.h const char *doc;
+argp_option::flags member       92 /usr/include/argp.h int flags;
+argp_option::group member      107 /usr/include/argp.h int group;
+argp_option::key member       85 /usr/include/argp.h int key;
+argp_option::name member       81 /usr/include/argp.h const char *name;
+argp_parse       prototype   404 /usr/include/argp.h extern error_t argp_parse (const struct argp *__restrict __argp,
+argp_parser_t    typedef     147 /usr/include/argp.h typedef error_t (*argp_parser_t) (int __key, char *__arg,
+argp_program_bug_address externvar   435 /usr/include/argp.h extern const char *argp_program_bug_address;
+argp_program_version externvar   419 /usr/include/argp.h extern const char *argp_program_version;
+argp_program_version_hook externvar   426 /usr/include/argp.h extern void (*argp_program_version_hook) (FILE *__restrict __stream,
+argp_state       externvar   143 /usr/include/argp.h struct argp_state; /* " */
+argp_state       struct      307 /usr/include/argp.h struct argp_state
+argp_state::arg_num member      326 /usr/include/argp.h unsigned arg_num;
+argp_state::argc member      313 /usr/include/argp.h int argc;
+argp_state::argv member      314 /usr/include/argp.h char **argv;
+argp_state::child_inputs member      337 /usr/include/argp.h void **child_inputs;
+argp_state::err_stream member      347 /usr/include/argp.h FILE *err_stream; /* For errors; initialized to stderr. */
+argp_state::flags member      320 /usr/include/argp.h unsigned flags;
+argp_state::hook member      340 /usr/include/argp.h void *hook;
+argp_state::input member      334 /usr/include/argp.h void *input;
+argp_state::name member      344 /usr/include/argp.h char *name;
+argp_state::next member      317 /usr/include/argp.h int next;
+argp_state::out_stream member      348 /usr/include/argp.h FILE *out_stream; /* For information; initialized to stdout. */
+argp_state::pstate member      350 /usr/include/argp.h void *pstate; /* Private, for use by argp. */
+argp_state::quoted member      331 /usr/include/argp.h int quoted;
+argp_state::root_argp member      310 /usr/include/argp.h const struct argp *root_argp;
+argp_state_help  prototype   490 /usr/include/argp.h extern void argp_state_help (const struct argp_state *__restrict __state,
+argp_usage       prototype   498 /usr/include/argp.h extern void argp_usage (const struct argp_state *__state);
+args_doc         member      236 /usr/include/argp.h const char *args_doc;
+argv             member      314 /usr/include/argp.h char **argv;
+child_inputs     member      337 /usr/include/argp.h void **child_inputs;
+children         member      249 /usr/include/argp.h const struct argp_child *children;
+doc              member       98 /usr/include/argp.h const char *doc;
+doc              member      241 /usr/include/argp.h const char *doc;
+err_stream       member      347 /usr/include/argp.h FILE *err_stream; /* For errors; initialized to stderr. */
+error_t          typedef      64 /usr/include/argp.h typedef int error_t;
+flags            member       92 /usr/include/argp.h int flags;
+flags            member      288 /usr/include/argp.h int flags;
+flags            member      320 /usr/include/argp.h unsigned flags;
+group            member      107 /usr/include/argp.h int group;
+group            member      302 /usr/include/argp.h int group;
+header           member      294 /usr/include/argp.h const char *header;
+help_filter      member      261 /usr/include/argp.h char *(*help_filter) (int __key, const char *__text, void *__input);
+hook             member      340 /usr/include/argp.h void *hook;
+input            member      334 /usr/include/argp.h void *input;
+key              member       85 /usr/include/argp.h int key;
+name             member       81 /usr/include/argp.h const char *name;
+name             member      344 /usr/include/argp.h char *name;
+next             member      317 /usr/include/argp.h int next;
+options          member      220 /usr/include/argp.h const struct argp_option *options;
+out_stream       member      348 /usr/include/argp.h FILE *out_stream; /* For information; initialized to stdout. */
+parser           member      229 /usr/include/argp.h argp_parser_t parser;
+pstate           member      350 /usr/include/argp.h void *pstate; /* Private, for use by argp. */
+quoted           member      331 /usr/include/argp.h int quoted;
+root_argp        member      310 /usr/include/argp.h const struct argp *root_argp;

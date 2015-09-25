@@ -1,0 +1,29 @@
+_ARGZ_H          macro        20 /usr/include/argz.h #define _ARGZ_H 1
+__argz_add       prototype    83 /usr/include/argz.h extern error_t __argz_add (char **__restrict __argz,
+__argz_add_sep   prototype    92 /usr/include/argz.h extern error_t __argz_add_sep (char **__restrict __argz,
+__argz_append    prototype    73 /usr/include/argz.h extern error_t __argz_append (char **__restrict __argz,
+__argz_count     prototype    55 /usr/include/argz.h extern size_t __argz_count (const char *__argz, size_t __len)
+__argz_create    prototype    38 /usr/include/argz.h extern error_t __argz_create (char *const __argv[], char **__restrict __argz,
+__argz_create_sep prototype    47 /usr/include/argz.h extern error_t __argz_create_sep (const char *__restrict __string,
+__argz_delete    prototype   102 /usr/include/argz.h extern void __argz_delete (char **__restrict __argz,
+__argz_extract   prototype    62 /usr/include/argz.h extern void __argz_extract (const char *__restrict __argz, size_t __len,
+__argz_insert    prototype   115 /usr/include/argz.h extern error_t __argz_insert (char **__restrict __argz,
+__argz_next      function    159 /usr/include/argz.h __NTH (__argz_next (const char *__argz, size_t __argz_len,
+__argz_next      prototype   152 /usr/include/argz.h extern char *__argz_next (const char *__restrict __argz, size_t __argz_len,
+__argz_replace   prototype   127 /usr/include/argz.h extern error_t __argz_replace (char **__restrict __argz,
+__argz_stringify prototype    69 /usr/include/argz.h extern void __argz_stringify (char *__argz, size_t __len, int __sep) __THROW;
+__need_error_t   macro        24 /usr/include/argz.h #define __need_error_t
+argz_add         prototype    86 /usr/include/argz.h extern error_t argz_add (char **__restrict __argz,
+argz_add_sep     prototype    96 /usr/include/argz.h extern error_t argz_add_sep (char **__restrict __argz,
+argz_append      prototype    77 /usr/include/argz.h extern error_t argz_append (char **__restrict __argz,
+argz_count       prototype    57 /usr/include/argz.h extern size_t argz_count (const char *__argz, size_t __len)
+argz_create      prototype    40 /usr/include/argz.h extern error_t argz_create (char *const __argv[], char **__restrict __argz,
+argz_create_sep  prototype    50 /usr/include/argz.h extern error_t argz_create_sep (const char *__restrict __string,
+argz_delete      prototype   105 /usr/include/argz.h extern void argz_delete (char **__restrict __argz,
+argz_extract     prototype    64 /usr/include/argz.h extern void argz_extract (const char *__restrict __argz, size_t __len,
+argz_insert      prototype   119 /usr/include/argz.h extern error_t argz_insert (char **__restrict __argz,
+argz_next        function    173 /usr/include/argz.h __NTH (argz_next (const char *__argz, size_t __argz_len,
+argz_next        prototype   154 /usr/include/argz.h extern char *argz_next (const char *__restrict __argz, size_t __argz_len,
+argz_replace     prototype   132 /usr/include/argz.h extern error_t argz_replace (char **__restrict __argz,
+argz_stringify   prototype    70 /usr/include/argz.h extern void argz_stringify (char *__argz, size_t __len, int __sep) __THROW;
+error_t          typedef      29 /usr/include/argz.h typedef int error_t;

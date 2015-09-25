@@ -1,0 +1,100 @@
+_CTYPE_H         macro        23 /usr/include/ctype.h #define _CTYPE_H 1
+_ISalnum         enumerator   59 /usr/include/ctype.h _ISalnum = _ISbit (11) /* Alphanumeric. */
+_ISalpha         enumerator   50 /usr/include/ctype.h _ISalpha = _ISbit (2), /* Alphabetic. */
+_ISbit           macro        41 /usr/include/ctype.h # define _ISbit(bit) (1 << (bit))
+_ISblank         enumerator   56 /usr/include/ctype.h _ISblank = _ISbit (8), /* Blank (usually SPC and TAB). */
+_IScntrl         enumerator   57 /usr/include/ctype.h _IScntrl = _ISbit (9), /* Control character. */
+_ISdigit         enumerator   51 /usr/include/ctype.h _ISdigit = _ISbit (3), /* Numeric. */
+_ISgraph         enumerator   55 /usr/include/ctype.h _ISgraph = _ISbit (7), /* Graphical. */
+_ISlower         enumerator   49 /usr/include/ctype.h _ISlower = _ISbit (1), /* lowercase. */
+_ISprint         enumerator   54 /usr/include/ctype.h _ISprint = _ISbit (6), /* Printing. */
+_ISpunct         enumerator   58 /usr/include/ctype.h _ISpunct = _ISbit (10), /* Punctuation. */
+_ISspace         enumerator   53 /usr/include/ctype.h _ISspace = _ISbit (5), /* Whitespace. */
+_ISupper         enumerator   48 /usr/include/ctype.h _ISupper = _ISbit (0), /* UPPERCASE. */
+_ISxdigit        enumerator   52 /usr/include/ctype.h _ISxdigit = _ISbit (4), /* Hexadecimal numeric. */
+__ctype_b_loc    prototype    79 /usr/include/ctype.h extern const unsigned short int **__ctype_b_loc (void)
+__ctype_tolower_loc prototype    81 /usr/include/ctype.h extern const __int32_t **__ctype_tolower_loc (void)
+__ctype_toupper_loc prototype    83 /usr/include/ctype.h extern const __int32_t **__ctype_toupper_loc (void)
+__exctype        macro       102 /usr/include/ctype.h #define __exctype(name) extern int name (int) __THROW
+__exctype        prototype   110 /usr/include/ctype.h __exctype (isalnum);
+__exctype        prototype   136 /usr/include/ctype.h __exctype (isblank);
+__exctype_l      macro       264 /usr/include/ctype.h # define __exctype_l(name) \
+__isalnum_l      macro       305 /usr/include/ctype.h # define __isalnum_l(c,l) __isctype_l((c), _ISalnum, (l))
+__isalpha_l      macro       306 /usr/include/ctype.h # define __isalpha_l(c,l) __isctype_l((c), _ISalpha, (l))
+__isascii        macro        99 /usr/include/ctype.h #define __isascii(c) (((c) & ~0x7f) == 0) /* If C is a 7 bit value. */
+__isascii_l      macro       320 /usr/include/ctype.h # define __isascii_l(c,l) ((l), __isascii (c))
+__isblank_l      macro       317 /usr/include/ctype.h # define __isblank_l(c,l) __isctype_l((c), _ISblank, (l))
+__iscntrl_l      macro       307 /usr/include/ctype.h # define __iscntrl_l(c,l) __isctype_l((c), _IScntrl, (l))
+__isctype        macro        88 /usr/include/ctype.h # define __isctype(c, type) \
+__isctype_f      macro        91 /usr/include/ctype.h # define __isctype_f(type) \
+__isctype_l      macro       261 /usr/include/ctype.h # define __isctype_l(c, type, locale) \
+__isdigit_l      macro       308 /usr/include/ctype.h # define __isdigit_l(c,l) __isctype_l((c), _ISdigit, (l))
+__isgraph_l      macro       310 /usr/include/ctype.h # define __isgraph_l(c,l) __isctype_l((c), _ISgraph, (l))
+__islower_l      macro       309 /usr/include/ctype.h # define __islower_l(c,l) __isctype_l((c), _ISlower, (l))
+__isprint_l      macro       311 /usr/include/ctype.h # define __isprint_l(c,l) __isctype_l((c), _ISprint, (l))
+__ispunct_l      macro       312 /usr/include/ctype.h # define __ispunct_l(c,l) __isctype_l((c), _ISpunct, (l))
+__isspace_l      macro       313 /usr/include/ctype.h # define __isspace_l(c,l) __isctype_l((c), _ISspace, (l))
+__isupper_l      macro       314 /usr/include/ctype.h # define __isupper_l(c,l) __isctype_l((c), _ISupper, (l))
+__isxdigit_l     macro       315 /usr/include/ctype.h # define __isxdigit_l(c,l) __isctype_l((c), _ISxdigit, (l))
+__toascii        macro       100 /usr/include/ctype.h #define __toascii(c) ((c) & 0x7f) /* Mask off high bits. */
+__toascii_l      macro       321 /usr/include/ctype.h # define __toascii_l(c,l) ((l), __toascii (c))
+__tobody         macro       163 /usr/include/ctype.h #define __tobody(c, f, a, args) \
+__tolower_l      macro       295 /usr/include/ctype.h # define __tolower_l(c, locale) \
+__tolower_l      prototype   287 /usr/include/ctype.h extern int __tolower_l (int __c, __locale_t __l) __THROW;
+__toupper_l      macro       297 /usr/include/ctype.h # define __toupper_l(c, locale) \
+__toupper_l      prototype   291 /usr/include/ctype.h extern int __toupper_l (int __c, __locale_t __l) __THROW;
+_tolower         macro       236 /usr/include/ctype.h # define _tolower(c) ((int) (*__ctype_tolower_loc ())[(int) (c)])
+_tolower         variable    159 /usr/include/ctype.h __exctype (_tolower);
+_toupper         macro       237 /usr/include/ctype.h # define _toupper(c) ((int) (*__ctype_toupper_loc ())[(int) (c)])
+_toupper         variable    158 /usr/include/ctype.h __exctype (_toupper);
+isalnum_l        macro       324 /usr/include/ctype.h # define isalnum_l(c,l) __isalnum_l ((c), (l))
+isalnum_l        variable    271 /usr/include/ctype.h __exctype_l (isalnum_l);
+isalpha          variable    111 /usr/include/ctype.h __exctype (isalpha);
+isalpha_l        macro       325 /usr/include/ctype.h # define isalpha_l(c,l) __isalpha_l ((c), (l))
+isalpha_l        variable    272 /usr/include/ctype.h __exctype_l (isalpha_l);
+isascii          macro       233 /usr/include/ctype.h # define isascii(c) __isascii (c)
+isascii          prototype   150 /usr/include/ctype.h extern int isascii (int __c) __THROW;
+isascii_l        macro       339 /usr/include/ctype.h # define isascii_l(c,l) __isascii_l ((c), (l))
+isblank_l        macro       336 /usr/include/ctype.h # define isblank_l(c,l) __isblank_l ((c), (l))
+isblank_l        variable    283 /usr/include/ctype.h __exctype_l (isblank_l);
+iscntrl          variable    112 /usr/include/ctype.h __exctype (iscntrl);
+iscntrl_l        macro       326 /usr/include/ctype.h # define iscntrl_l(c,l) __iscntrl_l ((c), (l))
+iscntrl_l        variable    273 /usr/include/ctype.h __exctype_l (iscntrl_l);
+isctype          prototype   143 /usr/include/ctype.h extern int isctype (int __c, int __mask) __THROW;
+isdigit          variable    113 /usr/include/ctype.h __exctype (isdigit);
+isdigit_l        macro       327 /usr/include/ctype.h # define isdigit_l(c,l) __isdigit_l ((c), (l))
+isdigit_l        variable    274 /usr/include/ctype.h __exctype_l (isdigit_l);
+isgraph          variable    115 /usr/include/ctype.h __exctype (isgraph);
+isgraph_l        macro       329 /usr/include/ctype.h # define isgraph_l(c,l) __isgraph_l ((c), (l))
+isgraph_l        variable    276 /usr/include/ctype.h __exctype_l (isgraph_l);
+islower          variable    114 /usr/include/ctype.h __exctype (islower);
+islower_l        macro       328 /usr/include/ctype.h # define islower_l(c,l) __islower_l ((c), (l))
+islower_l        variable    275 /usr/include/ctype.h __exctype_l (islower_l);
+isprint          variable    116 /usr/include/ctype.h __exctype (isprint);
+isprint_l        macro       330 /usr/include/ctype.h # define isprint_l(c,l) __isprint_l ((c), (l))
+isprint_l        variable    277 /usr/include/ctype.h __exctype_l (isprint_l);
+ispunct          variable    117 /usr/include/ctype.h __exctype (ispunct);
+ispunct_l        macro       331 /usr/include/ctype.h # define ispunct_l(c,l) __ispunct_l ((c), (l))
+ispunct_l        variable    278 /usr/include/ctype.h __exctype_l (ispunct_l);
+isspace          variable    118 /usr/include/ctype.h __exctype (isspace);
+isspace_l        macro       332 /usr/include/ctype.h # define isspace_l(c,l) __isspace_l ((c), (l))
+isspace_l        variable    279 /usr/include/ctype.h __exctype_l (isspace_l);
+isupper          variable    119 /usr/include/ctype.h __exctype (isupper);
+isupper_l        macro       333 /usr/include/ctype.h # define isupper_l(c,l) __isupper_l ((c), (l))
+isupper_l        variable    280 /usr/include/ctype.h __exctype_l (isupper_l);
+isxdigit         variable    120 /usr/include/ctype.h __exctype (isxdigit);
+isxdigit_l       macro       334 /usr/include/ctype.h # define isxdigit_l(c,l) __isxdigit_l ((c), (l))
+isxdigit_l       variable    281 /usr/include/ctype.h __exctype_l (isxdigit_l);
+toascii          macro       234 /usr/include/ctype.h # define toascii(c) __toascii (c)
+toascii          prototype   154 /usr/include/ctype.h extern int toascii (int __c) __THROW;
+toascii_l        macro       340 /usr/include/ctype.h # define toascii_l(c,l) __toascii_l ((c), (l))
+tolower          function    215 /usr/include/ctype.h __NTH (tolower (int __c))
+tolower          macro       228 /usr/include/ctype.h # define tolower(c) __tobody (c, tolower, *__ctype_tolower_loc (), (c))
+tolower          prototype   124 /usr/include/ctype.h extern int tolower (int __c) __THROW;
+tolower_l        macro       299 /usr/include/ctype.h # define tolower_l(c, locale) __tolower_l ((c), (locale))
+tolower_l        prototype   288 /usr/include/ctype.h extern int tolower_l (int __c, __locale_t __l) __THROW;
+toupper          function    221 /usr/include/ctype.h __NTH (toupper (int __c))
+toupper          macro       229 /usr/include/ctype.h # define toupper(c) __tobody (c, toupper, *__ctype_toupper_loc (), (c))
+toupper          prototype   127 /usr/include/ctype.h extern int toupper (int __c) __THROW;
+toupper_l        macro       300 /usr/include/ctype.h # define toupper_l(c, locale) __toupper_l ((c), (locale))
+toupper_l        prototype   292 /usr/include/ctype.h extern int toupper_l (int __c, __locale_t __l) __THROW;

@@ -1,0 +1,47 @@
+MM_APPL          enumerator   36 /usr/include/fmtmsg.h MM_APPL = 0x008, /* Condition detected by application. */
+MM_APPL          macro        37 /usr/include/fmtmsg.h #define MM_APPL MM_APPL
+MM_CONSOLE       enumerator   48 /usr/include/fmtmsg.h MM_CONSOLE = 0x200 /* Display message on system console. */
+MM_CONSOLE       macro        49 /usr/include/fmtmsg.h #define MM_CONSOLE MM_CONSOLE
+MM_ERROR         enumerator   59 /usr/include/fmtmsg.h MM_ERROR, /* Application has encountered a non-fatal fault. */
+MM_ERROR         macro        60 /usr/include/fmtmsg.h #define MM_ERROR MM_ERROR
+MM_FIRM          enumerator   34 /usr/include/fmtmsg.h MM_FIRM = 0x004, /* Source of the condition is firmware. */
+MM_FIRM          macro        35 /usr/include/fmtmsg.h #define MM_FIRM MM_FIRM
+MM_HALT          enumerator   57 /usr/include/fmtmsg.h MM_HALT, /* Error causing application to halt. */
+MM_HALT          macro        58 /usr/include/fmtmsg.h #define MM_HALT MM_HALT
+MM_HARD          enumerator   30 /usr/include/fmtmsg.h MM_HARD = 0x001, /* Source of the condition is hardware. */
+MM_HARD          macro        31 /usr/include/fmtmsg.h #define MM_HARD MM_HARD
+MM_INFO          enumerator   64 /usr/include/fmtmsg.h MM_INFO /* Informative message. */
+MM_INFO          macro        65 /usr/include/fmtmsg.h #define MM_INFO MM_INFO
+MM_NOCON         enumerator   87 /usr/include/fmtmsg.h MM_NOCON = 4
+MM_NOCON         macro        88 /usr/include/fmtmsg.h #define MM_NOCON MM_NOCON
+MM_NOMSG         enumerator   85 /usr/include/fmtmsg.h MM_NOMSG = 1,
+MM_NOMSG         macro        86 /usr/include/fmtmsg.h #define MM_NOMSG MM_NOMSG
+MM_NOSEV         enumerator   55 /usr/include/fmtmsg.h MM_NOSEV = 0, /* No severity level provided for the message. */
+MM_NOSEV         macro        56 /usr/include/fmtmsg.h #define MM_NOSEV MM_NOSEV
+MM_NOTOK         enumerator   81 /usr/include/fmtmsg.h MM_NOTOK = -1,
+MM_NOTOK         macro        82 /usr/include/fmtmsg.h #define MM_NOTOK MM_NOTOK
+MM_NRECOV        enumerator   44 /usr/include/fmtmsg.h MM_NRECOV = 0x080, /* Non-recoverable error. */
+MM_NRECOV        macro        45 /usr/include/fmtmsg.h #define MM_NRECOV MM_NRECOV
+MM_NULLACT       macro        74 /usr/include/fmtmsg.h #define MM_NULLACT ((char *) 0)
+MM_NULLLBL       macro        70 /usr/include/fmtmsg.h #define MM_NULLLBL ((char *) 0)
+MM_NULLMC        macro        72 /usr/include/fmtmsg.h #define MM_NULLMC ((long int) 0)
+MM_NULLSEV       macro        71 /usr/include/fmtmsg.h #define MM_NULLSEV 0
+MM_NULLTAG       macro        75 /usr/include/fmtmsg.h #define MM_NULLTAG ((char *) 0)
+MM_NULLTXT       macro        73 /usr/include/fmtmsg.h #define MM_NULLTXT ((char *) 0)
+MM_OK            enumerator   83 /usr/include/fmtmsg.h MM_OK = 0,
+MM_OK            macro        84 /usr/include/fmtmsg.h #define MM_OK MM_OK
+MM_OPSYS         enumerator   40 /usr/include/fmtmsg.h MM_OPSYS = 0x020, /* Condition detected by operating system. */
+MM_OPSYS         macro        41 /usr/include/fmtmsg.h #define MM_OPSYS MM_OPSYS
+MM_PRINT         enumerator   46 /usr/include/fmtmsg.h MM_PRINT = 0x100, /* Display message in standard error. */
+MM_PRINT         macro        47 /usr/include/fmtmsg.h #define MM_PRINT MM_PRINT
+MM_RECOVER       enumerator   42 /usr/include/fmtmsg.h MM_RECOVER = 0x040, /* Recoverable error. */
+MM_RECOVER       macro        43 /usr/include/fmtmsg.h #define MM_RECOVER MM_RECOVER
+MM_SOFT          enumerator   32 /usr/include/fmtmsg.h MM_SOFT = 0x002, /* Source of the condition is software. */
+MM_SOFT          macro        33 /usr/include/fmtmsg.h #define MM_SOFT MM_SOFT
+MM_UTIL          enumerator   38 /usr/include/fmtmsg.h MM_UTIL = 0x010, /* Condition detected by utility. */
+MM_UTIL          macro        39 /usr/include/fmtmsg.h #define MM_UTIL MM_UTIL
+MM_WARNING       enumerator   61 /usr/include/fmtmsg.h MM_WARNING, /* Application has detected unusual non-error
+MM_WARNING       macro        63 /usr/include/fmtmsg.h #define MM_WARNING MM_WARNING
+__FMTMSG_H       macro        20 /usr/include/fmtmsg.h #define __FMTMSG_H 1
+addseverity      prototype   100 /usr/include/fmtmsg.h extern int addseverity (int __severity, const char *__string) __THROW;
+fmtmsg           prototype    94 /usr/include/fmtmsg.h extern int fmtmsg (long int __classification, const char *__label,

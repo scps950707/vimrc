@@ -1,0 +1,11 @@
+HIME_PREEDIT_ATTR typedef       9 /usr/include/hime-im-client-attr.h } HIME_PREEDIT_ATTR;
+HIME_PREEDIT_ATTR_FLAG_REVERSE macro         2 /usr/include/hime-im-client-attr.h #define HIME_PREEDIT_ATTR_FLAG_REVERSE 2
+HIME_PREEDIT_ATTR_FLAG_UNDERLINE macro         1 /usr/include/hime-im-client-attr.h #define HIME_PREEDIT_ATTR_FLAG_UNDERLINE 1
+HIME_PREEDIT_ATTR_MAX_N macro         3 /usr/include/hime-im-client-attr.h #define HIME_PREEDIT_ATTR_MAX_N 64
+HIME_PREEDIT_MAX_STR macro         4 /usr/include/hime-im-client-attr.h #define HIME_PREEDIT_MAX_STR 512
+__anon1::flag    member        7 /usr/include/hime-im-client-attr.h int flag;
+__anon1::ofs0    member        8 /usr/include/hime-im-client-attr.h short ofs0, ofs1; // ofs : bytes offset
+__anon1::ofs1    member        8 /usr/include/hime-im-client-attr.h short ofs0, ofs1; // ofs : bytes offset
+flag             member        7 /usr/include/hime-im-client-attr.h int flag;
+ofs0             member        8 /usr/include/hime-im-client-attr.h short ofs0, ofs1; // ofs : bytes offset
+ofs1             member        8 /usr/include/hime-im-client-attr.h short ofs0, ofs1; // ofs : bytes offset

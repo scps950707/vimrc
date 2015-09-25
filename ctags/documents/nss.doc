@@ -1,0 +1,19 @@
+NSS_STATUS_NOTFOUND enumerator   35 /usr/include/nss.h NSS_STATUS_NOTFOUND,
+NSS_STATUS_RETURN enumerator   37 /usr/include/nss.h NSS_STATUS_RETURN
+NSS_STATUS_SUCCESS enumerator   36 /usr/include/nss.h NSS_STATUS_SUCCESS,
+NSS_STATUS_TRYAGAIN enumerator   33 /usr/include/nss.h NSS_STATUS_TRYAGAIN = -2,
+NSS_STATUS_UNAVAIL enumerator   34 /usr/include/nss.h NSS_STATUS_UNAVAIL,
+_NSS_H           macro        22 /usr/include/nss.h #define _NSS_H 1
+__nss_configure_lookup prototype    58 /usr/include/nss.h extern int __nss_configure_lookup (const char *__dbname,
+addr             member       47 /usr/include/nss.h uint32_t addr[4];
+family           member       46 /usr/include/nss.h int family;
+gaih_addrtuple   struct       42 /usr/include/nss.h struct gaih_addrtuple
+gaih_addrtuple::addr member       47 /usr/include/nss.h uint32_t addr[4];
+gaih_addrtuple::family member       46 /usr/include/nss.h int family;
+gaih_addrtuple::name member       45 /usr/include/nss.h char *name;
+gaih_addrtuple::next member       44 /usr/include/nss.h struct gaih_addrtuple *next;
+gaih_addrtuple::scopeid member       48 /usr/include/nss.h uint32_t scopeid;
+name             member       45 /usr/include/nss.h char *name;
+next             member       44 /usr/include/nss.h struct gaih_addrtuple *next;
+nss_status       enum         31 /usr/include/nss.h enum nss_status
+scopeid          member       48 /usr/include/nss.h uint32_t scopeid;

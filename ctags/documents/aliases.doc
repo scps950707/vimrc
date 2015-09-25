@@ -1,0 +1,16 @@
+_ALIASES_H       macro        19 /usr/include/aliases.h #define _ALIASES_H 1
+alias_local      member       34 /usr/include/aliases.h int alias_local;
+alias_members    member       33 /usr/include/aliases.h char **alias_members;
+alias_members_len member       32 /usr/include/aliases.h size_t alias_members_len;
+alias_name       member       31 /usr/include/aliases.h char *alias_name;
+aliasent         struct       29 /usr/include/aliases.h struct aliasent
+aliasent::alias_local member       34 /usr/include/aliases.h int alias_local;
+aliasent::alias_members member       33 /usr/include/aliases.h char **alias_members;
+aliasent::alias_members_len member       32 /usr/include/aliases.h size_t alias_members_len;
+aliasent::alias_name member       31 /usr/include/aliases.h char *alias_name;
+endaliasent      prototype    42 /usr/include/aliases.h extern void endaliasent (void) __THROW;
+getaliasbyname   prototype    53 /usr/include/aliases.h extern struct aliasent *getaliasbyname (const char *__name) __THROW;
+getaliasbyname_r prototype    56 /usr/include/aliases.h extern int getaliasbyname_r (const char *__restrict __name,
+getaliasent      prototype    45 /usr/include/aliases.h extern struct aliasent *getaliasent (void) __THROW;
+getaliasent_r    prototype    48 /usr/include/aliases.h extern int getaliasent_r (struct aliasent *__restrict __result_buf,
+setaliasent      prototype    39 /usr/include/aliases.h extern void setaliasent (void) __THROW;

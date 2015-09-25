@@ -30,5 +30,7 @@ sudo apt-get install apt-file
 sudo apt-get install libc6-dev
 sudo apt-get install libc++-dev
 sudo apt-file update
+
 apt-file list libc6-dev | grep -o '/usr/include/.*\.h'> [header-list-name]
 ctags --sort=yes --c++-kinds=+px --fields=+iaS --extra=+q -I./libc6-ignore -f [filename] -L [header-list-name]
+ctags --sort=yes --c++-kinds=+px --fields=+iaS --extra=+q -I./libc6-ignore -x [header-list-name]

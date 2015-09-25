@@ -1,0 +1,11 @@
+_ERR_H           macro        20 /usr/include/err.h #define _ERR_H 1
+__gnuc_va_list   macro        27 /usr/include/err.h # define __gnuc_va_list __ptr_t
+__need___va_list macro        24 /usr/include/err.h #define __need___va_list
+err              prototype    46 /usr/include/err.h extern void err (int __status, const char *__format, ...)
+errx             prototype    50 /usr/include/err.h extern void errx (int __status, const char *__format, ...)
+verr             prototype    48 /usr/include/err.h extern void verr (int __status, const char *__format, __gnuc_va_list)
+verrx            prototype    52 /usr/include/err.h extern void verrx (int __status, const char *, __gnuc_va_list)
+vwarn            prototype    36 /usr/include/err.h extern void vwarn (const char *__format, __gnuc_va_list)
+vwarnx           prototype    42 /usr/include/err.h extern void vwarnx (const char *__format, __gnuc_va_list)
+warn             prototype    34 /usr/include/err.h extern void warn (const char *__format, ...)
+warnx            prototype    40 /usr/include/err.h extern void warnx (const char *__format, ...)

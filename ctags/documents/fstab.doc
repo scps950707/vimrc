@@ -1,0 +1,28 @@
+FSTAB            macro        49 /usr/include/fstab.h #define FSTAB "/etc/fstab" /* deprecated */
+FSTAB_RO         macro        53 /usr/include/fstab.h #define FSTAB_RO "ro" /* read-only device */
+FSTAB_RQ         macro        52 /usr/include/fstab.h #define FSTAB_RQ "rq" /* read/write with quotas */
+FSTAB_RW         macro        51 /usr/include/fstab.h #define FSTAB_RW "rw" /* read/write device */
+FSTAB_SW         macro        54 /usr/include/fstab.h #define FSTAB_SW "sw" /* swap device */
+FSTAB_XX         macro        55 /usr/include/fstab.h #define FSTAB_XX "xx" /* ignore totally */
+_FSTAB_H         macro        33 /usr/include/fstab.h #define _FSTAB_H 1
+_PATH_FSTAB      macro        48 /usr/include/fstab.h #define _PATH_FSTAB "/etc/fstab"
+endfsent         prototype    75 /usr/include/fstab.h extern void endfsent (void) __THROW;
+fs_file          member       60 /usr/include/fstab.h char *fs_file; /* file system path prefix */
+fs_freq          member       64 /usr/include/fstab.h int fs_freq; /* dump frequency, in days */
+fs_mntops        member       62 /usr/include/fstab.h char *fs_mntops; /* Mount options ala -o */
+fs_passno        member       65 /usr/include/fstab.h int fs_passno; /* pass number on parallel dump */
+fs_spec          member       59 /usr/include/fstab.h char *fs_spec; /* block special device name */
+fs_type          member       63 /usr/include/fstab.h const char *fs_type; /* FSTAB_* from fs_mntops */
+fs_vfstype       member       61 /usr/include/fstab.h char *fs_vfstype; /* File system type, ufs, nfs */
+fstab            struct       57 /usr/include/fstab.h struct fstab
+fstab::fs_file   member       60 /usr/include/fstab.h char *fs_file; /* file system path prefix */
+fstab::fs_freq   member       64 /usr/include/fstab.h int fs_freq; /* dump frequency, in days */
+fstab::fs_mntops member       62 /usr/include/fstab.h char *fs_mntops; /* Mount options ala -o */
+fstab::fs_passno member       65 /usr/include/fstab.h int fs_passno; /* pass number on parallel dump */
+fstab::fs_spec   member       59 /usr/include/fstab.h char *fs_spec; /* block special device name */
+fstab::fs_type   member       63 /usr/include/fstab.h const char *fs_type; /* FSTAB_* from fs_mntops */
+fstab::fs_vfstype member       61 /usr/include/fstab.h char *fs_vfstype; /* File system type, ufs, nfs */
+getfsent         prototype    71 /usr/include/fstab.h extern struct fstab *getfsent (void) __THROW;
+getfsfile        prototype    73 /usr/include/fstab.h extern struct fstab *getfsfile (const char *__name) __THROW;
+getfsspec        prototype    72 /usr/include/fstab.h extern struct fstab *getfsspec (const char *__name) __THROW;
+setfsent         prototype    74 /usr/include/fstab.h extern int setfsent (void) __THROW;

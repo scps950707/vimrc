@@ -1,0 +1,8 @@
+_UTIME_H         macro        23 /usr/include/utime.h #define _UTIME_H 1
+__need_time_t    macro        32 /usr/include/utime.h # define __need_time_t
+actime           member       39 /usr/include/utime.h __time_t actime; /* Access time. */
+modtime          member       40 /usr/include/utime.h __time_t modtime; /* Modification time. */
+utimbuf          struct       37 /usr/include/utime.h struct utimbuf
+utimbuf::actime  member       39 /usr/include/utime.h __time_t actime; /* Access time. */
+utimbuf::modtime member       40 /usr/include/utime.h __time_t modtime; /* Modification time. */
+utime            prototype    45 /usr/include/utime.h extern int utime (const char *__file,

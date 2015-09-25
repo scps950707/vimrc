@@ -1,0 +1,198 @@
+F_LOCK           macro      1076 /usr/include/unistd.h # define F_LOCK 1 /* Lock a region for exclusive use. */
+F_OK             macro       284 /usr/include/unistd.h #define F_OK 0 /* Test for existence. */
+F_TEST           macro      1078 /usr/include/unistd.h # define F_TEST 3 /* Test a region for other processes locks. */
+F_TLOCK          macro      1077 /usr/include/unistd.h # define F_TLOCK 2 /* Test and lock a region for exclusive use. */
+F_ULOCK          macro      1075 /usr/include/unistd.h # define F_ULOCK 0 /* Unlock a previously locked region. */
+L_INCR           macro       323 /usr/include/unistd.h # define L_INCR SEEK_CUR
+L_SET            macro       322 /usr/include/unistd.h # define L_SET SEEK_SET
+L_XTND           macro       324 /usr/include/unistd.h # define L_XTND SEEK_END
+R_OK             macro       281 /usr/include/unistd.h #define R_OK 4 /* Test for read permission. */
+SEEK_CUR         macro       312 /usr/include/unistd.h # define SEEK_CUR 1 /* Seek from current position. */
+SEEK_DATA        macro       315 /usr/include/unistd.h # define SEEK_DATA 3 /* Seek to next data. */
+SEEK_END         macro       313 /usr/include/unistd.h # define SEEK_END 2 /* Seek from end of file. */
+SEEK_HOLE        macro       316 /usr/include/unistd.h # define SEEK_HOLE 4 /* Seek to next hole. */
+SEEK_SET         macro       311 /usr/include/unistd.h # define SEEK_SET 0 /* Seek from beginning of file. */
+STDERR_FILENO    macro       212 /usr/include/unistd.h #define STDERR_FILENO 2 /* Standard error output. */
+STDIN_FILENO     macro       210 /usr/include/unistd.h #define STDIN_FILENO 0 /* Standard input. */
+STDOUT_FILENO    macro       211 /usr/include/unistd.h #define STDOUT_FILENO 1 /* Standard output. */
+TEMP_FAILURE_RETRY macro      1101 /usr/include/unistd.h # define TEMP_FAILURE_RETRY(expression) \
+W_OK             macro       282 /usr/include/unistd.h #define W_OK 2 /* Test for write permission. */
+X_OK             macro       283 /usr/include/unistd.h #define X_OK 1 /* Test for execute permission. */
+_POSIX2_C_BIND   macro        71 /usr/include/unistd.h #define _POSIX2_C_BIND __POSIX2_THIS_VERSION
+_POSIX2_C_DEV    macro        75 /usr/include/unistd.h #define _POSIX2_C_DEV __POSIX2_THIS_VERSION
+_POSIX2_LOCALEDEF macro        83 /usr/include/unistd.h #define _POSIX2_LOCALEDEF __POSIX2_THIS_VERSION
+_POSIX2_SW_DEV   macro        79 /usr/include/unistd.h #define _POSIX2_SW_DEV __POSIX2_THIS_VERSION
+_POSIX2_VERSION  macro        67 /usr/include/unistd.h #define _POSIX2_VERSION __POSIX2_THIS_VERSION
+_POSIX_VERSION   macro        34 /usr/include/unistd.h # define _POSIX_VERSION 200809L
+_UNISTD_H        macro        23 /usr/include/unistd.h #define _UNISTD_H 1
+_XOPEN_CRYPT     macro       108 /usr/include/unistd.h #define _XOPEN_CRYPT 1
+_XOPEN_ENH_I18N  macro       112 /usr/include/unistd.h #define _XOPEN_ENH_I18N 1
+_XOPEN_LEGACY    macro       115 /usr/include/unistd.h #define _XOPEN_LEGACY 1
+_XOPEN_UNIX      macro       105 /usr/include/unistd.h #define _XOPEN_UNIX 1
+_XOPEN_VERSION   macro        87 /usr/include/unistd.h # define _XOPEN_VERSION 700
+_XOPEN_XCU_VERSION macro        97 /usr/include/unistd.h #define _XOPEN_XCU_VERSION 4
+_XOPEN_XPG2      macro       100 /usr/include/unistd.h #define _XOPEN_XPG2 1
+_XOPEN_XPG3      macro       101 /usr/include/unistd.h #define _XOPEN_XPG3 1
+_XOPEN_XPG4      macro       102 /usr/include/unistd.h #define _XOPEN_XPG4 1
+__POSIX2_THIS_VERSION macro        53 /usr/include/unistd.h # define __POSIX2_THIS_VERSION 200809L
+__REDIRECT       prototype   388 /usr/include/unistd.h extern ssize_t __REDIRECT (pread, (int __fd, void *__buf, size_t __nbytes,
+__REDIRECT       prototype   391 /usr/include/unistd.h extern ssize_t __REDIRECT (pwrite, (int __fd, const void *__buf,
+__REDIRECT       prototype  1084 /usr/include/unistd.h extern int __REDIRECT (lockf, (int __fd, int __cmd, __off64_t __len),
+__REDIRECT_NTH   prototype   337 /usr/include/unistd.h extern __off64_t __REDIRECT_NTH (lseek,
+__REDIRECT_NTH   prototype   997 /usr/include/unistd.h extern int __REDIRECT_NTH (truncate,
+__REDIRECT_NTH   prototype  1019 /usr/include/unistd.h extern int __REDIRECT_NTH (ftruncate, (int __fd, __off64_t __length),
+__environ        externvar   543 /usr/include/unistd.h extern char **__environ;
+__getpgid        prototype   637 /usr/include/unistd.h extern __pid_t __getpgid (__pid_t __pid) __THROW;
+__gid_t_defined  macro       233 /usr/include/unistd.h # define __gid_t_defined
+__intptr_t_defined macro       268 /usr/include/unistd.h # define __intptr_t_defined
+__need_NULL      macro       225 /usr/include/unistd.h #define __need_NULL
+__need_getopt    macro       870 /usr/include/unistd.h # define __need_getopt
+__need_size_t    macro       224 /usr/include/unistd.h #define __need_size_t
+__off64_t_defined macro       251 /usr/include/unistd.h # define __off64_t_defined
+__off_t_defined  macro       247 /usr/include/unistd.h # define __off_t_defined
+__pid_t_defined  macro       261 /usr/include/unistd.h # define __pid_t_defined
+__socklen_t_defined macro       275 /usr/include/unistd.h # define __socklen_t_defined
+__ssize_t_defined macro       221 /usr/include/unistd.h # define __ssize_t_defined
+__uid_t_defined  macro       238 /usr/include/unistd.h # define __uid_t_defined
+__useconds_t_defined macro       256 /usr/include/unistd.h # define __useconds_t_defined
+_exit            prototype   603 /usr/include/unistd.h extern void _exit (int __status) __attribute__ ((__noreturn__));
+access           prototype   287 /usr/include/unistd.h extern int access (const char *__name, int __type) __THROW __nonnull ((1));
+acct             prototype   925 /usr/include/unistd.h extern int acct (const char *__name) __THROW;
+alarm            prototype   432 /usr/include/unistd.h extern unsigned int alarm (unsigned int __seconds) __THROW;
+brk              prototype  1037 /usr/include/unistd.h extern int brk (void *__addr) __THROW __wur;
+chdir            prototype   497 /usr/include/unistd.h extern int chdir (const char *__path) __THROW __nonnull ((1)) __wur;
+chown            prototype   473 /usr/include/unistd.h extern int chown (const char *__file, __uid_t __owner, __gid_t __group)
+chroot           prototype   944 /usr/include/unistd.h extern int chroot (const char *__path) __THROW __nonnull ((1)) __wur;
+close            prototype   353 /usr/include/unistd.h extern int close (int __fd);
+confstr          prototype   623 /usr/include/unistd.h extern size_t confstr (int __name, char *__buf, size_t __len) __THROW;
+crypt            prototype  1120 /usr/include/unistd.h extern char *crypt (const char *__key, const char *__salt)
+ctermid          prototype  1142 /usr/include/unistd.h extern char *ctermid (char *__s) __THROW;
+daemon           prototype   937 /usr/include/unistd.h extern int daemon (int __nochdir, int __noclose) __THROW __wur;
+dup              prototype   531 /usr/include/unistd.h extern int dup (int __fd) __THROW __wur;
+dup2             prototype   534 /usr/include/unistd.h extern int dup2 (int __fd, int __fd2) __THROW;
+dup3             prototype   539 /usr/include/unistd.h extern int dup3 (int __fd, int __fd2, int __flags) __THROW;
+eaccess          prototype   296 /usr/include/unistd.h extern int eaccess (const char *__name, int __type)
+encrypt          prototype  1125 /usr/include/unistd.h extern void encrypt (char *__glibc_block, int __edflag)
+endusershell     prototype   930 /usr/include/unistd.h extern void endusershell (void) __THROW; /* Discard cached info. */
+environ          externvar   545 /usr/include/unistd.h extern char **environ;
+euidaccess       prototype   292 /usr/include/unistd.h extern int euidaccess (const char *__name, int __type)
+execl            prototype   573 /usr/include/unistd.h extern int execl (const char *__path, const char *__arg, ...)
+execle           prototype   568 /usr/include/unistd.h extern int execle (const char *__path, const char *__arg, ...)
+execlp           prototype   584 /usr/include/unistd.h extern int execlp (const char *__file, const char *__arg, ...)
+execv            prototype   563 /usr/include/unistd.h extern int execv (const char *__path, char *const __argv[])
+execve           prototype   551 /usr/include/unistd.h extern int execve (const char *__path, char *const __argv[],
+execvp           prototype   578 /usr/include/unistd.h extern int execvp (const char *__file, char *const __argv[])
+execvpe          prototype   590 /usr/include/unistd.h extern int execvpe (const char *__file, char *const __argv[],
+faccessat        prototype   304 /usr/include/unistd.h extern int faccessat (int __fd, const char *__file, int __type, int __flag)
+fchdir           prototype   501 /usr/include/unistd.h extern int fchdir (int __fd) __THROW __wur;
+fchown           prototype   478 /usr/include/unistd.h extern int fchown (int __fd, __uid_t __owner, __gid_t __group) __THROW __wur;
+fchownat         prototype   491 /usr/include/unistd.h extern int fchownat (int __fd, const char *__file, __uid_t __owner,
+fdatasync        prototype  1112 /usr/include/unistd.h extern int fdatasync (int __fildes);
+fexecve          prototype   557 /usr/include/unistd.h extern int fexecve (int __fd, char *const __argv[], char *const __envp[])
+fpathconf        prototype   616 /usr/include/unistd.h extern long int fpathconf (int __fd, int __name) __THROW;
+fsync            prototype   956 /usr/include/unistd.h extern int fsync (int __fd);
+ftruncate        macro      1022 /usr/include/unistd.h # define ftruncate ftruncate64
+ftruncate        prototype  1016 /usr/include/unistd.h extern int ftruncate (int __fd, __off_t __length) __THROW __wur;
+ftruncate64      prototype  1026 /usr/include/unistd.h extern int ftruncate64 (int __fd, __off64_t __length) __THROW __wur;
+get_current_dir_name prototype   517 /usr/include/unistd.h extern char *get_current_dir_name (void) __THROW;
+getcwd           prototype   511 /usr/include/unistd.h extern char *getcwd (char *__buf, size_t __size) __THROW __wur;
+getdomainname    prototype   897 /usr/include/unistd.h extern int getdomainname (char *__name, size_t __len)
+getdtablesize    prototype   983 /usr/include/unistd.h extern int getdtablesize (void) __THROW;
+getegid          prototype   684 /usr/include/unistd.h extern __gid_t getegid (void) __THROW;
+geteuid          prototype   678 /usr/include/unistd.h extern __uid_t geteuid (void) __THROW;
+getgid           prototype   681 /usr/include/unistd.h extern __gid_t getgid (void) __THROW;
+getgroups        prototype   689 /usr/include/unistd.h extern int getgroups (int __size, __gid_t __list[]) __THROW __wur;
+gethostid        prototype   969 /usr/include/unistd.h extern long int gethostid (void);
+gethostname      prototype   879 /usr/include/unistd.h extern int gethostname (char *__name, size_t __len) __THROW __nonnull ((1));
+getlogin         prototype   849 /usr/include/unistd.h extern char *getlogin (void);
+getlogin_r       prototype   857 /usr/include/unistd.h extern int getlogin_r (char *__name, size_t __name_len) __nonnull ((1));
+getpagesize      prototype   978 /usr/include/unistd.h extern int getpagesize (void) __THROW __attribute__ ((__const__));
+getpass          prototype   948 /usr/include/unistd.h extern char *getpass (const char *__prompt) __nonnull ((1));
+getpgid          prototype   639 /usr/include/unistd.h extern __pid_t getpgid (__pid_t __pid) __THROW;
+getpgrp          prototype   634 /usr/include/unistd.h extern __pid_t getpgrp (void) __THROW;
+getpid           prototype   628 /usr/include/unistd.h extern __pid_t getpid (void) __THROW;
+getppid          prototype   631 /usr/include/unistd.h extern __pid_t getppid (void) __THROW;
+getresgid        prototype   738 /usr/include/unistd.h extern int getresgid (__gid_t *__rgid, __gid_t *__egid, __gid_t *__sgid)
+getresuid        prototype   733 /usr/include/unistd.h extern int getresuid (__uid_t *__ruid, __uid_t *__euid, __uid_t *__suid)
+getsid           prototype   671 /usr/include/unistd.h extern __pid_t getsid (__pid_t __pid) __THROW;
+getuid           prototype   675 /usr/include/unistd.h extern __uid_t getuid (void) __THROW;
+getusershell     prototype   929 /usr/include/unistd.h extern char *getusershell (void) __THROW;
+getwd            prototype   525 /usr/include/unistd.h extern char *getwd (char *__buf)
+gid_t            typedef     232 /usr/include/unistd.h typedef __gid_t gid_t;
+group_member     prototype   693 /usr/include/unistd.h extern int group_member (__gid_t __gid) __THROW;
+intptr_t         typedef     267 /usr/include/unistd.h typedef __intptr_t intptr_t;
+isatty           prototype   779 /usr/include/unistd.h extern int isatty (int __fd) __THROW;
+lchown           prototype   483 /usr/include/unistd.h extern int lchown (const char *__file, __uid_t __owner, __gid_t __group)
+link             prototype   790 /usr/include/unistd.h extern int link (const char *__from, const char *__to)
+linkat           prototype   796 /usr/include/unistd.h extern int linkat (int __fromfd, const char *__from, int __tofd,
+lockf            macro      1087 /usr/include/unistd.h # define lockf lockf64
+lockf            prototype  1081 /usr/include/unistd.h extern int lockf (int __fd, int __cmd, __off_t __len) __wur;
+lockf64          prototype  1091 /usr/include/unistd.h extern int lockf64 (int __fd, int __cmd, __off64_t __len) __wur;
+lseek            macro       341 /usr/include/unistd.h # define lseek lseek64
+lseek            prototype   334 /usr/include/unistd.h extern __off_t lseek (int __fd, __off_t __offset, int __whence) __THROW;
+lseek64          prototype   345 /usr/include/unistd.h extern __off64_t lseek64 (int __fd, __off64_t __offset, int __whence)
+nice             prototype   598 /usr/include/unistd.h extern int nice (int __inc) __THROW __wur;
+off64_t          typedef     250 /usr/include/unistd.h typedef __off64_t off64_t;
+off_t            typedef     243 /usr/include/unistd.h typedef __off_t off_t;
+off_t            typedef     245 /usr/include/unistd.h typedef __off64_t off_t;
+pathconf         prototype   612 /usr/include/unistd.h extern long int pathconf (const char *__path, int __name)
+pause            prototype   469 /usr/include/unistd.h extern int pause (void);
+pid_t            typedef     260 /usr/include/unistd.h typedef __pid_t pid_t;
+pipe             prototype   417 /usr/include/unistd.h extern int pipe (int __pipedes[2]) __THROW __wur;
+pipe2            prototype   422 /usr/include/unistd.h extern int pipe2 (int __pipedes[2], int __flags) __THROW __wur;
+pread            macro       395 /usr/include/unistd.h # define pread pread64
+pread            prototype   376 /usr/include/unistd.h extern ssize_t pread (int __fd, void *__buf, size_t __nbytes,
+pread64          prototype   404 /usr/include/unistd.h extern ssize_t pread64 (int __fd, void *__buf, size_t __nbytes,
+profil           prototype   917 /usr/include/unistd.h extern int profil (unsigned short int *__sample_buffer, size_t __size,
+pwrite           macro       396 /usr/include/unistd.h # define pwrite pwrite64
+pwrite           prototype   384 /usr/include/unistd.h extern ssize_t pwrite (int __fd, const void *__buf, size_t __n,
+pwrite64         prototype   408 /usr/include/unistd.h extern ssize_t pwrite64 (int __fd, const void *__buf, size_t __n,
+read             prototype   360 /usr/include/unistd.h extern ssize_t read (int __fd, void *__buf, size_t __nbytes) __wur;
+readlink         prototype   809 /usr/include/unistd.h extern ssize_t readlink (const char *__restrict __path,
+readlinkat       prototype   820 /usr/include/unistd.h extern ssize_t readlinkat (int __fd, const char *__restrict __path,
+revoke           prototype   909 /usr/include/unistd.h extern int revoke (const char *__file) __THROW __nonnull ((1)) __wur;
+rmdir            prototype   835 /usr/include/unistd.h extern int rmdir (const char *__path) __THROW __nonnull ((1));
+sbrk             prototype  1043 /usr/include/unistd.h extern void *sbrk (intptr_t __delta) __THROW;
+setdomainname    prototype   899 /usr/include/unistd.h extern int setdomainname (const char *__name, size_t __len)
+setegid          prototype   727 /usr/include/unistd.h extern int setegid (__gid_t __gid) __THROW __wur;
+seteuid          prototype   710 /usr/include/unistd.h extern int seteuid (__uid_t __uid) __THROW __wur;
+setgid           prototype   717 /usr/include/unistd.h extern int setgid (__gid_t __gid) __THROW __wur;
+sethostid        prototype   891 /usr/include/unistd.h extern int sethostid (long int __id) __THROW __wur;
+sethostname      prototype   886 /usr/include/unistd.h extern int sethostname (const char *__name, size_t __len)
+setlogin         prototype   862 /usr/include/unistd.h extern int setlogin (const char *__name) __THROW __nonnull ((1));
+setpgid          prototype   646 /usr/include/unistd.h extern int setpgid (__pid_t __pid, __pid_t __pgid) __THROW;
+setpgrp          prototype   660 /usr/include/unistd.h extern int setpgrp (void) __THROW;
+setregid         prototype   722 /usr/include/unistd.h extern int setregid (__gid_t __rgid, __gid_t __egid) __THROW __wur;
+setresgid        prototype   748 /usr/include/unistd.h extern int setresgid (__gid_t __rgid, __gid_t __egid, __gid_t __sgid)
+setresuid        prototype   743 /usr/include/unistd.h extern int setresuid (__uid_t __ruid, __uid_t __euid, __uid_t __suid)
+setreuid         prototype   705 /usr/include/unistd.h extern int setreuid (__uid_t __ruid, __uid_t __euid) __THROW __wur;
+setsid           prototype   667 /usr/include/unistd.h extern __pid_t setsid (void) __THROW;
+setuid           prototype   700 /usr/include/unistd.h extern int setuid (__uid_t __uid) __THROW __wur;
+setusershell     prototype   931 /usr/include/unistd.h extern void setusershell (void) __THROW; /* Rewind and re-read the file. */
+sleep            prototype   444 /usr/include/unistd.h extern unsigned int sleep (unsigned int __seconds);
+socklen_t        typedef     274 /usr/include/unistd.h typedef __socklen_t socklen_t;
+ssize_t          typedef     220 /usr/include/unistd.h typedef __ssize_t ssize_t;
+swab             prototype  1133 /usr/include/unistd.h extern void swab (const void *__restrict __from, void *__restrict __to,
+symlink          prototype   803 /usr/include/unistd.h extern int symlink (const char *__from, const char *__to)
+symlinkat        prototype   816 /usr/include/unistd.h extern int symlinkat (const char *__from, int __tofd,
+sync             prototype   972 /usr/include/unistd.h extern void sync (void) __THROW;
+syncfs           prototype   962 /usr/include/unistd.h extern int syncfs (int __fd) __THROW;
+syscall          prototype  1058 /usr/include/unistd.h extern long int syscall (long int __sysno, ...) __THROW;
+sysconf          prototype   619 /usr/include/unistd.h extern long int sysconf (int __name) __THROW;
+tcgetpgrp        prototype   839 /usr/include/unistd.h extern __pid_t tcgetpgrp (int __fd) __THROW;
+tcsetpgrp        prototype   842 /usr/include/unistd.h extern int tcsetpgrp (int __fd, __pid_t __pgrp_id) __THROW;
+truncate         macro      1001 /usr/include/unistd.h # define truncate truncate64
+truncate         prototype   993 /usr/include/unistd.h extern int truncate (const char *__file, __off_t __length)
+truncate64       prototype  1005 /usr/include/unistd.h extern int truncate64 (const char *__file, __off64_t __length)
+ttyname          prototype   770 /usr/include/unistd.h extern char *ttyname (int __fd) __THROW;
+ttyname_r        prototype   774 /usr/include/unistd.h extern int ttyname_r (int __fd, char *__buf, size_t __buflen)
+ttyslot          prototype   785 /usr/include/unistd.h extern int ttyslot (void) __THROW;
+ualarm           prototype   452 /usr/include/unistd.h extern __useconds_t ualarm (__useconds_t __value, __useconds_t __interval)
+uid_t            typedef     237 /usr/include/unistd.h typedef __uid_t uid_t;
+unlink           prototype   826 /usr/include/unistd.h extern int unlink (const char *__name) __THROW __nonnull ((1));
+unlinkat         prototype   830 /usr/include/unistd.h extern int unlinkat (int __fd, const char *__name, int __flag)
+useconds_t       typedef     255 /usr/include/unistd.h typedef __useconds_t useconds_t;
+usleep           prototype   460 /usr/include/unistd.h extern int usleep (__useconds_t __useconds);
+vfork            prototype   764 /usr/include/unistd.h extern __pid_t vfork (void) __THROW;
+vhangup          prototype   906 /usr/include/unistd.h extern int vhangup (void) __THROW;
+write            prototype   366 /usr/include/unistd.h extern ssize_t write (int __fd, const void *__buf, size_t __n) __wur;

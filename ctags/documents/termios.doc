@@ -1,0 +1,17 @@
+CCEQ             macro        44 /usr/include/termios.h # define CCEQ(val, c) ((c) == (val) && (val) != _POSIX_VDISABLE)
+_TERMIOS_H       macro        23 /usr/include/termios.h #define _TERMIOS_H 1
+__pid_t_defined  macro        31 /usr/include/termios.h # define __pid_t_defined
+cfgetispeed      prototype    51 /usr/include/termios.h extern speed_t cfgetispeed (const struct termios *__termios_p) __THROW;
+cfgetospeed      prototype    48 /usr/include/termios.h extern speed_t cfgetospeed (const struct termios *__termios_p) __THROW;
+cfmakeraw        prototype    76 /usr/include/termios.h extern void cfmakeraw (struct termios *__termios_p) __THROW;
+cfsetispeed      prototype    57 /usr/include/termios.h extern int cfsetispeed (struct termios *__termios_p, speed_t __speed) __THROW;
+cfsetospeed      prototype    54 /usr/include/termios.h extern int cfsetospeed (struct termios *__termios_p, speed_t __speed) __THROW;
+cfsetspeed       prototype    61 /usr/include/termios.h extern int cfsetspeed (struct termios *__termios_p, speed_t __speed) __THROW;
+pid_t            typedef      30 /usr/include/termios.h typedef __pid_t pid_t;
+tcdrain          prototype    86 /usr/include/termios.h extern int tcdrain (int __fd);
+tcflow           prototype    94 /usr/include/termios.h extern int tcflow (int __fd, int __action) __THROW;
+tcflush          prototype    90 /usr/include/termios.h extern int tcflush (int __fd, int __queue_selector) __THROW;
+tcgetattr        prototype    66 /usr/include/termios.h extern int tcgetattr (int __fd, struct termios *__termios_p) __THROW;
+tcgetsid         prototype    99 /usr/include/termios.h extern __pid_t tcgetsid (int __fd) __THROW;
+tcsendbreak      prototype    80 /usr/include/termios.h extern int tcsendbreak (int __fd, int __duration) __THROW;
+tcsetattr        prototype    70 /usr/include/termios.h extern int tcsetattr (int __fd, int __optional_actions,

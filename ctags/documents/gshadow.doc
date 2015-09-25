@@ -1,0 +1,24 @@
+GSHADOW          macro        33 /usr/include/gshadow.h #define GSHADOW _PATH_GSHADOW
+_GSHADOW_H       macro        21 /usr/include/gshadow.h #define _GSHADOW_H 1
+__need_FILE      macro        27 /usr/include/gshadow.h #define __need_FILE
+__need_size_t    macro        29 /usr/include/gshadow.h #define __need_size_t
+endsgent         prototype    62 /usr/include/gshadow.h extern void endsgent (void);
+fgetsgent        prototype    94 /usr/include/gshadow.h extern struct sgrp *fgetsgent (FILE *__stream);
+fgetsgent_r      prototype   123 /usr/include/gshadow.h extern int fgetsgent_r (FILE *__stream, struct sgrp *__result_buf,
+getsgent         prototype    70 /usr/include/gshadow.h extern struct sgrp *getsgent (void);
+getsgent_r       prototype   112 /usr/include/gshadow.h extern int getsgent_r (struct sgrp *__result_buf, char *__buffer,
+getsgnam         prototype    78 /usr/include/gshadow.h extern struct sgrp *getsgnam (const char *__name);
+getsgnam_r       prototype   115 /usr/include/gshadow.h extern int getsgnam_r (const char *__name, struct sgrp *__result_buf,
+putsgent         prototype   102 /usr/include/gshadow.h extern int putsgent (const struct sgrp *__g, FILE *__stream);
+setsgent         prototype    54 /usr/include/gshadow.h extern void setsgent (void);
+sg_adm           member       43 /usr/include/gshadow.h char **sg_adm; /* Group administrator list. */
+sg_mem           member       44 /usr/include/gshadow.h char **sg_mem; /* Group member list. */
+sg_namp          member       41 /usr/include/gshadow.h char *sg_namp; /* Group name. */
+sg_passwd        member       42 /usr/include/gshadow.h char *sg_passwd; /* Encrypted password. */
+sgetsgent        prototype    86 /usr/include/gshadow.h extern struct sgrp *sgetsgent (const char *__string);
+sgetsgent_r      prototype   119 /usr/include/gshadow.h extern int sgetsgent_r (const char *__string, struct sgrp *__result_buf,
+sgrp             struct       39 /usr/include/gshadow.h struct sgrp
+sgrp::sg_adm     member       43 /usr/include/gshadow.h char **sg_adm; /* Group administrator list. */
+sgrp::sg_mem     member       44 /usr/include/gshadow.h char **sg_mem; /* Group member list. */
+sgrp::sg_namp    member       41 /usr/include/gshadow.h char *sg_namp; /* Group name. */
+sgrp::sg_passwd  member       42 /usr/include/gshadow.h char *sg_passwd; /* Encrypted password. */

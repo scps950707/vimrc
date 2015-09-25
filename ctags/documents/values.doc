@@ -1,0 +1,26 @@
+BITSPERBYTE      macro        65 /usr/include/values.h # define BITSPERBYTE CHAR_BIT
+CHARBITS         macro        31 /usr/include/values.h #define CHARBITS _TYPEBITS (char)
+DMAXEXP          macro        59 /usr/include/values.h #define DMAXEXP DBL_MAX_EXP
+DMINEXP          macro        57 /usr/include/values.h #define DMINEXP DBL_MIN_EXP
+DOUBLEBITS       macro        36 /usr/include/values.h #define DOUBLEBITS _TYPEBITS (double)
+FLOATBITS        macro        37 /usr/include/values.h #define FLOATBITS _TYPEBITS (float)
+FMAXEXP          macro        60 /usr/include/values.h #define FMAXEXP FLT_MAX_EXP
+FMINEXP          macro        58 /usr/include/values.h #define FMINEXP FLT_MIN_EXP
+HIBITL           macro        48 /usr/include/values.h #define HIBITL MINLONG
+HIBITS           macro        47 /usr/include/values.h #define HIBITS MINSHORT
+INTBITS          macro        33 /usr/include/values.h #define INTBITS _TYPEBITS (int)
+LONGBITS         macro        34 /usr/include/values.h #define LONGBITS _TYPEBITS (long int)
+MAXDOUBLE        macro        53 /usr/include/values.h #define MAXDOUBLE DBL_MAX
+MAXFLOAT         macro        54 /usr/include/values.h #define MAXFLOAT FLT_MAX
+MAXINT           macro        44 /usr/include/values.h #define MAXINT INT_MAX
+MAXLONG          macro        45 /usr/include/values.h #define MAXLONG LONG_MAX
+MAXSHORT         macro        43 /usr/include/values.h #define MAXSHORT SHRT_MAX
+MINDOUBLE        macro        55 /usr/include/values.h #define MINDOUBLE DBL_MIN
+MINFLOAT         macro        56 /usr/include/values.h #define MINFLOAT FLT_MIN
+MININT           macro        40 /usr/include/values.h #define MININT INT_MIN
+MINLONG          macro        41 /usr/include/values.h #define MINLONG LONG_MIN
+MINSHORT         macro        39 /usr/include/values.h #define MINSHORT SHRT_MIN
+PTRBITS          macro        35 /usr/include/values.h #define PTRBITS _TYPEBITS (char *)
+SHORTBITS        macro        32 /usr/include/values.h #define SHORTBITS _TYPEBITS (short int)
+_TYPEBITS        macro        29 /usr/include/values.h #define _TYPEBITS(type) (sizeof (type) * CHAR_BIT)
+_VALUES_H        macro        23 /usr/include/values.h #define _VALUES_H 1

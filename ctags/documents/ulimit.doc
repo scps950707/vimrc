@@ -1,0 +1,8 @@
+UL_GETFSIZE      enumerator   27 /usr/include/ulimit.h UL_GETFSIZE = 1, /* Return limit on the size of a file,
+UL_GETFSIZE      macro        29 /usr/include/ulimit.h #define UL_GETFSIZE UL_GETFSIZE
+UL_SETFSIZE      enumerator   30 /usr/include/ulimit.h UL_SETFSIZE, /* Set limit on the size of a file to
+UL_SETFSIZE      macro        32 /usr/include/ulimit.h #define UL_SETFSIZE UL_SETFSIZE
+_ULIMIT_H        macro        19 /usr/include/ulimit.h #define _ULIMIT_H 1
+__UL_GETMAXBRK   enumerator   33 /usr/include/ulimit.h __UL_GETMAXBRK, /* Return the maximum possible address
+__UL_GETOPENMAX  enumerator   35 /usr/include/ulimit.h __UL_GETOPENMAX /* Return the maximum number of files
+ulimit           prototype    43 /usr/include/ulimit.h extern long int ulimit (int __cmd, ...) __THROW;

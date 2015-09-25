@@ -1,0 +1,8 @@
+_ERRNO_H         macro        27 /usr/include/errno.h # define _ERRNO_H 1
+__error_t_defined macro        69 /usr/include/errno.h # define __error_t_defined 1
+__need_Emath     macro        36 /usr/include/errno.h #undef __need_Emath
+__need_error_t   macro        71 /usr/include/errno.h # undef __need_error_t
+errno            externvar    46 /usr/include/errno.h extern int errno;
+error_t          typedef      68 /usr/include/errno.h typedef int error_t;
+program_invocation_name externvar    54 /usr/include/errno.h extern char *program_invocation_name, *program_invocation_short_name;
+program_invocation_short_name externvar    54 /usr/include/errno.h extern char *program_invocation_name, *program_invocation_short_name;

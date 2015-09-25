@@ -1,0 +1,19 @@
+ARFMAG           macro        31 /usr/include/ar.h #define ARFMAG "`\n" /* String in ar_fmag at end of each header. */
+ARMAG            macro        28 /usr/include/ar.h #define ARMAG "!<arch>\n" /* String that begins an archive file. */
+SARMAG           macro        29 /usr/include/ar.h #define SARMAG 8 /* Size of that string. */
+_AR_H            macro        20 /usr/include/ar.h #define _AR_H 1
+ar_date          member       38 /usr/include/ar.h char ar_date[12]; /* File date, decimal seconds since Epoch. */
+ar_fmag          member       42 /usr/include/ar.h char ar_fmag[2]; /* Always contains ARFMAG. */
+ar_gid           member       39 /usr/include/ar.h char ar_uid[6], ar_gid[6]; /* User and group IDs, in ASCII decimal. */
+ar_hdr           struct       35 /usr/include/ar.h struct ar_hdr
+ar_hdr::ar_date  member       38 /usr/include/ar.h char ar_date[12]; /* File date, decimal seconds since Epoch. */
+ar_hdr::ar_fmag  member       42 /usr/include/ar.h char ar_fmag[2]; /* Always contains ARFMAG. */
+ar_hdr::ar_gid   member       39 /usr/include/ar.h char ar_uid[6], ar_gid[6]; /* User and group IDs, in ASCII decimal. */
+ar_hdr::ar_mode  member       40 /usr/include/ar.h char ar_mode[8]; /* File mode, in ASCII octal. */
+ar_hdr::ar_name  member       37 /usr/include/ar.h char ar_name[16]; /* Member file name, sometimes / terminated. */
+ar_hdr::ar_size  member       41 /usr/include/ar.h char ar_size[10]; /* File size, in ASCII decimal. */
+ar_hdr::ar_uid   member       39 /usr/include/ar.h char ar_uid[6], ar_gid[6]; /* User and group IDs, in ASCII decimal. */
+ar_mode          member       40 /usr/include/ar.h char ar_mode[8]; /* File mode, in ASCII octal. */
+ar_name          member       37 /usr/include/ar.h char ar_name[16]; /* Member file name, sometimes / terminated. */
+ar_size          member       41 /usr/include/ar.h char ar_size[10]; /* File size, in ASCII decimal. */
+ar_uid           member       39 /usr/include/ar.h char ar_uid[6], ar_gid[6]; /* User and group IDs, in ASCII decimal. */

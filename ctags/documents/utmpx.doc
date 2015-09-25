@@ -1,0 +1,18 @@
+UTMPX_FILE       macro        35 /usr/include/utmpx.h # define UTMPX_FILE _PATH_UTMPX
+UTMPX_FILENAME   macro        36 /usr/include/utmpx.h # define UTMPX_FILENAME _PATH_UTMPX
+WTMPX_FILE       macro        37 /usr/include/utmpx.h # define WTMPX_FILE _PATH_WTMPX
+WTMPX_FILENAME   macro        38 /usr/include/utmpx.h # define WTMPX_FILENAME _PATH_WTMPX
+_UTMPX_H         macro        19 /usr/include/utmpx.h #define _UTMPX_H 1
+__pid_t_defined  macro        27 /usr/include/utmpx.h # define __pid_t_defined
+endutxent        prototype    59 /usr/include/utmpx.h extern void endutxent (void);
+getutmp          prototype   111 /usr/include/utmpx.h extern void getutmp (const struct utmpx *__utmpx,
+getutmpx         prototype   120 /usr/include/utmpx.h extern void getutmpx (const struct utmp *__utmp, struct utmpx *__utmpx);
+getutxent        prototype    65 /usr/include/utmpx.h extern struct utmpx *getutxent (void);
+getutxid         prototype    71 /usr/include/utmpx.h extern struct utmpx *getutxid (const struct utmpx *__id);
+getutxline       prototype    77 /usr/include/utmpx.h extern struct utmpx *getutxline (const struct utmpx *__line);
+pid_t            typedef      26 /usr/include/utmpx.h typedef __pid_t pid_t;
+pututxline       prototype    83 /usr/include/utmpx.h extern struct utmpx *pututxline (const struct utmpx *__utmpx);
+setutxent        prototype    53 /usr/include/utmpx.h extern void setutxent (void);
+updwtmpx         prototype   101 /usr/include/utmpx.h extern void updwtmpx (const char *__wtmpx_file,
+utmp             externvar    43 /usr/include/utmpx.h struct utmp;
+utmpxname        prototype    93 /usr/include/utmpx.h extern int utmpxname (const char *__file);

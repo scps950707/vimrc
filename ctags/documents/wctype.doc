@@ -1,0 +1,68 @@
+WEOF             macro        38 /usr/include/wctype.h # define WEOF (0xffffffffu)
+_ISwalnum        enumerator   97 /usr/include/wctype.h _ISwalnum = _ISwbit (__ISwalnum) /* Alphanumeric. */
+_ISwalpha        enumerator   88 /usr/include/wctype.h _ISwalpha = _ISwbit (__ISwalpha), /* Alphabetic. */
+_ISwbit          macro        62 /usr/include/wctype.h # define _ISwbit(bit) (1 << (bit))
+_ISwblank        enumerator   94 /usr/include/wctype.h _ISwblank = _ISwbit (__ISwblank), /* Blank (usually SPC and TAB). */
+_ISwcntrl        enumerator   95 /usr/include/wctype.h _ISwcntrl = _ISwbit (__ISwcntrl), /* Control character. */
+_ISwdigit        enumerator   89 /usr/include/wctype.h _ISwdigit = _ISwbit (__ISwdigit), /* Numeric. */
+_ISwgraph        enumerator   93 /usr/include/wctype.h _ISwgraph = _ISwbit (__ISwgraph), /* Graphical. */
+_ISwlower        enumerator   87 /usr/include/wctype.h _ISwlower = _ISwbit (__ISwlower), /* lowercase. */
+_ISwprint        enumerator   92 /usr/include/wctype.h _ISwprint = _ISwbit (__ISwprint), /* Printing. */
+_ISwpunct        enumerator   96 /usr/include/wctype.h _ISwpunct = _ISwbit (__ISwpunct), /* Punctuation. */
+_ISwspace        enumerator   91 /usr/include/wctype.h _ISwspace = _ISwbit (__ISwspace), /* Whitespace. */
+_ISwupper        enumerator   86 /usr/include/wctype.h _ISwupper = _ISwbit (__ISwupper), /* UPPERCASE. */
+_ISwxdigit       enumerator   90 /usr/include/wctype.h _ISwxdigit = _ISwbit (__ISwxdigit), /* Hexadecimal numeric. */
+_WCTYPE_H        macro        29 /usr/include/wctype.h # define _WCTYPE_H 1
+__ISwalnum       enumerator   84 /usr/include/wctype.h __ISwalnum = 11, /* Alphanumeric. */
+__ISwalpha       enumerator   75 /usr/include/wctype.h __ISwalpha = 2, /* Alphabetic. */
+__ISwblank       enumerator   81 /usr/include/wctype.h __ISwblank = 8, /* Blank (usually SPC and TAB). */
+__ISwcntrl       enumerator   82 /usr/include/wctype.h __ISwcntrl = 9, /* Control character. */
+__ISwdigit       enumerator   76 /usr/include/wctype.h __ISwdigit = 3, /* Numeric. */
+__ISwgraph       enumerator   80 /usr/include/wctype.h __ISwgraph = 7, /* Graphical. */
+__ISwlower       enumerator   74 /usr/include/wctype.h __ISwlower = 1, /* lowercase. */
+__ISwprint       enumerator   79 /usr/include/wctype.h __ISwprint = 6, /* Printing. */
+__ISwpunct       enumerator   83 /usr/include/wctype.h __ISwpunct = 10, /* Punctuation. */
+__ISwspace       enumerator   78 /usr/include/wctype.h __ISwspace = 5, /* Whitespace. */
+__ISwupper       enumerator   73 /usr/include/wctype.h __ISwupper = 0, /* UPPERCASE. */
+__ISwxdigit      enumerator   77 /usr/include/wctype.h __ISwxdigit = 4, /* Hexadecimal numeric. */
+__iswxxx_defined macro        47 /usr/include/wctype.h # define __iswxxx_defined 1
+__need_iswxxx    macro        41 /usr/include/wctype.h #undef __need_iswxxx
+__need_wint_t    macro        32 /usr/include/wctype.h # define __need_wint_t
+iswalnum         prototype   111 /usr/include/wctype.h extern int iswalnum (wint_t __wc) __THROW;
+iswalnum_l       prototype   230 /usr/include/wctype.h extern int iswalnum_l (wint_t __wc, __locale_t __locale) __THROW;
+iswalpha         prototype   117 /usr/include/wctype.h extern int iswalpha (wint_t __wc) __THROW;
+iswalpha_l       prototype   236 /usr/include/wctype.h extern int iswalpha_l (wint_t __wc, __locale_t __locale) __THROW;
+iswblank         prototype   162 /usr/include/wctype.h extern int iswblank (wint_t __wc) __THROW;
+iswblank_l       prototype   280 /usr/include/wctype.h extern int iswblank_l (wint_t __wc, __locale_t __locale) __THROW;
+iswcntrl         prototype   120 /usr/include/wctype.h extern int iswcntrl (wint_t __wc) __THROW;
+iswcntrl_l       prototype   239 /usr/include/wctype.h extern int iswcntrl_l (wint_t __wc, __locale_t __locale) __THROW;
+iswctype         prototype   175 /usr/include/wctype.h extern int iswctype (wint_t __wc, wctype_t __desc) __THROW;
+iswctype_l       prototype   289 /usr/include/wctype.h extern int iswctype_l (wint_t __wc, wctype_t __desc, __locale_t __locale)
+iswdigit         prototype   124 /usr/include/wctype.h extern int iswdigit (wint_t __wc) __THROW;
+iswdigit_l       prototype   243 /usr/include/wctype.h extern int iswdigit_l (wint_t __wc, __locale_t __locale) __THROW;
+iswgraph         prototype   128 /usr/include/wctype.h extern int iswgraph (wint_t __wc) __THROW;
+iswgraph_l       prototype   247 /usr/include/wctype.h extern int iswgraph_l (wint_t __wc, __locale_t __locale) __THROW;
+iswlower         prototype   133 /usr/include/wctype.h extern int iswlower (wint_t __wc) __THROW;
+iswlower_l       prototype   252 /usr/include/wctype.h extern int iswlower_l (wint_t __wc, __locale_t __locale) __THROW;
+iswprint         prototype   136 /usr/include/wctype.h extern int iswprint (wint_t __wc) __THROW;
+iswprint_l       prototype   255 /usr/include/wctype.h extern int iswprint_l (wint_t __wc, __locale_t __locale) __THROW;
+iswpunct         prototype   141 /usr/include/wctype.h extern int iswpunct (wint_t __wc) __THROW;
+iswpunct_l       prototype   260 /usr/include/wctype.h extern int iswpunct_l (wint_t __wc, __locale_t __locale) __THROW;
+iswspace         prototype   146 /usr/include/wctype.h extern int iswspace (wint_t __wc) __THROW;
+iswspace_l       prototype   265 /usr/include/wctype.h extern int iswspace_l (wint_t __wc, __locale_t __locale) __THROW;
+iswupper         prototype   151 /usr/include/wctype.h extern int iswupper (wint_t __wc) __THROW;
+iswupper_l       prototype   270 /usr/include/wctype.h extern int iswupper_l (wint_t __wc, __locale_t __locale) __THROW;
+iswxdigit        prototype   156 /usr/include/wctype.h extern int iswxdigit (wint_t __wc) __THROW;
+iswxdigit_l      prototype   275 /usr/include/wctype.h extern int iswxdigit_l (wint_t __wc, __locale_t __locale) __THROW;
+towctrans        prototype   221 /usr/include/wctype.h extern wint_t towctrans (wint_t __wc, wctrans_t __desc) __THROW;
+towctrans_l      prototype   309 /usr/include/wctype.h extern wint_t towctrans_l (wint_t __wc, wctrans_t __desc,
+towlower         prototype   194 /usr/include/wctype.h extern wint_t towlower (wint_t __wc) __THROW;
+towlower_l       prototype   298 /usr/include/wctype.h extern wint_t towlower_l (wint_t __wc, __locale_t __locale) __THROW;
+towupper         prototype   197 /usr/include/wctype.h extern wint_t towupper (wint_t __wc) __THROW;
+towupper_l       prototype   301 /usr/include/wctype.h extern wint_t towupper_l (wint_t __wc, __locale_t __locale) __THROW;
+wctrans          prototype   218 /usr/include/wctype.h extern wctrans_t wctrans (const char *__property) __THROW;
+wctrans_l        prototype   305 /usr/include/wctype.h extern wctrans_t wctrans_l (const char *__property, __locale_t __locale)
+wctrans_t        typedef     186 /usr/include/wctype.h typedef const __int32_t *wctrans_t;
+wctype           prototype   171 /usr/include/wctype.h extern wctype_t wctype (const char *__property) __THROW;
+wctype_l         prototype   284 /usr/include/wctype.h extern wctype_t wctype_l (const char *__property, __locale_t __locale)
+wctype_t         typedef      52 /usr/include/wctype.h typedef unsigned long int wctype_t;

@@ -1,0 +1,74 @@
+NSIG             macro       200 /usr/include/signal.h # define NSIG _NSIG
+SV_INTERRUPT     macro       318 /usr/include/signal.h # define SV_INTERRUPT (1 << 1)/* Do not restart system calls. */
+SV_ONSTACK       macro       317 /usr/include/signal.h # define SV_ONSTACK (1 << 0)/* Take the signal on the signal stack. */
+SV_RESETHAND     macro       319 /usr/include/signal.h # define SV_RESETHAND (1 << 2)/* Reset handler to SIG_DFL on receipt. */
+_SIGNAL_H        macro        25 /usr/include/signal.h # define _SIGNAL_H
+__libc_current_sigrtmax prototype   397 /usr/include/signal.h extern int __libc_current_sigrtmax (void) __THROW;
+__libc_current_sigrtmin prototype   395 /usr/include/signal.h extern int __libc_current_sigrtmin (void) __THROW;
+__need_sig_atomic_t macro        43 /usr/include/signal.h # undef __need_sig_atomic_t
+__need_sigset_t  macro        51 /usr/include/signal.h # undef __need_sigset_t
+__need_size_t    macro       341 /usr/include/signal.h # define __need_size_t
+__need_timespec  macro        74 /usr/include/signal.h # define __need_timespec
+__pid_t_defined  macro        62 /usr/include/signal.h # define __pid_t_defined
+__sig_atomic_t_defined macro        38 /usr/include/signal.h # define __sig_atomic_t_defined
+__sighandler_t   typedef      85 /usr/include/signal.h typedef void (*__sighandler_t) (int);
+__sigpause       prototype   167 /usr/include/signal.h extern int __sigpause (int __sig_or_mask, int __is_sig);
+__sigset_t_defined macro        48 /usr/include/signal.h # define __sigset_t_defined
+__sysv_signal    prototype    90 /usr/include/signal.h extern __sighandler_t __sysv_signal (int __sig, __sighandler_t __handler)
+__uid_t_defined  macro        68 /usr/include/signal.h # define __uid_t_defined
+_sys_siglist     externvar   303 /usr/include/signal.h extern const char *const _sys_siglist[_NSIG];
+bsd_signal       prototype   119 /usr/include/signal.h extern __sighandler_t bsd_signal (int __sig, __sighandler_t __handler)
+gsignal          prototype   146 /usr/include/signal.h extern int gsignal (int __sig) __THROW;
+kill             prototype   127 /usr/include/signal.h extern int kill (__pid_t __pid, int __sig) __THROW;
+killpg           prototype   134 /usr/include/signal.h extern int killpg (__pid_t __pgrp, int __sig) __THROW;
+pid_t            typedef      61 /usr/include/signal.h typedef __pid_t pid_t;
+psiginfo         prototype   156 /usr/include/signal.h extern void psiginfo (const siginfo_t *__pinfo, const char *__s);
+psignal          prototype   151 /usr/include/signal.h extern void psignal (int __sig, const char *__s);
+raise            prototype   139 /usr/include/signal.h extern int raise (int __sig) __THROW;
+sig_atomic_t     typedef      40 /usr/include/signal.h typedef __sig_atomic_t sig_atomic_t;
+sig_t            typedef     209 /usr/include/signal.h typedef __sighandler_t sig_t;
+sigaction        prototype   259 /usr/include/signal.h extern int sigaction (int __sig, const struct sigaction *__restrict __act,
+sigaddset        prototype   221 /usr/include/signal.h extern int sigaddset (sigset_t *__set, int __signo) __THROW __nonnull ((1));
+sigaltstack      prototype   363 /usr/include/signal.h extern int sigaltstack (const struct sigaltstack *__restrict __ss,
+sigandset        prototype   235 /usr/include/signal.h extern int sigandset (sigset_t *__set, const sigset_t *__left,
+sigblock         prototype   189 /usr/include/signal.h extern int sigblock (int __mask) __THROW __attribute_deprecated__;
+sigdelset        prototype   224 /usr/include/signal.h extern int sigdelset (sigset_t *__set, int __signo) __THROW __nonnull ((1));
+sigemptyset      prototype   215 /usr/include/signal.h extern int sigemptyset (sigset_t *__set) __THROW __nonnull ((1));
+sigfillset       prototype   218 /usr/include/signal.h extern int sigfillset (sigset_t *__set) __THROW __nonnull ((1));
+siggetmask       prototype   195 /usr/include/signal.h extern int siggetmask (void) __THROW __attribute_deprecated__;
+sighandler_t     typedef     204 /usr/include/signal.h typedef __sighandler_t sighandler_t;
+sighold          prototype   372 /usr/include/signal.h extern int sighold (int __sig) __THROW;
+sigignore        prototype   378 /usr/include/signal.h extern int sigignore (int __sig) __THROW;
+siginterrupt     prototype   347 /usr/include/signal.h extern int siginterrupt (int __sig, int __interrupt) __THROW;
+sigisemptyset    prototype   232 /usr/include/signal.h extern int sigisemptyset (const sigset_t *__set) __THROW __nonnull ((1));
+sigismember      prototype   227 /usr/include/signal.h extern int sigismember (const sigset_t *__set, int __signo)
+sigmask          macro       186 /usr/include/signal.h # define sigmask(sig) __sigmask(sig)
+signal           prototype   102 /usr/include/signal.h extern __sighandler_t signal (int __sig, __sighandler_t __handler)
+sigorset         prototype   239 /usr/include/signal.h extern int sigorset (sigset_t *__set, const sigset_t *__left,
+sigpause         macro       174 /usr/include/signal.h # define sigpause(sig) __sigpause ((sig), 1)
+sigpending       prototype   263 /usr/include/signal.h extern int sigpending (sigset_t *__set) __THROW __nonnull ((1));
+sigprocmask      prototype   248 /usr/include/signal.h extern int sigprocmask (int __how, const sigset_t *__restrict __set,
+sigqueue         prototype   293 /usr/include/signal.h extern int sigqueue (__pid_t __pid, int __sig, const union sigval __val)
+sigrelse         prototype   375 /usr/include/signal.h extern int sigrelse (int __sig) __THROW;
+sigreturn        prototype   335 /usr/include/signal.h extern int sigreturn (struct sigcontext *__scp) __THROW;
+sigset           prototype   381 /usr/include/signal.h extern __sighandler_t sigset (int __sig, __sighandler_t __disp) __THROW;
+sigset_t         typedef      49 /usr/include/signal.h typedef __sigset_t sigset_t;
+sigsetmask       prototype   192 /usr/include/signal.h extern int sigsetmask (int __mask) __THROW __attribute_deprecated__;
+sigstack         prototype   358 /usr/include/signal.h extern int sigstack (struct sigstack *__ss, struct sigstack *__oss)
+sigsuspend       prototype   256 /usr/include/signal.h extern int sigsuspend (const sigset_t *__set) __nonnull ((1));
+sigtimedwait     prototype   286 /usr/include/signal.h extern int sigtimedwait (const sigset_t *__restrict __set,
+sigvec           prototype   327 /usr/include/signal.h extern int sigvec (int __sig, const struct sigvec *__vec,
+sigvec           struct      307 /usr/include/signal.h struct sigvec
+sigvec::sv_flags member      312 /usr/include/signal.h int sv_flags; /* Flags (see below). */
+sigvec::sv_handler member      309 /usr/include/signal.h __sighandler_t sv_handler; /* Signal handler. */
+sigvec::sv_mask  member      310 /usr/include/signal.h int sv_mask; /* Mask of signals to be blocked. */
+sigwait          prototype   270 /usr/include/signal.h extern int sigwait (const sigset_t *__restrict __set, int *__restrict __sig)
+sigwaitinfo      prototype   278 /usr/include/signal.h extern int sigwaitinfo (const sigset_t *__restrict __set,
+ssignal          prototype   144 /usr/include/signal.h extern __sighandler_t ssignal (int __sig, __sighandler_t __handler)
+sv_flags         member      312 /usr/include/signal.h int sv_flags; /* Flags (see below). */
+sv_handler       member      309 /usr/include/signal.h __sighandler_t sv_handler; /* Signal handler. */
+sv_mask          member      310 /usr/include/signal.h int sv_mask; /* Mask of signals to be blocked. */
+sv_onstack       macro       313 /usr/include/signal.h # define sv_onstack sv_flags /* 4.2 BSD compatibility. */
+sys_siglist      externvar   304 /usr/include/signal.h extern const char *const sys_siglist[_NSIG];
+sysv_signal      prototype    93 /usr/include/signal.h extern __sighandler_t sysv_signal (int __sig, __sighandler_t __handler)
+uid_t            typedef      67 /usr/include/signal.h typedef __uid_t uid_t;

@@ -1,0 +1,4 @@
+_SGTTY_H         macro        19 /usr/include/sgtty.h #define _SGTTY_H 1
+gtty             prototype    32 /usr/include/sgtty.h extern int gtty (int __fd, struct sgttyb *__params) __THROW;
+sgttyb           externvar    27 /usr/include/sgtty.h struct sgttyb;
+stty             prototype    35 /usr/include/sgtty.h extern int stty (int __fd, const struct sgttyb *__params) __THROW;

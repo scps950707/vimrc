@@ -1,0 +1,6 @@
+_MONETARY_H      macro        20 /usr/include/monetary.h #define _MONETARY_H 1
+__need_size_t    macro        25 /usr/include/monetary.h #define __need_size_t
+__ssize_t_defined macro        31 /usr/include/monetary.h # define __ssize_t_defined
+ssize_t          typedef      30 /usr/include/monetary.h typedef __ssize_t ssize_t;
+strfmon          prototype    38 /usr/include/monetary.h extern ssize_t strfmon (char *__restrict __s, size_t __maxsize,
+strfmon_l        prototype    46 /usr/include/monetary.h extern ssize_t strfmon_l (char *__restrict __s, size_t __maxsize,

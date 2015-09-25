@@ -1,0 +1,20 @@
+UTMP_FILE        macro        32 /usr/include/utmp.h #define UTMP_FILE _PATH_UTMP
+UTMP_FILENAME    macro        33 /usr/include/utmp.h #define UTMP_FILENAME _PATH_UTMP
+WTMP_FILE        macro        34 /usr/include/utmp.h #define WTMP_FILE _PATH_WTMP
+WTMP_FILENAME    macro        35 /usr/include/utmp.h #define WTMP_FILENAME _PATH_WTMP
+_UTMP_H          macro        19 /usr/include/utmp.h #define _UTMP_H 1
+endutent         prototype    68 /usr/include/utmp.h extern void endutent (void) __THROW;
+getutent         prototype    62 /usr/include/utmp.h extern struct utmp *getutent (void) __THROW;
+getutent_r       prototype    84 /usr/include/utmp.h extern int getutent_r (struct utmp *__buffer, struct utmp **__result) __THROW;
+getutid          prototype    72 /usr/include/utmp.h extern struct utmp *getutid (const struct utmp *__id) __THROW;
+getutid_r        prototype    86 /usr/include/utmp.h extern int getutid_r (const struct utmp *__id, struct utmp *__buffer,
+getutline        prototype    76 /usr/include/utmp.h extern struct utmp *getutline (const struct utmp *__line) __THROW;
+getutline_r      prototype    89 /usr/include/utmp.h extern int getutline_r (const struct utmp *__line,
+login            prototype    45 /usr/include/utmp.h extern void login (const struct utmp *__entry) __THROW;
+login_tty        prototype    41 /usr/include/utmp.h extern int login_tty (int __fd) __THROW;
+logout           prototype    48 /usr/include/utmp.h extern int logout (const char *__ut_line) __THROW;
+logwtmp          prototype    51 /usr/include/utmp.h extern void logwtmp (const char *__ut_line, const char *__ut_name,
+pututline        prototype    79 /usr/include/utmp.h extern struct utmp *pututline (const struct utmp *__utmp_ptr) __THROW;
+setutent         prototype    65 /usr/include/utmp.h extern void setutent (void) __THROW;
+updwtmp          prototype    55 /usr/include/utmp.h extern void updwtmp (const char *__wtmp_file, const struct utmp *__utmp)
+utmpname         prototype    59 /usr/include/utmp.h extern int utmpname (const char *__file) __THROW;

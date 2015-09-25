@@ -1,0 +1,127 @@
+AIO_ALLDONE      enumerator  110 /usr/include/aio.h AIO_ALLDONE
+AIO_ALLDONE      macro       111 /usr/include/aio.h #define AIO_ALLDONE AIO_ALLDONE
+AIO_CANCELED     enumerator  106 /usr/include/aio.h AIO_CANCELED,
+AIO_CANCELED     macro       107 /usr/include/aio.h #define AIO_CANCELED AIO_CANCELED
+AIO_NOTCANCELED  enumerator  108 /usr/include/aio.h AIO_NOTCANCELED,
+AIO_NOTCANCELED  macro       109 /usr/include/aio.h #define AIO_NOTCANCELED AIO_NOTCANCELED
+LIO_NOP          enumerator  122 /usr/include/aio.h LIO_NOP
+LIO_NOP          macro       123 /usr/include/aio.h #define LIO_NOP LIO_NOP
+LIO_NOWAIT       enumerator  132 /usr/include/aio.h LIO_NOWAIT
+LIO_NOWAIT       macro       133 /usr/include/aio.h #define LIO_NOWAIT LIO_NOWAIT
+LIO_READ         enumerator  118 /usr/include/aio.h LIO_READ,
+LIO_READ         macro       119 /usr/include/aio.h #define LIO_READ LIO_READ
+LIO_WAIT         enumerator  130 /usr/include/aio.h LIO_WAIT,
+LIO_WAIT         macro       131 /usr/include/aio.h #define LIO_WAIT LIO_WAIT
+LIO_WRITE        enumerator  120 /usr/include/aio.h LIO_WRITE,
+LIO_WRITE        macro       121 /usr/include/aio.h #define LIO_WRITE LIO_WRITE
+_AIO_H           macro        23 /usr/include/aio.h #define _AIO_H 1
+__REDIRECT_NTH   prototype   179 /usr/include/aio.h extern int __REDIRECT_NTH (aio_read, (struct aiocb *__aiocbp), aio_read64)
+__REDIRECT_NTH   prototype   181 /usr/include/aio.h extern int __REDIRECT_NTH (aio_write, (struct aiocb *__aiocbp), aio_write64)
+__REDIRECT_NTH   prototype   184 /usr/include/aio.h extern int __REDIRECT_NTH (lio_listio,
+__REDIRECT_NTH   prototype   190 /usr/include/aio.h extern int __REDIRECT_NTH (aio_error, (const struct aiocb *__aiocbp),
+__REDIRECT_NTH   prototype   192 /usr/include/aio.h extern __ssize_t __REDIRECT_NTH (aio_return, (struct aiocb *__aiocbp),
+__REDIRECT_NTH   prototype   195 /usr/include/aio.h extern int __REDIRECT_NTH (aio_cancel,
+__REDIRECT_NTH   prototype   199 /usr/include/aio.h extern int __REDIRECT_NTH (aio_suspend,
+__REDIRECT_NTH   prototype   204 /usr/include/aio.h extern int __REDIRECT_NTH (aio_fsync,
+__abs_prio       member       46 /usr/include/aio.h int __abs_prio;
+__abs_prio       member       74 /usr/include/aio.h int __abs_prio;
+__error_code     member       48 /usr/include/aio.h int __error_code;
+__error_code     member       76 /usr/include/aio.h int __error_code;
+__glibc_reserved member       57 /usr/include/aio.h char __glibc_reserved[32];
+__glibc_reserved member       80 /usr/include/aio.h char __glibc_reserved[32];
+__need_sigevent_t macro        27 /usr/include/aio.h #define __need_sigevent_t
+__need_timespec  macro        29 /usr/include/aio.h #define __need_timespec
+__next_prio      member       45 /usr/include/aio.h struct aiocb *__next_prio;
+__next_prio      member       73 /usr/include/aio.h struct aiocb *__next_prio;
+__pad            member       53 /usr/include/aio.h char __pad[sizeof (__off64_t) - sizeof (__off_t)];
+__policy         member       47 /usr/include/aio.h int __policy;
+__policy         member       75 /usr/include/aio.h int __policy;
+__return_value   member       49 /usr/include/aio.h __ssize_t __return_value;
+__return_value   member       77 /usr/include/aio.h __ssize_t __return_value;
+aio_buf          member       40 /usr/include/aio.h volatile void *aio_buf; /* Location of buffer. */
+aio_buf          member       68 /usr/include/aio.h volatile void *aio_buf; /* Location of buffer. */
+aio_cancel       macro       214 /usr/include/aio.h # define aio_cancel aio_cancel64
+aio_cancel       prototype   162 /usr/include/aio.h extern int aio_cancel (int __fildes, struct aiocb *__aiocbp) __THROW;
+aio_cancel64     prototype   234 /usr/include/aio.h extern int aio_cancel64 (int __fildes, struct aiocb64 *__aiocbp) __THROW;
+aio_debug        member       94 /usr/include/aio.h int aio_debug; /* Not used. */
+aio_error        macro       212 /usr/include/aio.h # define aio_error aio_error64
+aio_error        prototype   156 /usr/include/aio.h extern int aio_error (const struct aiocb *__aiocbp) __THROW __nonnull ((1));
+aio_error64      prototype   229 /usr/include/aio.h extern int aio_error64 (const struct aiocb64 *__aiocbp)
+aio_fildes       member       37 /usr/include/aio.h int aio_fildes; /* File desriptor. */
+aio_fildes       member       65 /usr/include/aio.h int aio_fildes; /* File desriptor. */
+aio_fsync        macro       216 /usr/include/aio.h # define aio_fsync aio_fsync64
+aio_fsync        prototype   175 /usr/include/aio.h extern int aio_fsync (int __operation, struct aiocb *__aiocbp)
+aio_fsync64      prototype   240 /usr/include/aio.h extern int aio_fsync64 (int __operation, struct aiocb64 *__aiocbp)
+aio_idle_time    member       96 /usr/include/aio.h int aio_idle_time; /* Number of seconds before idle thread
+aio_init         prototype   139 /usr/include/aio.h extern void aio_init (const struct aioinit *__init) __THROW __nonnull ((1));
+aio_lio_opcode   member       38 /usr/include/aio.h int aio_lio_opcode; /* Operation to be performed. */
+aio_lio_opcode   member       66 /usr/include/aio.h int aio_lio_opcode; /* Operation to be performed. */
+aio_locks        member       92 /usr/include/aio.h int aio_locks; /* Not used. */
+aio_nbytes       member       41 /usr/include/aio.h size_t aio_nbytes; /* Length of transfer. */
+aio_nbytes       member       69 /usr/include/aio.h size_t aio_nbytes; /* Length of transfer. */
+aio_num          member       91 /usr/include/aio.h int aio_num; /* Number of expected simultanious requests. */
+aio_numusers     member       95 /usr/include/aio.h int aio_numusers; /* Not used. */
+aio_offset       member       52 /usr/include/aio.h __off_t aio_offset; /* File offset. */
+aio_offset       member       55 /usr/include/aio.h __off64_t aio_offset; /* File offset. */
+aio_offset       member       79 /usr/include/aio.h __off64_t aio_offset; /* File offset. */
+aio_read         macro       209 /usr/include/aio.h # define aio_read aio_read64
+aio_read         prototype   145 /usr/include/aio.h extern int aio_read (struct aiocb *__aiocbp) __THROW __nonnull ((1));
+aio_read64       prototype   221 /usr/include/aio.h extern int aio_read64 (struct aiocb64 *__aiocbp) __THROW __nonnull ((1));
+aio_reqprio      member       39 /usr/include/aio.h int aio_reqprio; /* Request priority offset. */
+aio_reqprio      member       67 /usr/include/aio.h int aio_reqprio; /* Request priority offset. */
+aio_reserved     member       98 /usr/include/aio.h int aio_reserved;
+aio_return       macro       213 /usr/include/aio.h # define aio_return aio_return64
+aio_return       prototype   158 /usr/include/aio.h extern __ssize_t aio_return (struct aiocb *__aiocbp) __THROW __nonnull ((1));
+aio_return64     prototype   231 /usr/include/aio.h extern __ssize_t aio_return64 (struct aiocb64 *__aiocbp)
+aio_sigevent     member       42 /usr/include/aio.h struct sigevent aio_sigevent; /* Signal number and value. */
+aio_sigevent     member       70 /usr/include/aio.h struct sigevent aio_sigevent; /* Signal number and value. */
+aio_suspend      macro       215 /usr/include/aio.h # define aio_suspend aio_suspend64
+aio_suspend      prototype   169 /usr/include/aio.h extern int aio_suspend (const struct aiocb *const __list[], int __nent,
+aio_suspend64    prototype   236 /usr/include/aio.h extern int aio_suspend64 (const struct aiocb64 *const __list[], int __nent,
+aio_threads      member       90 /usr/include/aio.h int aio_threads; /* Maximal number of threads. */
+aio_usedba       member       93 /usr/include/aio.h int aio_usedba; /* Not used. */
+aio_write        macro       210 /usr/include/aio.h # define aio_write aio_write64
+aio_write        prototype   147 /usr/include/aio.h extern int aio_write (struct aiocb *__aiocbp) __THROW __nonnull ((1));
+aio_write64      prototype   222 /usr/include/aio.h extern int aio_write64 (struct aiocb64 *__aiocbp) __THROW __nonnull ((1));
+aiocb            struct       35 /usr/include/aio.h struct aiocb
+aiocb64          struct       63 /usr/include/aio.h struct aiocb64
+aiocb64::__abs_prio member       74 /usr/include/aio.h int __abs_prio;
+aiocb64::__error_code member       76 /usr/include/aio.h int __error_code;
+aiocb64::__glibc_reserved member       80 /usr/include/aio.h char __glibc_reserved[32];
+aiocb64::__next_prio member       73 /usr/include/aio.h struct aiocb *__next_prio;
+aiocb64::__policy member       75 /usr/include/aio.h int __policy;
+aiocb64::__return_value member       77 /usr/include/aio.h __ssize_t __return_value;
+aiocb64::aio_buf member       68 /usr/include/aio.h volatile void *aio_buf; /* Location of buffer. */
+aiocb64::aio_fildes member       65 /usr/include/aio.h int aio_fildes; /* File desriptor. */
+aiocb64::aio_lio_opcode member       66 /usr/include/aio.h int aio_lio_opcode; /* Operation to be performed. */
+aiocb64::aio_nbytes member       69 /usr/include/aio.h size_t aio_nbytes; /* Length of transfer. */
+aiocb64::aio_offset member       79 /usr/include/aio.h __off64_t aio_offset; /* File offset. */
+aiocb64::aio_reqprio member       67 /usr/include/aio.h int aio_reqprio; /* Request priority offset. */
+aiocb64::aio_sigevent member       70 /usr/include/aio.h struct sigevent aio_sigevent; /* Signal number and value. */
+aiocb::__abs_prio member       46 /usr/include/aio.h int __abs_prio;
+aiocb::__error_code member       48 /usr/include/aio.h int __error_code;
+aiocb::__glibc_reserved member       57 /usr/include/aio.h char __glibc_reserved[32];
+aiocb::__next_prio member       45 /usr/include/aio.h struct aiocb *__next_prio;
+aiocb::__pad     member       53 /usr/include/aio.h char __pad[sizeof (__off64_t) - sizeof (__off_t)];
+aiocb::__policy  member       47 /usr/include/aio.h int __policy;
+aiocb::__return_value member       49 /usr/include/aio.h __ssize_t __return_value;
+aiocb::aio_buf   member       40 /usr/include/aio.h volatile void *aio_buf; /* Location of buffer. */
+aiocb::aio_fildes member       37 /usr/include/aio.h int aio_fildes; /* File desriptor. */
+aiocb::aio_lio_opcode member       38 /usr/include/aio.h int aio_lio_opcode; /* Operation to be performed. */
+aiocb::aio_nbytes member       41 /usr/include/aio.h size_t aio_nbytes; /* Length of transfer. */
+aiocb::aio_offset member       52 /usr/include/aio.h __off_t aio_offset; /* File offset. */
+aiocb::aio_offset member       55 /usr/include/aio.h __off64_t aio_offset; /* File offset. */
+aiocb::aio_reqprio member       39 /usr/include/aio.h int aio_reqprio; /* Request priority offset. */
+aiocb::aio_sigevent member       42 /usr/include/aio.h struct sigevent aio_sigevent; /* Signal number and value. */
+aioinit          struct       88 /usr/include/aio.h struct aioinit
+aioinit::aio_debug member       94 /usr/include/aio.h int aio_debug; /* Not used. */
+aioinit::aio_idle_time member       96 /usr/include/aio.h int aio_idle_time; /* Number of seconds before idle thread
+aioinit::aio_locks member       92 /usr/include/aio.h int aio_locks; /* Not used. */
+aioinit::aio_num member       91 /usr/include/aio.h int aio_num; /* Number of expected simultanious requests. */
+aioinit::aio_numusers member       95 /usr/include/aio.h int aio_numusers; /* Not used. */
+aioinit::aio_reserved member       98 /usr/include/aio.h int aio_reserved;
+aioinit::aio_threads member       90 /usr/include/aio.h int aio_threads; /* Maximal number of threads. */
+aioinit::aio_usedba member       93 /usr/include/aio.h int aio_usedba; /* Not used. */
+lio_listio       macro       211 /usr/include/aio.h # define lio_listio lio_listio64
+lio_listio       prototype   150 /usr/include/aio.h extern int lio_listio (int __mode,
+lio_listio64     prototype   224 /usr/include/aio.h extern int lio_listio64 (int __mode,

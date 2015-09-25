@@ -1,0 +1,7 @@
+_STDC_PREDEF_H   macro        19 /usr/include/stdc-predef.h #define _STDC_PREDEF_H 1
+__STDC_IEC_559_COMPLEX__ macro        46 /usr/include/stdc-predef.h # define __STDC_IEC_559_COMPLEX__ 1
+__STDC_IEC_559_COMPLEX__ macro        49 /usr/include/stdc-predef.h # define __STDC_IEC_559_COMPLEX__ 1
+__STDC_IEC_559__ macro        38 /usr/include/stdc-predef.h # define __STDC_IEC_559__ 1
+__STDC_IEC_559__ macro        41 /usr/include/stdc-predef.h # define __STDC_IEC_559__ 1
+__STDC_ISO_10646__ macro        54 /usr/include/stdc-predef.h #define __STDC_ISO_10646__ 201103L
+__STDC_NO_THREADS__ macro        57 /usr/include/stdc-predef.h #define __STDC_NO_THREADS__ 1

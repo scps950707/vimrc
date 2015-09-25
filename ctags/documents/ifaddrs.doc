@@ -1,0 +1,24 @@
+_IFADDRS_H       macro        20 /usr/include/ifaddrs.h #define _IFADDRS_H 1
+freeifaddrs      prototype    69 /usr/include/ifaddrs.h extern void freeifaddrs (struct ifaddrs *__ifa) __THROW;
+getifaddrs       prototype    66 /usr/include/ifaddrs.h extern int getifaddrs (struct ifaddrs **__ifap) __THROW;
+ifa_addr         member       36 /usr/include/ifaddrs.h struct sockaddr *ifa_addr; /* Network address of this interface. */
+ifa_broadaddr    macro        50 /usr/include/ifaddrs.h # define ifa_broadaddr ifa_ifu.ifu_broadaddr
+ifa_data         member       56 /usr/include/ifaddrs.h void *ifa_data; /* Address-specific data (may be unused). */
+ifa_dstaddr      macro        53 /usr/include/ifaddrs.h # define ifa_dstaddr ifa_ifu.ifu_dstaddr
+ifa_flags        member       34 /usr/include/ifaddrs.h unsigned int ifa_flags; /* Flags as from SIOCGIFFLAGS ioctl. */
+ifa_ifu          member       46 /usr/include/ifaddrs.h } ifa_ifu;
+ifa_name         member       33 /usr/include/ifaddrs.h char *ifa_name; /* Name of this network interface. */
+ifa_netmask      member       37 /usr/include/ifaddrs.h struct sockaddr *ifa_netmask; /* Netmask of this interface. */
+ifa_next         member       31 /usr/include/ifaddrs.h struct ifaddrs *ifa_next; /* Pointer to the next structure. */
+ifaddrs          struct       29 /usr/include/ifaddrs.h struct ifaddrs
+ifaddrs::__anon1::ifu_broadaddr member       44 /usr/include/ifaddrs.h struct sockaddr *ifu_broadaddr; /* Broadcast address of this interface. */
+ifaddrs::__anon1::ifu_dstaddr member       45 /usr/include/ifaddrs.h struct sockaddr *ifu_dstaddr; /* Point-to-point destination address. */
+ifaddrs::ifa_addr member       36 /usr/include/ifaddrs.h struct sockaddr *ifa_addr; /* Network address of this interface. */
+ifaddrs::ifa_data member       56 /usr/include/ifaddrs.h void *ifa_data; /* Address-specific data (may be unused). */
+ifaddrs::ifa_flags member       34 /usr/include/ifaddrs.h unsigned int ifa_flags; /* Flags as from SIOCGIFFLAGS ioctl. */
+ifaddrs::ifa_ifu member       46 /usr/include/ifaddrs.h } ifa_ifu;
+ifaddrs::ifa_name member       33 /usr/include/ifaddrs.h char *ifa_name; /* Name of this network interface. */
+ifaddrs::ifa_netmask member       37 /usr/include/ifaddrs.h struct sockaddr *ifa_netmask; /* Netmask of this interface. */
+ifaddrs::ifa_next member       31 /usr/include/ifaddrs.h struct ifaddrs *ifa_next; /* Pointer to the next structure. */
+ifu_broadaddr    member       44 /usr/include/ifaddrs.h struct sockaddr *ifu_broadaddr; /* Broadcast address of this interface. */
+ifu_dstaddr      member       45 /usr/include/ifaddrs.h struct sockaddr *ifu_dstaddr; /* Point-to-point destination address. */

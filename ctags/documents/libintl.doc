@@ -1,0 +1,19 @@
+_LIBINTL_H       macro        21 /usr/include/libintl.h #define _LIBINTL_H 1
+__GNU_GETTEXT_SUPPORTED_REVISION macro        31 /usr/include/libintl.h #define __GNU_GETTEXT_SUPPORTED_REVISION(major) \
+__USE_GNU_GETTEXT macro        27 /usr/include/libintl.h #define __USE_GNU_GETTEXT 1
+__dcgettext      prototype    54 /usr/include/libintl.h extern char *__dcgettext (const char *__domainname,
+__dgettext       prototype    46 /usr/include/libintl.h extern char *__dgettext (const char *__domainname, const char *__msgid)
+__need_NULL      macro        99 /usr/include/libintl.h # define __need_NULL
+bind_textdomain_codeset prototype    91 /usr/include/libintl.h extern char *bind_textdomain_codeset (const char *__domainname,
+bindtextdomain   prototype    86 /usr/include/libintl.h extern char *bindtextdomain (const char *__domainname,
+dcgettext        prototype    51 /usr/include/libintl.h extern char *dcgettext (const char *__domainname,
+dcngettext       prototype    73 /usr/include/libintl.h extern char *dcngettext (const char *__domainname, const char *__msgid1,
+dgettext         macro       111 /usr/include/libintl.h # define dgettext(domainname, msgid) \
+dgettext         prototype    44 /usr/include/libintl.h extern char *dgettext (const char *__domainname, const char *__msgid)
+dngettext        macro       116 /usr/include/libintl.h # define dngettext(domainname, msgid1, msgid2, n) \
+dngettext        prototype    67 /usr/include/libintl.h extern char *dngettext (const char *__domainname, const char *__msgid1,
+gettext          macro       109 /usr/include/libintl.h # define gettext(msgid) dgettext (NULL, msgid)
+gettext          prototype    39 /usr/include/libintl.h extern char *gettext (const char *__msgid)
+ngettext         macro       114 /usr/include/libintl.h # define ngettext(msgid1, msgid2, n) dngettext (NULL, msgid1, msgid2, n)
+ngettext         prototype    61 /usr/include/libintl.h extern char *ngettext (const char *__msgid1, const char *__msgid2,
+textdomain       prototype    82 /usr/include/libintl.h extern char *textdomain (const char *__domainname) __THROW;

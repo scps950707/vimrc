@@ -1,0 +1,54 @@
+POSIX_SPAWN_RESETIDS macro        54 /usr/include/spawn.h #define POSIX_SPAWN_RESETIDS 0x01
+POSIX_SPAWN_SETPGROUP macro        55 /usr/include/spawn.h #define POSIX_SPAWN_SETPGROUP 0x02
+POSIX_SPAWN_SETSCHEDPARAM macro        58 /usr/include/spawn.h #define POSIX_SPAWN_SETSCHEDPARAM 0x10
+POSIX_SPAWN_SETSCHEDULER macro        59 /usr/include/spawn.h #define POSIX_SPAWN_SETSCHEDULER 0x20
+POSIX_SPAWN_SETSIGDEF macro        56 /usr/include/spawn.h #define POSIX_SPAWN_SETSIGDEF 0x04
+POSIX_SPAWN_SETSIGMASK macro        57 /usr/include/spawn.h #define POSIX_SPAWN_SETSIGMASK 0x08
+POSIX_SPAWN_USEVFORK macro        61 /usr/include/spawn.h # define POSIX_SPAWN_USEVFORK 0x40
+_SPAWN_H         macro        20 /usr/include/spawn.h #define _SPAWN_H 1
+__actions        member       48 /usr/include/spawn.h struct __spawn_action *__actions;
+__allocated      member       46 /usr/include/spawn.h int __allocated;
+__anon1::__flags member       32 /usr/include/spawn.h short int __flags;
+__anon1::__pad   member       38 /usr/include/spawn.h int __pad[16];
+__anon1::__pgrp  member       33 /usr/include/spawn.h pid_t __pgrp;
+__anon1::__policy member       37 /usr/include/spawn.h int __policy;
+__anon1::__sd    member       34 /usr/include/spawn.h sigset_t __sd;
+__anon1::__sp    member       36 /usr/include/spawn.h struct sched_param __sp;
+__anon1::__ss    member       35 /usr/include/spawn.h sigset_t __ss;
+__anon2::__actions member       48 /usr/include/spawn.h struct __spawn_action *__actions;
+__anon2::__allocated member       46 /usr/include/spawn.h int __allocated;
+__anon2::__pad   member       49 /usr/include/spawn.h int __pad[16];
+__anon2::__used  member       47 /usr/include/spawn.h int __used;
+__flags          member       32 /usr/include/spawn.h short int __flags;
+__need_sigset_t  macro        24 /usr/include/spawn.h #define __need_sigset_t
+__pad            member       38 /usr/include/spawn.h int __pad[16];
+__pad            member       49 /usr/include/spawn.h int __pad[16];
+__pgrp           member       33 /usr/include/spawn.h pid_t __pgrp;
+__policy         member       37 /usr/include/spawn.h int __policy;
+__sd             member       34 /usr/include/spawn.h sigset_t __sd;
+__sp             member       36 /usr/include/spawn.h struct sched_param __sp;
+__ss             member       35 /usr/include/spawn.h sigset_t __ss;
+__used           member       47 /usr/include/spawn.h int __used;
+posix_spawn      prototype    72 /usr/include/spawn.h extern int posix_spawn (pid_t *__restrict __pid,
+posix_spawn_file_actions_addclose prototype   178 /usr/include/spawn.h extern int posix_spawn_file_actions_addclose (posix_spawn_file_actions_t *
+posix_spawn_file_actions_adddup2 prototype   184 /usr/include/spawn.h extern int posix_spawn_file_actions_adddup2 (posix_spawn_file_actions_t *
+posix_spawn_file_actions_addopen prototype   169 /usr/include/spawn.h extern int posix_spawn_file_actions_addopen (posix_spawn_file_actions_t *
+posix_spawn_file_actions_destroy prototype   164 /usr/include/spawn.h extern int posix_spawn_file_actions_destroy (posix_spawn_file_actions_t *
+posix_spawn_file_actions_init prototype   160 /usr/include/spawn.h extern int posix_spawn_file_actions_init (posix_spawn_file_actions_t *
+posix_spawn_file_actions_t typedef      50 /usr/include/spawn.h } posix_spawn_file_actions_t;
+posix_spawnattr_destroy prototype    94 /usr/include/spawn.h extern int posix_spawnattr_destroy (posix_spawnattr_t *__attr) __THROW;
+posix_spawnattr_getflags prototype   120 /usr/include/spawn.h extern int posix_spawnattr_getflags (const posix_spawnattr_t *__restrict
+posix_spawnattr_getpgroup prototype   129 /usr/include/spawn.h extern int posix_spawnattr_getpgroup (const posix_spawnattr_t *__restrict
+posix_spawnattr_getschedparam prototype   148 /usr/include/spawn.h extern int posix_spawnattr_getschedparam (const posix_spawnattr_t *
+posix_spawnattr_getschedpolicy prototype   138 /usr/include/spawn.h extern int posix_spawnattr_getschedpolicy (const posix_spawnattr_t *
+posix_spawnattr_getsigdefault prototype    98 /usr/include/spawn.h extern int posix_spawnattr_getsigdefault (const posix_spawnattr_t *
+posix_spawnattr_getsigmask prototype   110 /usr/include/spawn.h extern int posix_spawnattr_getsigmask (const posix_spawnattr_t *__restrict
+posix_spawnattr_init prototype    91 /usr/include/spawn.h extern int posix_spawnattr_init (posix_spawnattr_t *__attr) __THROW;
+posix_spawnattr_setflags prototype   125 /usr/include/spawn.h extern int posix_spawnattr_setflags (posix_spawnattr_t *_attr,
+posix_spawnattr_setpgroup prototype   134 /usr/include/spawn.h extern int posix_spawnattr_setpgroup (posix_spawnattr_t *__attr,
+posix_spawnattr_setschedparam prototype   154 /usr/include/spawn.h extern int posix_spawnattr_setschedparam (posix_spawnattr_t *__restrict __attr,
+posix_spawnattr_setschedpolicy prototype   144 /usr/include/spawn.h extern int posix_spawnattr_setschedpolicy (posix_spawnattr_t *__attr,
+posix_spawnattr_setsigdefault prototype   104 /usr/include/spawn.h extern int posix_spawnattr_setsigdefault (posix_spawnattr_t *__restrict __attr,
+posix_spawnattr_setsigmask prototype   115 /usr/include/spawn.h extern int posix_spawnattr_setsigmask (posix_spawnattr_t *__restrict __attr,
+posix_spawnattr_t typedef      39 /usr/include/spawn.h } posix_spawnattr_t;
+posix_spawnp     prototype    84 /usr/include/spawn.h extern int posix_spawnp (pid_t *__pid, const char *__file,

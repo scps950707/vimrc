@@ -1,0 +1,5 @@
+_ALLOCA_H        macro        19 /usr/include/alloca.h #define _ALLOCA_H 1
+__need_size_t    macro        23 /usr/include/alloca.h #define __need_size_t
+alloca           macro        29 /usr/include/alloca.h #undef alloca
+alloca           macro        35 /usr/include/alloca.h # define alloca(size) __builtin_alloca (size)
+alloca           prototype    32 /usr/include/alloca.h extern void *alloca (size_t __size) __THROW;

@@ -1,0 +1,32 @@
+MNTOPT_DEFAULTS  macro        42 /usr/include/mntent.h #define MNTOPT_DEFAULTS "defaults" /* Use all default options. */
+MNTOPT_NOAUTO    macro        47 /usr/include/mntent.h #define MNTOPT_NOAUTO "noauto" /* Do not auto mount. */
+MNTOPT_NOSUID    macro        46 /usr/include/mntent.h #define MNTOPT_NOSUID "nosuid" /* No set uid allowed. */
+MNTOPT_RO        macro        43 /usr/include/mntent.h #define MNTOPT_RO "ro" /* Read only. */
+MNTOPT_RW        macro        44 /usr/include/mntent.h #define MNTOPT_RW "rw" /* Read/write. */
+MNTOPT_SUID      macro        45 /usr/include/mntent.h #define MNTOPT_SUID "suid" /* Set uid allowed. */
+MNTTAB           macro        29 /usr/include/mntent.h #define MNTTAB _PATH_MNTTAB /* Deprecated alias. */
+MNTTYPE_IGNORE   macro        36 /usr/include/mntent.h #define MNTTYPE_IGNORE "ignore" /* Ignore this entry. */
+MNTTYPE_NFS      macro        37 /usr/include/mntent.h #define MNTTYPE_NFS "nfs" /* Network file system. */
+MNTTYPE_SWAP     macro        38 /usr/include/mntent.h #define MNTTYPE_SWAP "swap" /* Swap device. */
+MOUNTED          macro        32 /usr/include/mntent.h #define MOUNTED _PATH_MOUNTED /* Deprecated alias. */
+_MNTENT_H        macro        20 /usr/include/mntent.h #define _MNTENT_H 1
+__need_FILE      macro        23 /usr/include/mntent.h #define __need_FILE
+addmntent        prototype    83 /usr/include/mntent.h extern int addmntent (FILE *__restrict __stream,
+endmntent        prototype    87 /usr/include/mntent.h extern int endmntent (FILE *__stream) __THROW;
+getmntent        prototype    71 /usr/include/mntent.h extern struct mntent *getmntent (FILE *__stream) __THROW;
+getmntent_r      prototype    75 /usr/include/mntent.h extern struct mntent *getmntent_r (FILE *__restrict __stream,
+hasmntopt        prototype    91 /usr/include/mntent.h extern char *hasmntopt (const struct mntent *__mnt,
+mnt_dir          member       56 /usr/include/mntent.h char *mnt_dir; /* Directory mounted on. */
+mnt_freq         member       59 /usr/include/mntent.h int mnt_freq; /* Dump frequency (in days). */
+mnt_fsname       member       55 /usr/include/mntent.h char *mnt_fsname; /* Device or server for filesystem. */
+mnt_opts         member       58 /usr/include/mntent.h char *mnt_opts; /* Comma-separated options for fs. */
+mnt_passno       member       60 /usr/include/mntent.h int mnt_passno; /* Pass number for `fsck'. */
+mnt_type         member       57 /usr/include/mntent.h char *mnt_type; /* Type of filesystem: ufs, nfs, etc. */
+mntent           struct       53 /usr/include/mntent.h struct mntent
+mntent::mnt_dir  member       56 /usr/include/mntent.h char *mnt_dir; /* Directory mounted on. */
+mntent::mnt_freq member       59 /usr/include/mntent.h int mnt_freq; /* Dump frequency (in days). */
+mntent::mnt_fsname member       55 /usr/include/mntent.h char *mnt_fsname; /* Device or server for filesystem. */
+mntent::mnt_opts member       58 /usr/include/mntent.h char *mnt_opts; /* Comma-separated options for fs. */
+mntent::mnt_passno member       60 /usr/include/mntent.h int mnt_passno; /* Pass number for `fsck'. */
+mntent::mnt_type member       57 /usr/include/mntent.h char *mnt_type; /* Type of filesystem: ufs, nfs, etc. */
+setmntent        prototype    66 /usr/include/mntent.h extern FILE *setmntent (const char *__file, const char *__mode) __THROW;

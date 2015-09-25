@@ -1,0 +1,79 @@
+_TGMATH_H        macro        23 /usr/include/tgmath.h #define _TGMATH_H 1
+__TGMATH_BINARY_FIRST_REAL_ONLY macro        89 /usr/include/tgmath.h # define __TGMATH_BINARY_FIRST_REAL_ONLY(Val1, Val2, Fct) \
+__TGMATH_BINARY_REAL_IMAG macro       209 /usr/include/tgmath.h # define __TGMATH_BINARY_REAL_IMAG(Val1, Val2, Fct, Cfct) \
+__TGMATH_BINARY_REAL_ONLY macro        97 /usr/include/tgmath.h # define __TGMATH_BINARY_REAL_ONLY(Val1, Val2, Fct) \
+__TGMATH_TERNARY_FIRST_SECOND_REAL_ONLY macro       115 /usr/include/tgmath.h # define __TGMATH_TERNARY_FIRST_SECOND_REAL_ONLY(Val1, Val2, Val3, Fct) \
+__TGMATH_TERNARY_REAL_ONLY macro       133 /usr/include/tgmath.h # define __TGMATH_TERNARY_REAL_ONLY(Val1, Val2, Val3, Fct) \
+__TGMATH_UNARY_IMAG macro       174 /usr/include/tgmath.h # define __TGMATH_UNARY_IMAG(Val, Cfct) \
+__TGMATH_UNARY_REAL_IMAG macro       160 /usr/include/tgmath.h # define __TGMATH_UNARY_REAL_IMAG(Val, Fct, Cfct) \
+__TGMATH_UNARY_REAL_IMAG_RET_REAL macro       187 /usr/include/tgmath.h # define __TGMATH_UNARY_REAL_IMAG_RET_REAL(Val, Fct, Cfct) \
+__TGMATH_UNARY_REAL_ONLY macro        73 /usr/include/tgmath.h # define __TGMATH_UNARY_REAL_ONLY(Val, Fct) \
+__TGMATH_UNARY_REAL_RET_ONLY macro        81 /usr/include/tgmath.h # define __TGMATH_UNARY_REAL_RET_ONLY(Val, RetType, Fct) \
+__floating_type  macro        50 /usr/include/tgmath.h # define __floating_type(type) \
+__floating_type  macro        55 /usr/include/tgmath.h # define __floating_type(type) (((type) 0.25) && ((type) 0.25 - 1))
+__tgmath_real_type macro        65 /usr/include/tgmath.h # define __tgmath_real_type(expr) \
+__tgmath_real_type_sub macro        60 /usr/include/tgmath.h # define __tgmath_real_type_sub(T, E) \
+__tgml           macro        39 /usr/include/tgmath.h # define __tgml(fct) fct
+__tgml           macro        41 /usr/include/tgmath.h # define __tgml(fct) fct ## l
+acos             macro       253 /usr/include/tgmath.h #define acos(Val) __TGMATH_UNARY_REAL_IMAG (Val, acos, cacos)
+acosh            macro       272 /usr/include/tgmath.h #define acosh(Val) __TGMATH_UNARY_REAL_IMAG (Val, acosh, cacosh)
+asin             macro       255 /usr/include/tgmath.h #define asin(Val) __TGMATH_UNARY_REAL_IMAG (Val, asin, casin)
+asinh            macro       274 /usr/include/tgmath.h #define asinh(Val) __TGMATH_UNARY_REAL_IMAG (Val, asinh, casinh)
+atan             macro       257 /usr/include/tgmath.h #define atan(Val) __TGMATH_UNARY_REAL_IMAG (Val, atan, catan)
+atan2            macro       259 /usr/include/tgmath.h #define atan2(Val1, Val2) __TGMATH_BINARY_REAL_ONLY (Val1, Val2, atan2)
+atanh            macro       276 /usr/include/tgmath.h #define atanh(Val) __TGMATH_UNARY_REAL_IMAG (Val, atanh, catanh)
+carg             macro       437 /usr/include/tgmath.h #define carg(Val) __TGMATH_UNARY_REAL_IMAG_RET_REAL (Val, carg, carg)
+cbrt             macro       335 /usr/include/tgmath.h #define cbrt(Val) __TGMATH_UNARY_REAL_ONLY (Val, cbrt)
+ceil             macro       341 /usr/include/tgmath.h #define ceil(Val) __TGMATH_UNARY_REAL_ONLY (Val, ceil)
+cimag            macro       449 /usr/include/tgmath.h #define cimag(Val) __TGMATH_UNARY_REAL_IMAG_RET_REAL (Val, cimag, cimag)
+conj             macro       440 /usr/include/tgmath.h #define conj(Val) __TGMATH_UNARY_IMAG (Val, conj)
+copysign         macro       382 /usr/include/tgmath.h #define copysign(Val1, Val2) __TGMATH_BINARY_REAL_ONLY (Val1, Val2, copysign)
+cos              macro       262 /usr/include/tgmath.h #define cos(Val) __TGMATH_UNARY_REAL_IMAG (Val, cos, ccos)
+cosh             macro       279 /usr/include/tgmath.h #define cosh(Val) __TGMATH_UNARY_REAL_IMAG (Val, cosh, ccosh)
+cproj            macro       443 /usr/include/tgmath.h #define cproj(Val) __TGMATH_UNARY_IMAG (Val, cproj)
+creal            macro       452 /usr/include/tgmath.h #define creal(Val) __TGMATH_UNARY_REAL_IMAG_RET_REAL (Val, creal, creal)
+erf              macro       385 /usr/include/tgmath.h #define erf(Val) __TGMATH_UNARY_REAL_ONLY (Val, erf)
+erfc             macro       386 /usr/include/tgmath.h #define erfc(Val) __TGMATH_UNARY_REAL_ONLY (Val, erfc)
+exp              macro       289 /usr/include/tgmath.h #define exp(Val) __TGMATH_UNARY_REAL_IMAG (Val, exp, cexp)
+exp2             macro       317 /usr/include/tgmath.h #define exp2(Val) __TGMATH_UNARY_REAL_ONLY (Val, exp2)
+expm1            macro       308 /usr/include/tgmath.h #define expm1(Val) __TGMATH_UNARY_REAL_ONLY (Val, expm1)
+fabs             macro       344 /usr/include/tgmath.h #define fabs(Val) __TGMATH_UNARY_REAL_IMAG_RET_REAL (Val, fabs, cabs)
+fdim             macro       420 /usr/include/tgmath.h #define fdim(Val1, Val2) __TGMATH_BINARY_REAL_ONLY (Val1, Val2, fdim)
+floor            macro       347 /usr/include/tgmath.h #define floor(Val) __TGMATH_UNARY_REAL_ONLY (Val, floor)
+fma              macro       430 /usr/include/tgmath.h #define fma(Val1, Val2, Val3) \
+fmax             macro       423 /usr/include/tgmath.h #define fmax(Val1, Val2) __TGMATH_BINARY_REAL_ONLY (Val1, Val2, fmax)
+fmin             macro       426 /usr/include/tgmath.h #define fmin(Val1, Val2) __TGMATH_BINARY_REAL_ONLY (Val1, Val2, fmin)
+fmod             macro       350 /usr/include/tgmath.h #define fmod(Val1, Val2) __TGMATH_BINARY_REAL_ONLY (Val1, Val2, fmod)
+frexp            macro       292 /usr/include/tgmath.h #define frexp(Val1, Val2) __TGMATH_BINARY_FIRST_REAL_ONLY (Val1, Val2, frexp)
+hypot            macro       332 /usr/include/tgmath.h #define hypot(Val1, Val2) __TGMATH_BINARY_REAL_ONLY (Val1, Val2, hypot)
+ilogb            macro       416 /usr/include/tgmath.h #define ilogb(Val) __TGMATH_UNARY_REAL_RET_ONLY (Val, int, ilogb)
+ldexp            macro       295 /usr/include/tgmath.h #define ldexp(Val1, Val2) __TGMATH_BINARY_FIRST_REAL_ONLY (Val1, Val2, ldexp)
+lgamma           macro       388 /usr/include/tgmath.h #define lgamma(Val) __TGMATH_UNARY_REAL_ONLY (Val, lgamma)
+llrint           macro       373 /usr/include/tgmath.h #define llrint(Val) __TGMATH_UNARY_REAL_RET_ONLY (Val, long long int, llrint)
+llround          macro       378 /usr/include/tgmath.h #define llround(Val) __TGMATH_UNARY_REAL_RET_ONLY (Val, long long int, llround)
+log              macro       298 /usr/include/tgmath.h #define log(Val) __TGMATH_UNARY_REAL_IMAG (Val, log, clog)
+log10            macro       302 /usr/include/tgmath.h # define log10(Val) __TGMATH_UNARY_REAL_IMAG (Val, log10, __clog10)
+log10            macro       304 /usr/include/tgmath.h # define log10(Val) __TGMATH_UNARY_REAL_ONLY (Val, log10)
+log1p            macro       311 /usr/include/tgmath.h #define log1p(Val) __TGMATH_UNARY_REAL_ONLY (Val, log1p)
+log2             macro       320 /usr/include/tgmath.h #define log2(Val) __TGMATH_UNARY_REAL_ONLY (Val, log2)
+logb             macro       314 /usr/include/tgmath.h #define logb(Val) __TGMATH_UNARY_REAL_ONLY (Val, logb)
+lrint            macro       372 /usr/include/tgmath.h #define lrint(Val) __TGMATH_UNARY_REAL_RET_ONLY (Val, long int, lrint)
+lround           macro       377 /usr/include/tgmath.h #define lround(Val) __TGMATH_UNARY_REAL_RET_ONLY (Val, long int, lround)
+nearbyint        macro       354 /usr/include/tgmath.h #define nearbyint(Val) __TGMATH_UNARY_REAL_ONLY (Val, nearbyint)
+nextafter        macro       396 /usr/include/tgmath.h #define nextafter(Val1, Val2) __TGMATH_BINARY_REAL_ONLY (Val1, Val2, nextafter)
+nexttoward       macro       397 /usr/include/tgmath.h #define nexttoward(Val1, Val2) \
+pow              macro       326 /usr/include/tgmath.h #define pow(Val1, Val2) __TGMATH_BINARY_REAL_IMAG (Val1, Val2, pow, cpow)
+remainder        macro       401 /usr/include/tgmath.h #define remainder(Val1, Val2) __TGMATH_BINARY_REAL_ONLY (Val1, Val2, remainder)
+remquo           macro       367 /usr/include/tgmath.h #define remquo(Val1, Val2, Val3) \
+rint             macro       393 /usr/include/tgmath.h #define rint(Val) __TGMATH_UNARY_REAL_ONLY (Val, rint)
+round            macro       358 /usr/include/tgmath.h #define round(Val) __TGMATH_UNARY_REAL_ONLY (Val, round)
+scalb            macro       405 /usr/include/tgmath.h # define scalb(Val1, Val2) __TGMATH_BINARY_REAL_ONLY (Val1, Val2, scalb)
+scalbln          macro       412 /usr/include/tgmath.h #define scalbln(Val1, Val2) \
+scalbn           macro       409 /usr/include/tgmath.h #define scalbn(Val1, Val2) __TGMATH_BINARY_FIRST_REAL_ONLY (Val1, Val2, scalbn)
+sin              macro       264 /usr/include/tgmath.h #define sin(Val) __TGMATH_UNARY_REAL_IMAG (Val, sin, csin)
+sinh             macro       281 /usr/include/tgmath.h #define sinh(Val) __TGMATH_UNARY_REAL_IMAG (Val, sinh, csinh)
+sqrt             macro       329 /usr/include/tgmath.h #define sqrt(Val) __TGMATH_UNARY_REAL_IMAG (Val, sqrt, csqrt)
+tan              macro       266 /usr/include/tgmath.h #define tan(Val) __TGMATH_UNARY_REAL_IMAG (Val, tan, ctan)
+tanh             macro       283 /usr/include/tgmath.h #define tanh(Val) __TGMATH_UNARY_REAL_IMAG (Val, tanh, ctanh)
+tgamma           macro       387 /usr/include/tgmath.h #define tgamma(Val) __TGMATH_UNARY_REAL_ONLY (Val, tgamma)
+trunc            macro       362 /usr/include/tgmath.h #define trunc(Val) __TGMATH_UNARY_REAL_ONLY (Val, trunc)
