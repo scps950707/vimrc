@@ -7,8 +7,6 @@ DIR_MANUAL=/usr/share/man/man3/
 install:clang
 	cat vimrc > ${FILE_VIMRC}
 	mkdir ${DIR_VIM}
-	mkdir ${DIR_VIM}/${DIR_COLORS}
-	mkdir ${DIR_VIM}/${DIR_CTAGS}
 	cp -r ${DIR_COLORS} ${DIR_VIM}
 	cp -r ${DIR_CTAGS} ${DIR_VIM}
 	sudo cp manC++/* ${DIR_MANUAL}
@@ -20,7 +18,7 @@ install:clang
 	vim -c "PlugInstall"
 
 update:
-	cp vimrc ${FILE_VIMRC}
+	cat vimrc > ${FILE_VIMRC}
 	cp plugins.vim ${DIR_VIM}
 	cp -r ${DIR_COLORS} ${DIR_VIM}
 	cp -r ${DIR_CTAGS} ${DIR_VIM}
