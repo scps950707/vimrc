@@ -53,9 +53,9 @@ let g:syntastic_error_symbol='✗'
 let g:syntastic_warning_symbol='⚠'
 let g:syntastic_enable_highlighting = 1
 let g:syntastic_stl_format = '[%E{Errors:%e}%B{, }%W{Warnings:%w}]'
-let g:syntastic_cpp_compiler_options = '-std=c++11'
+let g:syntastic_cpp_compiler_options = '-std=c++11 -Wall'
 let g:syntastic_cpp_check_header = 1
-let g:syntastic_c_compiler_options = '-std=c99'
+let g:syntastic_c_compiler_options = '-std=c99 -Wall -D_XOPEN_SOURCE=500 -D_POSIX_SOURCE'
 let g:syntastic_c_check_header = 1
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_loc_list_height = 5
