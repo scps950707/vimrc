@@ -73,7 +73,7 @@
 - ```F7``` call Replace()
 - ```F8``` call Replace(confirm)
 - ```F9``` visual selection replace
-- ```\m ``` Man
+- ```,m ``` Man
 - ```SPACE``` <Plug>(wildfire-fuel)
 - ```C-SPACE``` <Plug>(wildfire-water)
 - ```Ctrl-c``` paste from vim to system's clipboard
