@@ -17,7 +17,7 @@ set mouse=a "滑鼠所有模式下啟動
 set showcmd "在狀態列顯示目前所執行的指令
 set autochdir "自動轉換目錄到前檔案所在目錄
 set fileencodings=utf8 "vim預設編碼
-set hlsearch "高亮搜尋結果
+" set hlsearch "高亮搜尋結果
 set ignorecase "搜尋時忽略大小寫
 set ruler "顯示下方狀態列
 set autoindent "自動縮排
@@ -30,7 +30,7 @@ set shiftwidth=2 "縮排寬度
 set scrolloff=3 "滾動時游標下方保留幾行
 set wildmode=longest,list "命令模式自動補齊的型態
 set wildignore+=*.o,*.a,*.so,*.obj,*.exe,*.lib,*.ncb,*.opt,*.plg,.svn,.git
-set wildignore+=*.png,*.jpg,*.gif,*.svg,*.xpm
+set wildignore+=*.png,*.jpg,*.gif,*.svg,*.xpm,*.swp
 set nowrap "程式碼折行
 set nofoldenable "程式碼預設不折疊
 set foldmethod=syntax "偵測程式碼格式來折疊

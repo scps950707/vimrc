@@ -20,6 +20,7 @@
 
 ###Development
 - [X] [nerdtree](https://github.com/scrooloose/nerdtree) 
+- [X] [nerdtree-git-plugin](https://github.com/Xuyuanp/nerdtree-git-plugin)
 - [X] [editorconfig-vim](https://github.com/editorconfig/editorconfig-vim) 
 - [X] [vim-gitgutter](https://github.com/airblade/vim-gitgutter) 
 - [X] [indentLine](https://github.com/Yggdroot/indentLine) 
@@ -53,6 +54,7 @@
 
 ###Other
 - [ ] [consolas-powerline-vim](https://github.com/eugeii/consolas-powerline-vim)
+- [X] [vimcdoc-tw](https://github.com/chusiang/vimcdoc-tw)
 
 
 ###Mapping keys
