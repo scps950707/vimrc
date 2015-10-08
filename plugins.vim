@@ -76,6 +76,8 @@ let g:wildfire_objects = ["i'", 'i"', "i)", "i]", "i}"]
 Plug 'Mizuchi/STL-Syntax'
 Plug 'kien/ctrlp.vim'
 Plug 'tpope/vim-fugitive'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'chusiang/vimcdoc-tw'
 
 
 " ---Theme---
