@@ -56,5 +56,4 @@ map <F8> :<C-u>call Replace(1,input('Replace '.expand('<cword>').' with: '))<CR>
 vmap <F9> "hy:%s/<C-r>h//g<left><left>
 vnoremap <C-c> "+y
 
-autocmd FileType c set formatprg=astyle\ -s2A1k3W3jD
-autocmd FileType cpp set formatprg=astyle\ -s2A1xlk3W3jD
+autocmd FileType c,cpp set formatprg=astyle\ -A1s2pDHk3W3j
