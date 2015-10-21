@@ -11,7 +11,7 @@ let g:acp_behaviorSnipmateLength=1
 Plug 'L9'
 Plug 'Townk/vim-autoclose'
 Plug 'Rip-Rip/clang_complete'
-let g:clang_snippets=1 
+" let g:clang_snippets=1 
 let g:clang_close_preview=1
 let g:clang_use_library=1
 autocmd FileType cpp let g:clang_user_options = '-std=c++11'
@@ -21,9 +21,22 @@ let g:clang_library_path='/usr/lib/llvm-3.4/lib/'
 " let g:protodefprotogetter='~/.vim/plugged/vim-protodef/pullproto.pl'
 " let g:disable_protodef_sorting=1
 " Plug 'derekwyatt/vim-fswitch'
-autocmd FileType c,cpp set dictionary+=~/.vim/ctags/tags/*
-" autocmd FileType c,cpp set tags+=~/.vim/ctags/usr_include_tags
-
+" autocmd FileType c,cpp set dictionary+=~/.vim/ctags/tags/*
+autocmd FileType c,cpp set tags+=~/tags
+" autocmd FileType c,cpp set dictionary+=~/tags
+Plug 'vim-scripts/OmniCppComplete'
+set omnifunc=omni#cpp#complete
+set completeopt=menu,longest,menuone
+let OmniCpp_NamespaceSearch = 2
+let OmniCpp_GlobalScopeSearch = 1
+let OmniCpp_ShowAccess = 1
+let OmniCpp_ShowPrototypeInAbbr = 1 
+let OmniCpp_MayCompleteDot = 1   
+let OmniCpp_MayCompleteArrow = 1 
+let OmniCpp_MayCompleteScope = 1 
+let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]
+let OmniCpp_SelectFirstItem = 2
+let OmniCpp_DisplayMode=1
 
 " ---Development---
 
@@ -58,7 +71,7 @@ let g:syntastic_cpp_check_header = 1
 let g:syntastic_c_compiler_options = '-std=c99 -Wall -D_XOPEN_SOURCE=500 -D_POSIX_SOURCE'
 let g:syntastic_c_check_header = 1
 let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_loc_list_height = 5
+let g:syntastic_loc_list_height = 2
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
@@ -78,6 +91,7 @@ Plug 'kien/ctrlp.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'chusiang/vimcdoc-tw'
+Plug 'jez/vim-superman'
 
 
 " ---Theme---
