@@ -8,6 +8,7 @@ Plug 'othree/vim-autocomplpop'
 " let g:acp_completeOption = '.,w,b,k,d,u,t,i'
 let g:acp_completeOption = '.,w,b,k,t'
 let g:acp_behaviorSnipmateLength=1
+" let g:acp_behaviorKeywordCommand = "\<C-x>\<C-o>"
 Plug 'L9'
 Plug 'Townk/vim-autoclose'
 Plug 'Rip-Rip/clang_complete'

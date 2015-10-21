@@ -1,7 +1,3 @@
-call plug#begin('~/.vim/plugged')
-source ${HOME}/.vim/plugins.vim
-call plug#end()
-
 set cursorline "顯示當前游標列
 " set cursorcolumn "顯示當前游標行
 set nocompatible "VIM 不使用和VI相容的模式
@@ -57,3 +53,6 @@ vmap <F9> "hy:%s/<C-r>h//g<left><left>
 vnoremap <C-c> "+y
 
 autocmd FileType c,cpp set formatprg=astyle\ -A1s2pDHk3W3j
+call plug#begin('~/.vim/plugged')
+source ${HOME}/.vim/plugins.vim
+call plug#end()
