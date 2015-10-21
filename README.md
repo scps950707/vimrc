@@ -69,7 +69,7 @@
 - ```Ctrl-n``` g:multi_cursor_next_key
 - ```Ctrl-m``` g:multi_cursor_prev_key
 - ```Ctrl-q``` g:multi_cursor_skip_key
- - ```ESC``` g:multi_cursor_quit_key
+- ```ESC``` g:multi_cursor_quit_key
 - ```,z``` MBEbn
 -  ```,x``` MBEbp
 - ```F7``` call Replace()
