@@ -8,7 +8,6 @@ filetype plugin on " 偵測不同文件類型開啟相對應套件
 filetype indent on " 偵測不同語言採取相對應縮排
 set t_Co=256
 colorscheme jellybeans
-
 set mouse=a "滑鼠所有模式下啟動
 set showcmd "在狀態列顯示目前所執行的指令
 set autochdir "自動轉換目錄到前檔案所在目錄
@@ -24,6 +23,7 @@ set tabstop=2 "tab字元數
 set softtabstop=2 " 讓 vim 把連續數量的空格視為一個制表符
 set shiftwidth=2 "縮排寬度
 set scrolloff=3 "滾動時游標下方保留幾行
+set wildmenu
 set wildmode=longest,list "命令模式自動補齊的型態
 set wildignore+=*.o,*.a,*.so,*.obj,*.exe,*.lib,*.ncb,*.opt,*.plg,.svn,.git
 set wildignore+=*.png,*.jpg,*.gif,*.svg,*.xpm,*.swp
@@ -31,6 +31,11 @@ set nowrap "程式碼折行
 set nofoldenable "程式碼預設不折疊
 set foldmethod=syntax "偵測程式碼格式來折疊
 set foldcolumn=1 "VIM最左邊預留一塊foldcolumn的空間顯示折疊情形
+
+"auto close preview window
+" autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
+" autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+autocmd CompleteDone * pclose 
 
 function! Replace(confirm,replace)
   let flag = ''
@@ -52,7 +57,21 @@ map <F8> :<C-u>call Replace(1,input('Replace '.expand('<cword>').' with: '))<CR>
 vmap <F9> "hy:%s/<C-r>h//g<left><left>
 vnoremap <C-c> "+y
 
+
+" Plugins Management
 autocmd FileType c,cpp set formatprg=astyle\ -A1s2pDHk3W3j
 call plug#begin('~/.vim/plugged')
 source ${HOME}/.vim/plugins.vim
 call plug#end()
+" Plugins Management
+
+" Tags Management
+source ${HOME}/.vim/ctags/set_tags
+" Tags Management
+
+" Make these commonly mistyped commands still work
+command! WQ wq
+command! Wq wq
+command! Wqa wqa
+command! W w
+command! Q q

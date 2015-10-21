@@ -33,9 +33,9 @@
 - [X] [vim-commentary](https://github.com/tpope/vim-commentary) 
 - [X] [minibufexpl](https://github.com/fholgado/minibufexpl.vim)
 - [X] man.vim 
-- [X] [wildfire.vim](https://github.com/gcmt/wildfire.vim)
+- [ ] [wildfire.vim](https://github.com/gcmt/wildfire.vim)
 - [X] [Mizuchi/STL-Syntax](https://github.com/Mizuchi/STL-Syntax)
-- [X] [ctrlp](https://github.com/kien/ctrlp.vim)
+- [ ] [ctrlp](https://github.com/kien/ctrlp.vim)
 - [ ] [tabular](https://github.com/godlygeek/tabular)
 - [X] [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive)
 - [ ] [SingleCompile](https://github.com/xuhdev/SingleCompile)
@@ -49,7 +49,7 @@
 - [ ] [flazz/vim-colorschemes](https://github.com/flazz/vim-colorschemes) 
 - [ ] [tomorrow-theme](https://github.com/chriskempson/tomorrow-theme) 
 - [ ] [Apprentice](https://github.com/romainl/Apprentice) 
-- [X] [colorselecor](https://github.com/c9s/colorselector.vim)
+- [ ] [colorselecor](https://github.com/c9s/colorselector.vim)
 
 
 ###Other
@@ -78,6 +78,4 @@
 - ```F8``` call Replace(confirm)
 - ```F9``` visual selection replace
 - ```,m ``` Man
-- ```SPACE``` <Plug>(wildfire-fuel)
-- ```C-SPACE``` <Plug>(wildfire-water)
 - ```Ctrl-c``` paste from vim to system's clipboard
