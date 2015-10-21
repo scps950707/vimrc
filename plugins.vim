@@ -22,21 +22,7 @@ let g:clang_library_path='/usr/lib/llvm-3.4/lib/'
 " let g:disable_protodef_sorting=1
 " Plug 'derekwyatt/vim-fswitch'
 " autocmd FileType c,cpp set dictionary+=~/.vim/ctags/tags/*
-autocmd FileType c,cpp set tags+=~/tags
-" autocmd FileType c,cpp set dictionary+=~/tags
-Plug 'vim-scripts/OmniCppComplete'
-set omnifunc=omni#cpp#complete
-set completeopt=menu,longest,menuone
-let OmniCpp_NamespaceSearch = 2
-let OmniCpp_GlobalScopeSearch = 1
-let OmniCpp_ShowAccess = 1
-let OmniCpp_ShowPrototypeInAbbr = 1 
-let OmniCpp_MayCompleteDot = 1   
-let OmniCpp_MayCompleteArrow = 1 
-let OmniCpp_MayCompleteScope = 1 
-let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]
-let OmniCpp_SelectFirstItem = 2
-let OmniCpp_DisplayMode=1
+autocmd FileType c,cpp set tags+=~/.vim/ctags/tags/stdio.h
 
 " ---Development---
 
