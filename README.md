@@ -55,6 +55,7 @@
 ###Other
 - [ ] [consolas-powerline-vim](https://github.com/eugeii/consolas-powerline-vim)
 - [X] [vimcdoc-tw](https://github.com/chusiang/vimcdoc-tw)
+- [X][vim-superman](https://github.com/jez/vim-superman)
 
 
 ###Mapping keys
