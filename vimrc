@@ -67,7 +67,7 @@ call plug#end()
 " Plugins Management
 
 " Tags Management
-source ${HOME}/.vim/ctags/set_tags
+" source ${HOME}/.vim/ctags/set_tags
 " Tags Management
 
 " Make these commonly mistyped commands still work
