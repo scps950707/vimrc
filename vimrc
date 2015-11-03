@@ -56,6 +56,7 @@ map <F7> :<C-u>call Replace(0,input('Replace '.expand('<cword>').' with: '))<CR>
 map <F8> :<C-u>call Replace(1,input('Replace '.expand('<cword>').' with: '))<CR>
 vmap <F9> "hy:%s/<C-r>h//g<left><left>
 vnoremap <C-c> "+y
+map <C-a> <C-X><C-O>
 
 
 " Plugins Management

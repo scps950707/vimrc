@@ -28,8 +28,8 @@
 - [ ] [SrcExpl](https://github.com/wesleyche/SrcExpl) 
 - [X] [tagbar](https://github.com/majutsushi/tagbar) 
 - [ ] [taglist.vim](https://github.com/vim-scripts/taglist.vim) 
-- [ ] [syntastic](https://github.com/scrooloose/syntastic) 
-- [X] [syntastic(loclist_state)](https://github.com/scrooloose/syntastic/tree/loclist_state) 
+- [X] [syntastic](https://github.com/scrooloose/syntastic) 
+- [] [syntastic(loclist_state)](https://github.com/scrooloose/syntastic/tree/loclist_state) 
 - [X] [vim-commentary](https://github.com/tpope/vim-commentary) 
 - [X] [minibufexpl](https://github.com/fholgado/minibufexpl.vim)
 - [X] man.vim 
@@ -70,10 +70,11 @@
 - ```Ctrl-m``` g:multi_cursor_prev_key
 - ```Ctrl-q``` g:multi_cursor_skip_key
 - ```ESC``` g:multi_cursor_quit_key
-- ```,z``` MBEbn
--  ```,x``` MBEbp
+- ```Shift-z``` MBEbn
+-  ```Shift-x``` MBEbp
 - ```F7``` call Replace()
 - ```F8``` call Replace(confirm)
 - ```F9``` visual selection replace
 - ```,m ``` Man
 - ```Ctrl-c``` paste from vim to system's clipboard
+- ```Ctrl``` omnicomplete trigger

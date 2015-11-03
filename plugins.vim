@@ -39,27 +39,28 @@ let g:tagbar_width = 30
 let g:tagbar_compact=1
 let g:tagbar_sort = 0
 nmap <F3> :<C-u>TagbarToggle<CR>
-" Plug 'scrooloose/syntastic'
-Plug 'scrooloose/syntastic',{ 'branch': 'loclist_state' }
+Plug 'scrooloose/syntastic'
+" Plug 'scrooloose/syntastic',{ 'branch': 'loclist_state' }
+" Plug 'scrooloose/syntastic',{ 'branch': 'sphinx_checker' }
 let g:syntastic_error_symbol='✗'
 let g:syntastic_warning_symbol='⚠'
 let g:syntastic_enable_highlighting = 1
 let g:syntastic_stl_format = '[%E{Errors:%e}%B{, }%W{Warnings:%w}]'
 let g:syntastic_cpp_compiler_options = '-std=c++11 -Wall'
 let g:syntastic_cpp_check_header = 1
-let g:syntastic_c_compiler_options = '-std=c99 -Wall -D_XOPEN_SOURCE=500 -D_POSIX_SOURCE'
+let g:syntastic_c_compiler_options = '-std=c99 -Wall -D_XOPEN_SOURCE=500'
 let g:syntastic_c_check_header = 1
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_loc_list_height = 2
-let g:syntastic_auto_loc_list = 1
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_loc_list_height = 2
+" let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 Plug 'tpope/vim-commentary'
 map <F5> gcc
 map <F6> gc
 Plug 'fholgado/minibufexpl.vim'
-nmap ,z :MBEbp<CR>
-nmap ,x :MBEbn<CR>
+nmap <S-z> :MBEbp<CR>
+nmap <S-x> :MBEbn<CR>
 source $VIMRUNTIME/ftplugin/man.vim
 nmap ,m :Man 3 <cword><CR>
 Plug 'Mizuchi/STL-Syntax'
