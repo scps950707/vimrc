@@ -56,7 +56,7 @@ map <F7> :<C-u>call Replace(0,input('Replace '.expand('<cword>').' with: '))<CR>
 map <F8> :<C-u>call Replace(1,input('Replace '.expand('<cword>').' with: '))<CR>
 vmap <F9> "hy:%s/<C-r>h//g<left><left>
 vnoremap <C-c> "+y
-map <C-a> <C-X><C-O>
+imap <C-a> <C-X><C-O>
 
 
 " Plugins Management
@@ -68,6 +68,18 @@ call plug#end()
 
 " Tags Management
 " source ${HOME}/.vim/ctags/set_tags
+
+function! Project_tags()
+let command = ''
+  " let command = 'gcc -M -I ~/include *.[ch] | sed -e ''s/[\\ ]/\n/g'' | sed -e ''/^$/d'' -e ''/\.o:[ \t]*$/d''|ctags -L - --sort=yes --c++-kinds=+px --fields=+iaS --extra=+q '
+  let command = 'gcc -M -I ~/include *.[ch]
+        \| sed -e ''s/[\\ ]/\n/g ''
+        \| sed -e ''/^$/d'' -e ''/\.o:[ \t]*$/d''
+        \| ctags -L - --sort=yes --c++-kinds=+px --fields=+iaS --extra=+q '
+  execute '!'.command
+endfunction
+map <F10> :<C-u>call Project_tags()<CR>
+
 " Tags Management
 
 " Make these commonly mistyped commands still work
