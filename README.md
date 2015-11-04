@@ -29,7 +29,6 @@
 - [X] [tagbar](https://github.com/majutsushi/tagbar) 
 - [ ] [taglist.vim](https://github.com/vim-scripts/taglist.vim) 
 - [X] [syntastic](https://github.com/scrooloose/syntastic) 
-- [] [syntastic(loclist_state)](https://github.com/scrooloose/syntastic/tree/loclist_state) 
 - [X] [vim-commentary](https://github.com/tpope/vim-commentary) 
 - [X] [minibufexpl](https://github.com/fholgado/minibufexpl.vim)
 - [X] man.vim 
@@ -75,6 +74,7 @@
 - ```F7``` call Replace()
 - ```F8``` call Replace(confirm)
 - ```F9``` visual selection replace
+- ```F10``` call Project_tags()
 - ```,m ``` Man
 - ```Ctrl-c``` paste from vim to system's clipboard
-- ```Ctrl``` omnicomplete trigger
+- ```Ctrl-a``` omnicomplete trigger
