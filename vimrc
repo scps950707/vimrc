@@ -31,6 +31,7 @@ set nowrap "程式碼折行
 set nofoldenable "程式碼預設不折疊
 set foldmethod=syntax "偵測程式碼格式來折疊
 set foldcolumn=1 "VIM最左邊預留一塊foldcolumn的空間顯示折疊情形
+set previewheight=1
 
 "auto close preview window
 " autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
@@ -57,7 +58,7 @@ map <F8> :<C-u>call Replace(1,input('Replace '.expand('<cword>').' with: '))<CR>
 vmap <F9> "hy:%s/<C-r>h//g<left><left>
 vnoremap <C-c> "+y
 imap <C-a> <C-X><C-O>
-
+cnoremap help vert help 
 
 " Plugins Management
 autocmd FileType c,cpp set formatprg=astyle\ -A1s2pDHk3W3j
