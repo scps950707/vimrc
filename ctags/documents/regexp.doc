@@ -1,7 +1,0 @@
-_REGEXP_H        macro        20 /usr/include/regexp.h #define _REGEXP_H 1
-advance          prototype   220 /usr/include/regexp.h extern int advance (const char *__restrict __string,
-compile          function    101 /usr/include/regexp.h compile (char *__restrict instring, char *__restrict expbuf,
-loc1             externvar    85 /usr/include/regexp.h extern char *loc1;
-loc2             externvar    86 /usr/include/regexp.h extern char *loc2;
-locs             externvar    90 /usr/include/regexp.h extern char *locs;
-step             prototype   214 /usr/include/regexp.h extern int step (const char *__restrict __string,

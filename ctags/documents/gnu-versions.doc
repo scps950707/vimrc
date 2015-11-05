@@ -1,5 +1,0 @@
-_GNU_GETOPT_INTERFACE_VERSION macro        49 /usr/include/gnu-versions.h #define _GNU_GETOPT_INTERFACE_VERSION 2 /* vs posix/getopt.c and
-_GNU_GLOB_INTERFACE_VERSION macro        48 /usr/include/gnu-versions.h #define _GNU_GLOB_INTERFACE_VERSION 1 /* vs posix/glob.c */
-_GNU_OBSTACK_INTERFACE_VERSION macro        46 /usr/include/gnu-versions.h #define _GNU_OBSTACK_INTERFACE_VERSION 1 /* vs malloc/obstack.c */
-_GNU_REGEX_INTERFACE_VERSION macro        47 /usr/include/gnu-versions.h #define _GNU_REGEX_INTERFACE_VERSION 1 /* vs posix/regex.c */
-_GNU_VERSIONS_H  macro        20 /usr/include/gnu-versions.h #define _GNU_VERSIONS_H 1

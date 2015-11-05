@@ -1,5 +1,0 @@
-LAST_UNUSED_STAB_CODE enumerator   12 /usr/include/stab.h LAST_UNUSED_STAB_CODE
-__GNU_STAB__     macro         5 /usr/include/stab.h #define __GNU_STAB__
-__define_stab    macro         7 /usr/include/stab.h #define __define_stab(NAME, CODE, STRING) NAME=CODE,
-__define_stab    macro        15 /usr/include/stab.h #undef __define_stab
-__stab_debug_code enum          9 /usr/include/stab.h enum __stab_debug_code

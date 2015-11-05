@@ -1,3 +1,0 @@
-_PTY_H           macro        20 /usr/include/pty.h #define _PTY_H 1
-forkpty          prototype    39 /usr/include/pty.h extern int forkpty (int *__amaster, char *__name,
-openpty          prototype    33 /usr/include/pty.h extern int openpty (int *__amaster, int *__aslave, char *__name,

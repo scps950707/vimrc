@@ -1,2 +1,0 @@
-_UCONTEXT_H      macro        21 /usr/include/ucontext.h #define _UCONTEXT_H 1
-makecontext      prototype    47 /usr/include/ucontext.h extern void makecontext (ucontext_t *__ucp, void (*__func) (void),

@@ -1,4 +1,0 @@
-_EXECINFO_H      macro        19 /usr/include/execinfo.h #define _EXECINFO_H 1
-backtrace        prototype    27 /usr/include/execinfo.h extern int backtrace (void **__array, int __size) __nonnull ((1));
-backtrace_symbols prototype    32 /usr/include/execinfo.h extern char **backtrace_symbols (void *const *__array, int __size)
-backtrace_symbols_fd prototype    38 /usr/include/execinfo.h extern void backtrace_symbols_fd (void *const *__array, int __size, int __fd)

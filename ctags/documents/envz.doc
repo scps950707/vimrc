@@ -1,7 +1,0 @@
-_ENVZ_H          macro        20 /usr/include/envz.h #define _ENVZ_H 1
-envz_add         prototype    49 /usr/include/envz.h extern error_t envz_add (char **__restrict __envz,
-envz_entry       prototype    33 /usr/include/envz.h extern char *envz_entry (const char *__restrict __envz, size_t __envz_len,
-envz_get         prototype    39 /usr/include/envz.h extern char *envz_get (const char *__restrict __envz, size_t __envz_len,
-envz_merge       prototype    57 /usr/include/envz.h extern error_t envz_merge (char **__restrict __envz,
-envz_remove      prototype    63 /usr/include/envz.h extern void envz_remove (char **__restrict __envz,
-envz_strip       prototype    68 /usr/include/envz.h extern void envz_strip (char **__restrict __envz,

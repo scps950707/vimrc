@@ -1,4 +1,0 @@
-_BYTESWAP_H      macro        19 /usr/include/byteswap.h #define _BYTESWAP_H 1
-bswap_16         macro        31 /usr/include/byteswap.h #define bswap_16(x) __bswap_16 (x)
-bswap_32         macro        34 /usr/include/byteswap.h #define bswap_32(x) __bswap_32 (x)
-bswap_64         macro        37 /usr/include/byteswap.h #define bswap_64(x) __bswap_64 (x)
