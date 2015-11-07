@@ -55,6 +55,8 @@
 - [ ] [consolas-powerline-vim](https://github.com/eugeii/consolas-powerline-vim)
 - [X] [vimcdoc-tw](https://github.com/chusiang/vimcdoc-tw)
 - [X] [vim-superman](https://github.com/jez/vim-superman)
+- [X] [ctags](http://ctags.sourceforge.net/)
+- [X] [ctags-generator](https://github.com/scps950707/ctags-generator)
 
 
 ###Mapping keys
@@ -74,7 +76,8 @@
 - ```F7``` call Replace()
 - ```F8``` call Replace(confirm)
 - ```F9``` visual selection replace
-- ```F10``` call Project_tags()
+- ```Ctrl-F10``` call TagFullDepend()
+- ```F10``` call TagFileIncluded()
 - ```,m ``` Man
 - ```Ctrl-c``` paste from vim to system's clipboard
 - ```Ctrl-a``` omnicomplete trigger

@@ -68,18 +68,41 @@ call plug#end()
 " Plugins Management
 
 " Tags Management
-" source ${HOME}/.vim/ctags/set_tags
 
-function! Project_tags()
-let command = ''
-  " let command = 'gcc -M -I ~/include *.[ch] | sed -e ''s/[\\ ]/\n/g'' | sed -e ''/^$/d'' -e ''/\.o:[ \t]*$/d''|ctags -L - --sort=yes --c++-kinds=+px --fields=+iaS --extra=+q '
-  let command = 'gcc -M -I ~/include *.[ch]
-        \| sed -e ''s/[\\ ]/\n/g ''
-        \| sed -e ''/^$/d'' -e ''/\.o:[ \t]*$/d''
-        \| ctags -L - --sort=yes --c++-kinds=+px --fields=+iaS --extra=+q '
+function! TagFullDepend()
+  let command = ''
+  let command = ' gcc -M *.[ch] 
+        \| sed -e ''s/[\\ ]/\n/g'' 
+        \| sed -e ''/^$/d'' -e ''/\.o:[ \t]*$/d'' 
+        \| ctags -L - --sort=yes --c-kinds=defgpstux --fields=+iaS --extra=+q 
+        \-I __attribute__,__attribute_malloc__,__attribute_pure__,__wur,__THROW '
   execute '!'.command
 endfunction
-map <F10> :<C-u>call Project_tags()<CR>
+map <C-F10> :<C-u>call TagFullDepend()<CR>
+
+function! TagFileIncluded()
+  let find_include = ''
+  let find_include = '
+        \sed -n ''/\#include/p'' *.[ch] 
+        \| sed -e ''s/[<>"" ]//g'' 
+        \| sed -e ''s/\#include//g'' 
+        \| sed -e ''s/^.*\///g'' 
+        \| sort -u 
+        \ > myincludeheaders '
+  let generate_ctags = ''
+  let generate_ctags = '
+        \gcc -M *.[ch] 
+        \| sed -e ''s/[\\ ]/\n/g'' 
+        \| sed -e ''/^$/d'' -e ''/\.o:[ \t]*$/d'' 
+        \| grep -f myincludeheaders 
+        \| sort -u 
+        \| ctags -L - --sort=yes --c-kinds=defgpstux --fields=+iaS --extra=+q 
+        \-I __attribute__,__attribute_malloc__,__attribute_pure__,__wur,__THROW '
+  let remove_tmp = ''
+  let remove_tmp = 'rm myincludeheaders'
+  execute '!'.find_include.' && '.generate_ctags.' && '.remove_tmp
+endfunction
+map <F10> :<C-u>call TagFileIncluded()<CR>
 
 " Tags Management
 
