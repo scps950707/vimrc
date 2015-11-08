@@ -8,11 +8,15 @@ Plug 'othree/vim-autocomplpop'
 " let g:acp_completeOption = '.,w,b,k,d,u,t,i'
 let g:acp_completeOption = '.,w,b,k,t'
 let g:acp_behaviorSnipmateLength=1
+let g:acp_completeoptPreview=1
 Plug 'L9'
 Plug 'Townk/vim-autoclose'
 Plug 'Rip-Rip/clang_complete'
 let g:clang_close_preview=1
 let g:clang_use_library=1
+let g:clang_snippets=1
+let g:clang_trailing_placeholder=1
+" usage:first argument finish -> esc -> tab -> next argument
 autocmd FileType cpp let g:clang_user_options = '-std=c++11'
 autocmd FileType c let g:clang_user_options = '-std=c99'
 let g:clang_library_path='/usr/lib/llvm-3.4/lib/'
