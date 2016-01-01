@@ -11,7 +11,6 @@
 - [X] [vim-snipmate](https://github.com/garbas/vim-snipmate) 
 - [X] [vim-autocomplpop](https://github.com/othree/vim-autocomplpop)
 - [X] [L9](https://github.com/vim-scripts/L9)
-- [ ] [c.vim](https://github.com/scps950707/c.vim) 
 - [X] [vim-autoclose](https://github.com/Townk/vim-autoclose)
 - [X] [clang_complete](https://github.com/Rip-Rip/clang_complete)
 - [ ] [vim-protodef](https://github.com/scps950707/vim-protodef)
@@ -36,7 +35,7 @@
 - [X] [Mizuchi/STL-Syntax](https://github.com/Mizuchi/STL-Syntax)
 - [ ] [ctrlp](https://github.com/kien/ctrlp.vim)
 - [ ] [tabular](https://github.com/godlygeek/tabular)
-- [X] [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive)
+- [ ] [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive)
 - [ ] [SingleCompile](https://github.com/xuhdev/SingleCompile)
 - [X] [astyle](http://astyle.sourceforge.net/)
 
