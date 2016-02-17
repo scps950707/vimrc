@@ -80,4 +80,6 @@
 - ```F10``` call TagFileIncluded()
 - ```,m ``` Man
 - ```Ctrl-c``` paste from vim to system's clipboard
+- ```Ctrl-x``` cut from vim to system's clipboard
+- ```Ctrl-d``` set pastetoggle
 - ```Ctrl-a``` omnicomplete trigger
