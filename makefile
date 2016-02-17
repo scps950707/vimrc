@@ -8,9 +8,8 @@ install:clang
 	cat vimrc > ${FILE_VIMRC}
 	mkdir ${DIR_VIM}
 	cp -r ${DIR_COLORS} ${DIR_VIM}
-	# cp -r ${DIR_CTAGS} ${DIR_VIM}
 	sudo cp manC++/* ${DIR_MANUAL}
-	cp plugins.vim ${DIR_VIM} 
+	cp plugins.vim ${DIR_VIM}
 	sudo apt-get install curl
 	sudo apt-get install astyle
 	curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
@@ -21,9 +20,8 @@ update:
 	cat vimrc > ${FILE_VIMRC}
 	cp plugins.vim ${DIR_VIM}
 	cp -r ${DIR_COLORS} ${DIR_VIM}
-	# cp -r ${DIR_CTAGS} ${DIR_VIM}
 
-set_default:
+clean:
 	rm -rf ~/.vim ~/.vimrc ~/.viminfo
 
 help:
