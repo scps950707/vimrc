@@ -25,6 +25,18 @@ let g:clang_library_path='/usr/lib/llvm-3.4/lib/'
 
 Plug 'scrooloose/nerdtree'
 nmap <F2> :<C-u>NERDTreeToggle<CR>
+Plug 'Xuyuanp/nerdtree-git-plugin'
+let g:NERDTreeIndicatorMapCustom = {
+    \ "Modified"  : "Modified",
+    \ "Staged"    : "Staged",
+    \ "Untracked" : "Untracked",
+    \ "Renamed"   : "Renamed",
+    \ "Unmerged"  : "Unmerged",
+    \ "Deleted"   : "Deleted",
+    \ "Dirty"     : "Dirty",
+    \ "Clean"     : "Clean",
+    \ "Unknown"   : "Unknown"
+    \ }
 Plug 'editorconfig/editorconfig-vim'
 Plug 'airblade/vim-gitgutter'
 nmap ,g :GitGutterToggle<CR>
@@ -71,10 +83,10 @@ Plug 'Mizuchi/STL-Syntax'
 Plug 'kien/ctrlp.vim'
 let g:ctrlp_working_path_mode = 'a'
 " Plug 'tpope/vim-fugitive'
-Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'chusiang/vimcdoc-tw'
 set helplang=tw
 Plug 'jez/vim-superman'
+Plug 'bronson/vim-trailing-whitespace'
 
 
 " ---Theme---

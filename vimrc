@@ -11,7 +11,9 @@ colorscheme jellybeans
 set mouse=a "滑鼠所有模式下啟動
 set showcmd "在狀態列顯示目前所執行的指令
 set autochdir "自動轉換目錄到前檔案所在目錄
-set fileencodings=utf8 "vim預設編碼
+set fileencodings=utf-8 "vim預設編碼
+set encoding=utf-8
+set fileencodings=utf-8
 " set hlsearch "高亮搜尋結果
 set ignorecase "搜尋時忽略大小寫
 set ruler "顯示下方狀態列
@@ -32,11 +34,17 @@ set nofoldenable "程式碼預設不折疊
 set foldmethod=syntax "偵測程式碼格式來折疊
 set foldcolumn=1 "VIM最左邊預留一塊foldcolumn的空間顯示折疊情形
 set previewheight=1
+set nobackup
+set noswapfile
+set fileformats=unix,dos,mac
+set viminfo='20,\"50    " read/write a .viminfo file, don't store more than 50 lines of registers
+set history=20
+set wildchar=<TAB> " such as <TAB> in shell
 
 "auto close preview window
 " autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 " autocmd InsertLeave * if pumvisible() == 0|pclose|endif
-autocmd CompleteDone * pclose 
+autocmd CompleteDone * pclose
 
 function! Replace(confirm,replace)
   let flag = ''
@@ -57,8 +65,9 @@ map <F7> :<C-u>call Replace(0,input('Replace '.expand('<cword>').' with: '))<CR>
 map <F8> :<C-u>call Replace(1,input('Replace '.expand('<cword>').' with: '))<CR>
 vmap <F9> "hy:%s/<C-r>h//g<left><left>
 vnoremap <C-c> "+y
+vnoremap <C-x> "+x
 imap <C-a> <C-X><C-O>
-cnoremap help vert help 
+cnoremap help vert help
 
 " Plugins Management
 autocmd FileType c,cpp set formatprg=astyle\ -A1s2pDHk3W3j
@@ -71,10 +80,10 @@ call plug#end()
 
 function! TagFullDepend()
   let command = ''
-  let command = ' gcc -M *.[ch] 
-        \| sed -e ''s/[\\ ]/\n/g'' 
-        \| sed -e ''/^$/d'' -e ''/\.o:[ \t]*$/d'' 
-        \| ctags -L - --sort=yes --c-kinds=defgpstux --fields=+iaS --extra=+q 
+  let command = ' gcc -M *.[ch]
+        \| sed -e ''s/[\\ ]/\n/g''
+        \| sed -e ''/^$/d'' -e ''/\.o:[ \t]*$/d''
+        \| ctags -L - --sort=yes --c-kinds=defgpstux --fields=+iaS --extra=+q
         \-I __attribute__,__attribute_malloc__,__attribute_pure__,__wur,__THROW '
   execute '!'.command
 endfunction
@@ -83,20 +92,20 @@ map <C-F10> :<C-u>call TagFullDepend()<CR>
 function! TagFileIncluded()
   let find_include = ''
   let find_include = '
-        \sed -n ''/\#include/p'' *.[ch] 
-        \| sed -e ''s/[<>"" ]//g'' 
-        \| sed -e ''s/\#include//g'' 
-        \| sed -e ''s/^.*\///g'' 
-        \| sort -u 
+        \sed -n ''/\#include/p'' *.[ch]
+        \| sed -e ''s/[<>"" ]//g''
+        \| sed -e ''s/\#include//g''
+        \| sed -e ''s/^.*\///g''
+        \| sort -u
         \ > myincludeheaders '
   let generate_ctags = ''
   let generate_ctags = '
-        \gcc -M *.[ch] 
-        \| sed -e ''s/[\\ ]/\n/g'' 
-        \| sed -e ''/^$/d'' -e ''/\.o:[ \t]*$/d'' 
-        \| grep -f myincludeheaders 
-        \| sort -u 
-        \| ctags -L - --sort=yes --c-kinds=defgpstux --fields=+iaS --extra=+q 
+        \gcc -M *.[ch]
+        \| sed -e ''s/[\\ ]/\n/g''
+        \| sed -e ''/^$/d'' -e ''/\.o:[ \t]*$/d''
+        \| grep -f myincludeheaders
+        \| sort -u
+        \| ctags -L - --sort=yes --c-kinds=defgpstux --fields=+iaS --extra=+q
         \-I __attribute__,__attribute_malloc__,__attribute_pure__,__wur,__THROW '
   let remove_tmp = ''
   let remove_tmp = 'rm myincludeheaders'
@@ -104,11 +113,15 @@ function! TagFileIncluded()
 endfunction
 map <F10> :<C-u>call TagFileIncluded()<CR>
 
-" Tags Management
 
 " Make these commonly mistyped commands still work
-command! WQ wq
-command! Wq wq
-command! Wqa wqa
-command! W w
-command! Q q
+cnoreabbrev W! w!
+cnoreabbrev Q! q!
+cnoreabbrev Qall! qall!
+cnoreabbrev Wq wq
+cnoreabbrev Wa wa
+cnoreabbrev wQ wq
+cnoreabbrev WQ wq
+cnoreabbrev W w
+cnoreabbrev Q q
+cnoreabbrev Qall qall
