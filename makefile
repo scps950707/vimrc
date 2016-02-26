@@ -20,7 +20,7 @@ update:
 	cp plugins.vim ${DIR_VIM}
 	cp -r ${DIR_COLORS} ${DIR_VIM}
 
-clean:
+uninstall:
 	rm -rf ~/.vim ~/.vimrc ~/.viminfo
 
 help:
