@@ -61,25 +61,27 @@
 
 ###Mapping keys
 
-- ```F2``` nerdtree
-- ```F3``` tagbar
-- ```F4``` autoformat (astyle)
-- ```F5``` vim-commemtary-gcc
-- ```F6``` vim-commemtary-gc
-- ```,g``` gitgutter
-- ```Ctrl-n``` g:multi_cursor_next_key
-- ```Ctrl-m``` g:multi_cursor_prev_key
-- ```Ctrl-q``` g:multi_cursor_skip_key
-- ```ESC``` g:multi_cursor_quit_key
-- ```Shift-z``` MBEbn
--  ```Shift-x``` MBEbp
-- ```F7``` call Replace()
-- ```F8``` call Replace(confirm)
-- ```F9``` visual selection replace
-- ```Ctrl-F10``` call TagFullDepend()
-- ```F10``` call TagFileIncluded()
-- ```,m ``` Man
-- ```Ctrl-c``` paste from vim to system's clipboard
-- ```Ctrl-x``` cut from vim to system's clipboard
-- ```Ctrl-d``` set pastetoggle
-- ```Ctrl-a``` omnicomplete trigger
+|Key|Mappings|
+|----------|----------|
+|F2|nerdtree|
+|F3|tagbar|
+|F4|autoformat (astyle)|
+|F5|vim-commemtary-gcc|
+|F6|vim-commemtary-gc|
+|,g|gitgutter|
+|Ctrl-n|g:multi_cursor_next_key|
+|Ctrl-m|g:multi_cursor_prev_key|
+|Ctrl-q|g:multi_cursor_skip_key|
+|ESC|g:multi_cursor_quit_key|
+|Shift-z|MBEbn|
+|Shift-x|MBEbp|
+|F7|call Replace()|
+|F8|call Replace(confirm)|
+|F9|visual selection replace|
+|Ctrl-F10|call TagFullDepend()|
+|F10|call TagFileIncluded()|
+|,m |Man|
+|Ctrl-c|paste from vim to system's clipboard|
+|Ctrl-x|cut from vim to system's clipboard
+|Ctrl-d|set pastetoggle|
+|Ctrl-a|omnicomplete trigger|
