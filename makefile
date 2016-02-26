@@ -1,10 +1,9 @@
 FILE_VIMRC=${HOME}/.vimrc
 DIR_VIM=${HOME}/.vim
 DIR_COLORS=colors
-DIR_CTAGS=ctags
 DIR_MANUAL=/usr/share/man/man3/
 
-install:clang
+install:clang ctags
 	cat vimrc > ${FILE_VIMRC}
 	mkdir ${DIR_VIM}
 	cp -r ${DIR_COLORS} ${DIR_VIM}
@@ -29,3 +28,6 @@ help:
 
 clang:
 	sudo apt-get -y install clang libclang-dev
+
+ctags:
+	sudo apt-get -y install exuberant-ctags
