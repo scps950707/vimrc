@@ -15,7 +15,7 @@
 - [X] [clang_complete](https://github.com/Rip-Rip/clang_complete)
 - [ ] [vim-protodef](https://github.com/scps950707/vim-protodef)
 - [ ] [vim-fswitch](https://github.com/derekwyatt/vim-fswitch)
-- [X] [vim-gutentags](https://github.com/ludovicchabant/vim-gutentags)
+- [ ] [vim-gutentags](https://github.com/ludovicchabant/vim-gutentags)
 
 
 ###Development
