@@ -22,7 +22,7 @@ uninstall:
 	rm -rf ~/.vim ~/.vimrc ~/.viminfo
 
 help:
-	@echo "install update set_default"
+	@echo "make install"
 
 clang:
 	sudo apt-get -y install clang libclang-dev
