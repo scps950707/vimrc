@@ -89,6 +89,9 @@ set helplang=tw
 Plug 'jez/vim-superman'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'jreybert/vimagit'
+Plug 'mattn/gist-vim'
+let g:gist_clip_command = 'xclip -selection clipboard'
+Plug 'mattn/webapi-vim'
 
 " ---Theme---
 

@@ -40,6 +40,7 @@
 - [ ] [SingleCompile](https://github.com/xuhdev/SingleCompile)
 - [X] [astyle](http://astyle.sourceforge.net/)
 - [X] [vim-trailing-whitespace](https://github.com/bronson/vim-trailing-whitespace)
+- [X] [gist-vim](https://github.com/mattn/gist-vim)
 
 
 
