@@ -1,13 +1,11 @@
 FILE_VIMRC=${HOME}/.vimrc
 DIR_VIM=${HOME}/.vim
 DIR_COLORS=colors
-DIR_MANUAL=/usr/share/man/man3/
 
 install:clang ctags
 	cat vimrc > ${FILE_VIMRC}
 	mkdir ${DIR_VIM}
 	cp -r ${DIR_COLORS} ${DIR_VIM}
-	sudo cp manC++/* ${DIR_MANUAL}
 	cp plugins.vim ${DIR_VIM}
 	sudo apt-get install curl
 	sudo apt-get install astyle
