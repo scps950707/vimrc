@@ -28,15 +28,15 @@ Plug 'scrooloose/nerdtree'
 nmap <F2> :<C-u>NERDTreeToggle<CR>
 Plug 'Xuyuanp/nerdtree-git-plugin'
 let g:NERDTreeIndicatorMapCustom = {
-    \ "Modified"  : "Modified",
-    \ "Staged"    : "Staged",
-    \ "Untracked" : "Untracked",
-    \ "Renamed"   : "Renamed",
-    \ "Unmerged"  : "Unmerged",
-    \ "Deleted"   : "Deleted",
-    \ "Dirty"     : "Dirty",
-    \ "Clean"     : "Clean",
-    \ "Unknown"   : "Unknown"
+    \ "Modified"  : "M",
+    \ "Staged"    : "A",
+    \ "Untracked" : "?",
+    \ "Renamed"   : "R",
+    \ "Unmerged"  : "U",
+    \ "Deleted"   : "D",
+    \ "Dirty"     : "?",
+    \ "Clean"     : "C",
+    \ "Unknown"   : "?"
     \ }
 Plug 'editorconfig/editorconfig-vim'
 Plug 'airblade/vim-gitgutter'
