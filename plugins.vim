@@ -92,6 +92,8 @@ Plug 'jreybert/vimagit'
 Plug 'mattn/gist-vim'
 let g:gist_clip_command = 'xclip -selection clipboard'
 Plug 'mattn/webapi-vim'
+Plug 'moll/vim-bbye'
+nnoremap ,q :Bdelete<CR>
 
 " ---Theme---
 

@@ -41,7 +41,7 @@
 - [X] [astyle](http://astyle.sourceforge.net/)
 - [X] [vim-trailing-whitespace](https://github.com/bronson/vim-trailing-whitespace)
 - [X] [gist-vim](https://github.com/mattn/gist-vim)
-
+- [X] [moll/vim-bbye](https://github.com/moll/vim-bbye)
 
 
 ###Theme
@@ -87,3 +87,4 @@
 |Ctrl-c|paste from vim to system's clipboard|
 |Ctrl-x|cut from vim to system's clipboard
 |Ctrl-a|omnicomplete trigger|
+|,q|Bdelete|
