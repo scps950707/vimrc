@@ -26,6 +26,7 @@ let g:clang_library_path='/usr/lib/llvm-3.4/lib/'
 
 Plug 'scrooloose/nerdtree'
 nmap <F2> :<C-u>NERDTreeToggle<CR>
+let g:NERDTreeWinSize=15
 Plug 'Xuyuanp/nerdtree-git-plugin'
 let g:NERDTreeIndicatorMapCustom = {
     \ "Modified"  : "M",
