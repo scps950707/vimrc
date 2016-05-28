@@ -84,9 +84,13 @@ call plug#end()
 
 function! TagFullDepend()
   let command = ''
-  let command = ' gcc -M *.[ch]
-        \| sed -e ''s/[\\ ]/\n/g''
-        \| sed -e ''/^$/d'' -e ''/\.o:[ \t]*$/d''
+  let command = '
+        \ls -R
+        \| grep ''\..*[ch]p*p*''
+        \| xargs gcc -M
+        \| sed ''s/[\\ ]/\n/g''
+        \| sed ''/^$/d;/\.o:[ \t]*$/d''
+        \| sort -u
         \| ctags -L - --sort=yes --c-kinds=defgpstux --fields=+iaS --extra=+q
         \ -I __attribute__,__attribute_malloc__,__attribute_pure__,__wur,__THROW '
   execute '!'.command
@@ -96,17 +100,19 @@ map <C-F10> :<C-u>call TagFullDepend()<CR>
 function! TagFileIncluded()
   let find_include = ''
   let find_include = '
-        \sed -n ''/\#include/p'' *.[ch]
-        \| sed -e ''s/[<>"" ]//g''
-        \| sed -e ''s/\#include//g''
-        \| sed -e ''s/^.*\///g''
+        \ls -R
+        \| grep ''\..*[ch]p*p*''
+        \| xargs sed -n ''/include/p''
+        \| sed ''s/\#include//g;s/[>< ]//g''
         \| sort -u
         \ > myincludeheaders '
   let generate_ctags = ''
   let generate_ctags = '
-        \gcc -M *.[ch]
-        \| sed -e ''s/[\\ ]/\n/g''
-        \| sed -e ''/^$/d'' -e ''/\.o:[ \t]*$/d''
+        \ls -R
+        \| grep ''\..*[ch]p*p*''
+        \| xargs gcc -M
+        \| sed ''s/[\\ ]/\n/g''
+        \| sed ''/^$/d;/\.o:[ \t]*$/d''
         \| grep -f myincludeheaders
         \| sort -u
         \| ctags -L - --sort=yes --c-kinds=defgpstux --fields=+iaS --extra=+q
