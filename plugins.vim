@@ -84,7 +84,7 @@ nmap ,m :Man 3 <cword><CR>
 Plug 'Mizuchi/STL-Syntax'
 Plug 'kien/ctrlp.vim'
 let g:ctrlp_working_path_mode = 'a'
-" Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-fugitive'
 Plug 'chusiang/vimcdoc-tw'
 set helplang=tw
 Plug 'jez/vim-superman'
