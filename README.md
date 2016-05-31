@@ -40,6 +40,7 @@
 - [ ] [SingleCompile](https://github.com/xuhdev/SingleCompile)
 - [X] [astyle](http://astyle.sourceforge.net/)
 - [X] [vim-trailing-whitespace](https://github.com/bronson/vim-trailing-whitespace)
+- [X] [vimagit](https://github.com/jreybert/vimagit)
 - [X] [gist-vim](https://github.com/mattn/gist-vim)
 - [X] [moll/vim-bbye](https://github.com/moll/vim-bbye)
 
@@ -83,7 +84,7 @@
 |F9|visual selection replace|
 |Ctrl-F10|call TagFullDepend()|
 |F10|call TagFileIncluded()|
-|,m |Man|
+|,m |Magit|
 |Ctrl-c|paste from vim to system's clipboard|
 |Ctrl-x|cut from vim to system's clipboard
 |Ctrl-a|omnicomplete trigger|

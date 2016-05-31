@@ -80,7 +80,6 @@ Plug 'fholgado/minibufexpl.vim'
 nmap <S-z> :MBEbp<CR>
 nmap <S-x> :MBEbn<CR>
 source $VIMRUNTIME/ftplugin/man.vim
-nmap ,m :Man 3 <cword><CR>
 Plug 'Mizuchi/STL-Syntax'
 Plug 'kien/ctrlp.vim'
 let g:ctrlp_working_path_mode = 'a'
@@ -90,6 +89,7 @@ set helplang=tw
 Plug 'jez/vim-superman'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'jreybert/vimagit'
+nmap ,m :Magit<CR>
 Plug 'mattn/gist-vim'
 let g:gist_clip_command = 'xclip -selection clipboard'
 Plug 'mattn/webapi-vim'
