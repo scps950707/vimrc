@@ -36,7 +36,7 @@
 - [X] [Mizuchi/STL-Syntax](https://github.com/Mizuchi/STL-Syntax)
 - [ ] [ctrlp](https://github.com/kien/ctrlp.vim)
 - [ ] [tabular](https://github.com/godlygeek/tabular)
-- [ ] [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive)
+- [X] [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive)
 - [ ] [SingleCompile](https://github.com/xuhdev/SingleCompile)
 - [X] [astyle](http://astyle.sourceforge.net/)
 - [X] [vim-trailing-whitespace](https://github.com/bronson/vim-trailing-whitespace)
