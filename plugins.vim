@@ -96,5 +96,4 @@ Plug 'bling/vim-airline'
 " ---Other---
 Plug 'chusiang/vimcdoc-tw'
 set helplang=tw
-Plug 'jez/vim-superman'
 Plug 'mattn/webapi-vim'
