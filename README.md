@@ -64,7 +64,7 @@
 - [X] [webapi-vim](https://github.com/mattn/webapi-vim)
 
 
-###Mapping keys
+###Key Mappings
 
 |Key|Mappings|
 |----------|----------|
@@ -73,19 +73,19 @@
 |F4|autoformat (astyle)|
 |F5|vim-commemtary-gcc|
 |F6|vim-commemtary-gc|
-|,g|gitgutter|
-|Ctrl-n|g:multi_cursor_next_key|
-|Ctrl-m|g:multi_cursor_prev_key|
-|Ctrl-q|g:multi_cursor_skip_key|
-|ESC|g:multi_cursor_quit_key|
-|Shift-z|MBEbn|
-|Shift-x|MBEbp|
 |F7|call Replace()|
 |F8|GundoToggle|
-|Ctrl-F10|call TagFullDepend()|
 |F10|call TagFileIncluded()|
+|Ctrl-F10|call TagFullDepend()|
+|,g|gitgutter|
 |,m |Magit|
+|,q|Bdelete|
 |Ctrl-c|paste from vim to system's clipboard|
 |Ctrl-x|cut from vim to system's clipboard
 |Ctrl-a|omnicomplete trigger|
-|,q|Bdelete|
+|Ctrl-n|g:multi_cursor_next_key|
+|Ctrl-m|g:multi_cursor_prev_key|
+|Ctrl-q|g:multi_cursor_skip_key|
+|Shift-z|MBEbn|
+|Shift-x|MBEbp|
+|ESC|g:multi_cursor_quit_key|
