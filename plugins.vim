@@ -50,16 +50,12 @@ let g:multi_cursor_next_key='<C-n>'
 let g:multi_cursor_prev_key='<C-m>'
 let g:multi_cursor_skip_key='<C-q>'
 let g:multi_cursor_quit_key='<Esc>'
-" Plug 'wesleyche/SrcExpl'
-" nmap <F4> :<C-u>SrcExplToggle<CR>
 Plug 'majutsushi/tagbar'
 let g:tagbar_width = 30
 let g:tagbar_compact=1
 let g:tagbar_sort = 0
 nmap <F3> :<C-u>TagbarToggle<CR>
 Plug 'scrooloose/syntastic'
-" Plug 'scrooloose/syntastic',{ 'branch': 'loclist_state' }
-" Plug 'scrooloose/syntastic',{ 'branch': 'sphinx_checker' }
 let g:syntastic_error_symbol='✗'
 let g:syntastic_warning_symbol='⚠'
 let g:syntastic_enable_highlighting = 1
@@ -95,7 +91,6 @@ nnoremap ,q :Bdelete<CR>
 " ---Theme---
 
 Plug 'bling/vim-airline'
-" Plug 'c9s/colorselector.vim'
 
 
 " ---Other---
