@@ -80,8 +80,6 @@
 |Shift-z|MBEbn|
 |Shift-x|MBEbp|
 |F7|call Replace()|
-|F8|call Replace(confirm)|
-|F9|visual selection replace|
 |Ctrl-F10|call TagFullDepend()|
 |F10|call TagFileIncluded()|
 |,m |Magit|

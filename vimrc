@@ -62,8 +62,8 @@ endfunction
 " nmap <F4> <C-u>gg=G<CR>
 nmap <F4> <C-u>gggqG<CR>
 map <F7> :<C-u>call Replace(0,input('Replace '.expand('<cword>').' with: '))<CR>
-map <F8> :<C-u>call Replace(1,input('Replace '.expand('<cword>').' with: '))<CR>
-vmap <F9> "hy:%s/<C-r>h//g<left><left>
+" map <F8> :<C-u>call Replace(1,input('Replace '.expand('<cword>').' with: '))<CR>
+" vmap <F9> "hy:%s/<C-r>h//g<left><left>
 vnoremap <C-c> "+y
 " paste from vim to system's clipboard
 vnoremap <C-x> "+x
