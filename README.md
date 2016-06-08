@@ -33,23 +33,23 @@
 - [X] [minibufexpl](https://github.com/fholgado/minibufexpl.vim)
 - [X] man.vim
 - [ ] [wildfire.vim](https://github.com/gcmt/wildfire.vim)
-- [X] [Mizuchi/STL-Syntax](https://github.com/Mizuchi/STL-Syntax)
+- [X] [STL-Syntax](https://github.com/Mizuchi/STL-Syntax)
 - [ ] [ctrlp](https://github.com/kien/ctrlp.vim)
 - [ ] [tabular](https://github.com/godlygeek/tabular)
-- [X] [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive)
+- [X] [vim-fugitive](https://github.com/tpope/vim-fugitive)
 - [ ] [SingleCompile](https://github.com/xuhdev/SingleCompile)
 - [X] [astyle](http://astyle.sourceforge.net/)
 - [X] [vim-trailing-whitespace](https://github.com/bronson/vim-trailing-whitespace)
 - [X] [vimagit](https://github.com/jreybert/vimagit)
 - [X] [gist-vim](https://github.com/mattn/gist-vim)
-- [X] [moll/vim-bbye](https://github.com/moll/vim-bbye)
+- [X] [vim-bbye](https://github.com/moll/vim-bbye)
 - [X] [gundo.vim](https://github.com/sjl/gundo.vim)
 
 
 ###Theme
 - [X] [vim-airline](https://github.com/bling/vim-airline)
 - [ ] [vim-powerline](https://github.com/Lokaltog/vim-powerline)
-- [ ] [flazz/vim-colorschemes](https://github.com/flazz/vim-colorschemes)
+- [ ] [vim-colorschemes](https://github.com/flazz/vim-colorschemes)
 - [ ] [tomorrow-theme](https://github.com/chriskempson/tomorrow-theme)
 - [ ] [Apprentice](https://github.com/romainl/Apprentice)
 - [ ] [colorselecor](https://github.com/c9s/colorselector.vim)
