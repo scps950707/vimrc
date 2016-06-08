@@ -87,6 +87,9 @@ Plug 'mattn/gist-vim'
 let g:gist_clip_command = 'xclip -selection clipboard'
 Plug 'moll/vim-bbye'
 nnoremap ,q :Bdelete<CR>
+Plug 'sjl/gundo.vim'
+let g:gundo_close_on_revert=1
+nnoremap <F8> :GundoToggle<CR>
 
 " ---Theme---
 

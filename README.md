@@ -43,6 +43,7 @@
 - [X] [vimagit](https://github.com/jreybert/vimagit)
 - [X] [gist-vim](https://github.com/mattn/gist-vim)
 - [X] [moll/vim-bbye](https://github.com/moll/vim-bbye)
+- [X] [gundo.vim](https://github.com/sjl/gundo.vim)
 
 
 ###Theme
@@ -80,6 +81,7 @@
 |Shift-z|MBEbn|
 |Shift-x|MBEbp|
 |F7|call Replace()|
+|F8|GundoToggle|
 |Ctrl-F10|call TagFullDepend()|
 |F10|call TagFileIncluded()|
 |,m |Magit|
