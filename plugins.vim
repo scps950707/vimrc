@@ -79,7 +79,6 @@ source $VIMRUNTIME/ftplugin/man.vim
 Plug 'Mizuchi/STL-Syntax'
 Plug 'kien/ctrlp.vim'
 let g:ctrlp_working_path_mode = 'a'
-Plug 'tpope/vim-fugitive'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'jreybert/vimagit'
 nmap ,m :Magit<CR>
@@ -94,9 +93,10 @@ nnoremap <F8> :GundoToggle<CR>
 " ---Theme---
 
 Plug 'bling/vim-airline'
-
+let g:airline_section_b = '%{gitbranch#name()}'
 
 " ---Other---
 Plug 'chusiang/vimcdoc-tw'
 set helplang=tw
 Plug 'mattn/webapi-vim'
+Plug 'itchyny/vim-gitbranch'

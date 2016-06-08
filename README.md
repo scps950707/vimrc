@@ -36,7 +36,7 @@
 - [X] [STL-Syntax](https://github.com/Mizuchi/STL-Syntax)
 - [ ] [ctrlp](https://github.com/kien/ctrlp.vim)
 - [ ] [tabular](https://github.com/godlygeek/tabular)
-- [X] [vim-fugitive](https://github.com/tpope/vim-fugitive)
+- [ ] [vim-fugitive](https://github.com/tpope/vim-fugitive)
 - [ ] [SingleCompile](https://github.com/xuhdev/SingleCompile)
 - [X] [astyle](http://astyle.sourceforge.net/)
 - [X] [vim-trailing-whitespace](https://github.com/bronson/vim-trailing-whitespace)
@@ -62,6 +62,7 @@
 - [X] [ctags](http://ctags.sourceforge.net/)
 - [X] [ctags-generator](https://github.com/scps950707/ctags-generator)
 - [X] [webapi-vim](https://github.com/mattn/webapi-vim)
+- [X] [vim-gitbranch](https://github.com/itchyny/vim-gitbranch)
 
 
 ###Key Mappings
