@@ -84,15 +84,11 @@ Plug 'Mizuchi/STL-Syntax'
 Plug 'kien/ctrlp.vim'
 let g:ctrlp_working_path_mode = 'a'
 Plug 'tpope/vim-fugitive'
-Plug 'chusiang/vimcdoc-tw'
-set helplang=tw
-Plug 'jez/vim-superman'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'jreybert/vimagit'
 nmap ,m :Magit<CR>
 Plug 'mattn/gist-vim'
 let g:gist_clip_command = 'xclip -selection clipboard'
-Plug 'mattn/webapi-vim'
 Plug 'moll/vim-bbye'
 nnoremap ,q :Bdelete<CR>
 
@@ -100,3 +96,10 @@ nnoremap ,q :Bdelete<CR>
 
 Plug 'bling/vim-airline'
 " Plug 'c9s/colorselector.vim'
+
+
+" ---Other---
+Plug 'chusiang/vimcdoc-tw'
+set helplang=tw
+Plug 'jez/vim-superman'
+Plug 'mattn/webapi-vim'
