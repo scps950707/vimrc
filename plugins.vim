@@ -89,6 +89,9 @@ nnoremap ,q :Bdelete<CR>
 Plug 'sjl/gundo.vim'
 let g:gundo_close_on_revert=1
 nnoremap <F8> :GundoToggle<CR>
+Plug 'scps950707/vim-ctags'
+map <C-F10> :CtagsFullDepend<CR>
+map <F10> :CtagsFileIncluded<CR>
 
 " ---Theme---
 
