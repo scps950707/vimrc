@@ -72,9 +72,6 @@ let g:syntastic_check_on_wq = 0
 Plug 'tpope/vim-commentary'
 map <F5> gcc
 map <F6> gc
-Plug 'fholgado/minibufexpl.vim'
-nmap <S-z> :MBEbp<CR>
-nmap <S-x> :MBEbn<CR>
 source $VIMRUNTIME/ftplugin/man.vim
 Plug 'Mizuchi/STL-Syntax'
 Plug 'kien/ctrlp.vim'
@@ -97,6 +94,9 @@ map <F10> :CtagsFileIncluded<CR>
 
 Plug 'bling/vim-airline'
 let g:airline_section_b = '%{gitbranch#name()}'
+let g:airline#extensions#tabline#enabled = 1
+nmap <S-z> :bprevious<CR>
+nmap <S-x> :bnext<CR>
 
 " ---Other---
 Plug 'chusiang/vimcdoc-tw'

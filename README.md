@@ -30,7 +30,7 @@
 - [ ] [taglist.vim](https://github.com/vim-scripts/taglist.vim)
 - [X] [syntastic](https://github.com/scrooloose/syntastic)
 - [X] [vim-commentary](https://github.com/tpope/vim-commentary)
-- [X] [minibufexpl](https://github.com/fholgado/minibufexpl.vim)
+- [ ] [minibufexpl](https://github.com/fholgado/minibufexpl.vim)
 - [X] man.vim
 - [ ] [wildfire.vim](https://github.com/gcmt/wildfire.vim)
 - [X] [STL-Syntax](https://github.com/Mizuchi/STL-Syntax)
