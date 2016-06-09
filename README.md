@@ -63,7 +63,7 @@
 - [X] [ctags](http://ctags.sourceforge.net/)
 - [X] [webapi-vim](https://github.com/mattn/webapi-vim)
 - [X] [vim-gitbranch](https://github.com/itchyny/vim-gitbranch)
-- [X] [v](https://github.com/rupa/v)
+- [X] [v](https://github.com/scps950707/v)
 
 
 ###Key Mappings

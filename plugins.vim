@@ -103,3 +103,4 @@ Plug 'chusiang/vimcdoc-tw'
 set helplang=tw
 Plug 'mattn/webapi-vim'
 Plug 'itchyny/vim-gitbranch'
+Plug 'scps950707/v', { 'do': './install.sh' }
