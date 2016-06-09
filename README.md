@@ -44,6 +44,7 @@
 - [X] [gist-vim](https://github.com/mattn/gist-vim)
 - [X] [vim-bbye](https://github.com/moll/vim-bbye)
 - [X] [gundo.vim](https://github.com/sjl/gundo.vim)
+- [X] [vim-ctags](https://github.com/scps950707/vim-ctags)
 
 
 ###Theme
@@ -60,7 +61,6 @@
 - [X] [vimcdoc-tw](https://github.com/chusiang/vimcdoc-tw)
 - [ ] [vim-superman](https://github.com/jez/vim-superman)
 - [X] [ctags](http://ctags.sourceforge.net/)
-- [X] [ctags-generator](https://github.com/scps950707/ctags-generator)
 - [X] [webapi-vim](https://github.com/mattn/webapi-vim)
 - [X] [vim-gitbranch](https://github.com/itchyny/vim-gitbranch)
 - [X] [v](https://github.com/rupa/v)
@@ -77,8 +77,8 @@
 |F6|vim-commemtary-gc|
 |F7|call Replace()|
 |F8|GundoToggle|
-|F10|call TagFileIncluded()|
-|Ctrl-F10|call TagFullDepend()|
+|F10|CtagsFileIncluded|
+|Ctrl-F10|CtagsFullDepend|
 |,g|gitgutter|
 |,m |Magit|
 |,q|Bdelete|
