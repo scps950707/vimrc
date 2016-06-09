@@ -45,6 +45,7 @@
 - [X] [vim-bbye](https://github.com/moll/vim-bbye)
 - [X] [gundo.vim](https://github.com/sjl/gundo.vim)
 - [X] [vim-ctags](https://github.com/scps950707/vim-ctags)
+- [X] [vimshell.vim](https://github.com/Shougo/vimshell.vim)
 
 
 ###Theme
@@ -64,6 +65,7 @@
 - [X] [webapi-vim](https://github.com/mattn/webapi-vim)
 - [X] [vim-gitbranch](https://github.com/itchyny/vim-gitbranch)
 - [X] [v](https://github.com/scps950707/v)
+- [X] [vimproc.vim](https://github.com/Shougo/vimproc.vim)
 
 
 ###Key Mappings
@@ -77,6 +79,8 @@
 |F6|vim-commemtary-gc|
 |F7|call Replace()|
 |F8|GundoToggle|
+|F9|VimShell|
+|Ctrl-F9|VimShell -split|
 |F10|CtagsFileIncluded|
 |Ctrl-F10|CtagsFullDepend|
 |,g|gitgutter|

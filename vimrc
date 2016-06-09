@@ -10,7 +10,7 @@ set t_Co=256
 colorscheme jellybeans
 set mouse=a "滑鼠所有模式下啟動
 set showcmd "在狀態列顯示目前所執行的指令
-set autochdir "自動轉換目錄到前檔案所在目錄
+" set autochdir "自動轉換目錄到前檔案所在目錄
 set fileencodings=utf-8 "vim預設編碼
 set encoding=utf-8
 set fileencodings=utf-8

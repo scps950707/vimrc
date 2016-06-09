@@ -89,6 +89,11 @@ nnoremap <F8> :GundoToggle<CR>
 Plug 'scps950707/vim-ctags'
 map <C-F10> :CtagsFullDepend<CR>
 map <F10> :CtagsFileIncluded<CR>
+Plug 'Shougo/vimshell.vim'
+map <F9> :VimShell<CR>
+map <C-F9> :VimShell -split<CR>
+let g:vimshell_prompt='$ '
+let g:vimshell_user_prompt = 'fnamemodify(getcwd(), ":~")'
 
 " ---Theme---
 
@@ -104,3 +109,4 @@ set helplang=tw
 Plug 'mattn/webapi-vim'
 Plug 'itchyny/vim-gitbranch'
 Plug 'scps950707/v', { 'do': './install.sh' }
+Plug 'Shougo/vimproc.vim', { 'do': 'make' }
