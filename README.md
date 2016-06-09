@@ -95,3 +95,4 @@
 |Shift-z|MBEbn|
 |Shift-x|MBEbp|
 |ESC|g:multi_cursor_quit_key|
+|Ctrl-arrow|split resize|
