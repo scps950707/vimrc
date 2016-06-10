@@ -93,6 +93,8 @@ map <F9> :VimShell<CR>
 map <C-F9> :VimShell -split<CR>
 let g:vimshell_prompt='$ '
 let g:vimshell_user_prompt = 'fnamemodify(getcwd(), ":~")'
+Plug 'haya14busa/incsearch.vim'
+map /  <Plug>(incsearch-forward)
 
 " ---Theme---
 
