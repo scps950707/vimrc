@@ -21,9 +21,9 @@ set autoindent "自動縮排
 set cindent "採用C語言的縮排方式
 set expandtab "用space代替tab
 set smartindent "每一行都和前一行有相同的縮排量
-set tabstop=2 "tab字元數
-set softtabstop=2 " 讓 vim 把連續數量的空格視為一個制表符
-set shiftwidth=2 "縮排寬度
+set tabstop=4 "tab字元數
+set softtabstop=4 " 讓 vim 把連續數量的空格視為一個制表符
+set shiftwidth=4 "縮排寬度
 set scrolloff=3 "滾動時游標下方保留幾行
 set wildmenu
 set wildmode=longest,list "命令模式自動補齊的型態
@@ -74,7 +74,7 @@ imap <C-a> <C-X><C-O>
 cnoremap help vert help
 
 " Plugins Management
-autocmd FileType c,cpp set formatprg=astyle\ -A1s2pDHk3W3j
+autocmd FileType c,cpp set formatprg=astyle\ -A1s4pDHk3W3j
 call plug#begin('~/.vim/plugged')
 source ${HOME}/.vim/plugins.vim
 call plug#end()
