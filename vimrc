@@ -97,3 +97,5 @@ nnoremap <C-left> :vertical resize -5<cr>
 nnoremap <C-down> :resize +5<cr>
 nnoremap <C-up> :resize -5<cr>
 nnoremap <C-right> :vertical resize +5<cr>
+
+source ${HOME}/.vim/timestamp.vim

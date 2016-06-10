@@ -6,7 +6,7 @@ install:clang ctags
 	cat vimrc > ${FILE_VIMRC}
 	mkdir ${DIR_VIM}
 	cp -r ${DIR_COLORS} ${DIR_VIM}
-	cp plugins.vim ${DIR_VIM}
+	cp *.vim ${DIR_VIM}
 	sudo apt-get install curl
 	sudo apt-get install astyle
 	curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
@@ -15,7 +15,7 @@ install:clang ctags
 
 update:
 	cat vimrc > ${FILE_VIMRC}
-	cp plugins.vim ${DIR_VIM}
+	cp *.vim ${DIR_VIM}
 	cp -r ${DIR_COLORS} ${DIR_VIM}
 
 uninstall:
