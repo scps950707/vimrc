@@ -34,7 +34,7 @@
 - [X] man.vim
 - [ ] [wildfire.vim](https://github.com/gcmt/wildfire.vim)
 - [X] [STL-Syntax](https://github.com/Mizuchi/STL-Syntax)
-- [ ] [ctrlp](https://github.com/kien/ctrlp.vim)
+- [X] [ctrlp](https://github.com/kien/ctrlp.vim)
 - [ ] [tabular](https://github.com/godlygeek/tabular)
 - [ ] [vim-fugitive](https://github.com/tpope/vim-fugitive)
 - [ ] [SingleCompile](https://github.com/xuhdev/SingleCompile)
