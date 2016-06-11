@@ -87,6 +87,7 @@
 |,g|gitgutter|
 |,m |Magit|
 |,q|Bdelete|
+|,s|UpdateTimeStamp|
 |Ctrl-c|paste from vim to system's clipboard|
 |Ctrl-x|cut from vim to system's clipboard
 |Ctrl-a|omnicomplete trigger|

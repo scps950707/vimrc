@@ -7,7 +7,9 @@
 " Modified
 " Last [Uu]pdate(d)
 
-autocmd! BufWritePre * :call s:timestamp()
+" autocmd! BufWritePre * :call s:timestamp()
+command! -nargs=0 UpdateTimeStamp call s:timestamp()
+map ,s :UpdateTimeStamp<CR>
 " to update timestamp when saving if its in the first 20 lines of a file
 function! s:timestamp()
     let pat = '\(\(Last\)\?\s*\([Cc]hanged\?\|[Mm]odified\|[Uu]pdated\?\)\s*:\s*\).*'
