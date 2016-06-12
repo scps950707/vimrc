@@ -77,6 +77,7 @@ Plug 'kien/ctrlp.vim'
 let g:ctrlp_working_path_mode = 'a'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'jreybert/vimagit'
+let g:magit_default_fold_level=0
 nmap ,m :Magit<CR>
 Plug 'mattn/gist-vim'
 let g:gist_clip_command = 'xclip -selection clipboard'
