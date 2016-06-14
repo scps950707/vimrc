@@ -112,3 +112,5 @@ Plug 'mattn/webapi-vim'
 Plug 'itchyny/vim-gitbranch'
 Plug 'scps950707/v', { 'do': './install.sh' }
 Plug 'Shougo/vimproc.vim', { 'do': 'make' }
+Plug 'tyru/open-browser-github.vim'
+Plug 'tyru/open-browser.vim'

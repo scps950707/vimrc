@@ -67,6 +67,8 @@
 - [X] [vim-gitbranch](https://github.com/itchyny/vim-gitbranch)
 - [X] [v](https://github.com/scps950707/v)
 - [X] [vimproc.vim](https://github.com/Shougo/vimproc.vim)
+- [X] [open-browser-github.vim](https://github.com/tyru/open-browser-github.vim)
+- [X] [open-browser](https://github.com/tyru/open-browser.vim)
 
 
 ###Key Mappings
