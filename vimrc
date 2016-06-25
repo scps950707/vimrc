@@ -40,6 +40,8 @@ set fileformats=unix,dos,mac
 set viminfo='20,\"50    " read/write a .viminfo file, don't store more than 50 lines of registers
 set history=20
 set wildchar=<TAB> " such as <TAB> in shell
+set autoread
+autocmd CursorHold * checktime
 
 "auto close preview window
 " autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
