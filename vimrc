@@ -46,39 +46,38 @@ set wildchar=<TAB> " such as <TAB> in shell
 " autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 autocmd CompleteDone * pclose
 
+
+" replace settings
 function! Replace(confirm,replace)
-  let flag = ''
-  if a:confirm
-    let flag.='gc'
-  else
-    let flag.='g'
-  endif
-  let search = ''
-  let search .= '\<' . escape(expand('<cword>'), '/\.*$^~[') . '\>'
-  let replace = escape(a:replace, '/\&~')
-  execute '%s/'.search.'/'.replace.'/'.flag
+    let flag = ''
+    if a:confirm
+        let flag.='gc'
+    else
+        let flag.='g'
+    endif
+    let search = ''
+    let search .= '\<' . escape(expand('<cword>'), '/\.*$^~[') . '\>'
+    let replace = escape(a:replace, '/\&~')
+    execute '%s/'.search.'/'.replace.'/'.flag
 endfunction
-" nmap <F4> <C-u>0ggVG=<CR>
-" nmap <F4> <C-u>gg=G<CR>
-nmap <F4> <C-u>gggqG<CR>
 map <F7> :<C-u>call Replace(0,input('Replace '.expand('<cword>').' with: '))<CR>
 " map <F8> :<C-u>call Replace(1,input('Replace '.expand('<cword>').' with: '))<CR>
 " vmap <F9> "hy:%s/<C-r>h//g<left><left>
+
+
+" copy and paste
 vnoremap <C-c> "+y
 " paste from vim to system's clipboard
 vnoremap <C-x> "+x
 " cut from vim to system's clipboard
 " nmap <C-d> "+P
 " paste from system's clipboard to vim
-imap <C-a> <C-X><C-O>
-cnoremap help vert help
+
 
 " Plugins Management
-autocmd FileType c,cpp set formatprg=astyle\ -A1s4pDHk3W3j
 call plug#begin('~/.vim/plugged')
 source ${HOME}/.vim/plugins.vim
 call plug#end()
-" Plugins Management
 
 
 " Make these commonly mistyped commands still work
@@ -93,9 +92,26 @@ cnoreabbrev W w
 cnoreabbrev Q q
 cnoreabbrev Qall qall
 
+
+" command mapping
+cnoremap help vert help
+
+
+" split resize mapping
 nnoremap <C-left> :vertical resize -5<cr>
 nnoremap <C-down> :resize +5<cr>
 nnoremap <C-up> :resize -5<cr>
 nnoremap <C-right> :vertical resize +5<cr>
 
 source ${HOME}/.vim/timestamp.vim
+
+
+" map omnifunc complete to ctrl-a
+imap <C-a> <C-X><C-O>
+
+
+" auto indent
+" nmap <F4> <C-u>0ggVG=<CR>
+" nmap <F4> <C-u>gg=G<CR>
+nmap <F4> <C-u>gggqG<CR>
+autocmd FileType c,cpp set formatprg=astyle
