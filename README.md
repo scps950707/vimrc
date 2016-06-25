@@ -96,7 +96,7 @@
 |Ctrl-n|g:multi_cursor_next_key|
 |Ctrl-m|g:multi_cursor_prev_key|
 |Ctrl-q|g:multi_cursor_skip_key|
-|Shift-z|MBEbn|
-|Shift-x|MBEbp|
+|Shift-z|bprevious|
+|Shift-x|bnext|
 |ESC|g:multi_cursor_quit_key|
 |Ctrl-arrow|split resize|
