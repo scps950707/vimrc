@@ -9,6 +9,7 @@ Plug 'othree/vim-autocomplpop'
 let g:acp_completeOption = '.,w,b,k,t'
 let g:acp_behaviorSnipmateLength=1
 let g:acp_completeoptPreview=1
+let g:acp_behaviorKeywordLength=4
 Plug 'L9'
 Plug 'Townk/vim-autoclose'
 Plug 'Rip-Rip/clang_complete'
