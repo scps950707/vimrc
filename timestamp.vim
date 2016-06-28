@@ -21,16 +21,16 @@ endfunction
 function! s:subst(start, end, pat, rep)
     let lineno = a:start
     while lineno <= a:end
-  let curline = getline(lineno)
-  if match(curline, a:pat) != -1
-      let newline = substitute( curline, a:pat, a:rep, '' )
-      if( newline != curline )
-    " Only substitute if we made a change
-    "silent! undojoin
-    keepjumps call setline(lineno, newline)
-      endif
-  endif
-  let lineno = lineno + 1
+        let curline = getline(lineno)
+        if match(curline, a:pat) != -1
+            let newline = substitute( curline, a:pat, a:rep, '' )
+            if( newline != curline )
+                " Only substitute if we made a change
+                "silent! undojoin
+                keepjumps call setline(lineno, newline)
+            endif
+        endif
+        let lineno = lineno + 1
     endwhile
 endfunction
 " }}}
