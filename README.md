@@ -69,6 +69,7 @@
 - [X] [vimproc.vim](https://github.com/Shougo/vimproc.vim)
 - [X] [open-browser-github.vim](https://github.com/tyru/open-browser-github.vim)
 - [X] [open-browser](https://github.com/tyru/open-browser.vim)
+- [X] [vim-timestamp](https://github.com/scps950707/vim-timestamp)
 
 
 ###Key Mappings

@@ -117,3 +117,5 @@ Plug 'scps950707/v', { 'do': './install.sh' }
 Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 Plug 'tyru/open-browser-github.vim'
 Plug 'tyru/open-browser.vim'
+Plug 'scps950707/vim-timestamp'
+nmap ,s :UpdateTimeStamp<CR>
