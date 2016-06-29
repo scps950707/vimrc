@@ -91,7 +91,7 @@ nnoremap <F8> :GundoToggle<CR>
 Plug 'scps950707/vim-ctags'
 map <C-F10> :CtagsFullDepend<CR>
 map <F10> :CtagsFileIncluded<CR>
-Plug 'Shougo/vimshell.vim'
+Plug 'Shougo/vimshell.vim', { 'do': 'ln -sf ~/github/dotfiles/config/.aliases ~/.vimshrc' }
 map <F9> :VimShell<CR>
 map <C-F9> :VimShell -split<CR>
 let g:vimshell_prompt='$ '
