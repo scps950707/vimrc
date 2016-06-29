@@ -51,14 +51,12 @@ autocmd CompleteDone * pclose
 
 " replace settings
 function! Replace(confirm,replace)
-    let flag = ''
     if a:confirm
-        let flag.='gc'
+        let flag='gc'
     else
-        let flag.='g'
+        let flag='g'
     endif
-    let search = ''
-    let search .= '\<' . escape(expand('<cword>'), '/\.*$^~[') . '\>'
+    let search = '\<' . escape(expand('<cword>'), '/\.*$^~[') . '\>'
     let replace = escape(a:replace, '/\&~')
     execute '%s/'.search.'/'.replace.'/'.flag
 endfunction
