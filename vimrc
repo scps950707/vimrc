@@ -115,3 +115,6 @@ imap <C-a> <C-X><C-O>
 " nmap <F4> <C-u>gg=G<CR>
 nmap <F4> <C-u>gggqG<CR>
 autocmd FileType c,cpp set formatprg=astyle
+
+" in help page map q to close buffer
+autocmd FileType help nnoremap <buffer> <silent> q :q<CR>
