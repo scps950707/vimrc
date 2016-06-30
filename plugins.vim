@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2016-06-30 04:54
+" Last Modified:  2016-07-01 01:42
 " Filename:       vimrc
 " =============================================================================
 
@@ -53,11 +53,6 @@ nmap ,g :GitGutterToggle<CR>
 Plug 'Yggdroot/indentLine'
 let g:indentLine_char = '|'
 Plug 'terryma/vim-multiple-cursors'
-let g:multi_cursor_use_default_mapping=0
-let g:multi_cursor_next_key='<C-n>'
-let g:multi_cursor_prev_key='<C-m>'
-let g:multi_cursor_skip_key='<C-q>'
-let g:multi_cursor_quit_key='<Esc>'
 Plug 'majutsushi/tagbar'
 let g:tagbar_width = 30
 let g:tagbar_compact=1
