@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2016-07-01 01:42
+" Last Modified:  2016-07-01 13:32
 " Filename:       vimrc
 " =============================================================================
 
@@ -112,8 +112,8 @@ nmap <S-z> :bprevious<CR>
 nmap <S-x> :bnext<CR>
 
 " ---Other---
-Plug 'chusiang/vimcdoc-tw'
-set helplang=tw
+" Plug 'chusiang/vimcdoc-tw'
+" set helplang=tw
 Plug 'mattn/webapi-vim'
 Plug 'itchyny/vim-gitbranch'
 Plug 'scps950707/v', { 'do': './install.sh' }

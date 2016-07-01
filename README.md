@@ -60,7 +60,7 @@
 
 ###Other
 - [ ] [consolas-powerline-vim](https://github.com/eugeii/consolas-powerline-vim)
-- [X] [vimcdoc-tw](https://github.com/chusiang/vimcdoc-tw)
+- [ ] [vimcdoc-tw](https://github.com/chusiang/vimcdoc-tw)
 - [ ] [vim-superman](https://github.com/jez/vim-superman)
 - [X] [ctags](http://ctags.sourceforge.net/)
 - [X] [webapi-vim](https://github.com/mattn/webapi-vim)
