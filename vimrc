@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2016-06-30 04:54
+" Last Modified:  2016-07-01 21:34
 " Filename:       vimrc
 " =============================================================================
 
@@ -49,7 +49,6 @@ set viminfo='20,\"50    " read/write a .viminfo file, don't store more than 50 l
 set history=20
 set wildchar=<TAB> " such as <TAB> in shell
 set autoread
-autocmd CursorHold * checktime
 
 "auto close preview window
 " autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
