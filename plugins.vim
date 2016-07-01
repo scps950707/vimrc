@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2016-07-02 04:18
+" Last Modified:  2016-07-02 04:21
 " Filename:       vimrc
 " =============================================================================
 
@@ -125,3 +125,4 @@ Plug 'tyru/open-browser-github.vim'
 Plug 'tyru/open-browser.vim'
 Plug 'scps950707/vim-timestamp'
 nmap ,s :UpdateTimeStamp<CR>
+Plug 'junegunn/vader.vim'

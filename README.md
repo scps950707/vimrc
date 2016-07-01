@@ -71,6 +71,7 @@
 - [X] [open-browser-github.vim](https://github.com/tyru/open-browser-github.vim)
 - [X] [open-browser](https://github.com/tyru/open-browser.vim)
 - [X] [vim-timestamp](https://github.com/scps950707/vim-timestamp)
+- [X] [vader.vim](https://github.com/junegunn/vader.vim)
 
 
 ###Key Mappings
