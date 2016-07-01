@@ -47,6 +47,7 @@
 - [X] [vim-ctags](https://github.com/scps950707/vim-ctags)
 - [X] [vimshell.vim](https://github.com/Shougo/vimshell.vim)
 - [X] [incsearch.vim](https://github.com/haya14busa/incsearch.vim)
+- [X] [vim-lengthmatters](https://github.com/scps950707/vim-lengthmatters)
 
 
 ###Theme

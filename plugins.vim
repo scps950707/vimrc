@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2016-07-01 13:32
+" Last Modified:  2016-07-02 04:18
 " Filename:       vimrc
 " =============================================================================
 
@@ -102,6 +102,9 @@ let g:vimshell_user_prompt = 'fnamemodify(getcwd(), ":~")'
 autocmd FileType * if &ft=='vimshell'| :AcpDisable | else | :AcpEnable | endif
 Plug 'haya14busa/incsearch.vim'
 map /  <Plug>(incsearch-forward)
+Plug 'scps950707/vim-lengthmatters'
+let g:lengthmatters_on_by_default=0
+autocmd User VimagitEnterCommit let g:lengthmatters_magit_mode=1|:LengthmattersReload
 
 " ---Theme---
 
