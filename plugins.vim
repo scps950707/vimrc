@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2016-07-02 22:16
+" Last Modified:  2016-07-02 23:51
 " Filename:       plugins.vim
 " =============================================================================
 Plug 'MarcWeber/vim-addon-mw-utils'
@@ -99,7 +99,7 @@ map / <Plug>(incsearch-forward)
 Plug 'scps950707/vim-lengthmatters'
 let g:lengthmatters_on_by_default=0
 autocmd User VimagitEnterCommit let g:lengthmatters_magit_mode=1|:LengthmattersReload
-Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline'
 let g:airline_section_b = '%{gitbranch#name()}'
 let g:airline#extensions#tabline#enabled = 1
 nmap <S-z> :bprevious<CR>
@@ -113,3 +113,17 @@ Plug 'tyru/open-browser.vim'
 Plug 'scps950707/vim-timestamp'
 nmap ,s :UpdateTimeStamp<CR>
 Plug 'junegunn/vader.vim'
+
+
+" unused
+" Plug 'ludovicchabant/vim-gutentags'
+" Plug 'derekwyatt/vim-fswitch'
+" Plug 'wesleyche/SrcExpl'
+" Plug 'vim-scripts/taglist.vim'
+" Plug 'fholgado/minibufexpl.vim'
+" Plug 'tpope/vim-fugitive'
+" Plug 'Lokaltog/vim-powerline'
+" Plug 'gcmt/wildfire.vim'
+" Plug 'chusiang/vimcdoc-tw'
+" Plug 'jez/vim-superman'
+" Plug 'godlygeek/tabular'
