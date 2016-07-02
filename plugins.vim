@@ -2,12 +2,9 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2016-07-02 04:21
-" Filename:       vimrc
+" Last Modified:  2016-07-02 22:16
+" Filename:       plugins.vim
 " =============================================================================
-
-" ---Auto complete---
-
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
 Plug 'scps950707/vim-snippets'
@@ -18,7 +15,7 @@ let g:acp_completeOption = '.,w,b,k,t'
 let g:acp_behaviorSnipmateLength=1
 let g:acp_completeoptPreview=1
 let g:acp_behaviorKeywordLength=4
-Plug 'L9'
+Plug 'vim-scripts/L9'
 Plug 'Townk/vim-autoclose'
 Plug 'Rip-Rip/clang_complete'
 let g:clang_close_preview=1
@@ -29,9 +26,6 @@ let g:clang_trailing_placeholder=1
 autocmd FileType cpp let g:clang_user_options = '-std=c++11'
 autocmd FileType c let g:clang_user_options = '-std=c99'
 let g:clang_library_path='/usr/lib/llvm-3.4/lib/'
-
-" ---Development---
-
 Plug 'scrooloose/nerdtree'
 nmap <F2> :<C-u>NERDTreeToggle<CR>
 let g:NERDTreeWinSize=15
@@ -101,22 +95,15 @@ let g:vimshell_prompt='$ '
 let g:vimshell_user_prompt = 'fnamemodify(getcwd(), ":~")'
 autocmd FileType * if &ft=='vimshell'| :AcpDisable | else | :AcpEnable | endif
 Plug 'haya14busa/incsearch.vim'
-map /  <Plug>(incsearch-forward)
+map / <Plug>(incsearch-forward)
 Plug 'scps950707/vim-lengthmatters'
 let g:lengthmatters_on_by_default=0
 autocmd User VimagitEnterCommit let g:lengthmatters_magit_mode=1|:LengthmattersReload
-
-" ---Theme---
-
 Plug 'bling/vim-airline'
 let g:airline_section_b = '%{gitbranch#name()}'
 let g:airline#extensions#tabline#enabled = 1
 nmap <S-z> :bprevious<CR>
 nmap <S-x> :bnext<CR>
-
-" ---Other---
-" Plug 'chusiang/vimcdoc-tw'
-" set helplang=tw
 Plug 'mattn/webapi-vim'
 Plug 'itchyny/vim-gitbranch'
 Plug 'scps950707/v', { 'do': './install.sh' }

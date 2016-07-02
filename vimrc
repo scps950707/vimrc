@@ -2,10 +2,9 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2016-07-01 21:34
+" Last Modified:  2016-07-02 22:16
 " Filename:       vimrc
 " =============================================================================
-
 set cursorline "顯示當前游標列
 " set cursorcolumn "顯示當前游標行
 set nocompatible "VIM 不使用和VI相容的模式
