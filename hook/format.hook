@@ -1,0 +1,29 @@
+#!/bin/sh
+# =============================================================================
+# Author:         scps950707
+# Email:          scps950707@gmail.com
+# Created:        2016-07-03 00:33
+# Last Modified:  2016-07-03 02:10
+# Filename:       format.sh
+# =============================================================================
+cd `git rev-parse --show-toplevel`
+
+stashdiff=`mktemp /tmp/stash.XXXXX` || exit 1
+git diff --full-index --exit-code > $stashdiff
+bothmodified=$?
+if [ $bothmodified -ne 0 ];then
+    git stash -q --keep-index
+fi
+
+TMPFILE=`mktemp /tmp/pluginsvim.XXXXX` || exit 1
+./format.gawk plugins.vim > $TMPFILE
+cat $TMPFILE > plugins.vim
+rm -rf $TMPFILE
+git add plugins.vim
+
+if [ $bothmodified -ne 0 ];then
+    git apply < $stashdiff && git stash drop -q
+fi
+rm $stashdiff
+
+exit 0
