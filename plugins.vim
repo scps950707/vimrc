@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2016-07-03 00:40
+" Last Modified:  2016-07-04 03:33
 " Filename:       plugins.vim
 " =============================================================================
 Plug 'MarcWeber/vim-addon-mw-utils'
@@ -46,10 +46,6 @@ Plug 'garbas/vim-snipmate'
 Plug 'haya14busa/incsearch.vim'
 map / <Plug>(incsearch-forward)
 Plug 'itchyny/vim-gitbranch'
-Plug 'jreybert/vimagit'
-let g:magit_default_fold_level=0
-autocmd filetype magit setlocal foldenable
-nmap ,m :Magit<CR>
 Plug 'junegunn/vader.vim'
 Plug 'kien/ctrlp.vim'
 let g:ctrlp_working_path_mode = 'a'
@@ -74,11 +70,13 @@ Plug 'scps950707/vim-ctags'
 map <C-F10> :CtagsFullDepend<CR>
 map <F10> :CtagsFileIncluded<CR>
 Plug 'scps950707/vim-lengthmatters'
-let g:lengthmatters_on_by_default=0
-autocmd User VimagitEnterCommit let g:lengthmatters_magit_mode=1|:LengthmattersReload
 Plug 'scps950707/vim-snippets'
 Plug 'scps950707/vim-timestamp'
 nmap ,s :UpdateTimeStamp<CR>
+Plug 'scps950707/vimagit'
+let g:magit_default_fold_level=0
+autocmd filetype magit setlocal foldenable
+nmap ,m :Magit<CR>
 Plug 'scrooloose/nerdtree'
 nmap <F2> :<C-u>NERDTreeToggle<CR>
 let g:NERDTreeWinSize=15

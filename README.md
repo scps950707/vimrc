@@ -45,7 +45,7 @@
 - [ ] [vim-superman](https://github.com/jez/vim-superman)
 - [X] [vim-timestamp](https://github.com/scps950707/vim-timestamp)
 - [X] [vim-trailing-whitespace](https://github.com/bronson/vim-trailing-whitespace)
-- [X] [vimagit](https://github.com/jreybert/vimagit)
+- [X] [vimagit](https://github.com/scps950707/vimagit)
 - [ ] [vimcdoc-tw](https://github.com/chusiang/vimcdoc-tw)
 - [X] [vimproc.vim](https://github.com/Shougo/vimproc.vim)
 - [X] [vimshell.vim](https://github.com/Shougo/vimshell.vim)
