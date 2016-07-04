@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2016-07-05 02:03
+" Last Modified:  2016-07-05 02:29
 " Filename:       plugins.vim
 " =============================================================================
 Plug 'MarcWeber/vim-addon-mw-utils'
@@ -54,15 +54,6 @@ Plug 'moll/vim-bbye'
 nnoremap ,q :Bdelete<CR>
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
 let g:ycm_global_ycm_extra_conf= '~/.ycm_extra_conf.py'
-function! BuildYCM(info)
-  " info is a dictionary with 3 fields
-  " - name:   name of the plugin
-  " - status: 'installed', 'updated', or 'unchanged'
-  " - force:  set on PlugInstall! or PlugUpdate!
-  if a:info.status == 'installed' || a:info.force
-    !./install.py --clang-completer
-  endif
-endfunction
 Plug 'scps950707/v', { 'do': './install.sh' }
 Plug 'scps950707/vim-ctags'
 map <C-F10> :CtagsFullDepend<CR>
