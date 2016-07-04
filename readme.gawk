@@ -3,7 +3,7 @@
 # Author:         scps950707
 # Email:          scps950707@gmail.com
 # Created:        2016-07-02 23:49
-# Last Modified:  2016-07-03 01:34
+# Last Modified:  2016-07-04 17:25
 # Filename:       readme.gawk
 # =============================================================================
 {
@@ -23,9 +23,10 @@
     {
         gsub("<","\\<")
         gsub(">","\\>")
-        for(i=1;i<=NF;i++)
+        keyMapTable[$2]="|"$1"|"$2"|"$3
+        for(i=4;i<=NF;i++)
         {
-            keyMapTable[$2]=keyMapTable[$2]"|"$i
+            keyMapTable[$2]=keyMapTable[$2]" "$i
         }
         keyMapTable[$2]=keyMapTable[$2]"|"
     }

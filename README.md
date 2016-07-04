@@ -62,13 +62,13 @@
 |nmap|,s|:UpdateTimeStamp\<CR\>|
 |map|/|\<Plug\>(incsearch-forward)|
 |map|\<C-F10\>|:CtagsFullDepend\<CR\>|
-|map|\<C-F9\>|:VimShell|-split\<CR\>|
+|map|\<C-F9\>|:VimShell -split\<CR\>|
 |imap|\<C-a\>|\<C-X\>\<C-O\>|
 |vnoremap|\<C-c\>|"+y|
-|nnoremap|\<C-down\>|:resize|+5\<cr\>|
-|nnoremap|\<C-left\>|:vertical|resize|-5\<cr\>|
-|nnoremap|\<C-right\>|:vertical|resize|+5\<cr\>|
-|nnoremap|\<C-up\>|:resize|-5\<cr\>|
+|nnoremap|\<C-down\>|:resize +5\<cr\>|
+|nnoremap|\<C-left\>|:vertical resize -5\<cr\>|
+|nnoremap|\<C-right\>|:vertical resize +5\<cr\>|
+|nnoremap|\<C-up\>|:resize -5\<cr\>|
 |vnoremap|\<C-x\>|"+x|
 |map|\<F10\>|:CtagsFileIncluded\<CR\>|
 |nmap|\<F2\>|:\<C-u\>NERDTreeToggle\<CR\>|
@@ -76,9 +76,9 @@
 |nmap|\<F4\>|\<C-u\>gggqG\<CR\>|
 |map|\<F5\>|gcc|
 |map|\<F6\>|gc|
-|map|\<F7\>|:\<C-u\>call|Replace(0,input('Replace|'.expand('\<cword\>').'|with:|'))\<CR\>|
+|map|\<F7\>|:\<C-u\>call Replace(0,input('Replace '.expand('\<cword\>').' with: '))\<CR\>|
 |nnoremap|\<F8\>|:GundoToggle\<CR\>|
 |map|\<F9\>|:VimShell\<CR\>|
 |nmap|\<S-x\>|:bnext\<CR\>|
 |nmap|\<S-z\>|:bprevious\<CR\>|
-|cnoremap|help|vert|help|
+|cnoremap|help|vert help|
