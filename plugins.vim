@@ -2,28 +2,22 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2016-07-04 03:33
+" Last Modified:  2016-07-05 02:03
 " Filename:       plugins.vim
 " =============================================================================
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'Mizuchi/STL-Syntax'
-Plug 'Rip-Rip/clang_complete'
-let g:clang_close_preview=1
-let g:clang_use_library=1
-let g:clang_snippets=1
-let g:clang_trailing_placeholder=1
-" usage:first argument finish -> esc -> tab -> next argument
-autocmd FileType cpp let g:clang_user_options = '-std=c++11'
-autocmd FileType c let g:clang_user_options = '-std=c99'
-let g:clang_library_path='/usr/lib/llvm-3.4/lib/'
 Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 Plug 'Shougo/vimshell.vim', { 'do': 'ln -sf ~/github/dotfiles/config/.aliases ~/.vimshrc' }
 map <F9> :VimShell<CR>
 map <C-F9> :VimShell -split<CR>
 let g:vimshell_prompt='$ '
 let g:vimshell_user_prompt = 'fnamemodify(getcwd(), ":~")'
-autocmd FileType * if &ft=='vimshell'| :AcpDisable | else | :AcpEnable | endif
+" autocmd FileType * if &ft=='vimshell'| :AcpDisable | else | :AcpEnable | endif
 Plug 'Townk/vim-autoclose'
+Plug 'Valloric/YouCompleteMe', { 'do' : function('BuildYCM') }
+let g:ycm_autoclose_preview_window_after_completion=1
+let g:ycm_confirm_extra_conf = 0
 Plug 'Xuyuanp/nerdtree-git-plugin'
 let g:NERDTreeIndicatorMapCustom = {
     \ "Modified"  : "M",
@@ -42,7 +36,6 @@ Plug 'airblade/vim-gitgutter'
 nmap ,g :GitGutterToggle<CR>
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'garbas/vim-snipmate'
 Plug 'haya14busa/incsearch.vim'
 map / <Plug>(incsearch-forward)
 Plug 'itchyny/vim-gitbranch'
@@ -59,12 +52,17 @@ let g:gist_clip_command = 'xclip -selection clipboard'
 Plug 'mattn/webapi-vim'
 Plug 'moll/vim-bbye'
 nnoremap ,q :Bdelete<CR>
-Plug 'othree/vim-autocomplpop'
-" let g:acp_completeOption = '.,w,b,k,d,u,t,i'
-let g:acp_completeOption = '.,w,b,k,t'
-let g:acp_behaviorSnipmateLength=1
-let g:acp_completeoptPreview=1
-let g:acp_behaviorKeywordLength=4
+Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
+let g:ycm_global_ycm_extra_conf= '~/.ycm_extra_conf.py'
+function! BuildYCM(info)
+  " info is a dictionary with 3 fields
+  " - name:   name of the plugin
+  " - status: 'installed', 'updated', or 'unchanged'
+  " - force:  set on PlugInstall! or PlugUpdate!
+  if a:info.status == 'installed' || a:info.force
+    !./install.py --clang-completer
+  endif
+endfunction
 Plug 'scps950707/v', { 'do': './install.sh' }
 Plug 'scps950707/vim-ctags'
 map <C-F10> :CtagsFullDepend<CR>
@@ -108,17 +106,34 @@ Plug 'tyru/open-browser.vim'
 Plug 'vim-airline/vim-airline'
 let g:airline_section_b = '%{gitbranch#name()}'
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#ycm#enabled = 1
 nmap <S-z> :bprevious<CR>
 nmap <S-x> :bnext<CR>
 Plug 'vim-scripts/L9'
 " Plug 'Lokaltog/vim-powerline'
+" Plug 'Rip-Rip/clang_complete'
+" let g:clang_close_preview=1
+" let g:clang_use_library=1
+" let g:clang_snippets=1
+" let g:clang_trailing_placeholder=1
+" " usage:first argument finish -> esc -> tab -> next argument
+" autocmd FileType cpp let g:clang_user_options = '-std=c++11'
+" autocmd FileType c let g:clang_user_options = '-std=c99'
+" let g:clang_library_path='/usr/lib/llvm-3.4/lib/'
 " Plug 'chusiang/vimcdoc-tw'
 " Plug 'derekwyatt/vim-fswitch'
 " Plug 'fholgado/minibufexpl.vim'
+" Plug 'garbas/vim-snipmate'
 " Plug 'gcmt/wildfire.vim'
 " Plug 'godlygeek/tabular'
 " Plug 'jez/vim-superman'
 " Plug 'ludovicchabant/vim-gutentags'
+" Plug 'othree/vim-autocomplpop'
+" let g:acp_completeOption = '.,w,b,k,d,u,t,i'
+" let g:acp_completeOption = '.,w,b,k,t'
+" let g:acp_behaviorSnipmateLength=1
+" let g:acp_completeoptPreview=1
+" let g:acp_behaviorKeywordLength=4
 " Plug 'tpope/vim-fugitive'
 " Plug 'vim-scripts/taglist.vim'
 " Plug 'wesleyche/SrcExpl'
