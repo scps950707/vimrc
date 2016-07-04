@@ -25,6 +25,7 @@
 - [X] [tagbar](https://github.com/majutsushi/tagbar)
 - [ ] [taglist.vim](https://github.com/vim-scripts/taglist.vim)
 - [X] [tlib_vim](https://github.com/tomtom/tlib_vim)
+- [X] [ultisnips](https://github.com/SirVer/ultisnips)
 - [X] [v](https://github.com/scps950707/v)
 - [X] [vader.vim](https://github.com/junegunn/vader.vim)
 - [X] [vim-addon-mw-utils](https://github.com/MarcWeber/vim-addon-mw-utils)
