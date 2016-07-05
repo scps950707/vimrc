@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2016-07-05 02:39
+" Last Modified:  2016-07-05 17:48
 " Filename:       plugins.vim
 " =============================================================================
 Plug 'MarcWeber/vim-addon-mw-utils'
@@ -71,6 +71,7 @@ nmap ,s :UpdateTimeStamp<CR>
 Plug 'scps950707/vimagit'
 let g:magit_default_fold_level=0
 autocmd filetype magit setlocal foldenable
+autocmd User VimagitEnterCommit startinsert!
 nmap ,m :Magit<CR>
 Plug 'scrooloose/nerdtree'
 nmap <F2> :<C-u>NERDTreeToggle<CR>
