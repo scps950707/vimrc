@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2016-07-05 23:58
+" Last Modified:  2016-07-06 00:01
 " Filename:       plugins.vim
 " =============================================================================
 Plug 'MarcWeber/vim-addon-mw-utils'
@@ -59,12 +59,12 @@ Plug 'moll/vim-bbye'
 nnoremap ,q :Bdelete<CR>
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
 let g:ycm_global_ycm_extra_conf= '~/.ycm_extra_conf.py'
+Plug 'scps950707/snippets'
 Plug 'scps950707/v', { 'do': './install.sh' }
 Plug 'scps950707/vim-ctags'
 map <C-F10> :CtagsFullDepend<CR>
 map <F10> :CtagsFileIncluded<CR>
 Plug 'scps950707/vim-lengthmatters'
-Plug 'scps950707/vim-snippets'
 Plug 'scps950707/vim-timestamp'
 nmap ,s :UpdateTimeStamp<CR>
 Plug 'scps950707/vimagit'
@@ -131,6 +131,7 @@ Plug 'vim-scripts/L9'
 " let g:acp_behaviorSnipmateLength=1
 " let g:acp_completeoptPreview=1
 " let g:acp_behaviorKeywordLength=4
+" Plug 'scps950707/vim-snippets'
 " Plug 'tpope/vim-fugitive'
 " Plug 'vim-scripts/taglist.vim'
 " Plug 'wesleyche/SrcExpl'
