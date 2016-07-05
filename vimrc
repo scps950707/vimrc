@@ -2,13 +2,14 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2016-07-05 02:29
+" Last Modified:  2016-07-06 00:37
 " Filename:       vimrc
 " =============================================================================
 set cursorline "顯示當前游標列
 " set cursorcolumn "顯示當前游標行
 set nocompatible "VIM 不使用和VI相容的模式
 set number
+set relativenumber
 set laststatus=2 " 總是顯示狀態欄
 filetype on " 開啟文件類型偵測
 filetype plugin on " 偵測不同文件類型開啟相對應套件
