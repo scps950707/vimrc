@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2016-07-05 17:48
+" Last Modified:  2016-07-05 23:58
 " Filename:       plugins.vim
 " =============================================================================
 Plug 'MarcWeber/vim-addon-mw-utils'
@@ -18,7 +18,6 @@ Plug 'SirVer/ultisnips'
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-Plug 'Townk/vim-autoclose'
 Plug 'Valloric/YouCompleteMe', { 'do' : function('BuildYCM') }
 let g:ycm_autoclose_preview_window_after_completion=1
 let g:ycm_confirm_extra_conf = 0

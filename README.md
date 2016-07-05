@@ -30,7 +30,6 @@
 - [X] [vader.vim](https://github.com/junegunn/vader.vim)
 - [X] [vim-addon-mw-utils](https://github.com/MarcWeber/vim-addon-mw-utils)
 - [X] [vim-airline](https://github.com/vim-airline/vim-airline)
-- [X] [vim-autoclose](https://github.com/Townk/vim-autoclose)
 - [ ] [vim-autocomplpop](https://github.com/othree/vim-autocomplpop)
 - [X] [vim-bbye](https://github.com/moll/vim-bbye)
 - [X] [vim-commentary](https://github.com/tpope/vim-commentary)
