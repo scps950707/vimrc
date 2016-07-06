@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2016-07-06 00:37
+" Last Modified:  2016-07-06 22:16
 " Filename:       vimrc
 " =============================================================================
 set cursorline "顯示當前游標列
@@ -50,6 +50,7 @@ set history=20
 set wildchar=<TAB> " such as <TAB> in shell
 set autoread
 set hidden
+set completeopt=menu,menuone
 
 
 " replace settings
