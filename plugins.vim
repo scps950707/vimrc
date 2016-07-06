@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2016-07-06 18:46
+" Last Modified:  2016-07-06 22:10
 " Filename:       plugins.vim
 " =============================================================================
 Plug 'Mizuchi/STL-Syntax'
@@ -13,7 +13,6 @@ map <F9> :VimShell<CR>
 map <C-F9> :VimShell -split<CR>
 let g:vimshell_prompt='$ '
 let g:vimshell_user_prompt = 'fnamemodify(getcwd(), ":~")'
-" autocmd FileType * if &ft=='vimshell'| :AcpDisable | else | :AcpEnable | endif
 Plug 'SirVer/ultisnips'
 let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/plugged/snippets/UltiSnips']
 let g:UltiSnipsExpandTrigger = "<nop>"
@@ -30,8 +29,9 @@ inoremap <expr><CR> pumvisible() ? "<C-R>=ExpandSnippetOrCarriageReturn()<CR>" :
 Plug 'Valloric/YouCompleteMe', { 'do' : function('BuildYCM') }
 let g:ycm_autoclose_preview_window_after_completion=1
 let g:ycm_confirm_extra_conf = 0
-let g:ycm_key_list_select_completion = ['<Down>']
-let g:ycm_key_list_previous_completion = ['<Up>']
+let g:ycm_filetype_specific_completion_to_disable = {}
+let g:ycm_collect_identifiers_from_tags_files = 1
+let g:ycm_complete_in_comments = 1
 Plug 'Xuyuanp/nerdtree-git-plugin'
 let g:NERDTreeIndicatorMapCustom = {
     \ "Modified"  : "M",
