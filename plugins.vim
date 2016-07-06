@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2016-07-06 22:10
+" Last Modified:  2016-07-07 01:57
 " Filename:       plugins.vim
 " =============================================================================
 Plug 'Mizuchi/STL-Syntax'
@@ -112,8 +112,12 @@ source $VIMRUNTIME/ftplugin/man.vim
 Plug 'tyru/open-browser-github.vim'
 Plug 'tyru/open-browser.vim'
 Plug 'vim-airline/vim-airline'
-let g:airline_section_b = '%{gitbranch#name()}'
+function! AirlineInit()
+    let g:airline_section_b = airline#section#create(['hunks', '%{gitbranch#name()}'])
+endfunction
+autocmd User AirlineAfterInit call AirlineInit()
 let g:airline#extensions#bufferline#enabled = 1
+let g:airline#extensions#syntastic#enabled = 1
 let g:airline#extensions#ycm#enabled = 1
 nmap <S-z> :bprevious<CR>
 nmap <S-x> :bnext<CR>
