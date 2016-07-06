@@ -2,10 +2,9 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2016-07-06 18:24
+" Last Modified:  2016-07-06 18:46
 " Filename:       plugins.vim
 " =============================================================================
-Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'Mizuchi/STL-Syntax'
 Plug 'Raimondi/delimitMate'
 Plug 'Shougo/vimproc.vim', { 'do': 'make' }
@@ -106,7 +105,6 @@ Plug 'sjl/gundo.vim'
 let g:gundo_close_on_revert=1
 nnoremap <F8> :GundoToggle<CR>
 Plug 'terryma/vim-multiple-cursors'
-Plug 'tomtom/tlib_vim'
 Plug 'tpope/vim-commentary'
 map <F5> gcc
 map <F6> gc
@@ -119,7 +117,6 @@ let g:airline#extensions#bufferline#enabled = 1
 let g:airline#extensions#ycm#enabled = 1
 nmap <S-z> :bprevious<CR>
 nmap <S-x> :bnext<CR>
-Plug 'vim-scripts/L9'
 " Plug 'Lokaltog/vim-powerline'
 " Plug 'Rip-Rip/clang_complete'
 " let g:clang_close_preview=1

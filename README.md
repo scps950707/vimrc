@@ -3,7 +3,6 @@
 
 
 #Plugins
-- [X] [L9](https://github.com/vim-scripts/L9)
 - [X] [STL-Syntax](https://github.com/Mizuchi/STL-Syntax)
 - [ ] [SrcExpl](https://github.com/wesleyche/SrcExpl)
 - [X] [YCM-Generator](https://github.com/rdnetto/YCM-Generator)
@@ -26,11 +25,9 @@
 - [ ] [tabular](https://github.com/godlygeek/tabular)
 - [X] [tagbar](https://github.com/majutsushi/tagbar)
 - [ ] [taglist.vim](https://github.com/vim-scripts/taglist.vim)
-- [X] [tlib_vim](https://github.com/tomtom/tlib_vim)
 - [X] [ultisnips](https://github.com/SirVer/ultisnips)
 - [X] [v](https://github.com/scps950707/v)
 - [X] [vader.vim](https://github.com/junegunn/vader.vim)
-- [X] [vim-addon-mw-utils](https://github.com/MarcWeber/vim-addon-mw-utils)
 - [X] [vim-airline](https://github.com/vim-airline/vim-airline)
 - [ ] [vim-autocomplpop](https://github.com/othree/vim-autocomplpop)
 - [X] [vim-bbye](https://github.com/moll/vim-bbye)
