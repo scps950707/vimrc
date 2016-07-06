@@ -34,6 +34,7 @@
 - [X] [vim-airline](https://github.com/vim-airline/vim-airline)
 - [ ] [vim-autocomplpop](https://github.com/othree/vim-autocomplpop)
 - [X] [vim-bbye](https://github.com/moll/vim-bbye)
+- [X] [vim-bufferline](https://github.com/bling/vim-bufferline)
 - [X] [vim-commentary](https://github.com/tpope/vim-commentary)
 - [X] [vim-ctags](https://github.com/scps950707/vim-ctags)
 - [ ] [vim-fswitch](https://github.com/derekwyatt/vim-fswitch)

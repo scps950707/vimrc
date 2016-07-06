@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2016-07-06 01:02
+" Last Modified:  2016-07-06 18:24
 " Filename:       plugins.vim
 " =============================================================================
 Plug 'MarcWeber/vim-addon-mw-utils'
@@ -49,6 +49,9 @@ Plug 'Yggdroot/indentLine'
 let g:indentLine_char = '|'
 Plug 'airblade/vim-gitgutter'
 nmap ,g :GitGutterToggle<CR>
+Plug 'bling/vim-bufferline'
+let g:bufferline_echo = 0
+let g:bufferline_show_bufnr = 0
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'haya14busa/incsearch.vim'
@@ -112,7 +115,7 @@ Plug 'tyru/open-browser-github.vim'
 Plug 'tyru/open-browser.vim'
 Plug 'vim-airline/vim-airline'
 let g:airline_section_b = '%{gitbranch#name()}'
-let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#bufferline#enabled = 1
 let g:airline#extensions#ycm#enabled = 1
 nmap <S-z> :bprevious<CR>
 nmap <S-x> :bnext<CR>
