@@ -3,27 +3,30 @@
 # Author:         scps950707
 # Email:          scps950707@gmail.com
 # Created:        2016-07-03 00:33
-# Last Modified:  2016-07-03 02:10
-# Filename:       format.sh
+# Last Modified:  2016-07-08 17:40
+# Filename:       format.hook
 # =============================================================================
-cd `git rev-parse --show-toplevel`
+originObj=`mktemp /tmp/plugins.XXXXX` || exit 1
+targetObj=plugins.vim
+script=./format.gawk
 
-stashdiff=`mktemp /tmp/stash.XXXXX` || exit 1
-git diff --full-index --exit-code > $stashdiff
-bothmodified=$?
-if [ $bothmodified -ne 0 ];then
-    git stash -q --keep-index
+cd `git rev-parse --show-toplevel`
+git diff --quiet --exit-code
+gitAddPatched=$?
+if [ $gitAddPatched -ne 0 ];then
+    cat $targetObj > $originObj
+    git checkout -- $targetObj
 fi
 
 TMPFILE=`mktemp /tmp/pluginsvim.XXXXX` || exit 1
-./format.gawk plugins.vim > $TMPFILE
-cat $TMPFILE > plugins.vim
+$script $targetObj > $TMPFILE
+cat $TMPFILE > $targetObj
 rm -rf $TMPFILE
-git add plugins.vim
+git add $targetObj
 
-if [ $bothmodified -ne 0 ];then
-    git apply < $stashdiff && git stash drop -q
+if [ $gitAddPatched -ne 0 ];then
+    $script $originObj > $targetObj
 fi
-rm $stashdiff
+rm $originObj
 
 exit 0
