@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2016-07-07 18:16
+" Last Modified:  2016-07-07 18:19
 " Filename:       plugins.vim
 " =============================================================================
 Plug 'Mizuchi/STL-Syntax'
@@ -51,7 +51,6 @@ nmap ,g :GitGutterToggle<CR>
 Plug 'bling/vim-bufferline'
 let g:bufferline_echo = 0
 let g:bufferline_show_bufnr = 0
-Plug 'bronson/vim-trailing-whitespace'
 Plug 'djoshea/vim-autoread'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'haya14busa/incsearch.vim'
@@ -70,6 +69,7 @@ let g:gist_clip_command = 'xclip -selection clipboard'
 Plug 'mattn/webapi-vim'
 Plug 'moll/vim-bbye'
 nnoremap ,q :Bdelete<CR>
+Plug 'ntpeters/vim-better-whitespace'
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
 let g:ycm_global_ycm_extra_conf= '~/.ycm_extra_conf.py'
 Plug 'scps950707/snippets'
@@ -134,6 +134,7 @@ let g:airline_theme = 'base16'
 " autocmd FileType cpp let g:clang_user_options = '-std=c++11'
 " autocmd FileType c let g:clang_user_options = '-std=c99'
 " let g:clang_library_path='/usr/lib/llvm-3.4/lib/'
+" Plug 'bronson/vim-trailing-whitespace'
 " Plug 'chusiang/vimcdoc-tw'
 " Plug 'derekwyatt/vim-fswitch'
 " Plug 'fholgado/minibufexpl.vim'
