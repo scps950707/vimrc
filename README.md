@@ -31,6 +31,7 @@
 - [X] [vim-airline](https://github.com/vim-airline/vim-airline)
 - [X] [vim-airline-themes](https://github.com/vim-airline/vim-airline-themes)
 - [ ] [vim-autocomplpop](https://github.com/othree/vim-autocomplpop)
+- [X] [vim-autoread](https://github.com/djoshea/vim-autoread)
 - [X] [vim-bbye](https://github.com/moll/vim-bbye)
 - [X] [vim-bufferline](https://github.com/bling/vim-bufferline)
 - [X] [vim-commentary](https://github.com/tpope/vim-commentary)
