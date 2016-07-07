@@ -8,7 +8,7 @@
 - [X] [YCM-Generator](https://github.com/rdnetto/YCM-Generator)
 - [X] [YouCompleteMe](https://github.com/Valloric/YouCompleteMe)
 - [ ] [clang_complete](https://github.com/Rip-Rip/clang_complete)
-- [X] [ctrlp.vim](https://github.com/kien/ctrlp.vim)
+- [X] [ctrlp.vim](https://github.com/ctrlpvim/ctrlp.vim)
 - [X] [delimitMate](https://github.com/Raimondi/delimitMate)
 - [X] [editorconfig-vim](https://github.com/editorconfig/editorconfig-vim)
 - [X] [gist-vim](https://github.com/mattn/gist-vim)

@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2016-07-07 18:19
+" Last Modified:  2016-07-08 03:48
 " Filename:       plugins.vim
 " =============================================================================
 Plug 'Mizuchi/STL-Syntax'
@@ -51,14 +51,14 @@ nmap ,g :GitGutterToggle<CR>
 Plug 'bling/vim-bufferline'
 let g:bufferline_echo = 0
 let g:bufferline_show_bufnr = 0
+Plug 'ctrlpvim/ctrlp.vim'
+let g:ctrlp_working_path_mode = 'a'
 Plug 'djoshea/vim-autoread'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'haya14busa/incsearch.vim'
 map / <Plug>(incsearch-forward)
 Plug 'itchyny/vim-gitbranch'
 Plug 'junegunn/vader.vim'
-Plug 'kien/ctrlp.vim'
-let g:ctrlp_working_path_mode = 'a'
 Plug 'majutsushi/tagbar'
 let g:tagbar_width = 30
 let g:tagbar_compact=1
