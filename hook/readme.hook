@@ -3,23 +3,25 @@
 # Author:         scps950707
 # Email:          scps950707@gmail.com
 # Created:        2016-07-02 04:59
-# Last Modified:  2016-07-03 02:10
-# Filename:       readme.sh
+# Last Modified:  2016-07-08 18:07
+# Filename:       readme.hook
 # =============================================================================
-cd `git rev-parse --show-toplevel`
-
 stashdiff=`mktemp /tmp/stash.XXXXX` || exit 1
-git diff --full-index --exit-code > $stashdiff
-bothmodified=$?
-if [ $bothmodified -ne 0 ];then
+input="plugins.vim vimrc"
+script=./readme.gawk
+target=README.md
+
+cd `git rev-parse --show-toplevel`
+git diff --exit-code > $stashdiff
+gitAddPatched=$?
+if [ $gitAddPatched -ne 0 ];then
     git stash -q --keep-index
 fi
 
-FILES="plugins.vim vimrc"
-./readme.gawk $FILES > README.md
-git add README.md
+$script $input > $target
+git add $target
 
-if [ $bothmodified -ne 0 ];then
+if [ $gitAddPatched -ne 0 ];then
     git apply < $stashdiff && git stash drop -q
 fi
 rm $stashdiff
