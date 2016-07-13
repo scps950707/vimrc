@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2016-07-06 22:16
+" Last Modified:  2016-07-14 00:04
 " Filename:       vimrc
 " =============================================================================
 set cursorline "顯示當前游標列
@@ -34,7 +34,7 @@ set softtabstop=4 " 讓 vim 把連續數量的空格視為一個制表符
 set shiftwidth=4 "縮排寬度
 set scrolloff=3 "滾動時游標下方保留幾行
 set wildmenu
-set wildmode=longest,list "命令模式自動補齊的型態
+set wildmode=longest:full,full
 set wildignore+=*.o,*.a,*.so,*.obj,*.exe,*.lib,*.ncb,*.opt,*.plg,.svn,.git
 set wildignore+=*.png,*.jpg,*.gif,*.svg,*.xpm,*.swp
 set nowrap "程式碼折行
