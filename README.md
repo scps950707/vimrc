@@ -42,7 +42,7 @@
 - [X] [vim-gitbranch](https://github.com/itchyny/vim-gitbranch)
 - [X] [vim-gitgutter](https://github.com/airblade/vim-gitgutter)
 - [ ] [vim-gutentags](https://github.com/ludovicchabant/vim-gutentags)
-- [X] [vim-lengthmatters](https://github.com/scps950707/vim-lengthmatters)
+- [ ] [vim-lengthmatters](https://github.com/scps950707/vim-lengthmatters)
 - [X] [vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors)
 - [ ] [vim-powerline](https://github.com/Lokaltog/vim-powerline)
 - [ ] [vim-snipmate](https://github.com/garbas/vim-snipmate)

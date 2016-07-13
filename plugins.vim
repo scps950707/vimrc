@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2016-07-08 18:00
+" Last Modified:  2016-07-13 16:21
 " Filename:       plugins.vim
 " =============================================================================
 Plug 'Mizuchi/STL-Syntax'
@@ -77,7 +77,6 @@ Plug 'scps950707/v', { 'do': './install.sh' }
 Plug 'scps950707/vim-ctags'
 map <C-F10> :CtagsFullDepend<CR>
 map <F10> :CtagsFileIncluded<CR>
-Plug 'scps950707/vim-lengthmatters'
 Plug 'scps950707/vim-timestamp'
 nmap ,s :UpdateTimeStamp<CR>
 Plug 'scps950707/vimagit'
@@ -148,6 +147,7 @@ Plug 'vim-airline/vim-airline-themes'
 " let g:acp_behaviorSnipmateLength=1
 " let g:acp_completeoptPreview=1
 " let g:acp_behaviorKeywordLength=4
+" Plug 'scps950707/vim-lengthmatters'
 " Plug 'scps950707/vim-snippets'
 " Plug 'tpope/vim-fugitive'
 " Plug 'vim-scripts/taglist.vim'
