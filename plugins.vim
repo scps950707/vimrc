@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2016-07-13 17:02
+" Last Modified:  2016-07-14 03:48
 " Filename:       plugins.vim
 " =============================================================================
 Plug 'Mizuchi/STL-Syntax'
@@ -27,7 +27,7 @@ function ExpandSnippetOrCarriageReturn()
 endfunction
 inoremap <expr><CR> pumvisible() ? "<C-R>=ExpandSnippetOrCarriageReturn()<CR>" : "<CR>"
 Plug 'Valloric/YouCompleteMe', { 'do' : function('BuildYCM') }
-let g:ycm_autoclose_preview_window_after_completion=1
+let g:ycm_autoclose_preview_window_after_insertion=1
 let g:ycm_confirm_extra_conf = 0
 let g:ycm_filetype_specific_completion_to_disable = {}
 let g:ycm_collect_identifiers_from_tags_files = 1
