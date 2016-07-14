@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2016-07-14 03:48
+" Last Modified:  2016-07-14 18:11
 " Filename:       vimrc
 " =============================================================================
 set cursorline "顯示當前游標列
@@ -50,6 +50,7 @@ set history=20
 set wildchar=<TAB> " such as <TAB> in shell
 set autoread
 set hidden
+set completeopt-=preview
 
 
 " replace settings
@@ -75,17 +76,6 @@ vnoremap <C-x> "+x
 " cut from vim to system's clipboard
 " nmap <C-d> "+P
 " paste from system's clipboard to vim
-
-
-function! BuildYCM(info)
-  " info is a dictionary with 3 fields
-  " - name:   name of the plugin
-  " - status: 'installed', 'updated', or 'unchanged'
-  " - force:  set on PlugInstall! or PlugUpdate!
-  if a:info.status == 'installed' || a:info.force
-    !./install.py --clang-completer
-  endif
-endfunction
 
 
 " Plugins Management

@@ -6,7 +6,7 @@
 - [X] [STL-Syntax](https://github.com/Mizuchi/STL-Syntax)
 - [ ] [SrcExpl](https://github.com/wesleyche/SrcExpl)
 - [X] [YCM-Generator](https://github.com/rdnetto/YCM-Generator)
-- [X] [YouCompleteMe](https://github.com/Valloric/YouCompleteMe)
+- [X] [YouCompleteMe](https://github.com/oblitum/YouCompleteMe)
 - [ ] [clang_complete](https://github.com/Rip-Rip/clang_complete)
 - [X] [ctrlp.vim](https://github.com/ctrlpvim/ctrlp.vim)
 - [X] [delimitMate](https://github.com/Raimondi/delimitMate)

@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2016-07-14 03:48
+" Last Modified:  2016-07-14 18:11
 " Filename:       plugins.vim
 " =============================================================================
 Plug 'Mizuchi/STL-Syntax'
@@ -26,25 +26,6 @@ function ExpandSnippetOrCarriageReturn()
     endif
 endfunction
 inoremap <expr><CR> pumvisible() ? "<C-R>=ExpandSnippetOrCarriageReturn()<CR>" : "<CR>"
-Plug 'Valloric/YouCompleteMe', { 'do' : function('BuildYCM') }
-let g:ycm_autoclose_preview_window_after_insertion=1
-let g:ycm_confirm_extra_conf = 0
-let g:ycm_filetype_specific_completion_to_disable = {}
-let g:ycm_collect_identifiers_from_tags_files = 1
-let g:ycm_complete_in_comments = 1
-let g:ycm_filetype_blacklist = {
-    \ 'tagbar' : 1,
-    \ 'qf' : 1,
-    \ 'notes' : 1,
-    \ 'markdown' : 1,
-    \ 'unite' : 1,
-    \ 'text' : 1,
-    \ 'vimwiki' : 1,
-    \ 'pandoc' : 1,
-    \ 'infolog' : 1,
-    \ 'mail' : 1,
-    \ 'vimshell' : 1
-    \ }
 Plug 'Xuyuanp/nerdtree-git-plugin'
 let g:NERDTreeIndicatorMapCustom = {
     \ "Modified"  : "M",
@@ -83,6 +64,24 @@ Plug 'mattn/webapi-vim'
 Plug 'moll/vim-bbye'
 nnoremap ,q :Bdelete<CR>
 Plug 'ntpeters/vim-better-whitespace'
+Plug 'oblitum/YouCompleteMe', { 'do': './install.py --clang-completer' }
+let g:ycm_confirm_extra_conf = 0
+let g:ycm_filetype_specific_completion_to_disable = {}
+let g:ycm_collect_identifiers_from_tags_files = 1
+let g:ycm_complete_in_comments = 1
+let g:ycm_filetype_blacklist = {
+    \ 'tagbar' : 1,
+    \ 'qf' : 1,
+    \ 'notes' : 1,
+    \ 'markdown' : 1,
+    \ 'unite' : 1,
+    \ 'text' : 1,
+    \ 'vimwiki' : 1,
+    \ 'pandoc' : 1,
+    \ 'infolog' : 1,
+    \ 'mail' : 1,
+    \ 'vimshell' : 1
+    \ }
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
 let g:ycm_global_ycm_extra_conf= '~/.ycm_extra_conf.py'
 Plug 'scps950707/snippets'
