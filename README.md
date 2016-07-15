@@ -47,6 +47,7 @@
 - [ ] [vim-powerline](https://github.com/Lokaltog/vim-powerline)
 - [ ] [vim-snipmate](https://github.com/garbas/vim-snipmate)
 - [ ] [vim-snippets](https://github.com/scps950707/vim-snippets)
+- [X] [vim-startify](https://github.com/mhinz/vim-startify)
 - [ ] [vim-superman](https://github.com/jez/vim-superman)
 - [X] [vim-timestamp](https://github.com/scps950707/vim-timestamp)
 - [ ] [vim-trailing-whitespace](https://github.com/bronson/vim-trailing-whitespace)

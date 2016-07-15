@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2016-07-14 18:11
+" Last Modified:  2016-07-16 03:50
 " Filename:       plugins.vim
 " =============================================================================
 Plug 'Mizuchi/STL-Syntax'
@@ -61,6 +61,10 @@ nmap <F3> :<C-u>TagbarToggle<CR>
 Plug 'mattn/gist-vim'
 let g:gist_clip_command = 'xclip -selection clipboard'
 Plug 'mattn/webapi-vim'
+Plug 'mhinz/vim-startify'
+let g:startify_bookmarks = [ '~/github/vimrc/vimrc','~/github/vimrc/plugins.vim']
+let g:startify_change_to_dir = 1
+let g:startify_files_number = 8
 Plug 'moll/vim-bbye'
 nnoremap ,q :Bdelete<CR>
 Plug 'ntpeters/vim-better-whitespace'
