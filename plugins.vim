@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2016-07-18 16:22
+" Last Modified:  2016-07-18 17:23
 " Filename:       plugins.vim
 " =============================================================================
 Plug 'Mizuchi/STL-Syntax'
@@ -14,7 +14,6 @@ map <C-F9> :VimShell -split<CR>
 let g:vimshell_prompt='$ '
 let g:vimshell_user_prompt = 'fnamemodify(getcwd(), ":~")'
 Plug 'SirVer/ultisnips'
-let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/plugged/snippets/UltiSnips']
 let g:UltiSnipsExpandTrigger = "<nop>"
 let g:ulti_expand_or_jump_res=0
 function ExpandSnippetOrCarriageReturn()
