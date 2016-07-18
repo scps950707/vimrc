@@ -12,7 +12,7 @@
 - [X] [delimitMate](https://github.com/Raimondi/delimitMate)
 - [X] [editorconfig-vim](https://github.com/editorconfig/editorconfig-vim)
 - [X] [gist-vim](https://github.com/mattn/gist-vim)
-- [X] [gundo.vim](https://github.com/sjl/gundo.vim)
+- [ ] [gundo.vim](https://github.com/sjl/gundo.vim)
 - [X] [incsearch.vim](https://github.com/haya14busa/incsearch.vim)
 - [X] [indentLine](https://github.com/Yggdroot/indentLine)
 - [ ] [minibufexpl.vim](https://github.com/fholgado/minibufexpl.vim)
@@ -26,6 +26,7 @@
 - [X] [tagbar](https://github.com/majutsushi/tagbar)
 - [ ] [taglist.vim](https://github.com/vim-scripts/taglist.vim)
 - [X] [ultisnips](https://github.com/SirVer/ultisnips)
+- [X] [undotree](https://github.com/mbbill/undotree)
 - [X] [v](https://github.com/scps950707/v)
 - [X] [vader.vim](https://github.com/junegunn/vader.vim)
 - [X] [vim-airline](https://github.com/vim-airline/vim-airline)
@@ -83,7 +84,7 @@
 |map|\<F5\>|gcc|
 |map|\<F6\>|gc|
 |map|\<F7\>|:\<C-u\>call Replace(0,input('Replace '.expand('\<cword\>').' with: '))\<CR\>|
-|nnoremap|\<F8\>|:GundoToggle\<CR\>|
+|nnoremap|\<F8\>|:UndotreeToggle\<cr\>|
 |map|\<F9\>|:VimShell\<CR\>|
 |nmap|\<S-x\>|:bnext\<CR\>|
 |nmap|\<S-z\>|:bprevious\<CR\>|

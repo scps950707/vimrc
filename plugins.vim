@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2016-07-16 03:50
+" Last Modified:  2016-07-18 16:22
 " Filename:       plugins.vim
 " =============================================================================
 Plug 'Mizuchi/STL-Syntax'
@@ -61,6 +61,9 @@ nmap <F3> :<C-u>TagbarToggle<CR>
 Plug 'mattn/gist-vim'
 let g:gist_clip_command = 'xclip -selection clipboard'
 Plug 'mattn/webapi-vim'
+Plug 'mbbill/undotree'
+let g:undotree_SetFocusWhenToggle = 1
+nnoremap <F8> :UndotreeToggle<cr>
 Plug 'mhinz/vim-startify'
 let g:startify_bookmarks = [ '~/github/vimrc/vimrc','~/github/vimrc/plugins.vim']
 let g:startify_change_to_dir = 1
@@ -117,9 +120,6 @@ let g:syntastic_c_check_header = 1
 " let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-Plug 'sjl/gundo.vim'
-let g:gundo_close_on_revert=1
-nnoremap <F8> :GundoToggle<CR>
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-commentary'
 map <F5> gcc
@@ -165,6 +165,9 @@ Plug 'vim-airline/vim-airline-themes'
 " let g:acp_behaviorKeywordLength=4
 " Plug 'scps950707/vim-lengthmatters'
 " Plug 'scps950707/vim-snippets'
+" Plug 'sjl/gundo.vim'
+" let g:gundo_close_on_revert=1
+" nnoremap <F8> :GundoToggle<CR>
 " Plug 'tpope/vim-fugitive'
 " Plug 'vim-scripts/taglist.vim'
 " Plug 'wesleyche/SrcExpl'
