@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2016-07-20 00:23
+" Last Modified:  2016-07-20 00:51
 " Filename:       plugins.vim
 " =============================================================================
 Plug 'Mizuchi/STL-Syntax'
@@ -41,9 +41,6 @@ Plug 'Yggdroot/indentLine'
 let g:indentLine_char = '|'
 Plug 'airblade/vim-gitgutter'
 nmap ,g :GitGutterToggle<CR>
-Plug 'bling/vim-bufferline'
-let g:bufferline_echo = 0
-let g:bufferline_show_bufnr = 0
 Plug 'ctrlpvim/ctrlp.vim'
 let g:ctrlp_working_path_mode = 'a'
 Plug 'djoshea/vim-autoread'
@@ -143,9 +140,11 @@ function! AirlineInit()
     let g:airline_section_b = airline#section#create(['hunks', '%{gitbranch#name()}'])
 endfunction
 autocmd User AirlineAfterInit call AirlineInit()
-let g:airline#extensions#bufferline#enabled = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#buffer_min_count = 2
 let g:airline#extensions#syntastic#enabled = 1
 let g:airline#extensions#ycm#enabled = 1
+let g:airline_theme='base16'
 nmap <S-z> :bprevious<CR>
 nmap <S-x> :bnext<CR>
 Plug 'vim-airline/vim-airline-themes'
@@ -159,6 +158,9 @@ Plug 'vim-airline/vim-airline-themes'
 " autocmd FileType cpp let g:clang_user_options = '-std=c++11'
 " autocmd FileType c let g:clang_user_options = '-std=c99'
 " let g:clang_library_path='/usr/lib/llvm-3.4/lib/'
+" Plug 'bling/vim-bufferline'
+" let g:bufferline_echo = 0
+" let g:bufferline_show_bufnr = 0
 " Plug 'bronson/vim-trailing-whitespace'
 " Plug 'chusiang/vimcdoc-tw'
 " Plug 'derekwyatt/vim-fswitch'
