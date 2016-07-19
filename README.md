@@ -44,6 +44,7 @@
 - [X] [vim-gitgutter](https://github.com/airblade/vim-gitgutter)
 - [ ] [vim-gutentags](https://github.com/ludovicchabant/vim-gutentags)
 - [ ] [vim-lengthmatters](https://github.com/scps950707/vim-lengthmatters)
+- [X] [vim-move](https://github.com/matze/vim-move)
 - [X] [vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors)
 - [ ] [vim-powerline](https://github.com/Lokaltog/vim-powerline)
 - [ ] [vim-snipmate](https://github.com/garbas/vim-snipmate)

@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2016-07-18 17:23
+" Last Modified:  2016-07-19 21:17
 " Filename:       plugins.vim
 " =============================================================================
 Plug 'Mizuchi/STL-Syntax'
@@ -60,6 +60,8 @@ nmap <F3> :<C-u>TagbarToggle<CR>
 Plug 'mattn/gist-vim'
 let g:gist_clip_command = 'xclip -selection clipboard'
 Plug 'mattn/webapi-vim'
+Plug 'matze/vim-move'
+let g:move_key_modifier = 'C'
 Plug 'mbbill/undotree'
 let g:undotree_SetFocusWhenToggle = 1
 nnoremap <F8> :UndotreeToggle<cr>
