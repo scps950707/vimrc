@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2016-07-19 21:17
+" Last Modified:  2016-07-19 23:48
 " Filename:       plugins.vim
 " =============================================================================
 Plug 'Mizuchi/STL-Syntax'
@@ -66,9 +66,22 @@ Plug 'mbbill/undotree'
 let g:undotree_SetFocusWhenToggle = 1
 nnoremap <F8> :UndotreeToggle<cr>
 Plug 'mhinz/vim-startify'
-let g:startify_bookmarks = [ '~/github/vimrc/vimrc','~/github/vimrc/plugins.vim']
+if(filereadable($HOME.'/.vim_startify_bookmarks'))
+    let g:startify_bookmarks = readfile($HOME.'/.vim_startify_bookmarks')
+endif
+if(filereadable($HOME.'/.vim_startify_commands'))
+    let g:startify_commands = readfile($HOME.'/.vim_startify_commands')
+endif
+let g:startify_list_order = [
+        \ ['   MRU '. getcwd()], 'dir',
+        \ ['   Bookmarks'],      'bookmarks',
+        \ ['   MRU'],            'files',
+        \ ['   Commands'],       'commands',
+        \ ['   Sessions'],       'sessions',
+        \ ]
 let g:startify_change_to_dir = 1
 let g:startify_files_number = 8
+let g:startify_custom_header = []
 Plug 'moll/vim-bbye'
 nnoremap ,q :Bdelete<CR>
 Plug 'ntpeters/vim-better-whitespace'
