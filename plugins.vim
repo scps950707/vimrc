@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2016-07-20 00:51
+" Last Modified:  2016-07-20 01:15
 " Filename:       plugins.vim
 " =============================================================================
 Plug 'Mizuchi/STL-Syntax'
@@ -113,6 +113,7 @@ Plug 'scps950707/vimagit'
 let g:magit_default_fold_level=0
 autocmd filetype magit setlocal foldenable
 autocmd User VimagitEnterCommit startinsert!
+autocmd User VimagitBufferClose :edit
 nmap ,m :Magit<CR>
 Plug 'scrooloose/nerdtree'
 nmap <F2> :<C-u>NERDTreeToggle<CR>
