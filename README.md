@@ -81,7 +81,7 @@
 |map|\<F10\>|:CtagsFileIncluded\<CR\>|
 |nmap|\<F2\>|:\<C-u\>NERDTreeToggle\<CR\>|
 |nmap|\<F3\>|:\<C-u\>TagbarToggle\<CR\>|
-|nmap|\<F4\>|\<C-u\>gggqG\<CR\>|
+|nmap|\<F4\>|\<C-u\>gg=G\<CR\>|
 |map|\<F5\>|gcc|
 |map|\<F6\>|gc|
 |map|\<F7\>|:\<C-u\>call Replace(0,input('Replace '.expand('\<cword\>').' with: '))\<CR\>|

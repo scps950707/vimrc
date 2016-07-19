@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2016-07-14 18:11
+" Last Modified:  2016-07-19 21:49
 " Filename:       vimrc
 " =============================================================================
 set cursorline "顯示當前游標列
@@ -113,9 +113,8 @@ imap <C-a> <C-X><C-O>
 
 
 " auto indent
-" nmap <F4> <C-u>0ggVG=<CR>
-" nmap <F4> <C-u>gg=G<CR>
-nmap <F4> <C-u>gggqG<CR>
+nmap <F4> <C-u>gg=G<CR>
+autocmd FileType c,cpp nmap <buffer> <F4> <C-u>gggqG<CR>
 autocmd FileType c,cpp set formatprg=astyle
 
 " in help page map q to close buffer
