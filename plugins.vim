@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2016-07-20 00:10
+" Last Modified:  2016-07-20 00:23
 " Filename:       plugins.vim
 " =============================================================================
 Plug 'Mizuchi/STL-Syntax'
@@ -27,16 +27,16 @@ endfunction
 inoremap <expr><CR> pumvisible() ? "<C-R>=ExpandSnippetOrCarriageReturn()<CR>" : "\<CR>"
 Plug 'Xuyuanp/nerdtree-git-plugin'
 let g:NERDTreeIndicatorMapCustom = {
-    \ "Modified"  : "M",
-    \ "Staged"    : "A",
-    \ "Untracked" : "?",
-    \ "Renamed"   : "R",
-    \ "Unmerged"  : "U",
-    \ "Deleted"   : "D",
-    \ "Dirty"     : "?",
-    \ "Clean"     : "C",
-    \ "Unknown"   : "?"
-    \ }
+            \ "Modified"  : "M",
+            \ "Staged"    : "A",
+            \ "Untracked" : "?",
+            \ "Renamed"   : "R",
+            \ "Unmerged"  : "U",
+            \ "Deleted"   : "D",
+            \ "Dirty"     : "?",
+            \ "Clean"     : "C",
+            \ "Unknown"   : "?"
+            \ }
 Plug 'Yggdroot/indentLine'
 let g:indentLine_char = '|'
 Plug 'airblade/vim-gitgutter'
@@ -73,12 +73,12 @@ if(filereadable($HOME.'/.vim_startify_commands'))
     let g:startify_commands = readfile($HOME.'/.vim_startify_commands')
 endif
 let g:startify_list_order = [
-        \ ['   MRU '. getcwd()], 'dir',
-        \ ['   Bookmarks'],      'bookmarks',
-        \ ['   MRU'],            'files',
-        \ ['   Commands'],       'commands',
-        \ ['   Sessions'],       'sessions',
-        \ ]
+            \ ['   MRU '. getcwd()], 'dir',
+            \ ['   Bookmarks'],      'bookmarks',
+            \ ['   MRU'],            'files',
+            \ ['   Commands'],       'commands',
+            \ ['   Sessions'],       'sessions',
+            \ ]
 let g:startify_change_to_dir = 1
 let g:startify_files_number = 8
 let g:startify_custom_header = []
@@ -86,25 +86,25 @@ Plug 'moll/vim-bbye'
 nnoremap ,q :Bdelete<CR>
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'oblitum/YouCompleteMe', { 'do': './install.py --clang-completer' }
+let g:ycm_global_ycm_extra_conf= '~/.ycm_extra_conf.py'
 let g:ycm_confirm_extra_conf = 0
 let g:ycm_filetype_specific_completion_to_disable = {}
 let g:ycm_collect_identifiers_from_tags_files = 1
 let g:ycm_complete_in_comments = 1
 let g:ycm_filetype_blacklist = {
-    \ 'tagbar' : 1,
-    \ 'qf' : 1,
-    \ 'notes' : 1,
-    \ 'markdown' : 1,
-    \ 'unite' : 1,
-    \ 'text' : 1,
-    \ 'vimwiki' : 1,
-    \ 'pandoc' : 1,
-    \ 'infolog' : 1,
-    \ 'mail' : 1,
-    \ 'vimshell' : 1
-    \ }
+            \ 'tagbar' : 1,
+            \ 'qf' : 1,
+            \ 'notes' : 1,
+            \ 'markdown' : 1,
+            \ 'unite' : 1,
+            \ 'text' : 1,
+            \ 'vimwiki' : 1,
+            \ 'pandoc' : 1,
+            \ 'infolog' : 1,
+            \ 'mail' : 1,
+            \ 'vimshell' : 1
+            \ }
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
-let g:ycm_global_ycm_extra_conf= '~/.ycm_extra_conf.py'
 Plug 'scps950707/snippets'
 Plug 'scps950707/v', { 'do': './install.sh' }
 Plug 'scps950707/vim-ctags'
@@ -129,9 +129,6 @@ let g:syntastic_cpp_compiler_options = '-std=c++11 -Wall'
 let g:syntastic_cpp_check_header = 1
 let g:syntastic_c_compiler_options = '-std=c99 -Wall -D_XOPEN_SOURCE=500'
 let g:syntastic_c_check_header = 1
-" let g:syntastic_always_populate_loc_list = 1
-" let g:syntastic_loc_list_height = 2
-" let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 Plug 'terryma/vim-multiple-cursors'
@@ -172,7 +169,6 @@ Plug 'vim-airline/vim-airline-themes'
 " Plug 'jez/vim-superman'
 " Plug 'ludovicchabant/vim-gutentags'
 " Plug 'othree/vim-autocomplpop'
-" let g:acp_completeOption = '.,w,b,k,d,u,t,i'
 " let g:acp_completeOption = '.,w,b,k,t'
 " let g:acp_behaviorSnipmateLength=1
 " let g:acp_completeoptPreview=1
