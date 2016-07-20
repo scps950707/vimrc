@@ -37,6 +37,7 @@
 - [X] [vim-better-whitespace](https://github.com/ntpeters/vim-better-whitespace)
 - [ ] [vim-bufferline](https://github.com/bling/vim-bufferline)
 - [X] [vim-commentary](https://github.com/tpope/vim-commentary)
+- [X] [vim-cpp-enhanced-highlight](https://github.com/octol/vim-cpp-enhanced-highlight)
 - [X] [vim-ctags](https://github.com/scps950707/vim-ctags)
 - [ ] [vim-fswitch](https://github.com/derekwyatt/vim-fswitch)
 - [ ] [vim-fugitive](https://github.com/tpope/vim-fugitive)
