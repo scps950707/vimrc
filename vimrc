@@ -49,7 +49,7 @@ set viminfo='20,\"50    " read/write a .viminfo file, don't store more than 50 l
 set history=20
 set wildchar=<TAB> " such as <TAB> in shell
 set autoread
-set hidden
+" set hidden
 set completeopt-=preview
 set pastetoggle=<F12>
 
