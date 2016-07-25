@@ -65,10 +65,17 @@ nnoremap <F8> :UndotreeToggle<cr>
 Plug 'mhinz/vim-startify'
 if(filereadable($HOME.'/.vim_startify_bookmarks'))
     let g:startify_bookmarks = readfile($HOME.'/.vim_startify_bookmarks')
+else
+    echomsg $HOME.'/.vim_startify_bookmarks not exist'
 endif
 if(filereadable($HOME.'/.vim_startify_commands'))
     let g:startify_commands = readfile($HOME.'/.vim_startify_commands')
+else
+    echomsg $HOME.'/.vim_startify_commands not exist'
 endif
+command! -nargs=0 StartifyAddCurrentFileToBookmark call writefile([expand('%:p')],$HOME.'/.vim_startify_bookmarks',"a")
+command! -nargs=0 StartifyEditBookmark edit ~/.vim_startify_bookmarks
+command! -nargs=0 StartifyEditCommands edit ~/.vim_startify_commands
 let g:startify_list_order = [
             \ ['   MRU '. getcwd()], 'dir',
             \ ['   Bookmarks'],      'bookmarks',
