@@ -13,6 +13,7 @@ map <F9> :VimShell<CR>
 map <C-F9> :VimShell -split<CR>
 let g:vimshell_prompt='$ '
 let g:vimshell_user_prompt = 'fnamemodify(getcwd(), ":~")'
+autocmd filetype vimshell setlocal omnifunc=vimshell#complete#omnifunc
 Plug 'SirVer/ultisnips'
 let g:UltiSnipsExpandTrigger = "<nop>"
 let g:ulti_expand_or_jump_res=0
