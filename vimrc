@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2016-07-28 05:48
+" Last Modified:  2016-08-03 07:52
 " Filename:       vimrc
 " =============================================================================
 set cursorline "顯示當前游標列
@@ -38,8 +38,8 @@ set wildmode=longest:full,full
 set wildignore+=*.o,*.a,*.so,*.obj,*.exe,*.lib,*.ncb,*.opt,*.plg,.svn,.git
 set wildignore+=*.png,*.jpg,*.gif,*.svg,*.xpm,*.swp
 set nowrap "程式碼折行
-set nofoldenable "程式碼預設不折疊
-set foldmethod=syntax "偵測程式碼格式來折疊
+" set nofoldenable "程式碼預設不折疊
+set foldmethod=marker "偵測程式碼格式來折疊
 set foldcolumn=1 "VIM最左邊預留一塊foldcolumn的空間顯示折疊情形
 set previewheight=1
 set nobackup
