@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2016-08-03 07:52
+" Last Modified:  2016-08-03 09:48
 " Filename:       vimrc
 " =============================================================================
 set cursorline "顯示當前游標列
@@ -120,3 +120,6 @@ autocmd FileType c,cpp set formatprg=astyle
 
 " in help page map q to close buffer
 autocmd FileType help nnoremap <buffer> <silent> q :q<CR>
+
+" check file modified externally
+autocmd FocusGained,BufEnter * :silent! checktime
