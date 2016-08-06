@@ -2,11 +2,21 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2016-08-03 09:48
+" Last Modified:  2016-08-06 12:13
 " Filename:       plugins.vim
 " =============================================================================
 Plug 'Mizuchi/STL-Syntax'
 Plug 'Raimondi/delimitMate'
+Plug 'Shougo/neocomplete.vim'
+let g:neocomplete#enable_at_startup = 1
+autocmd FileType * call s:YCMNEOswitch()
+function s:YCMNEOswitch()
+    if &filetype == 'vimshell'
+        NeoCompleteUnlock
+    else
+        NeoCompleteLock
+    endif
+endfunction
 Plug 'Shougo/unite.vim'
 Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 Plug 'Shougo/vimshell.vim', { 'do': 'ln -sf ~/github/dotfiles/config/.aliases ~/.vimshrc' }
