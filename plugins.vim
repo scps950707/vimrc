@@ -2,21 +2,11 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2016-08-06 12:13
+" Last Modified:  2016-08-16 20:47
 " Filename:       plugins.vim
 " =============================================================================
 Plug 'Mizuchi/STL-Syntax'
 Plug 'Raimondi/delimitMate'
-Plug 'Shougo/neocomplete.vim'
-let g:neocomplete#enable_at_startup = 1
-autocmd FileType * call s:YCMNEOswitch()
-function s:YCMNEOswitch()
-    if &filetype == 'vimshell'
-        NeoCompleteUnlock
-    else
-        NeoCompleteLock
-    endif
-endfunction
 Plug 'Shougo/unite.vim'
 Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 Plug 'Shougo/vimshell.vim', { 'do': 'ln -sf ~/github/dotfiles/config/.aliases ~/.vimshrc' }
@@ -177,6 +167,16 @@ Plug 'vim-airline/vim-airline-themes'
 " autocmd FileType cpp let g:clang_user_options = '-std=c++11'
 " autocmd FileType c let g:clang_user_options = '-std=c99'
 " let g:clang_library_path='/usr/lib/llvm-3.4/lib/'
+" Plug 'Shougo/neocomplete.vim'
+" let g:neocomplete#enable_at_startup = 1
+" autocmd FileType * call s:YCMNEOswitch()
+" function s:YCMNEOswitch()
+"     if &filetype == 'vimshell'
+"         NeoCompleteUnlock
+"     else
+"         NeoCompleteLock
+"     endif
+" endfunction
 " Plug 'bling/vim-bufferline'
 " let g:bufferline_echo = 0
 " let g:bufferline_show_bufnr = 0
