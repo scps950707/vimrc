@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2016-08-17 11:29
+" Last Modified:  2016-08-17 11:52
 " Filename:       plugins.vim
 " =============================================================================
 Plug 'Mizuchi/STL-Syntax'
@@ -45,7 +45,6 @@ Plug 'airblade/vim-gitgutter'
 nmap ,g :GitGutterToggle<CR>
 Plug 'ctrlpvim/ctrlp.vim'
 let g:ctrlp_working_path_mode = 'a'
-Plug 'djoshea/vim-autoread'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'gcmt/wildfire.vim'
 Plug 'haya14busa/incsearch.vim'
@@ -184,6 +183,7 @@ Plug 'vim-airline/vim-airline-themes'
 " Plug 'bronson/vim-trailing-whitespace'
 " Plug 'chusiang/vimcdoc-tw'
 " Plug 'derekwyatt/vim-fswitch'
+" Plug 'djoshea/vim-autoread'
 " Plug 'fholgado/minibufexpl.vim'
 " Plug 'garbas/vim-snipmate'
 " Plug 'gcmt/wildfire.vim'
