@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2016-08-16 20:47
+" Last Modified:  2016-08-17 11:29
 " Filename:       plugins.vim
 " =============================================================================
 Plug 'Mizuchi/STL-Syntax'
@@ -47,6 +47,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 let g:ctrlp_working_path_mode = 'a'
 Plug 'djoshea/vim-autoread'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'gcmt/wildfire.vim'
 Plug 'haya14busa/incsearch.vim'
 map / <Plug>(incsearch-forward)
 Plug 'itchyny/vim-gitbranch'
