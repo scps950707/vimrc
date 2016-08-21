@@ -40,7 +40,7 @@
 - [ ] [vim-bufferline](https://github.com/bling/vim-bufferline)
 - [X] [vim-commentary](https://github.com/tpope/vim-commentary)
 - [X] [vim-cpp-enhanced-highlight](https://github.com/octol/vim-cpp-enhanced-highlight)
-- [X] [vim-ctags](https://github.com/scps950707/vim-ctags)
+- [ ] [vim-ctags](https://github.com/scps950707/vim-ctags)
 - [ ] [vim-fswitch](https://github.com/derekwyatt/vim-fswitch)
 - [ ] [vim-fugitive](https://github.com/tpope/vim-fugitive)
 - [X] [vim-gitbranch](https://github.com/itchyny/vim-gitbranch)
@@ -54,7 +54,7 @@
 - [ ] [vim-snippets](https://github.com/scps950707/vim-snippets)
 - [X] [vim-startify](https://github.com/mhinz/vim-startify)
 - [ ] [vim-superman](https://github.com/jez/vim-superman)
-- [X] [vim-timestamp](https://github.com/scps950707/vim-timestamp)
+- [ ] [vim-timestamp](https://github.com/scps950707/vim-timestamp)
 - [ ] [vim-trailing-whitespace](https://github.com/bronson/vim-trailing-whitespace)
 - [X] [vimagit](https://github.com/scps950707/vimagit)
 - [ ] [vimcdoc-tw](https://github.com/chusiang/vimcdoc-tw)
@@ -68,11 +68,9 @@
 |Mappings|Key|Target|
 |-----------|----------|---------|
 |nmap|,g|:GitGutterToggle\<CR\>|
-|nmap|,m|:Magit\<CR\>|
+|nmap|,m|:\<C-u\>Magit\<CR\>|
 |nnoremap|,q|:Bdelete\<CR\>|
-|nmap|,s|:UpdateTimeStamp\<CR\>|
 |map|/|\<Plug\>(incsearch-forward)|
-|map|\<C-F10\>|:CtagsFullDepend\<CR\>|
 |map|\<C-F9\>|:VimShell -split\<CR\>|
 |imap|\<C-a\>|\<C-X\>\<C-O\>|
 |vnoremap|\<C-c\>|"+y|
@@ -81,14 +79,13 @@
 |nnoremap|\<C-right\>|:vertical resize +5\<cr\>|
 |nnoremap|\<C-up\>|:resize -5\<cr\>|
 |vnoremap|\<C-x\>|"+x|
-|map|\<F10\>|:CtagsFileIncluded\<CR\>|
 |nmap|\<F2\>|:\<C-u\>NERDTreeToggle\<CR\>|
 |nmap|\<F3\>|:\<C-u\>TagbarToggle\<CR\>|
 |nmap|\<F4\>|\<C-u\>gg=G\<CR\>|
 |map|\<F5\>|gcc|
 |map|\<F6\>|gc|
 |map|\<F7\>|:\<C-u\>call Replace(0,input('Replace '.expand('\<cword\>').' with: '))\<CR\>|
-|nnoremap|\<F8\>|:UndotreeToggle\<cr\>|
+|nnoremap|\<F8\>|:\<C-u\>UndotreeToggle\<cr\>|
 |map|\<F9\>|:VimShell\<CR\>|
 |nmap|\<S-x\>|:bnext\<CR\>|
 |nmap|\<S-z\>|:bprevious\<CR\>|

@@ -2,14 +2,14 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2016-08-21 10:45
+" Last Modified:  2016-08-21 11:24
 " Filename:       plugins.vim
 " =============================================================================
-Plug 'Mizuchi/STL-Syntax'
+Plug 'Mizuchi/STL-Syntax', { 'for': 'cpp' }
 Plug 'Raimondi/delimitMate'
 Plug 'Shougo/unite.vim'
-Plug 'Shougo/vimproc.vim', { 'do': 'make' }
-Plug 'Shougo/vimshell.vim', { 'do': 'ln -sf ~/github/dotfiles/config/.aliases ~/.vimshrc' }
+Plug 'Shougo/vimproc.vim', { 'do': 'make' , 'on': 'VimShell' }
+Plug 'Shougo/vimshell.vim', { 'do': 'ln -sf ~/github/dotfiles/config/.aliases ~/.vimshrc', 'on': 'VimShell' }
 map <F9> :VimShell<CR>
 map <C-F9> :VimShell -split<CR>
 let g:vimshell_prompt='$ '
@@ -27,7 +27,7 @@ function ExpandSnippetOrCarriageReturn()
     endif
 endfunction
 inoremap <expr><CR> pumvisible() ? "<C-R>=ExpandSnippetOrCarriageReturn()<CR>" : "\<CR>"
-Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'Xuyuanp/nerdtree-git-plugin', { 'on': 'NERDTreeToggle' }
 let g:NERDTreeIndicatorMapCustom = {
             \ "Modified"  : "M",
             \ "Staged"    : "A",
@@ -50,20 +50,20 @@ Plug 'gcmt/wildfire.vim'
 Plug 'haya14busa/incsearch.vim'
 map / <Plug>(incsearch-forward)
 Plug 'itchyny/vim-gitbranch'
-Plug 'junegunn/vader.vim'
+Plug 'junegunn/vader.vim', { 'on': 'Vader' }
 Plug 'majutsushi/tagbar'
 let g:tagbar_width = 30
 let g:tagbar_compact=1
 let g:tagbar_sort = 0
 nmap <F3> :<C-u>TagbarToggle<CR>
-Plug 'mattn/gist-vim'
+Plug 'mattn/gist-vim', { 'on': 'Gist' }
 let g:gist_clip_command = 'xclip -selection clipboard'
-Plug 'mattn/webapi-vim'
+Plug 'mattn/webapi-vim', { 'on': 'Gist' }
 Plug 'matze/vim-move'
 let g:move_key_modifier = 'C'
-Plug 'mbbill/undotree'
+Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }
 let g:undotree_SetFocusWhenToggle = 1
-nnoremap <F8> :UndotreeToggle<cr>
+nnoremap <F8> :<C-u>UndotreeToggle<cr>
 Plug 'mhinz/vim-startify'
 if(filereadable($HOME.'/.vim_startify_bookmarks'))
     let g:startify_bookmarks = readfile($HOME.'/.vim_startify_bookmarks')
@@ -110,20 +110,15 @@ let g:ycm_filetype_blacklist = {
             \ 'mail' : 1,
             \ 'vimshell' : 1
             \ }
-Plug 'octol/vim-cpp-enhanced-highlight'
-Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
+Plug 'octol/vim-cpp-enhanced-highlight', { 'for': 'cpp' }
+Plug 'rdnetto/YCM-Generator', { 'branch': 'stable', 'for': 'cpp' }
 Plug 'scps950707/snippets'
-Plug 'scps950707/vim-ctags'
-map <C-F10> :CtagsFullDepend<CR>
-map <F10> :CtagsFileIncluded<CR>
-Plug 'scps950707/vim-timestamp'
-nmap ,s :UpdateTimeStamp<CR>
-Plug 'scps950707/vimagit'
+Plug 'scps950707/vimagit', { 'on': 'Magit' }
 let g:magit_default_fold_level=0
 autocmd filetype magit setlocal foldenable
 autocmd User VimagitEnterCommit startinsert!
-nmap ,m :Magit<CR>
-Plug 'scrooloose/nerdtree'
+nmap ,m :<C-u>Magit<CR>
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 nmap <F2> :<C-u>NERDTreeToggle<CR>
 Plug 'scrooloose/syntastic'
 let g:syntastic_error_symbol='✗'
@@ -195,8 +190,13 @@ Plug 'vim-airline/vim-airline-themes'
 " let g:acp_completeoptPreview=1
 " let g:acp_behaviorKeywordLength=4
 " Plug 'rupa/v'
+" Plug 'scps950707/vim-ctags'
+" map <C-F10> :CtagsFullDepend<CR>
+" map <F10> :CtagsFileIncluded<CR>
 " Plug 'scps950707/vim-lengthmatters'
 " Plug 'scps950707/vim-snippets'
+" Plug 'scps950707/vim-timestamp'
+" nmap ,s :UpdateTimeStamp<CR>
 " Plug 'sjl/gundo.vim'
 " let g:gundo_close_on_revert=1
 " nnoremap <F8> :GundoToggle<CR>
