@@ -29,7 +29,7 @@
 - [X] [ultisnips](https://github.com/SirVer/ultisnips)
 - [X] [undotree](https://github.com/mbbill/undotree)
 - [X] [unite.vim](https://github.com/Shougo/unite.vim)
-- [X] [v](https://github.com/scps950707/v)
+- [ ] [v](https://github.com/rupa/v)
 - [X] [vader.vim](https://github.com/junegunn/vader.vim)
 - [X] [vim-airline](https://github.com/vim-airline/vim-airline)
 - [X] [vim-airline-themes](https://github.com/vim-airline/vim-airline-themes)

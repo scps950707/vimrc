@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2016-08-17 11:52
+" Last Modified:  2016-08-21 10:45
 " Filename:       plugins.vim
 " =============================================================================
 Plug 'Mizuchi/STL-Syntax'
@@ -113,7 +113,6 @@ let g:ycm_filetype_blacklist = {
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
 Plug 'scps950707/snippets'
-Plug 'scps950707/v', { 'do': './install.sh' }
 Plug 'scps950707/vim-ctags'
 map <C-F10> :CtagsFullDepend<CR>
 map <F10> :CtagsFileIncluded<CR>
@@ -195,6 +194,7 @@ Plug 'vim-airline/vim-airline-themes'
 " let g:acp_behaviorSnipmateLength=1
 " let g:acp_completeoptPreview=1
 " let g:acp_behaviorKeywordLength=4
+" Plug 'rupa/v'
 " Plug 'scps950707/vim-lengthmatters'
 " Plug 'scps950707/vim-snippets'
 " Plug 'sjl/gundo.vim'
