@@ -72,7 +72,6 @@
 |nnoremap|,q|:Bdelete\<CR\>|
 |map|/|\<Plug\>(incsearch-forward)|
 |map|\<C-F9\>|:VimShell -split\<CR\>|
-|imap|\<C-a\>|\<C-X\>\<C-O\>|
 |vnoremap|\<C-c\>|"+y|
 |nnoremap|\<C-down\>|:resize +5\<cr\>|
 |nnoremap|\<C-left\>|:vertical resize -5\<cr\>|

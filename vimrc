@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2016-08-03 09:48
+" Last Modified:  2016-08-22 23:05
 " Filename:       vimrc
 " =============================================================================
 set cursorline "顯示當前游標列
@@ -101,17 +101,11 @@ cnoreabbrev Qall qall
 " command mapping
 cnoremap help vert help
 
-
 " split resize mapping
 nnoremap <C-left> :vertical resize -5<cr>
 nnoremap <C-down> :resize +5<cr>
 nnoremap <C-up> :resize -5<cr>
 nnoremap <C-right> :vertical resize +5<cr>
-
-
-" map omnifunc complete to ctrl-a
-imap <C-a> <C-X><C-O>
-
 
 " auto indent
 nmap <F4> <C-u>gg=G<CR>
