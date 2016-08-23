@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2016-08-21 11:39
+" Last Modified:  2016-08-23 11:26
 " Filename:       plugins.vim
 " =============================================================================
 Plug 'Mizuchi/STL-Syntax', { 'for': 'cpp' }
@@ -111,6 +111,8 @@ let g:ycm_filetype_blacklist = {
             \ 'vimshell' : 1
             \ }
 Plug 'octol/vim-cpp-enhanced-highlight', { 'for': 'cpp' }
+let g:cpp_class_scope_highlight = 1
+let g:cpp_experimental_template_highlight = 1
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable', 'for': 'cpp' }
 Plug 'scps950707/snippets'
 Plug 'scps950707/vimagit', { 'on': 'Magit' }
