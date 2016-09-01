@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2016-08-31 12:25
+" Last Modified:  2016-09-01 11:03
 " Filename:       plugins.vim
 " =============================================================================
 Plug 'Mizuchi/STL-Syntax', { 'for': 'cpp' }
@@ -13,10 +13,9 @@ Plug 'Shougo/vimshell.vim', { 'do': 'ln -sf ~/github/dotfiles/config/.aliases ~/
 map <F9> :VimShell<CR>
 function! MyVimShellVerticalSplit()
     exec 'VimShell -split'
-    exec 'vertical resize -30'
+    exec 'vertical resize 50'
 endfunction
-command! -nargs=0 MyVimShellVerticalSplit call MyVimShellVerticalSplit()
-nmap <C-F9> :MyVimShellVerticalSplit<CR>
+nmap <C-F9> :call MyVimShellVerticalSplit()<CR>
 let g:vimshell_prompt='$ '
 let g:vimshell_user_prompt = 'fnamemodify(getcwd(), ":~")'
 autocmd filetype vimshell setlocal omnifunc=vimshell#complete#omnifunc

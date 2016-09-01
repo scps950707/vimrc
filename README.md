@@ -71,7 +71,7 @@
 |nmap|,m|:\<C-u\>Magit\<CR\>|
 |nnoremap|,q|:Bdelete\<CR\>|
 |map|/|\<Plug\>(incsearch-forward)|
-|nmap|\<C-F9\>|:MyVimShellVerticalSplit\<CR\>|
+|nmap|\<C-F9\>|:call MyVimShellVerticalSplit()\<CR\>|
 |vnoremap|\<C-c\>|"+y|
 |nnoremap|\<C-down\>|:resize +5\<cr\>|
 |nnoremap|\<C-left\>|:vertical resize -5\<cr\>|
