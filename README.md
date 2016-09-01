@@ -41,6 +41,7 @@
 - [X] [vim-commentary](https://github.com/tpope/vim-commentary)
 - [X] [vim-cpp-enhanced-highlight](https://github.com/octol/vim-cpp-enhanced-highlight)
 - [ ] [vim-ctags](https://github.com/scps950707/vim-ctags)
+- [X] [vim-dispatch](https://github.com/tpope/vim-dispatch)
 - [ ] [vim-fswitch](https://github.com/derekwyatt/vim-fswitch)
 - [ ] [vim-fugitive](https://github.com/tpope/vim-fugitive)
 - [X] [vim-gitbranch](https://github.com/itchyny/vim-gitbranch)
@@ -71,6 +72,7 @@
 |nmap|,m|:\<C-u\>Magit\<CR\>|
 |nnoremap|,q|:Bdelete\<CR\>|
 |map|/|\<Plug\>(incsearch-forward)|
+|nnoremap|\<C-F10\>|:Dispatch!\<CR\>|
 |nmap|\<C-F9\>|:call MyVimShellVerticalSplit()\<CR\>|
 |vnoremap|\<C-c\>|"+y|
 |nnoremap|\<C-down\>|:resize +5\<cr\>|
@@ -78,6 +80,7 @@
 |nnoremap|\<C-right\>|:vertical resize +5\<cr\>|
 |nnoremap|\<C-up\>|:resize -5\<cr\>|
 |vnoremap|\<C-x\>|"+x|
+|nnoremap|\<F10\>|:Dispatch\<CR\>|
 |nmap|\<F2\>|:\<C-u\>NERDTreeToggle\<CR\>|
 |nmap|\<F3\>|:\<C-u\>TagbarToggle\<CR\>|
 |nmap|\<F4\>|:call MyIndent()\<CR\>|
