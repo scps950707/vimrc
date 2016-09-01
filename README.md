@@ -80,7 +80,7 @@
 |vnoremap|\<C-x\>|"+x|
 |nmap|\<F2\>|:\<C-u\>NERDTreeToggle\<CR\>|
 |nmap|\<F3\>|:\<C-u\>TagbarToggle\<CR\>|
-|nmap|\<F4\>|\<C-u\>gg=G\<CR\>|
+|nmap|\<F4\>|:call MyIndent()\<CR\>|
 |map|\<F5\>|gcc|
 |map|\<F6\>|gc|
 |map|\<F7\>|:\<C-u\>call Replace(0,input('Replace '.expand('\<cword\>').' with: '))\<CR\>|

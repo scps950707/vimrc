@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2016-08-31 14:38
+" Last Modified:  2016-09-01 16:32
 " Filename:       vimrc
 " =============================================================================
 set cursorline "顯示當前游標列
@@ -109,8 +109,16 @@ nnoremap <C-up> :resize -5<cr>
 nnoremap <C-right> :vertical resize +5<cr>
 
 " auto indent
-nmap <F4> <C-u>gg=G<CR>
-autocmd FileType c,cpp nmap <buffer> <F4> <C-u>gggqG<CR>
+function MyIndent()
+    let curLineNum=line('.')
+    if &ft == 'c' || &ft == 'cpp'
+        exec 'normal gggqG'
+    else
+        exec 'normal gg=G'
+    endif
+    exec 'normal '. curLineNum . 'G'
+endfunction
+nmap <F4> :call MyIndent()<CR>
 autocmd FileType c,cpp set formatprg=astyle
 
 " in help page map q to close buffer
