@@ -86,9 +86,9 @@
 |nmap|\<F4\>|:call MyIndent()\<CR\>|
 |map|\<F5\>|gcc|
 |map|\<F6\>|gc|
-|map|\<F7\>|:\<C-u\>call Replace(0,input('Replace '.expand('\<cword\>').' with: '))\<CR\>|
+|nmap|\<F7\>|:\<C-u\>call Replace(0,input('Replace '.expand('\<cword\>').' with: '))\<CR\>|
 |nnoremap|\<F8\>|:\<C-u\>UndotreeToggle\<cr\>|
-|map|\<F9\>|:VimShell\<CR\>|
+|nmap|\<F9\>|:VimShell\<CR\>|
 |nmap|\<S-x\>|:bnext\<CR\>|
 |nmap|\<S-z\>|:bprevious\<CR\>|
 |inoremap|\<expr\>\<CR\>|pumvisible() ? "\<C-R\>=ExpandSnippetOrCarriageReturn()\<CR\>" : "\\<CR\>"|

@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2016-09-01 16:32
+" Last Modified:  2016-09-02 16:15
 " Filename:       vimrc
 " =============================================================================
 set cursorline "顯示當前游標列
@@ -65,7 +65,7 @@ function! Replace(confirm,replace)
     let replace = escape(a:replace, '/\&~')
     execute '%s/'.search.'/'.replace.'/'.flag
 endfunction
-map <F7> :<C-u>call Replace(0,input('Replace '.expand('<cword>').' with: '))<CR>
+nmap <F7> :<C-u>call Replace(0,input('Replace '.expand('<cword>').' with: '))<CR>
 " map <F8> :<C-u>call Replace(1,input('Replace '.expand('<cword>').' with: '))<CR>
 " vmap <F9> "hy:%s/<C-r>h//g<left><left>
 

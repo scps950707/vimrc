@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2016-09-02 16:05
+" Last Modified:  2016-09-03 19:03
 " Filename:       plugins.vim
 " =============================================================================
 Plug 'Mizuchi/STL-Syntax', { 'for': 'cpp' }
@@ -10,7 +10,7 @@ Plug 'Raimondi/delimitMate'
 Plug 'Shougo/unite.vim'
 Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 Plug 'Shougo/vimshell.vim', { 'do': 'ln -sf ~/github/dotfiles/config/.aliases ~/.vimshrc' }
-map <F9> :VimShell<CR>
+nmap <F9> :VimShell<CR>
 function! MyVimShellVerticalSplit()
     exec 'VimShell -split'
     exec 'vertical resize 50'
