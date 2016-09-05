@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2016-09-02 16:15
+" Last Modified:  2016-09-05 17:25
 " Filename:       vimrc
 " =============================================================================
 set cursorline "顯示當前游標列
@@ -126,3 +126,7 @@ autocmd FileType help nnoremap <buffer> <silent> q :q<CR>
 
 " check file modified externally
 autocmd FocusGained,BufEnter * :silent! checktime
+
+" gitcommit settings
+autocmd FileType gitcommit setlocal nofoldenable
+autocmd FileType gitcommit setlocal spell
