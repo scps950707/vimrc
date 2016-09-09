@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2016-09-05 17:25
+" Last Modified:  2016-09-09 20:41
 " Filename:       vimrc
 " =============================================================================
 set cursorline "顯示當前游標列
@@ -15,7 +15,6 @@ filetype on " 開啟文件類型偵測
 filetype plugin on " 偵測不同文件類型開啟相對應套件
 filetype indent on " 偵測不同語言採取相對應縮排
 set t_Co=256
-colorscheme jellybeans
 set mouse=a "滑鼠所有模式下啟動
 set showcmd "在狀態列顯示目前所執行的指令
 " set autochdir "自動轉換目錄到前檔案所在目錄
@@ -85,6 +84,8 @@ call plug#begin('~/.vim/plugged')
 source ${HOME}/.vim/plugins.vim
 call plug#end()
 
+" set colorscheme after plugins are loaded
+colorscheme jellybeans
 
 " Make these commonly mistyped commands still work
 cnoreabbrev W! w!

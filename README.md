@@ -15,6 +15,7 @@
 - [ ] [gundo.vim](https://github.com/sjl/gundo.vim)
 - [X] [incsearch.vim](https://github.com/haya14busa/incsearch.vim)
 - [X] [indentLine](https://github.com/Yggdroot/indentLine)
+- [X] [jellybeans.vim](https://github.com/nanotech/jellybeans.vim)
 - [ ] [minibufexpl.vim](https://github.com/fholgado/minibufexpl.vim)
 - [ ] [neocomplete.vim](https://github.com/Shougo/neocomplete.vim)
 - [X] [nerdtree](https://github.com/scrooloose/nerdtree)
