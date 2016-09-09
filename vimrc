@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2016-09-09 20:41
+" Last Modified:  2016-09-09 22:24
 " Filename:       vimrc
 " =============================================================================
 set cursorline "顯示當前游標列
@@ -77,6 +77,11 @@ vnoremap <C-x> "+x
 " nmap <C-d> "+P
 " paste from system's clipboard to vim
 
+if empty(glob('~/.vim/autoload/plug.vim'))
+    silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+                \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    autocmd VimEnter * PlugInstall | source $MYVIMRC
+endif
 
 let g:plug_window = 'enew'
 " Plugins Management
