@@ -24,7 +24,7 @@
 - [X] [open-browser.vim](https://github.com/tyru/open-browser.vim)
 - [X] [snippets](https://github.com/scps950707/snippets)
 - [X] [syntastic](https://github.com/scrooloose/syntastic)
-- [ ] [tabular](https://github.com/godlygeek/tabular)
+- [X] [tabular](https://github.com/godlygeek/tabular)
 - [X] [tagbar](https://github.com/majutsushi/tagbar)
 - [ ] [taglist.vim](https://github.com/vim-scripts/taglist.vim)
 - [X] [ultisnips](https://github.com/SirVer/ultisnips)

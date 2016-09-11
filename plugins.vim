@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2016-09-12 03:48
+" Last Modified:  2016-09-12 03:49
 " Filename:       plugins.vim
 " =============================================================================
 Plug 'Mizuchi/STL-Syntax', { 'for': 'cpp' }
@@ -51,6 +51,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 let g:ctrlp_working_path_mode = 'a'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'gcmt/wildfire.vim'
+Plug 'godlygeek/tabular'
 Plug 'haya14busa/incsearch.vim'
 map / <Plug>(incsearch-forward)
 Plug 'itchyny/vim-gitbranch'
@@ -191,7 +192,6 @@ Plug 'vim-airline/vim-airline-themes'
 " Plug 'fholgado/minibufexpl.vim'
 " Plug 'garbas/vim-snipmate'
 " Plug 'gcmt/wildfire.vim'
-" Plug 'godlygeek/tabular'
 " Plug 'jez/vim-superman'
 " Plug 'ludovicchabant/vim-gutentags'
 " Plug 'moll/vim-bbye'
