@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2016-09-09 22:26
+" Last Modified:  2016-09-11 21:25
 " Filename:       vimrc
 " =============================================================================
 set cursorline "顯示當前游標列
@@ -90,7 +90,7 @@ source ${HOME}/.vim/plugins.vim
 call plug#end()
 
 " set colorscheme after plugins are loaded
-colorscheme jellybeans
+silent! colorscheme jellybeans
 
 " Make these commonly mistyped commands still work
 cnoreabbrev W! w!
