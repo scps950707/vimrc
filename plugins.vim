@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2016-09-11 20:06
+" Last Modified:  2016-09-12 03:48
 " Filename:       plugins.vim
 " =============================================================================
 Plug 'Mizuchi/STL-Syntax', { 'for': 'cpp' }
@@ -142,6 +142,7 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-commentary'
 map <F5> gcc
 map <F6> gc
+autocmd FileType awk setlocal commentstring=#%s
 Plug 'tpope/vim-dispatch'
 nnoremap <F10> :Dispatch<CR>
 nnoremap <C-F10> :Dispatch!<CR>
