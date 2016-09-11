@@ -36,7 +36,7 @@
 - [X] [vim-airline-themes](https://github.com/vim-airline/vim-airline-themes)
 - [ ] [vim-autocomplpop](https://github.com/othree/vim-autocomplpop)
 - [ ] [vim-autoread](https://github.com/djoshea/vim-autoread)
-- [X] [vim-bbye](https://github.com/moll/vim-bbye)
+- [ ] [vim-bbye](https://github.com/moll/vim-bbye)
 - [X] [vim-better-whitespace](https://github.com/ntpeters/vim-better-whitespace)
 - [ ] [vim-bufferline](https://github.com/bling/vim-bufferline)
 - [X] [vim-commentary](https://github.com/tpope/vim-commentary)
@@ -52,6 +52,7 @@
 - [X] [vim-move](https://github.com/matze/vim-move)
 - [X] [vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors)
 - [ ] [vim-powerline](https://github.com/Lokaltog/vim-powerline)
+- [X] [vim-sayonara](https://github.com/mhinz/vim-sayonara)
 - [ ] [vim-snipmate](https://github.com/garbas/vim-snipmate)
 - [ ] [vim-snippets](https://github.com/scps950707/vim-snippets)
 - [X] [vim-startify](https://github.com/mhinz/vim-startify)
@@ -71,7 +72,7 @@
 |-----------|----------|---------|
 |nmap|,g|:GitGutterToggle\<CR\>|
 |nmap|,m|:\<C-u\>Magit\<CR\>|
-|nnoremap|,q|:Bdelete\<CR\>|
+|nmap|,q|:Sayonara\<CR\>|
 |map|/|\<Plug\>(incsearch-forward)|
 |nnoremap|\<C-F10\>|:Dispatch!\<CR\>|
 |nmap|\<C-F9\>|:call MyVimShellVerticalSplit()\<CR\>|

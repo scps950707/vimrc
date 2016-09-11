@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2016-09-09 22:26
+" Last Modified:  2016-09-11 20:06
 " Filename:       plugins.vim
 " =============================================================================
 Plug 'Mizuchi/STL-Syntax', { 'for': 'cpp' }
@@ -68,6 +68,8 @@ let g:move_key_modifier = 'C'
 Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }
 let g:undotree_SetFocusWhenToggle = 1
 nnoremap <F8> :<C-u>UndotreeToggle<cr>
+Plug 'mhinz/vim-sayonara', { 'on': 'Sayonara' }
+nmap ,q :Sayonara<CR>
 Plug 'mhinz/vim-startify'
 if(filereadable($HOME.'/.vim_startify_bookmarks'))
     let g:startify_bookmarks = readfile($HOME.'/.vim_startify_bookmarks')
@@ -92,8 +94,6 @@ let g:startify_list_order = [
 let g:startify_change_to_dir = 1
 let g:startify_files_number = 8
 let g:startify_custom_header = []
-Plug 'moll/vim-bbye'
-nnoremap ,q :Bdelete<CR>
 Plug 'nanotech/jellybeans.vim'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'oblitum/YouCompleteMe', { 'do': './install.py --clang-completer' }
@@ -193,6 +193,8 @@ Plug 'vim-airline/vim-airline-themes'
 " Plug 'godlygeek/tabular'
 " Plug 'jez/vim-superman'
 " Plug 'ludovicchabant/vim-gutentags'
+" Plug 'moll/vim-bbye'
+" nnoremap ,q :Bdelete<CR>
 " Plug 'othree/vim-autocomplpop'
 " let g:acp_completeOption = '.,w,b,k,t'
 " let g:acp_behaviorSnipmateLength=1
