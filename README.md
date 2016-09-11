@@ -64,7 +64,7 @@
 - [X] [vimproc.vim](https://github.com/Shougo/vimproc.vim)
 - [X] [vimshell.vim](https://github.com/Shougo/vimshell.vim)
 - [X] [webapi-vim](https://github.com/mattn/webapi-vim)
-- [ ] [wildfire.vim](https://github.com/gcmt/wildfire.vim)
+- [X] [wildfire.vim](https://github.com/gcmt/wildfire.vim)
 
 
 #Key Mappings

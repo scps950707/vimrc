@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2016-09-12 03:49
+" Last Modified:  2016-09-12 03:50
 " Filename:       plugins.vim
 " =============================================================================
 Plug 'Mizuchi/STL-Syntax', { 'for': 'cpp' }
@@ -191,7 +191,6 @@ Plug 'vim-airline/vim-airline-themes'
 " Plug 'djoshea/vim-autoread'
 " Plug 'fholgado/minibufexpl.vim'
 " Plug 'garbas/vim-snipmate'
-" Plug 'gcmt/wildfire.vim'
 " Plug 'jez/vim-superman'
 " Plug 'ludovicchabant/vim-gutentags'
 " Plug 'moll/vim-bbye'
