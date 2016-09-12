@@ -3,11 +3,12 @@
 # Author:         scps950707
 # Email:          scps950707@gmail.com
 # Created:        2016-07-03 00:33
-# Last Modified:  2016-08-03 09:40
+# Last Modified:  2016-09-13 00:52
 # Filename:       format.hook
 # =============================================================================
 originObj=`mktemp /tmp/plugins.XXXXX` || exit 1
 targetObj=plugins.vim
+targetObj2=colorscheme.vim
 script=./format.gawk
 
 cd `git rev-parse --show-toplevel`
@@ -23,6 +24,12 @@ $script $targetObj > $TMPFILE
 cat $TMPFILE > $targetObj
 rm -rf $TMPFILE
 git add $targetObj
+
+TMPFILE2=`mktemp /tmp/colorschemevim.XXXXX` || exit 1
+$script $targetObj2 > $TMPFILE2
+cat $TMPFILE2 > $targetObj2
+rm -rf $TMPFILE2
+git add $targetObj2
 
 if [ $gitAddPatched -ne 0 ];then
     $script $originObj > $targetObj

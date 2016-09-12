@@ -3,7 +3,7 @@
 # Author:         scps950707
 # Email:          scps950707@gmail.com
 # Created:        2016-07-02 23:49
-# Last Modified:  2016-07-04 17:25
+# Last Modified:  2016-09-13 00:44
 # Filename:       readme.gawk
 # =============================================================================
 {
@@ -32,20 +32,20 @@
     }
 }
 END{
-    print "#PluginMagnager"
-    print "- [X] [vim-plug](https://github.com/junegunn/vim-plug)"
-    print ""
-    print ""
-    print "#Plugins"
     n=asorti(plugList,sortedIndex)
     for(i=1;i<=n;i++)
         print plugList[sortedIndex[i]]
     print ""
     print ""
-    print "#Key Mappings"
-    print "|Mappings|Key|Target|"
-    print "|-----------|----------|---------|"
     n=asorti(keyMapTable,sortedIndex)
-    for(i=1;i<=n;i++)
-        print keyMapTable[sortedIndex[i]]
+    if(n>0)
+    {
+        print "#Key Mappings"
+        print "|Mappings|Key|Target|"
+        print "|-----------|----------|---------|"
+        for(i=1;i<=n;i++)
+            print keyMapTable[sortedIndex[i]]
+        print ""
+        print ""
+    }
 }

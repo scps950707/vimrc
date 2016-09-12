@@ -94,3 +94,19 @@
 |nmap|\<S-z\>|:bprevious\<CR\>|
 |inoremap|\<expr\>\<CR\>|pumvisible() ? "\<C-R\>=ExpandSnippetOrCarriageReturn()\<CR\>" : "\\<CR\>"|
 |cnoremap|help|vert help|
+
+
+#Colorscheme
+- [X] [Apprentice](https://github.com/romainl/Apprentice)
+- [X] [badwolf](https://github.com/sjl/badwolf)
+- [X] [gruvbox](https://github.com/morhetz/gruvbox)
+- [X] [jellybeans.vim](https://github.com/nanotech/jellybeans.vim)
+- [X] [molokai](https://github.com/tomasr/molokai)
+- [X] [onedark.vim](https://github.com/joshdick/onedark.vim)
+- [X] [papercolor-theme](https://github.com/NLKNguyen/papercolor-theme)
+- [X] [vim](https://github.com/dracula/vim)
+- [X] [vim-gotham](https://github.com/whatyouhide/vim-gotham)
+- [X] [vim-hybrid](https://github.com/w0ng/vim-hybrid)
+- [X] [vim-hybrid-material](https://github.com/kristijanhusak/vim-hybrid-material)
+
+

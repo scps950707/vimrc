@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2016-09-12 23:17
+" Last Modified:  2016-09-13 01:21
 " Filename:       vimrc
 " =============================================================================
 set cursorline "顯示當前游標列
@@ -88,6 +88,7 @@ let g:plug_window = 'enew'
 " Plugins Management
 call plug#begin('~/.vim/plugged')
 source ${HOME}/.vim/plugins.vim
+source ${HOME}/.vim/colorscheme.vim
 call plug#end()
 
 " set colorscheme after plugins are loaded
