@@ -157,8 +157,6 @@ let g:airline#extensions#tabline#buffer_min_count = 2
 let g:airline#extensions#syntastic#enabled = 1
 let g:airline#extensions#ycm#enabled = 1
 let g:airline_theme='base16'
-nmap <S-z> :bprevious<CR>
-nmap <S-x> :bnext<CR>
 Plug 'vim-airline/vim-airline-themes'
 " Plug 'Lokaltog/vim-powerline'
 " Plug 'Rip-Rip/clang_complete'

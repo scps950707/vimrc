@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2016-09-13 01:21
+" Last Modified:  2016-09-13 22:51
 " Filename:       vimrc
 " =============================================================================
 set cursorline "顯示當前游標列
@@ -138,3 +138,7 @@ autocmd FocusGained,BufEnter * :silent! checktime
 " gitcommit settings
 autocmd FileType gitcommit setlocal nofoldenable
 autocmd FileType gitcommit setlocal spell
+
+" mapping for toggle buffer
+nmap <S-z> :bprevious<CR>
+nmap <S-x> :bnext<CR>
