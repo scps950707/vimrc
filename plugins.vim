@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2016-09-13 22:34
+" Last Modified:  2016-09-13 22:51
 " Filename:       plugins.vim
 " =============================================================================
 Plug 'Mizuchi/STL-Syntax', { 'for': 'cpp' }
@@ -48,7 +48,6 @@ let g:indentLine_char = '|'
 Plug 'airblade/vim-gitgutter'
 nmap ,g :GitGutterToggle<CR>
 Plug 'ctrlpvim/ctrlp.vim'
-let g:ctrlp_working_path_mode = 'a'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'gcmt/wildfire.vim'
 Plug 'godlygeek/tabular'
