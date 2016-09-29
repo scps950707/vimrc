@@ -102,6 +102,7 @@
 - [X] [badwolf](https://github.com/sjl/badwolf)
 - [X] [gruvbox](https://github.com/morhetz/gruvbox)
 - [X] [jellybeans.vim](https://github.com/nanotech/jellybeans.vim)
+- [X] [luthadel.vim](https://github.com/moskytw/luthadel.vim)
 - [X] [molokai](https://github.com/tomasr/molokai)
 - [X] [onedark.vim](https://github.com/joshdick/onedark.vim)
 - [X] [papercolor-theme](https://github.com/NLKNguyen/papercolor-theme)
