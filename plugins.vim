@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2016-11-25 16:40
+" Last Modified:  2016-11-27 15:30
 " Filename:       plugins.vim
 " =============================================================================
 Plug 'Mizuchi/STL-Syntax', { 'for': 'cpp' }
@@ -95,7 +95,7 @@ let g:startify_change_to_dir = 1
 let g:startify_files_number = 8
 let g:startify_custom_header = []
 Plug 'ntpeters/vim-better-whitespace'
-Plug 'oblitum/YouCompleteMe', { 'do': './install.py --clang-completer' , 'commit': 'b83680d' }
+Plug 'oblitum/YouCompleteMe', { 'do': './install.py --clang-completer' }
 let g:ycm_global_ycm_extra_conf= '~/.ycm_extra_conf.py'
 let g:ycm_confirm_extra_conf = 0
 let g:ycm_filetype_specific_completion_to_disable = {}
