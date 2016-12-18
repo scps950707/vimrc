@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2016-12-13 20:36
+" Last Modified:  2016-12-18 23:39
 " Filename:       vimrc
 " =============================================================================
 set cursorline "顯示當前游標列
@@ -53,6 +53,7 @@ set completeopt-=preview
 set pastetoggle=<F12>
 set backspace=indent,eol,start
 set noshowmode
+set modeline
 
 
 " replace settings
