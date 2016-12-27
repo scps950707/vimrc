@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2016-12-18 23:39
+" Last Modified:  2016-12-27 14:50
 " Filename:       plugins.vim
 " =============================================================================
 Plug 'Mizuchi/STL-Syntax', { 'for': 'cpp' }
@@ -132,6 +132,7 @@ autocmd User VimagitEnterCommit startinsert!
 nmap ,m :<C-u>Magit<CR>
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 nmap <F2> :<C-u>NERDTreeToggle<CR>
+let NERDTreeIgnore=['\.pyc$', '\.o$']
 Plug 'scrooloose/syntastic'
 let g:syntastic_error_symbol='✗'
 let g:syntastic_warning_symbol='⚠'
