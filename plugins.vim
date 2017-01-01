@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2016-12-27 14:50
+" Last Modified:  2017-01-01 17:55
 " Filename:       plugins.vim
 " =============================================================================
 Plug 'Mizuchi/STL-Syntax', { 'for': 'cpp' }
@@ -56,6 +56,7 @@ let g:jedi#popup_on_dot = 0
 let g:jedi#completions_command = ''
 let g:jedi#show_call_signatures = 2
 let g:jedi#show_call_signatures_delay = 0
+let g:jedi#force_py_version = 3
 Plug 'editorconfig/editorconfig-vim'
 Plug 'gcmt/wildfire.vim'
 Plug 'godlygeek/tabular'
