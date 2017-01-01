@@ -14,6 +14,7 @@
 - [X] [editorconfig-vim](https://github.com/editorconfig/editorconfig-vim)
 - [X] [gist-vim](https://github.com/mattn/gist-vim)
 - [ ] [gundo.vim](https://github.com/sjl/gundo.vim)
+- [X] [html5.vim](https://github.com/othree/html5.vim)
 - [X] [incsearch.vim](https://github.com/haya14busa/incsearch.vim)
 - [X] [indentLine](https://github.com/Yggdroot/indentLine)
 - [X] [jedi-vim](https://github.com/davidhalter/jedi-vim)
