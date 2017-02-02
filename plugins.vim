@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2017-02-02 16:50
+" Last Modified:  2017-02-02 16:51
 " Filename:       plugins.vim
 " =============================================================================
 Plug 'Mizuchi/STL-Syntax', { 'for': 'cpp' }
@@ -47,6 +47,8 @@ Plug 'Yggdroot/indentLine'
 let g:indentLine_char = '|'
 Plug 'airblade/vim-gitgutter'
 nmap ,g :GitGutterToggle<CR>
+Plug 'andviro/flake8-vim', { 'for': 'python' }
+let g:PyFlakeOnWrite = 0
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'davidhalter/jedi-vim', { 'for': 'python' }
 let g:jedi#auto_initialization = 1
@@ -69,6 +71,7 @@ let g:tagbar_width = 30
 let g:tagbar_compact=1
 let g:tagbar_sort = 0
 nmap <F3> :<C-u>TagbarToggle<CR>
+Plug 'mattn/emmet-vim', { 'for': 'html' }
 Plug 'mattn/gist-vim', { 'on': 'Gist' }
 let g:gist_clip_command = 'xclip -selection clipboard'
 Plug 'mattn/webapi-vim', { 'on': 'Gist' }
@@ -124,6 +127,7 @@ Plug 'octol/vim-cpp-enhanced-highlight', { 'for': 'cpp' }
 let g:cpp_class_scope_highlight = 1
 let g:cpp_experimental_template_highlight = 1
 Plug 'othree/html5.vim'
+Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable', 'on': 'YcmGenerateConfig' }
 Plug 'scps950707/colorselector.vim'
 Plug 'scps950707/snippets'
