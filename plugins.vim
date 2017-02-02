@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2017-01-01 17:55
+" Last Modified:  2017-02-02 16:50
 " Filename:       plugins.vim
 " =============================================================================
 Plug 'Mizuchi/STL-Syntax', { 'for': 'cpp' }
@@ -96,7 +96,7 @@ let g:startify_list_order = [
             \ ['   Commands'],       'commands',
             \ ['   Sessions'],       'sessions',
             \ ]
-let g:startify_change_to_dir = 1
+let g:startify_change_to_dir = 0
 let g:startify_files_number = 8
 let g:startify_custom_header = []
 Plug 'ntpeters/vim-better-whitespace'
