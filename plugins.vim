@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2017-02-02 16:51
+" Last Modified:  2017-02-11 15:28
 " Filename:       plugins.vim
 " =============================================================================
 Plug 'Mizuchi/STL-Syntax', { 'for': 'cpp' }
@@ -47,8 +47,6 @@ Plug 'Yggdroot/indentLine'
 let g:indentLine_char = '|'
 Plug 'airblade/vim-gitgutter'
 nmap ,g :GitGutterToggle<CR>
-Plug 'andviro/flake8-vim', { 'for': 'python' }
-let g:PyFlakeOnWrite = 0
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'davidhalter/jedi-vim', { 'for': 'python' }
 let g:jedi#auto_initialization = 1
@@ -191,6 +189,8 @@ Plug 'vim-airline/vim-airline-themes'
 "         NeoCompleteLock
 "     endif
 " endfunction
+" Plug 'andviro/flake8-vim', { 'for': 'python' }
+" let g:PyFlakeOnWrite = 0
 " Plug 'bling/vim-bufferline'
 " let g:bufferline_echo = 0
 " let g:bufferline_show_bufnr = 0
@@ -222,4 +222,5 @@ Plug 'vim-airline/vim-airline-themes'
 " nnoremap <F8> :GundoToggle<CR>
 " Plug 'tpope/vim-fugitive'
 " Plug 'vim-scripts/taglist.vim'
+" Plug 'w0rp/ale'
 " Plug 'wesleyche/SrcExpl'
