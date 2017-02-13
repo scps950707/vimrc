@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2017-02-11 15:28
+" Last Modified:  2017-02-13 21:18
 " Filename:       plugins.vim
 " =============================================================================
 Plug 'Mizuchi/STL-Syntax', { 'for': 'cpp' }
@@ -169,6 +169,7 @@ let g:airline#extensions#syntastic#enabled = 1
 let g:airline#extensions#ycm#enabled = 1
 let g:airline_theme='base16'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'w0rp/ale'
 " Plug 'Lokaltog/vim-powerline'
 " Plug 'Rip-Rip/clang_complete'
 " let g:clang_close_preview=1
@@ -222,5 +223,4 @@ Plug 'vim-airline/vim-airline-themes'
 " nnoremap <F8> :GundoToggle<CR>
 " Plug 'tpope/vim-fugitive'
 " Plug 'vim-scripts/taglist.vim'
-" Plug 'w0rp/ale'
 " Plug 'wesleyche/SrcExpl'
