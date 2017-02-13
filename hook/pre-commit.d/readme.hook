@@ -3,12 +3,11 @@
 # Author:         scps950707
 # Email:          scps950707@gmail.com
 # Created:        2016-07-02 04:59
-# Last Modified:  2016-09-13 01:04
+# Last Modified:  2017-02-14 01:30
 # Filename:       readme.hook
 # =============================================================================
 stashdiff=`mktemp /tmp/stash.XXXXX` || exit 1
-input="plugins.vim vimrc"
-script=./readme.gawk
+script=./readme.py
 target=README.md
 
 cd `git rev-parse --show-toplevel`
@@ -18,12 +17,7 @@ if [ $gitAddPatched -ne 0 ];then
     git stash -q --keep-index
 fi
 
-echo "#PluginMagnager" > $target
-echo "- [X] [vim-plug](https://github.com/junegunn/vim-plug)\n\n" >> $target
-echo "#Plugins" >> $target
-$script $input >> $target
-echo "#Colorscheme" >> $target
-$script colorscheme.vim >> $target
+$script $input > $target
 git add $target
 
 if [ $gitAddPatched -ne 0 ];then

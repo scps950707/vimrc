@@ -118,5 +118,3 @@
 - [X] [vim-gotham](https://github.com/whatyouhide/vim-gotham)
 - [X] [vim-hybrid](https://github.com/w0ng/vim-hybrid)
 - [X] [vim-hybrid-material](https://github.com/kristijanhusak/vim-hybrid-material)
-
-
