@@ -3,10 +3,10 @@
 # Author:         scps950707
 # Email:          scps950707@gmail.com
 # Created:        2016-07-03 00:33
-# Last Modified:  2017-02-13 18:10
+# Last Modified:  2017-02-14 02:53
 # Filename:       format.hook
 # =============================================================================
-script=./format.gawk
+script=./format.py
 
 cd `git rev-parse --show-toplevel`
 git diff --quiet --exit-code
