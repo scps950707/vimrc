@@ -3,37 +3,34 @@
 # Author:         scps950707
 # Email:          scps950707@gmail.com
 # Created:        2016-07-03 00:33
-# Last Modified:  2016-09-13 00:52
+# Last Modified:  2017-02-13 18:10
 # Filename:       format.hook
 # =============================================================================
-originObj=`mktemp /tmp/plugins.XXXXX` || exit 1
-targetObj=plugins.vim
-targetObj2=colorscheme.vim
 script=./format.gawk
 
 cd `git rev-parse --show-toplevel`
 git diff --quiet --exit-code
 gitAddPatched=$?
-if [ $gitAddPatched -ne 0 ];then
-    cat $targetObj > $originObj
-    git checkout -- $targetObj
-fi
 
-TMPFILE=`mktemp /tmp/pluginsvim.XXXXX` || exit 1
-$script $targetObj > $TMPFILE
-cat $TMPFILE > $targetObj
-rm -rf $TMPFILE
-git add $targetObj
+for f in *.vim
+do
+    originBak=`mktemp /tmp/$(basename $f).XXXXX` || exit 1
 
-TMPFILE2=`mktemp /tmp/colorschemevim.XXXXX` || exit 1
-$script $targetObj2 > $TMPFILE2
-cat $TMPFILE2 > $targetObj2
-rm -rf $TMPFILE2
-git add $targetObj2
+    if [ $gitAddPatched -ne 0 ];then
+        cat $f > $originBak
+        git checkout -- $f
+    fi
 
-if [ $gitAddPatched -ne 0 ];then
-    $script $originObj > $targetObj
-fi
-rm $originObj
+    FORMATTED=`mktemp /tmp/$(basename $f)_formated.XXXXX` || exit 1
+    $script $f > $FORMATTED
+    cat $FORMATTED > $f
+    rm $FORMATTED
+    git add $f
+
+    if [ $gitAddPatched -ne 0 ];then
+        $script $originBak > $f
+    fi
+    rm $originBak
+done
 
 exit 0
