@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2017-02-18 01:28
+" Last Modified:  2017-02-18 03:56
 " Filename:       plugins.vim
 " =============================================================================
 Plug 'Mizuchi/STL-Syntax', { 'for': 'cpp' }
@@ -148,6 +148,7 @@ let g:syntastic_c_compiler_options = '-std=c99 -Wall -D_XOPEN_SOURCE=500'
 let g:syntastic_c_check_header = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:syntastic_python_checkers = ["flake8"]
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-commentary'
 map <F5> gcc
