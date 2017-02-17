@@ -63,6 +63,7 @@
 - [ ] [vim-snippets](https://github.com/scps950707/vim-snippets)
 - [X] [vim-startify](https://github.com/mhinz/vim-startify)
 - [ ] [vim-superman](https://github.com/jez/vim-superman)
+- [X] [vim-surround](https://github.com/tpope/vim-surround)
 - [ ] [vim-timestamp](https://github.com/scps950707/vim-timestamp)
 - [ ] [vim-trailing-whitespace](https://github.com/bronson/vim-trailing-whitespace)
 - [X] [vimagit](https://github.com/scps950707/vimagit)
