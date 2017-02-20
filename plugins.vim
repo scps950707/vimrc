@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2017-02-18 03:56
+" Last Modified:  2017-02-21 03:54
 " Filename:       plugins.vim
 " =============================================================================
 Plug 'Mizuchi/STL-Syntax', { 'for': 'cpp' }
@@ -48,7 +48,7 @@ let g:indentLine_char = '|'
 Plug 'airblade/vim-gitgutter'
 nmap ,g :GitGutterToggle<CR>
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'davidhalter/jedi-vim', { 'for': 'python' }
+Plug 'davidhalter/jedi-vim', { 'for': 'python', 'commit': '8cf616b0887276e026aefdf68bc0311b83eec381' }
 let g:jedi#auto_initialization = 1
 let g:jedi#completions_enabled = 0
 let g:jedi#auto_vim_configuration = 0
