@@ -66,7 +66,7 @@
 - [X] [vim-surround](https://github.com/tpope/vim-surround)
 - [ ] [vim-timestamp](https://github.com/scps950707/vim-timestamp)
 - [ ] [vim-trailing-whitespace](https://github.com/bronson/vim-trailing-whitespace)
-- [X] [vimagit](https://github.com/scps950707/vimagit)
+- [X] [vimagit](https://github.com/jreybert/vimagit)
 - [ ] [vimcdoc-tw](https://github.com/chusiang/vimcdoc-tw)
 - [X] [vimproc.vim](https://github.com/Shougo/vimproc.vim)
 - [X] [vimshell.vim](https://github.com/Shougo/vimshell.vim)

@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2017-02-21 03:54
+" Last Modified:  2017-02-24 18:00
 " Filename:       plugins.vim
 " =============================================================================
 Plug 'Mizuchi/STL-Syntax', { 'for': 'cpp' }
@@ -63,6 +63,11 @@ Plug 'godlygeek/tabular'
 Plug 'haya14busa/incsearch.vim'
 map / <Plug>(incsearch-forward)
 Plug 'itchyny/vim-gitbranch'
+Plug 'jreybert/vimagit'
+let g:magit_default_fold_level=0
+autocmd filetype magit setlocal foldenable
+autocmd User VimagitEnterCommit startinsert!
+nmap ,m :<C-u>Magit<CR>
 Plug 'junegunn/vader.vim', { 'on': 'Vader' }
 Plug 'majutsushi/tagbar'
 let g:tagbar_width = 30
@@ -129,11 +134,6 @@ Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable', 'on': 'YcmGenerateConfig' }
 Plug 'scps950707/colorselector.vim'
 Plug 'scps950707/snippets'
-Plug 'scps950707/vimagit', { 'on': 'Magit' }
-let g:magit_default_fold_level=0
-autocmd filetype magit setlocal foldenable
-autocmd User VimagitEnterCommit startinsert!
-nmap ,m :<C-u>Magit<CR>
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 nmap <F2> :<C-u>NERDTreeToggle<CR>
 let NERDTreeIgnore=['\.pyc$', '\.o$']
@@ -169,6 +169,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_min_count = 2
 let g:airline#extensions#syntastic#enabled = 1
 let g:airline#extensions#ycm#enabled = 1
+let g:airline#extensions#vimagit#enabled = 1
 let g:airline_theme='base16'
 Plug 'vim-airline/vim-airline-themes'
 " Plug 'Lokaltog/vim-powerline'
