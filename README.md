@@ -1,8 +1,8 @@
-#PluginMagnager
+# PluginMagnager
 - [X] [vim-plug](https://github.com/junegunn/vim-plug)
 
 
-#Plugins
+# Plugins
 - [X] [STL-Syntax](https://github.com/Mizuchi/STL-Syntax)
 - [ ] [SrcExpl](https://github.com/wesleyche/SrcExpl)
 - [X] [YCM-Generator](https://github.com/rdnetto/YCM-Generator)
@@ -74,7 +74,7 @@
 - [X] [wildfire.vim](https://github.com/gcmt/wildfire.vim)
 
 
-#Key Mappings
+# Key Mappings
 |Mappings|Key|Target|
 |-----------|----------|---------|
 |nmap|,g|:GitGutterToggle\<CR\>|
@@ -104,7 +104,7 @@
 |cnoremap|help|vert help|
 
 
-#Colorscheme
+# Colorscheme
 - [X] [Apprentice](https://github.com/romainl/Apprentice)
 - [X] [badwolf](https://github.com/sjl/badwolf)
 - [X] [gruvbox](https://github.com/morhetz/gruvbox)

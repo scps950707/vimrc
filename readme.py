@@ -4,7 +4,7 @@
 # Author:         scps950707
 # Email:          scps950707@gmail.com
 # Created:        2017-02-13 18:51
-# Last Modified:  2017-02-14 01:30
+# Last Modified:  2017-03-18 03:08
 # Filename:       readme.py
 # ==========================================================================
 
@@ -32,9 +32,9 @@ def getDict(fname):
 
 
 if __name__ == "__main__":
-    print("#PluginMagnager")
+    print("# PluginMagnager")
     print("- [X] [vim-plug](https://github.com/junegunn/vim-plug)\n\n")
-    print("#Plugins")
+    print("# Plugins")
     plugList, keyMapTable = getDict('plugins.vim')
     p1, k1 = getDict('vimrc')
     plugList.update(p1)
@@ -46,7 +46,7 @@ if __name__ == "__main__":
                 plugList[key][0],
                 ))
 
-    print("\n\n#Key Mappings")
+    print("\n\n# Key Mappings")
     print("|Mappings|Key|Target|")
     print("|-----------|----------|---------|")
     for key in sorted(keyMapTable):
@@ -57,7 +57,7 @@ if __name__ == "__main__":
             ))
 
     colp, colk = getDict('colorscheme.vim')
-    print('\n\n#Colorscheme')
+    print('\n\n# Colorscheme')
     for key in sorted(colp):
         print('- {0} [{1}](https://github.com/{2})'.format(
                 '[X]' if colp[key][1] else '[ ]',
