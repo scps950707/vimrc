@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2017-06-15 16:58
+" Last Modified:  2017-06-26 02:10
 " Filename:       plugins.vim
 " =============================================================================
 Plug 'Mizuchi/STL-Syntax', { 'for': 'cpp' }
@@ -48,7 +48,6 @@ let g:NERDTreeIndicatorMapCustom = {
 Plug 'Yggdroot/indentLine'
 let g:indentLine_char = '|'
 Plug 'airblade/vim-gitgutter'
-nmap ,g :GitGutterToggle<CR>
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'davidhalter/jedi-vim', { 'for': 'python' }
 let g:jedi#auto_initialization = 1
@@ -85,6 +84,12 @@ let g:move_key_modifier = 'C'
 Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }
 let g:undotree_SetFocusWhenToggle = 1
 nnoremap <F8> :<C-u>UndotreeToggle<cr>
+Plug 'mhinz/vim-grepper', { 'on': ['Grepper', '<plug>(GrepperOperator)'] }
+nnoremap ,g :Grepper<CR>
+let g:grepper               = {}
+let g:grepper.jump          = 1
+let g:grepper.next_tool     = ',g'
+let g:grepper.simple_prompt = 1
 Plug 'mhinz/vim-sayonara', { 'on': 'Sayonara' }
 nmap ,q :Sayonara<CR>
 Plug 'mhinz/vim-startify'

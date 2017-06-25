@@ -52,6 +52,7 @@
 - [ ] [vim-fugitive](https://github.com/tpope/vim-fugitive)
 - [X] [vim-gitbranch](https://github.com/itchyny/vim-gitbranch)
 - [X] [vim-gitgutter](https://github.com/airblade/vim-gitgutter)
+- [X] [vim-grepper](https://github.com/mhinz/vim-grepper)
 - [ ] [vim-gutentags](https://github.com/ludovicchabant/vim-gutentags)
 - [X] [vim-javascript](https://github.com/pangloss/vim-javascript)
 - [ ] [vim-lengthmatters](https://github.com/scps950707/vim-lengthmatters)
@@ -77,7 +78,7 @@
 # Key Mappings
 |Mappings|Key|Target|
 |-----------|----------|---------|
-|nmap|,g|:GitGutterToggle\<CR\>|
+|nnoremap|,g|:Grepper\<CR\>|
 |nmap|,m|:\<C-u\>Magit\<CR\>|
 |nmap|,q|:Sayonara\<CR\>|
 |map|/|\<Plug\>(incsearch-forward)|
