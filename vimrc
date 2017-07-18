@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2017-06-26 02:14
+" Last Modified:  2017-07-18 20:18
 " Filename:       vimrc
 " =============================================================================
 set cursorline "顯示當前游標列
@@ -147,3 +147,10 @@ autocmd FileType gitcommit setlocal spell
 " mapping for toggle buffer
 nmap <S-z> :bprevious<CR>
 nmap <S-x> :bnext<CR>
+
+if &term =~ '256color'
+    " disable Background Color Erase (BCE) so that color schemes
+    " render properly when inside 256-color tmux and GNU screen.
+    " see also http://snk.tuxfamily.org/log/vim-256color-bce.html
+    set t_ut=
+endif
