@@ -34,7 +34,7 @@
 - [ ] [taglist.vim](https://github.com/vim-scripts/taglist.vim)
 - [X] [ultisnips](https://github.com/SirVer/ultisnips)
 - [X] [undotree](https://github.com/mbbill/undotree)
-- [X] [unite.vim](https://github.com/Shougo/unite.vim)
+- [ ] [unite.vim](https://github.com/Shougo/unite.vim)
 - [ ] [v](https://github.com/rupa/v)
 - [X] [vader.vim](https://github.com/junegunn/vader.vim)
 - [X] [vim-airline](https://github.com/vim-airline/vim-airline)
@@ -69,8 +69,8 @@
 - [ ] [vim-trailing-whitespace](https://github.com/bronson/vim-trailing-whitespace)
 - [X] [vimagit](https://github.com/jreybert/vimagit)
 - [ ] [vimcdoc-tw](https://github.com/chusiang/vimcdoc-tw)
-- [X] [vimproc.vim](https://github.com/Shougo/vimproc.vim)
-- [X] [vimshell.vim](https://github.com/Shougo/vimshell.vim)
+- [ ] [vimproc.vim](https://github.com/Shougo/vimproc.vim)
+- [ ] [vimshell.vim](https://github.com/Shougo/vimshell.vim)
 - [X] [webapi-vim](https://github.com/mattn/webapi-vim)
 - [X] [wildfire.vim](https://github.com/gcmt/wildfire.vim)
 
@@ -83,7 +83,6 @@
 |nmap|,q|:Sayonara\<CR\>|
 |map|/|\<Plug\>(incsearch-forward)|
 |nnoremap|\<C-F10\>|:Dispatch!\<CR\>|
-|nmap|\<C-F9\>|:call MyVimShellVerticalSplit()\<CR\>|
 |vnoremap|\<C-c\>|"+y|
 |nnoremap|\<C-down\>|:resize +5\<cr\>|
 |nnoremap|\<C-left\>|:vertical resize -5\<cr\>|
@@ -98,7 +97,6 @@
 |map|\<F6\>|gc|
 |nmap|\<F7\>|:\<C-u\>call Replace(0,input('Replace '.expand('\<cword\>').' with: '))\<CR\>|
 |nnoremap|\<F8\>|:\<C-u\>UndotreeToggle\<cr\>|
-|nmap|\<F9\>|:VimShell\<CR\>|
 |nmap|\<S-x\>|:bnext\<CR\>|
 |nmap|\<S-z\>|:bprevious\<CR\>|
 |inoremap|\<expr\>\<CR\>|pumvisible() ? "\<C-R\>=ExpandSnippetOrCarriageReturn()\<CR\>" : "\\<CR\>"|

@@ -2,23 +2,11 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2017-07-20 01:41
+" Last Modified:  2017-07-20 01:43
 " Filename:       plugins.vim
 " =============================================================================
 Plug 'Mizuchi/STL-Syntax', { 'for': 'cpp' }
 Plug 'Raimondi/delimitMate'
-Plug 'Shougo/unite.vim'
-Plug 'Shougo/vimproc.vim', { 'do': 'make' }
-Plug 'Shougo/vimshell.vim', { 'do': 'ln -sf ~/github/dotfiles/config/.aliases ~/.vimshrc' }
-nmap <F9> :VimShell<CR>
-function! MyVimShellVerticalSplit()
-    exec 'VimShell -split'
-    exec 'vertical resize 50'
-endfunction
-nmap <C-F9> :call MyVimShellVerticalSplit()<CR>
-let g:vimshell_prompt='$ '
-let g:vimshell_user_prompt = 'fnamemodify(getcwd(), ":~")'
-autocmd filetype vimshell setlocal omnifunc=vimshell#complete#omnifunc
 Plug 'SirVer/ultisnips'
 let g:UltiSnipsJumpForwardTrigger="<s-j>"
 let g:UltiSnipsJumpBackwardTrigger="<s-k>"
@@ -198,6 +186,18 @@ Plug 'vim-airline/vim-airline-themes'
 "         NeoCompleteLock
 "     endif
 " endfunction
+" Plug 'Shougo/unite.vim'
+" Plug 'Shougo/vimproc.vim', { 'do': 'make' }
+" Plug 'Shougo/vimshell.vim', { 'do': 'ln -sf ~/github/dotfiles/config/.aliases ~/.vimshrc' }
+" nmap <F9> :VimShell<CR>
+" function! MyVimShellVerticalSplit()
+"     exec 'VimShell -split'
+"     exec 'vertical resize 50'
+" endfunction
+" nmap <C-F9> :call MyVimShellVerticalSplit()<CR>
+" let g:vimshell_prompt='$ '
+" let g:vimshell_user_prompt = 'fnamemodify(getcwd(), ":~")'
+" autocmd filetype vimshell setlocal omnifunc=vimshell#complete#omnifunc
 " Plug 'andviro/flake8-vim', { 'for': 'python' }
 " let g:PyFlakeOnWrite = 0
 " Plug 'bling/vim-bufferline'
