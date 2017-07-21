@@ -80,9 +80,6 @@
 # Key Mappings
 |Mappings|Key|Target|
 |-----------|----------|---------|
-|nnoremap|,g|:Grepper\<CR\>|
-|nmap|,m|:\<C-u\>Magit\<CR\>|
-|nmap|,q|:Sayonara\<CR\>|
 |map|/|\<Plug\>(incsearch-forward)|
 |nnoremap|\<C-F10\>|:Dispatch!\<CR\>|
 |vnoremap|\<C-c\>|"+y|
@@ -103,6 +100,9 @@
 |nmap|\<S-x\>|:bnext\<CR\>|
 |nmap|\<S-z\>|:bprevious\<CR\>|
 |inoremap|\<expr\>\<CR\>|pumvisible() ? "\<C-R\>=ExpandSnippetOrCarriageReturn()\<CR\>" : "\\<CR\>"|
+|nnoremap|\<leader\>g|:Grepper\<CR\>|
+|nmap|\<leader\>m|:\<C-u\>Magit\<CR\>|
+|nmap|\<leader\>q|:Sayonara\<CR\>|
 |cnoremap|help|vert help|
 
 

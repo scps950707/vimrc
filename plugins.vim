@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2017-07-21 18:53
+" Last Modified:  2017-07-21 18:54
 " Filename:       plugins.vim
 " =============================================================================
 Plug 'Mizuchi/STL-Syntax', { 'for': 'cpp' }
@@ -55,7 +55,7 @@ Plug 'jreybert/vimagit'
 let g:magit_default_fold_level=0
 autocmd filetype magit setlocal foldenable
 autocmd User VimagitEnterCommit startinsert!
-nmap ,m :<C-u>Magit<CR>
+nmap <leader>m :<C-u>Magit<CR>
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 nmap <C-p> :<C-u>FZF<CR>
@@ -75,13 +75,13 @@ Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }
 let g:undotree_SetFocusWhenToggle = 1
 nnoremap <F8> :<C-u>UndotreeToggle<cr>
 Plug 'mhinz/vim-grepper', { 'on': ['Grepper', '<plug>(GrepperOperator)'] }
-nnoremap ,g :Grepper<CR>
+nnoremap <leader>g :Grepper<CR>
 let g:grepper               = {}
 let g:grepper.jump          = 1
-let g:grepper.next_tool     = ',g'
+let g:grepper.next_tool     = '<leader>g'
 let g:grepper.simple_prompt = 1
 Plug 'mhinz/vim-sayonara', { 'on': 'Sayonara' }
-nmap ,q :Sayonara<CR>
+nmap <leader>q :Sayonara<CR>
 Plug 'mhinz/vim-startify'
 if(filereadable($HOME.'/.vim_startify_bookmarks'))
     let g:startify_bookmarks = readfile($HOME.'/.vim_startify_bookmarks')

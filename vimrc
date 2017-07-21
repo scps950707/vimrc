@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2017-07-20 01:41
+" Last Modified:  2017-07-21 18:54
 " Filename:       vimrc
 " =============================================================================
 set cursorline "顯示當前游標列
@@ -55,6 +55,7 @@ set backspace=indent,eol,start
 set noshowmode
 set modeline
 set visualbell
+let mapleader = ","
 
 
 " replace settings
