@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2017-07-20 01:44
+" Last Modified:  2017-07-21 18:53
 " Filename:       plugins.vim
 " =============================================================================
 Plug 'Mizuchi/STL-Syntax', { 'for': 'cpp' }
@@ -36,7 +36,6 @@ let g:NERDTreeIndicatorMapCustom = {
 Plug 'Yggdroot/indentLine'
 let g:indentLine_char = '|'
 Plug 'airblade/vim-gitgutter'
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'davidhalter/jedi-vim', { 'for': 'python' }
 let g:jedi#auto_initialization = 1
 let g:jedi#completions_enabled = 0
@@ -57,6 +56,9 @@ let g:magit_default_fold_level=0
 autocmd filetype magit setlocal foldenable
 autocmd User VimagitEnterCommit startinsert!
 nmap ,m :<C-u>Magit<CR>
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+nmap <C-p> :<C-u>FZF<CR>
 Plug 'junegunn/vader.vim', { 'on': 'Vader' }
 Plug 'majutsushi/tagbar'
 let g:tagbar_width = 30
@@ -127,7 +129,6 @@ let g:cpp_experimental_template_highlight = 1
 Plug 'othree/html5.vim', { 'for': 'html' }
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable', 'on': 'YcmGenerateConfig' }
-Plug 'scps950707/colorselector.vim', { 'on': 'SelectColorS' }
 Plug 'scps950707/snippets'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 nmap <F2> :<C-u>NERDTreeToggle<CR>
@@ -205,6 +206,7 @@ Plug 'vim-airline/vim-airline-themes'
 " let g:bufferline_show_bufnr = 0
 " Plug 'bronson/vim-trailing-whitespace'
 " Plug 'chusiang/vimcdoc-tw'
+" Plug 'ctrlpvim/ctrlp.vim'
 " Plug 'derekwyatt/vim-fswitch'
 " Plug 'djoshea/vim-autoread'
 " Plug 'fholgado/minibufexpl.vim'
@@ -219,6 +221,7 @@ Plug 'vim-airline/vim-airline-themes'
 " let g:acp_completeoptPreview=1
 " let g:acp_behaviorKeywordLength=4
 " Plug 'rupa/v'
+" Plug 'scps950707/colorselector.vim', { 'on': 'SelectColorS' }
 " Plug 'scps950707/vim-ctags'
 " map <C-F10> :CtagsFullDepend<CR>
 " map <F10> :CtagsFileIncluded<CR>

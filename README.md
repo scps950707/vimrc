@@ -9,12 +9,14 @@
 - [X] [YouCompleteMe](https://github.com/oblitum/YouCompleteMe)
 - [ ] [ale](https://github.com/w0rp/ale)
 - [ ] [clang_complete](https://github.com/Rip-Rip/clang_complete)
-- [X] [colorselector.vim](https://github.com/scps950707/colorselector.vim)
-- [X] [ctrlp.vim](https://github.com/ctrlpvim/ctrlp.vim)
+- [ ] [colorselector.vim](https://github.com/scps950707/colorselector.vim)
+- [ ] [ctrlp.vim](https://github.com/ctrlpvim/ctrlp.vim)
 - [X] [delimitMate](https://github.com/Raimondi/delimitMate)
 - [X] [editorconfig-vim](https://github.com/editorconfig/editorconfig-vim)
 - [X] [emmet-vim](https://github.com/mattn/emmet-vim)
 - [ ] [flake8-vim](https://github.com/andviro/flake8-vim)
+- [X] [fzf](https://github.com/junegunn/fzf)
+- [X] [fzf.vim](https://github.com/junegunn/fzf.vim)
 - [X] [gist-vim](https://github.com/mattn/gist-vim)
 - [ ] [gundo.vim](https://github.com/sjl/gundo.vim)
 - [X] [html5.vim](https://github.com/othree/html5.vim)
@@ -86,6 +88,7 @@
 |vnoremap|\<C-c\>|"+y|
 |nnoremap|\<C-down\>|:resize +5\<cr\>|
 |nnoremap|\<C-left\>|:vertical resize -5\<cr\>|
+|nmap|\<C-p\>|:\<C-u\>FZF\<CR\>|
 |nnoremap|\<C-right\>|:vertical resize +5\<cr\>|
 |nnoremap|\<C-up\>|:resize -5\<cr\>|
 |vnoremap|\<C-x\>|"+x|
