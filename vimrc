@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2017-07-21 18:54
+" Last Modified:  2017-08-17 10:02
 " Filename:       vimrc
 " =============================================================================
 set cursorline "顯示當前游標列
@@ -55,6 +55,7 @@ set backspace=indent,eol,start
 set noshowmode
 set modeline
 set visualbell
+set tags=./tags;/  " This will look in the current directory for tags, and work up the tree towards root until one is found
 let mapleader = ","
 
 
