@@ -103,6 +103,7 @@
 |nnoremap|\<leader\>g|:Grepper\<CR\>|
 |nmap|\<leader\>m|:\<C-u\>Magit\<CR\>|
 |nmap|\<leader\>q|:Sayonara\<CR\>|
+|map|Q|\<Nop\>|
 |cnoremap|help|vert help|
 
 

@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2017-08-17 10:02
+" Last Modified:  2017-11-01 14:04
 " Filename:       vimrc
 " =============================================================================
 set cursorline "顯示當前游標列
@@ -159,3 +159,6 @@ if &term =~ '256color'
     " see also http://snk.tuxfamily.org/log/vim-256color-bce.html
     set t_ut=
 endif
+
+" disable Ex mode
+map Q <Nop>
