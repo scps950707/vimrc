@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2017-11-01 14:04
+" Last Modified:  2017-11-06 21:33
 " Filename:       vimrc
 " =============================================================================
 set cursorline "顯示當前游標列
@@ -21,7 +21,7 @@ set showcmd "在狀態列顯示目前所執行的指令
 set fileencodings=utf-8 "vim預設編碼
 set encoding=utf-8
 set fileencodings=utf-8
-" set hlsearch "高亮搜尋結果
+set hlsearch "高亮搜尋結果
 set ignorecase "搜尋時忽略大小寫
 set ruler "顯示下方狀態列
 set autoindent "自動縮排
