@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2017-10-23 16:58
+" Last Modified:  2017-11-06 21:34
 " Filename:       plugins.vim
 " =============================================================================
 Plug 'Mizuchi/STL-Syntax', { 'for': 'cpp' }
@@ -48,8 +48,15 @@ let g:jedi#force_py_version = 3
 Plug 'editorconfig/editorconfig-vim'
 Plug 'gcmt/wildfire.vim'
 Plug 'godlygeek/tabular'
+Plug 'haya14busa/incsearch-fuzzy.vim'
+map z/ <Plug>(incsearch-fuzzy-/)
+map z? <Plug>(incsearch-fuzzy-?)
+map zg/ <Plug>(incsearch-fuzzy-stay)
 Plug 'haya14busa/incsearch.vim'
+let g:incsearch#auto_nohlsearch = 1
 map / <Plug>(incsearch-forward)
+map ?  <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
 Plug 'itchyny/vim-gitbranch'
 Plug 'jreybert/vimagit'
 let g:magit_default_fold_level=0

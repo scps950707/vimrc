@@ -20,6 +20,7 @@
 - [X] [gist-vim](https://github.com/mattn/gist-vim)
 - [ ] [gundo.vim](https://github.com/sjl/gundo.vim)
 - [X] [html5.vim](https://github.com/othree/html5.vim)
+- [X] [incsearch-fuzzy.vim](https://github.com/haya14busa/incsearch-fuzzy.vim)
 - [X] [incsearch.vim](https://github.com/haya14busa/incsearch.vim)
 - [X] [indentLine](https://github.com/Yggdroot/indentLine)
 - [X] [jedi-vim](https://github.com/davidhalter/jedi-vim)
@@ -103,8 +104,13 @@
 |nnoremap|\<leader\>g|:Grepper\<CR\>|
 |nmap|\<leader\>m|:\<C-u\>Magit\<CR\>|
 |nmap|\<leader\>q|:Sayonara\<CR\>|
+|map|?| \<Plug\>(incsearch-backward)|
 |map|Q|\<Nop\>|
+|map|g/|\<Plug\>(incsearch-stay)|
 |cnoremap|help|vert help|
+|map|z/|\<Plug\>(incsearch-fuzzy-/)|
+|map|z?|\<Plug\>(incsearch-fuzzy-?)|
+|map|zg/|\<Plug\>(incsearch-fuzzy-stay)|
 
 
 # Colorscheme
