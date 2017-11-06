@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2017-11-06 21:34
+" Last Modified:  2017-11-06 22:05
 " Filename:       plugins.vim
 " =============================================================================
 Plug 'Mizuchi/STL-Syntax', { 'for': 'cpp' }
@@ -57,6 +57,8 @@ let g:incsearch#auto_nohlsearch = 1
 map / <Plug>(incsearch-forward)
 map ?  <Plug>(incsearch-backward)
 map g/ <Plug>(incsearch-stay)
+map n <Plug>(incsearch-nohl)<Plug>(anzu-n-with-echo)
+map N <Plug>(incsearch-nohl)<Plug>(anzu-N-with-echo)
 Plug 'itchyny/vim-gitbranch'
 Plug 'jreybert/vimagit'
 let g:magit_default_fold_level=0
@@ -133,6 +135,8 @@ let g:ycm_filetype_blacklist = {
 Plug 'octol/vim-cpp-enhanced-highlight', { 'for': 'cpp' }
 let g:cpp_class_scope_highlight = 1
 let g:cpp_experimental_template_highlight = 1
+Plug 'osyo-manga/vim-anzu'
+nmap <Esc><Esc> <Plug>(anzu-clear-search-status)
 Plug 'othree/html5.vim', { 'for': 'html' }
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable', 'on': 'YcmGenerateConfig' }
