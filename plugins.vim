@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2017-11-06 22:05
+" Last Modified:  2017-11-11 20:42
 " Filename:       plugins.vim
 " =============================================================================
 Plug 'Mizuchi/STL-Syntax', { 'for': 'cpp' }
@@ -136,7 +136,6 @@ Plug 'octol/vim-cpp-enhanced-highlight', { 'for': 'cpp' }
 let g:cpp_class_scope_highlight = 1
 let g:cpp_experimental_template_highlight = 1
 Plug 'osyo-manga/vim-anzu'
-nmap <Esc><Esc> <Plug>(anzu-clear-search-status)
 Plug 'othree/html5.vim', { 'for': 'html' }
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable', 'on': 'YcmGenerateConfig' }

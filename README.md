@@ -91,7 +91,6 @@
 |nnoremap|\<C-right\>|:vertical resize +5\<cr\>|
 |nnoremap|\<C-up\>|:resize -5\<cr\>|
 |vnoremap|\<C-x\>|"+x|
-|nmap|\<Esc\>\<Esc\>|\<Plug\>(anzu-clear-search-status)|
 |nnoremap|\<F10\>|:Dispatch\<CR\>|
 |nmap|\<F2\>|:\<C-u\>NERDTreeToggle\<CR\>|
 |nmap|\<F3\>|:\<C-u\>TagbarToggle\<CR\>|
