@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2017-11-06 21:33
+" Last Modified:  2017-11-21 01:04
 " Filename:       vimrc
 " =============================================================================
 set cursorline "顯示當前游標列
@@ -27,7 +27,6 @@ set ruler "顯示下方狀態列
 set autoindent "自動縮排
 set cindent "採用C語言的縮排方式
 set expandtab "用space代替tab
-set smartindent "每一行都和前一行有相同的縮排量
 set tabstop=4 "tab字元數
 set softtabstop=4 " 讓 vim 把連續數量的空格視為一個制表符
 set shiftwidth=4 "縮排寬度
