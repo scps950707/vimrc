@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2017-11-21 01:04
+" Last Modified:  2017-11-21 01:05
 " Filename:       vimrc
 " =============================================================================
 set cursorline "顯示當前游標列
@@ -131,22 +131,26 @@ function! MyIndent()
     exec 'normal '. curLineNum . 'G'
 endfunction
 nmap <F4> :call MyIndent()<CR>
-autocmd FileType c,cpp set formatprg=astyle
 
-" in help page map q to close buffer
-autocmd FileType help nnoremap <buffer> <silent> q :q<CR>
-" in quickfix map q to close buffer
-autocmd FileType qf nnoremap <buffer> <silent> q :cclose<CR>
+augroup MyAutoCommand
+    autocmd!
+    autocmd FileType c,cpp set formatprg=astyle
 
-" check file modified externally
-autocmd FocusGained,BufEnter * :silent! checktime
+    " in help page map q to close buffer
+    autocmd FileType help nnoremap <buffer> <silent> q :q<CR>
+    " in quickfix map q to close buffer
+    autocmd FileType qf nnoremap <buffer> <silent> q :cclose<CR>
 
-" gitcommit settings
-autocmd FileType gitcommit setlocal nofoldenable
-autocmd FileType gitcommit setlocal spell
+    " check file modified externally
+    autocmd FocusGained,BufEnter * :silent! checktime
 
-" awk comment string
-autocmd FileType awk setlocal commentstring=#%s
+    " gitcommit settings
+    autocmd FileType gitcommit setlocal nofoldenable
+    autocmd FileType gitcommit setlocal spell
+
+    " awk comment string
+    autocmd FileType awk setlocal commentstring=#%s
+augroup END
 
 " mapping for toggle buffer
 nmap <S-z> :bprevious<CR>
