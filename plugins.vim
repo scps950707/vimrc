@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2017-11-11 20:42
+" Last Modified:  2017-11-21 01:07
 " Filename:       plugins.vim
 " =============================================================================
 Plug 'Mizuchi/STL-Syntax', { 'for': 'cpp' }
@@ -35,6 +35,8 @@ let g:NERDTreeIndicatorMapCustom = {
             \ }
 Plug 'Yggdroot/indentLine'
 let g:indentLine_char = '|'
+let g:indentLine_leadingSpaceChar = '·'
+let g:indentLine_leadingSpaceEnabled = 1
 Plug 'airblade/vim-gitgutter'
 Plug 'davidhalter/jedi-vim', { 'for': 'python' }
 let g:jedi#auto_initialization = 1
