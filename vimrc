@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2017-11-21 01:05
+" Last Modified:  2017-11-21 01:32
 " Filename:       vimrc
 " =============================================================================
 set cursorline "顯示當前游標列
@@ -69,9 +69,9 @@ function! Replace(confirm,replace)
     let replace = escape(a:replace, '/\&~')
     execute '%s/'.search.'/'.replace.'/'.flag
 endfunction
-nmap <F7> :<C-u>call Replace(0,input('Replace '.expand('<cword>').' with: '))<CR>
-" map <F8> :<C-u>call Replace(1,input('Replace '.expand('<cword>').' with: '))<CR>
-" vmap <F9> "hy:%s/<C-r>h//g<left><left>
+nnoremap <F7> :<C-u>call Replace(0,input('Replace '.expand('<cword>').' with: '))<CR>
+" nnoremap <F8> :<C-u>call Replace(1,input('Replace '.expand('<cword>').' with: '))<CR>
+" vnoremap <F9> "hy:%s/<C-r>h//g<left><left>
 
 
 " copy and paste
@@ -79,7 +79,7 @@ vnoremap <C-c> "+y
 " paste from vim to system's clipboard
 vnoremap <C-x> "+x
 " cut from vim to system's clipboard
-" nmap <C-d> "+P
+" nnoremap <C-d> "+P
 " paste from system's clipboard to vim
 
 if empty(glob('~/.vim/autoload/plug.vim'))
@@ -130,7 +130,7 @@ function! MyIndent()
     endif
     exec 'normal '. curLineNum . 'G'
 endfunction
-nmap <F4> :call MyIndent()<CR>
+nnoremap <F4> :call MyIndent()<CR>
 
 augroup MyAutoCommand
     autocmd!
@@ -153,8 +153,8 @@ augroup MyAutoCommand
 augroup END
 
 " mapping for toggle buffer
-nmap <S-z> :bprevious<CR>
-nmap <S-x> :bnext<CR>
+nnoremap <S-z> :<C-u>bprevious<CR>
+nnoremap <S-x> :<C-u>bnext<CR>
 
 if &term =~ '256color'
     " disable Background Color Erase (BCE) so that color schemes

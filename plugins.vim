@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2017-11-21 01:07
+" Last Modified:  2017-11-21 01:32
 " Filename:       plugins.vim
 " =============================================================================
 Plug 'Mizuchi/STL-Syntax', { 'for': 'cpp' }
@@ -66,16 +66,16 @@ Plug 'jreybert/vimagit'
 let g:magit_default_fold_level=0
 autocmd filetype magit setlocal foldenable
 autocmd User VimagitEnterCommit startinsert!
-nmap <leader>m :<C-u>Magit<CR>
+nnoremap <leader>m :<C-u>Magit<CR>
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-nmap <C-p> :<C-u>FZF<CR>
+nnoremap <C-p> :<C-u>FZF<CR>
 Plug 'junegunn/vader.vim', { 'on': 'Vader' }
 Plug 'majutsushi/tagbar'
 let g:tagbar_width = 30
 let g:tagbar_compact=1
 let g:tagbar_sort = 0
-nmap <F3> :<C-u>TagbarToggle<CR>
+nnoremap <F3> :<C-u>TagbarToggle<CR>
 Plug 'mattn/emmet-vim', { 'for': 'html' }
 Plug 'mattn/gist-vim', { 'on': 'Gist' }
 let g:gist_clip_command = 'xclip -selection clipboard'
@@ -86,13 +86,13 @@ Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }
 let g:undotree_SetFocusWhenToggle = 1
 nnoremap <F8> :<C-u>UndotreeToggle<cr>
 Plug 'mhinz/vim-grepper', { 'on': ['Grepper', '<plug>(GrepperOperator)'] }
-nnoremap <leader>g :Grepper<CR>
+nnoremap <leader>g :<C-u>Grepper<CR>
 let g:grepper               = {}
 let g:grepper.jump          = 1
 let g:grepper.next_tool     = '<leader>g'
 let g:grepper.simple_prompt = 1
 Plug 'mhinz/vim-sayonara', { 'on': 'Sayonara' }
-nmap <leader>q :Sayonara<CR>
+nnoremap <leader>q :<C-u>Sayonara<CR>
 Plug 'mhinz/vim-startify'
 if(filereadable($HOME.'/.vim_startify_bookmarks'))
     let g:startify_bookmarks = readfile($HOME.'/.vim_startify_bookmarks')
@@ -143,7 +143,7 @@ Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable', 'on': 'YcmGenerateConfig' }
 Plug 'scps950707/snippets'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-nmap <F2> :<C-u>NERDTreeToggle<CR>
+nnoremap <F2> :<C-u>NERDTreeToggle<CR>
 let NERDTreeIgnore=['\.pyc$', '\.o$']
 Plug 'scrooloose/syntastic'
 let g:syntastic_error_symbol='✗'
@@ -162,8 +162,8 @@ Plug 'tpope/vim-commentary'
 map <F5> gcc
 map <F6> gc
 Plug 'tpope/vim-dispatch'
-nnoremap <F10> :Dispatch<CR>
-nnoremap <C-F10> :Dispatch!<CR>
+nnoremap <F10> :<C-u>Dispatch<CR>
+nnoremap <C-F10> :<C-u>Dispatch!<CR>
 Plug 'tpope/vim-surround'
 Plug 'tyru/open-browser-github.vim'
 Plug 'tyru/open-browser.vim'
@@ -203,12 +203,12 @@ Plug 'vim-airline/vim-airline-themes'
 " Plug 'Shougo/unite.vim'
 " Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 " Plug 'Shougo/vimshell.vim', { 'do': 'ln -sf ~/github/dotfiles/config/.aliases ~/.vimshrc' }
-" nmap <F9> :VimShell<CR>
+" nnoremap <F9> :<C-u>VimShell<CR>
 " function! MyVimShellVerticalSplit()
 "     exec 'VimShell -split'
 "     exec 'vertical resize 50'
 " endfunction
-" nmap <C-F9> :call MyVimShellVerticalSplit()<CR>
+" nnoremap <C-F9> :call MyVimShellVerticalSplit()<CR>
 " let g:vimshell_prompt='$ '
 " let g:vimshell_user_prompt = 'fnamemodify(getcwd(), ":~")'
 " autocmd filetype vimshell setlocal omnifunc=vimshell#complete#omnifunc
@@ -227,7 +227,7 @@ Plug 'vim-airline/vim-airline-themes'
 " Plug 'jez/vim-superman'
 " Plug 'ludovicchabant/vim-gutentags'
 " Plug 'moll/vim-bbye'
-" nnoremap ,q :Bdelete<CR>
+" nnoremap ,q :<C-u>Bdelete<CR>
 " Plug 'othree/vim-autocomplpop'
 " let g:acp_completeOption = '.,w,b,k,t'
 " let g:acp_behaviorSnipmateLength=1
@@ -236,12 +236,12 @@ Plug 'vim-airline/vim-airline-themes'
 " Plug 'rupa/v'
 " Plug 'scps950707/colorselector.vim', { 'on': 'SelectColorS' }
 " Plug 'scps950707/vim-ctags'
-" map <C-F10> :CtagsFullDepend<CR>
-" map <F10> :CtagsFileIncluded<CR>
+" nnoremap <C-F10> :<C-u>CtagsFullDepend<CR>
+" nnoremap <F10> :<C-u>CtagsFileIncluded<CR>
 " Plug 'scps950707/vim-lengthmatters'
 " Plug 'scps950707/vim-snippets'
 " Plug 'scps950707/vim-timestamp'
-" nmap ,s :UpdateTimeStamp<CR>
+" nnoremap ,s :<C-u>UpdateTimeStamp<CR>
 " Plug 'sjl/gundo.vim'
 " let g:gundo_close_on_revert=1
 " nnoremap <F8> :GundoToggle<CR>

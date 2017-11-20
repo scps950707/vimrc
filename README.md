@@ -83,28 +83,28 @@
 |Mappings|Key|Target|
 |-----------|----------|---------|
 |map|/|\<Plug\>(incsearch-forward)|
-|nnoremap|\<C-F10\>|:Dispatch!\<CR\>|
+|nnoremap|\<C-F10\>|:\<C-u\>Dispatch!\<CR\>|
 |vnoremap|\<C-c\>|"+y|
 |nnoremap|\<C-down\>|:resize +5\<cr\>|
 |nnoremap|\<C-left\>|:vertical resize -5\<cr\>|
-|nmap|\<C-p\>|:\<C-u\>FZF\<CR\>|
+|nnoremap|\<C-p\>|:\<C-u\>FZF\<CR\>|
 |nnoremap|\<C-right\>|:vertical resize +5\<cr\>|
 |nnoremap|\<C-up\>|:resize -5\<cr\>|
 |vnoremap|\<C-x\>|"+x|
-|nnoremap|\<F10\>|:Dispatch\<CR\>|
-|nmap|\<F2\>|:\<C-u\>NERDTreeToggle\<CR\>|
-|nmap|\<F3\>|:\<C-u\>TagbarToggle\<CR\>|
-|nmap|\<F4\>|:call MyIndent()\<CR\>|
+|nnoremap|\<F10\>|:\<C-u\>Dispatch\<CR\>|
+|nnoremap|\<F2\>|:\<C-u\>NERDTreeToggle\<CR\>|
+|nnoremap|\<F3\>|:\<C-u\>TagbarToggle\<CR\>|
+|nnoremap|\<F4\>|:call MyIndent()\<CR\>|
 |map|\<F5\>|gcc|
 |map|\<F6\>|gc|
-|nmap|\<F7\>|:\<C-u\>call Replace(0,input('Replace '.expand('\<cword\>').' with: '))\<CR\>|
+|nnoremap|\<F7\>|:\<C-u\>call Replace(0,input('Replace '.expand('\<cword\>').' with: '))\<CR\>|
 |nnoremap|\<F8\>|:\<C-u\>UndotreeToggle\<cr\>|
-|nmap|\<S-x\>|:bnext\<CR\>|
-|nmap|\<S-z\>|:bprevious\<CR\>|
+|nnoremap|\<S-x\>|:\<C-u\>bnext\<CR\>|
+|nnoremap|\<S-z\>|:\<C-u\>bprevious\<CR\>|
 |inoremap|\<expr\>\<CR\>|pumvisible() ? "\<C-R\>=ExpandSnippetOrCarriageReturn()\<CR\>" : "\\<CR\>"|
-|nnoremap|\<leader\>g|:Grepper\<CR\>|
-|nmap|\<leader\>m|:\<C-u\>Magit\<CR\>|
-|nmap|\<leader\>q|:Sayonara\<CR\>|
+|nnoremap|\<leader\>g|:\<C-u\>Grepper\<CR\>|
+|nnoremap|\<leader\>m|:\<C-u\>Magit\<CR\>|
+|nnoremap|\<leader\>q|:\<C-u\>Sayonara\<CR\>|
 |map|?| \<Plug\>(incsearch-backward)|
 |map|N|\<Plug\>(incsearch-nohl)\<Plug\>(anzu-N-with-echo)|
 |map|Q|\<Nop\>|
