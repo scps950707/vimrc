@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2017-11-21 01:32
+" Last Modified:  2017-11-21 01:41
 " Filename:       plugins.vim
 " =============================================================================
 Plug 'Mizuchi/STL-Syntax', { 'for': 'cpp' }
@@ -12,7 +12,7 @@ let g:UltiSnipsJumpForwardTrigger="<s-j>"
 let g:UltiSnipsJumpBackwardTrigger="<s-k>"
 let g:UltiSnipsExpandTrigger = "<nop>"
 let g:ulti_expand_or_jump_res=0
-function! ExpandSnippetOrCarriageReturn()
+function! ExpandSnippetOrCarriageReturn() abort
     let snippet = UltiSnips#ExpandSnippetOrJump()
     if g:ulti_expand_or_jump_res > 0
         return snippet
@@ -168,7 +168,7 @@ Plug 'tpope/vim-surround'
 Plug 'tyru/open-browser-github.vim'
 Plug 'tyru/open-browser.vim'
 Plug 'vim-airline/vim-airline'
-function! AirlineInit()
+function! AirlineInit() abort
     let g:airline_section_b = airline#section#create(['hunks', '%{gitbranch#name()}'])
 endfunction
 autocmd User AirlineAfterInit call AirlineInit()
@@ -193,7 +193,7 @@ Plug 'vim-airline/vim-airline-themes'
 " Plug 'Shougo/neocomplete.vim'
 " let g:neocomplete#enable_at_startup = 1
 " autocmd FileType * call s:YCMNEOswitch()
-" function s:YCMNEOswitch()
+" function s:YCMNEOswitch() abort
 "     if &filetype == 'vimshell'
 "         NeoCompleteUnlock
 "     else
@@ -204,7 +204,7 @@ Plug 'vim-airline/vim-airline-themes'
 " Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 " Plug 'Shougo/vimshell.vim', { 'do': 'ln -sf ~/github/dotfiles/config/.aliases ~/.vimshrc' }
 " nnoremap <F9> :<C-u>VimShell<CR>
-" function! MyVimShellVerticalSplit()
+" function! MyVimShellVerticalSplit() abort
 "     exec 'VimShell -split'
 "     exec 'vertical resize 50'
 " endfunction

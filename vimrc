@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2017-11-21 01:32
+" Last Modified:  2017-11-21 01:41
 " Filename:       vimrc
 " =============================================================================
 set cursorline "顯示當前游標列
@@ -59,7 +59,7 @@ let mapleader = ","
 
 
 " replace settings
-function! Replace(confirm,replace)
+function! Replace(confirm,replace) abort
     if a:confirm
         let flag='gc'
     else
@@ -121,7 +121,7 @@ nnoremap <C-up> :resize -5<cr>
 nnoremap <C-right> :vertical resize +5<cr>
 
 " auto indent
-function! MyIndent()
+function! MyIndent() abort
     let curLineNum=line('.')
     if &ft == 'c' || &ft == 'cpp'
         exec 'normal gggqG'
