@@ -2,20 +2,20 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2017-11-21 01:41
+" Last Modified:  2017-11-30 13:05
 " Filename:       plugins.vim
 " =============================================================================
 Plug 'Mizuchi/STL-Syntax', { 'for': 'cpp' }
 Plug 'Raimondi/delimitMate'
 Plug 'SirVer/ultisnips'
-let g:UltiSnipsJumpForwardTrigger="<s-j>"
-let g:UltiSnipsJumpBackwardTrigger="<s-k>"
-let g:UltiSnipsExpandTrigger = "<nop>"
+let g:UltiSnipsJumpForwardTrigger='<s-j>'
+let g:UltiSnipsJumpBackwardTrigger='<s-k>'
+let g:UltiSnipsExpandTrigger = '<nop>'
 let g:ulti_expand_or_jump_res=0
 function! ExpandSnippetOrCarriageReturn() abort
-    let snippet = UltiSnips#ExpandSnippetOrJump()
+    let l:snippet = UltiSnips#ExpandSnippetOrJump()
     if g:ulti_expand_or_jump_res > 0
-        return snippet
+        return l:snippet
     else
         return "\<CR>"
     endif
@@ -23,15 +23,15 @@ endfunction
 inoremap <expr><CR> pumvisible() ? "<C-R>=ExpandSnippetOrCarriageReturn()<CR>" : "\<CR>"
 Plug 'Xuyuanp/nerdtree-git-plugin', { 'on': 'NERDTreeToggle' }
 let g:NERDTreeIndicatorMapCustom = {
-            \ "Modified"  : "M",
-            \ "Staged"    : "A",
-            \ "Untracked" : "?",
-            \ "Renamed"   : "R",
-            \ "Unmerged"  : "U",
-            \ "Deleted"   : "D",
-            \ "Dirty"     : "?",
-            \ "Clean"     : "C",
-            \ "Unknown"   : "?"
+            \ 'Modified'  : 'M',
+            \ 'Staged'    : 'A',
+            \ 'Untracked' : '?',
+            \ 'Renamed'   : 'R',
+            \ 'Unmerged'  : 'U',
+            \ 'Deleted'   : 'D',
+            \ 'Dirty'     : '?',
+            \ 'Clean'     : 'C',
+            \ 'Unknown'   : '?'
             \ }
 Plug 'Yggdroot/indentLine'
 let g:indentLine_char = '|'
@@ -144,7 +144,7 @@ Plug 'rdnetto/YCM-Generator', { 'branch': 'stable', 'on': 'YcmGenerateConfig' }
 Plug 'scps950707/snippets'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 nnoremap <F2> :<C-u>NERDTreeToggle<CR>
-let NERDTreeIgnore=['\.pyc$', '\.o$']
+let g:NERDTreeIgnore=['\.pyc$', '\.o$']
 Plug 'scrooloose/syntastic'
 let g:syntastic_error_symbol='✗'
 let g:syntastic_warning_symbol='⚠'
@@ -156,7 +156,7 @@ let g:syntastic_c_compiler_options = '-std=c99 -Wall -D_XOPEN_SOURCE=500'
 let g:syntastic_c_check_header = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-let g:syntastic_python_checkers = ["flake8"]
+let g:syntastic_python_checkers = ['flake8']
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-commentary'
 map <F5> gcc
@@ -169,7 +169,7 @@ Plug 'tyru/open-browser-github.vim'
 Plug 'tyru/open-browser.vim'
 Plug 'vim-airline/vim-airline'
 function! AirlineInit() abort
-    let g:airline_section_b = airline#section#create(['hunks', '%{gitbranch#name()}'])
+    let g:airline_section_b = airline#section#create(['%{gitbranch#name()}'])
 endfunction
 autocmd User AirlineAfterInit call AirlineInit()
 let g:airline#extensions#tabline#enabled = 1
@@ -247,5 +247,4 @@ Plug 'vim-airline/vim-airline-themes'
 " nnoremap <F8> :GundoToggle<CR>
 " Plug 'tpope/vim-fugitive'
 " Plug 'vim-scripts/taglist.vim'
-" Plug 'w0rp/ale'
 " Plug 'wesleyche/SrcExpl'

@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2017-11-21 01:41
+" Last Modified:  2017-11-24 15:43
 " Filename:       vimrc
 " =============================================================================
 set cursorline "顯示當前游標列
@@ -55,19 +55,19 @@ set noshowmode
 set modeline
 set visualbell
 set tags=./tags;/  " This will look in the current directory for tags, and work up the tree towards root until one is found
-let mapleader = ","
+let g:mapleader = ','
 
 
 " replace settings
 function! Replace(confirm,replace) abort
     if a:confirm
-        let flag='gc'
+        let l:flag='gc'
     else
-        let flag='g'
+        let l:flag='g'
     endif
-    let search = '\<' . escape(expand('<cword>'), '/\.*$^~[') . '\>'
-    let replace = escape(a:replace, '/\&~')
-    execute '%s/'.search.'/'.replace.'/'.flag
+    let l:search = '\<' . escape(expand('<cword>'), '/\.*$^~[') . '\>'
+    let l:replace = escape(a:replace, '/\&~')
+    execute '%s/'.l:search.'/'.l:replace.'/'.l:flag
 endfunction
 nnoremap <F7> :<C-u>call Replace(0,input('Replace '.expand('<cword>').' with: '))<CR>
 " nnoremap <F8> :<C-u>call Replace(1,input('Replace '.expand('<cword>').' with: '))<CR>
@@ -85,7 +85,10 @@ vnoremap <C-x> "+x
 if empty(glob('~/.vim/autoload/plug.vim'))
     silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
                 \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-    autocmd VimEnter * PlugInstall | source $MYVIMRC
+    augroup pluginstall
+        autocmd!
+        autocmd VimEnter * PlugInstall | source $MYVIMRC
+    augroup END
 endif
 
 let g:plug_window = 'enew'
@@ -122,13 +125,13 @@ nnoremap <C-right> :vertical resize +5<cr>
 
 " auto indent
 function! MyIndent() abort
-    let curLineNum=line('.')
-    if &ft == 'c' || &ft == 'cpp'
+    let l:curLineNum=line('.')
+    if &filetype ==? 'c' || &filetype ==? 'cpp'
         exec 'normal gggqG'
     else
         exec 'normal gg=G'
     endif
-    exec 'normal '. curLineNum . 'G'
+    exec 'normal '. l:curLineNum . 'G'
 endfunction
 nnoremap <F4> :call MyIndent()<CR>
 
@@ -156,7 +159,7 @@ augroup END
 nnoremap <S-z> :<C-u>bprevious<CR>
 nnoremap <S-x> :<C-u>bnext<CR>
 
-if &term =~ '256color'
+if &term =~? '256color'
     " disable Background Color Erase (BCE) so that color schemes
     " render properly when inside 256-color tmux and GNU screen.
     " see also http://snk.tuxfamily.org/log/vim-256color-bce.html
