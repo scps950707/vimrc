@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2017-11-30 13:05
+" Last Modified:  2017-12-02 16:43
 " Filename:       plugins.vim
 " =============================================================================
 Plug 'Mizuchi/STL-Syntax', { 'for': 'cpp' }
@@ -115,6 +115,8 @@ let g:startify_files_number = 8
 let g:startify_custom_header = []
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'oblitum/YouCompleteMe', { 'do': './install.py --clang-completer' }
+let g:ycm_error_symbol='✗'
+let g:ycm_warning_symbol='⚠'
 let g:ycm_global_ycm_extra_conf= '~/.ycm_extra_conf.py'
 let g:ycm_confirm_extra_conf = 0
 let g:ycm_filetype_specific_completion_to_disable = {}
@@ -145,18 +147,6 @@ Plug 'scps950707/snippets'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 nnoremap <F2> :<C-u>NERDTreeToggle<CR>
 let g:NERDTreeIgnore=['\.pyc$', '\.o$']
-Plug 'scrooloose/syntastic'
-let g:syntastic_error_symbol='✗'
-let g:syntastic_warning_symbol='⚠'
-let g:syntastic_enable_highlighting = 1
-let g:syntastic_stl_format = '[%E{Errors:%e}%B{, }%W{Warnings:%w}]'
-let g:syntastic_cpp_compiler_options = '-std=c++11 -Wall'
-let g:syntastic_cpp_check_header = 1
-let g:syntastic_c_compiler_options = '-std=c99 -Wall -D_XOPEN_SOURCE=500'
-let g:syntastic_c_check_header = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_python_checkers = ['flake8']
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-commentary'
 map <F5> gcc
@@ -175,11 +165,18 @@ autocmd User AirlineAfterInit call AirlineInit()
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#tabline#buffer_min_count = 2
-let g:airline#extensions#syntastic#enabled = 1
 let g:airline#extensions#ycm#enabled = 1
 let g:airline#extensions#vimagit#enabled = 1
+let g:airline#extensions#ale#enabled = 1
 let g:airline_theme='base16'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'w0rp/ale'
+let g:ale_echo_msg_error_str = 'E'
+let g:ale_echo_msg_warning_str = 'W'
+let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+let g:ale_fixers = {
+\   'python': ['autopep8'],
+\}
 " Plug 'Lokaltog/vim-powerline'
 " Plug 'Rip-Rip/clang_complete'
 " let g:clang_close_preview=1
@@ -242,6 +239,18 @@ Plug 'vim-airline/vim-airline-themes'
 " Plug 'scps950707/vim-snippets'
 " Plug 'scps950707/vim-timestamp'
 " nnoremap ,s :<C-u>UpdateTimeStamp<CR>
+" Plug 'scrooloose/syntastic'
+" let g:syntastic_error_symbol='✗'
+" let g:syntastic_warning_symbol='⚠'
+" let g:syntastic_enable_highlighting = 1
+" let g:syntastic_stl_format = '[%E{Errors:%e}%B{, }%W{Warnings:%w}]'
+" let g:syntastic_cpp_compiler_options = '-std=c++11 -Wall'
+" let g:syntastic_cpp_check_header = 1
+" let g:syntastic_c_compiler_options = '-std=c99 -Wall -D_XOPEN_SOURCE=500'
+" let g:syntastic_c_check_header = 1
+" let g:syntastic_check_on_open = 1
+" let g:syntastic_check_on_wq = 0
+" let g:syntastic_python_checkers = ['flake8']
 " Plug 'sjl/gundo.vim'
 " let g:gundo_close_on_revert=1
 " nnoremap <F8> :GundoToggle<CR>
