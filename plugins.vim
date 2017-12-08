@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2017-12-02 16:43
+" Last Modified:  2017-12-08 16:24
 " Filename:       plugins.vim
 " =============================================================================
 Plug 'Mizuchi/STL-Syntax', { 'for': 'cpp' }
@@ -159,7 +159,7 @@ Plug 'tyru/open-browser-github.vim'
 Plug 'tyru/open-browser.vim'
 Plug 'vim-airline/vim-airline'
 function! AirlineInit() abort
-    let g:airline_section_b = airline#section#create(['%{gitbranch#name()}'])
+    let g:airline_section_b = airline#section#create(['hunks', '%{gitbranch#name()}'])
 endfunction
 autocmd User AirlineAfterInit call AirlineInit()
 let g:airline#extensions#tabline#enabled = 1
