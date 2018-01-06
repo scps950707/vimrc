@@ -2,7 +2,7 @@
 # Author:         scps950707
 # Email:          scps950707@gmail.com
 # Created:        2015-04-18 01:55
-# Last Modified:  2017-02-26 15:02
+# Last Modified:  2018-01-07 02:12
 # Filename:       makefile
 # =============================================================================
 
@@ -13,7 +13,7 @@ install:
 	mkdir -p ${DIR_VIM}
 	cp vimrc ${FILE_VIMRC}
 	cp *.vim ${DIR_VIM}
-	sudo apt-get -y install curl astyle
+	sudo apt -y install curl astyle
 	vim
 
 update:
