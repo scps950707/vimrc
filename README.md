@@ -42,7 +42,6 @@
 - [X] [vader.vim](https://github.com/junegunn/vader.vim)
 - [X] [vim-airline](https://github.com/vim-airline/vim-airline)
 - [X] [vim-airline-themes](https://github.com/vim-airline/vim-airline-themes)
-- [X] [vim-anzu](https://github.com/osyo-manga/vim-anzu)
 - [ ] [vim-autocomplpop](https://github.com/othree/vim-autocomplpop)
 - [ ] [vim-autoread](https://github.com/djoshea/vim-autoread)
 - [ ] [vim-bbye](https://github.com/moll/vim-bbye)
@@ -106,11 +105,9 @@
 |nnoremap|\<leader\>m|:\<C-u\>Magit\<CR\>|
 |nnoremap|\<leader\>q|:\<C-u\>Sayonara\<CR\>|
 |map|?| \<Plug\>(incsearch-backward)|
-|map|N|\<Plug\>(incsearch-nohl)\<Plug\>(anzu-N-with-echo)|
 |map|Q|\<Nop\>|
 |map|g/|\<Plug\>(incsearch-stay)|
 |cnoremap|help|vert help|
-|map|n|\<Plug\>(incsearch-nohl)\<Plug\>(anzu-n-with-echo)|
 |map|z/|\<Plug\>(incsearch-fuzzy-/)|
 |map|z?|\<Plug\>(incsearch-fuzzy-?)|
 |map|zg/|\<Plug\>(incsearch-fuzzy-stay)|
