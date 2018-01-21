@@ -61,6 +61,7 @@
 - [ ] [vim-lengthmatters](https://github.com/scps950707/vim-lengthmatters)
 - [X] [vim-move](https://github.com/matze/vim-move)
 - [X] [vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors)
+- [X] [vim-obsession](https://github.com/tpope/vim-obsession)
 - [ ] [vim-powerline](https://github.com/Lokaltog/vim-powerline)
 - [X] [vim-sayonara](https://github.com/mhinz/vim-sayonara)
 - [ ] [vim-snipmate](https://github.com/garbas/vim-snipmate)

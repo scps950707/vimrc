@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2018-01-07 02:11
+" Last Modified:  2018-01-21 16:38
 " Filename:       plugins.vim
 " =============================================================================
 Plug 'Mizuchi/STL-Syntax', { 'for': 'cpp' }
@@ -151,6 +151,7 @@ map <F6> gc
 Plug 'tpope/vim-dispatch'
 nnoremap <F10> :<C-u>Dispatch<CR>
 nnoremap <C-F10> :<C-u>Dispatch!<CR>
+Plug 'tpope/vim-obsession'
 Plug 'tpope/vim-surround'
 Plug 'tyru/open-browser-github.vim'
 Plug 'tyru/open-browser.vim'
