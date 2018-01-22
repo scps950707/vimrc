@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2017-11-24 15:43
+" Last Modified:  2018-01-23 01:47
 " Filename:       vimrc
 " =============================================================================
 set cursorline "顯示當前游標列
@@ -56,7 +56,8 @@ set modeline
 set visualbell
 set tags=./tags;/  " This will look in the current directory for tags, and work up the tree towards root until one is found
 let g:mapleader = ','
-
+set ttimeout
+set ttimeoutlen=100
 
 " replace settings
 function! Replace(confirm,replace) abort
