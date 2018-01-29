@@ -3,6 +3,7 @@
 
 
 # Plugins
+- [X] [.zplug](https://github.com/$HOME/.zplug/repos/junegunn/fzf)
 - [X] [STL-Syntax](https://github.com/Mizuchi/STL-Syntax)
 - [ ] [SrcExpl](https://github.com/wesleyche/SrcExpl)
 - [X] [YCM-Generator](https://github.com/rdnetto/YCM-Generator)
@@ -15,7 +16,6 @@
 - [X] [editorconfig-vim](https://github.com/editorconfig/editorconfig-vim)
 - [X] [emmet-vim](https://github.com/mattn/emmet-vim)
 - [ ] [flake8-vim](https://github.com/andviro/flake8-vim)
-- [X] [fzf](https://github.com/junegunn/fzf)
 - [X] [fzf.vim](https://github.com/junegunn/fzf.vim)
 - [X] [gist-vim](https://github.com/mattn/gist-vim)
 - [ ] [gundo.vim](https://github.com/sjl/gundo.vim)

@@ -2,9 +2,10 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2018-01-21 16:38
+" Last Modified:  2018-01-29 16:30
 " Filename:       plugins.vim
 " =============================================================================
+Plug '$HOME/.zplug/repos/junegunn/fzf'
 Plug 'Mizuchi/STL-Syntax', { 'for': 'cpp' }
 Plug 'Raimondi/delimitMate'
 Plug 'SirVer/ultisnips'
@@ -65,7 +66,6 @@ let g:magit_default_fold_level=0
 autocmd filetype magit setlocal foldenable
 autocmd User VimagitEnterCommit startinsert!
 nnoremap <leader>m :<C-u>Magit<CR>
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 nnoremap <C-p> :<C-u>FZF<CR>
 Plug 'junegunn/vader.vim', { 'on': 'Vader' }
