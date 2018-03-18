@@ -11,6 +11,7 @@
 - [X] [ale](https://github.com/w0rp/ale)
 - [ ] [clang_complete](https://github.com/Rip-Rip/clang_complete)
 - [ ] [colorselector.vim](https://github.com/scps950707/colorselector.vim)
+- [X] [cscope_maps.vim](https://github.com/scps950707/cscope_maps.vim)
 - [ ] [ctrlp.vim](https://github.com/ctrlpvim/ctrlp.vim)
 - [X] [delimitMate](https://github.com/Raimondi/delimitMate)
 - [X] [editorconfig-vim](https://github.com/editorconfig/editorconfig-vim)

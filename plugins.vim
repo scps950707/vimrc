@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2018-01-29 16:30
+" Last Modified:  2018-03-18 22:58
 " Filename:       plugins.vim
 " =============================================================================
 Plug '$HOME/.zplug/repos/junegunn/fzf'
@@ -140,6 +140,7 @@ let g:cpp_experimental_template_highlight = 1
 Plug 'othree/html5.vim', { 'for': 'html' }
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable', 'on': 'YcmGenerateConfig' }
+Plug 'scps950707/cscope_maps.vim'
 Plug 'scps950707/snippets'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 nnoremap <F2> :<C-u>NERDTreeToggle<CR>
