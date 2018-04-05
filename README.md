@@ -56,7 +56,7 @@
 - [ ] [vim-fugitive](https://github.com/tpope/vim-fugitive)
 - [X] [vim-gitbranch](https://github.com/itchyny/vim-gitbranch)
 - [X] [vim-gitgutter](https://github.com/airblade/vim-gitgutter)
-- [X] [vim-grepper](https://github.com/mhinz/vim-grepper)
+- [ ] [vim-grepper](https://github.com/mhinz/vim-grepper)
 - [ ] [vim-gutentags](https://github.com/ludovicchabant/vim-gutentags)
 - [X] [vim-javascript](https://github.com/pangloss/vim-javascript)
 - [ ] [vim-lengthmatters](https://github.com/scps950707/vim-lengthmatters)
@@ -85,6 +85,7 @@
 |-----------|----------|---------|
 |map|/|\<Plug\>(incsearch-forward)|
 |nnoremap|\<C-F10\>|:\<C-u\>Dispatch!\<CR\>|
+|nnoremap|\<C-b\>|:\<C-u\>Buffers\<CR\>|
 |vnoremap|\<C-c\>|"+y|
 |nnoremap|\<C-down\>|:resize +5\<cr\>|
 |nnoremap|\<C-left\>|:vertical resize -5\<cr\>|
@@ -103,7 +104,7 @@
 |nnoremap|\<S-x\>|:\<C-u\>bnext\<CR\>|
 |nnoremap|\<S-z\>|:\<C-u\>bprevious\<CR\>|
 |inoremap|\<expr\>\<CR\>|pumvisible() ? "\<C-R\>=ExpandSnippetOrCarriageReturn()\<CR\>" : "\\<CR\>"|
-|nnoremap|\<leader\>g|:\<C-u\>Grepper\<CR\>|
+|nnoremap|\<leader\>g|:\<C-u\>Ag\<CR\>|
 |nnoremap|\<leader\>m|:\<C-u\>Magit\<CR\>|
 |nnoremap|\<leader\>q|:\<C-u\>Sayonara\<CR\>|
 |map|?| \<Plug\>(incsearch-backward)|

@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2018-03-18 22:58
+" Last Modified:  2018-04-05 14:56
 " Filename:       plugins.vim
 " =============================================================================
 Plug '$HOME/.zplug/repos/junegunn/fzf'
@@ -68,6 +68,8 @@ autocmd User VimagitEnterCommit startinsert!
 nnoremap <leader>m :<C-u>Magit<CR>
 Plug 'junegunn/fzf.vim'
 nnoremap <C-p> :<C-u>FZF<CR>
+nnoremap <C-b> :<C-u>Buffers<CR>
+nnoremap <leader>g :<C-u>Ag<CR>
 Plug 'junegunn/vader.vim', { 'on': 'Vader' }
 Plug 'majutsushi/tagbar'
 let g:tagbar_width = 30
@@ -83,12 +85,6 @@ let g:move_key_modifier = 'C'
 Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }
 let g:undotree_SetFocusWhenToggle = 1
 nnoremap <F8> :<C-u>UndotreeToggle<cr>
-Plug 'mhinz/vim-grepper', { 'on': ['Grepper', '<plug>(GrepperOperator)'] }
-nnoremap <leader>g :<C-u>Grepper<CR>
-let g:grepper               = {}
-let g:grepper.jump          = 1
-let g:grepper.next_tool     = '<leader>g'
-let g:grepper.simple_prompt = 1
 Plug 'mhinz/vim-sayonara', { 'on': 'Sayonara' }
 nnoremap <leader>q :<C-u>Sayonara<CR>
 Plug 'mhinz/vim-startify'
@@ -222,6 +218,12 @@ let g:ale_fixers = {
 " Plug 'garbas/vim-snipmate'
 " Plug 'jez/vim-superman'
 " Plug 'ludovicchabant/vim-gutentags'
+" Plug 'mhinz/vim-grepper', { 'on': ['Grepper', '<plug>(GrepperOperator)'] }
+" nnoremap <leader>g :<C-u>Grepper<CR>
+" let g:grepper               = {}
+" let g:grepper.jump          = 1
+" let g:grepper.next_tool     = '<leader>g'
+" let g:grepper.simple_prompt = 1
 " Plug 'moll/vim-bbye'
 " nnoremap ,q :<C-u>Bdelete<CR>
 " Plug 'othree/vim-autocomplpop'
