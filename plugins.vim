@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2018-04-05 14:56
+" Last Modified:  2018-04-12 23:19
 " Filename:       plugins.vim
 " =============================================================================
 Plug '$HOME/.zplug/repos/junegunn/fzf'
@@ -68,7 +68,7 @@ autocmd User VimagitEnterCommit startinsert!
 nnoremap <leader>m :<C-u>Magit<CR>
 Plug 'junegunn/fzf.vim'
 nnoremap <C-p> :<C-u>FZF<CR>
-nnoremap <C-b> :<C-u>Buffers<CR>
+nnoremap <C-d> :<C-u>Buffers<CR>
 nnoremap <leader>g :<C-u>Ag<CR>
 Plug 'junegunn/vader.vim', { 'on': 'Vader' }
 Plug 'majutsushi/tagbar'

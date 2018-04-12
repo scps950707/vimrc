@@ -85,8 +85,8 @@
 |-----------|----------|---------|
 |map|/|\<Plug\>(incsearch-forward)|
 |nnoremap|\<C-F10\>|:\<C-u\>Dispatch!\<CR\>|
-|nnoremap|\<C-b\>|:\<C-u\>Buffers\<CR\>|
 |vnoremap|\<C-c\>|"+y|
+|nnoremap|\<C-d\>|:\<C-u\>Buffers\<CR\>|
 |nnoremap|\<C-down\>|:resize +5\<cr\>|
 |nnoremap|\<C-left\>|:vertical resize -5\<cr\>|
 |nnoremap|\<C-p\>|:\<C-u\>FZF\<CR\>|
