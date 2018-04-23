@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2018-04-12 23:19
+" Last Modified:  2018-04-23 14:49
 " Filename:       plugins.vim
 " =============================================================================
 Plug '$HOME/.zplug/repos/junegunn/fzf'
@@ -169,8 +169,13 @@ Plug 'w0rp/ale'
 let g:ale_echo_msg_error_str = 'E'
 let g:ale_echo_msg_warning_str = 'W'
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+let g:ale_c_parse_makefile = 1
 let g:ale_fixers = {
 \   'python': ['autopep8'],
+\}
+let g:ale_linters = {
+\	'c': ['cppcheck', 'flawfinder', 'clangtidy'],
+\	'cpp': ['cppcheck', 'flawfinder', 'clangtidy'],
 \}
 " Plug 'Lokaltog/vim-powerline'
 " Plug 'Rip-Rip/clang_complete'
