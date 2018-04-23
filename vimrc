@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2018-03-31 23:51
+" Last Modified:  2018-04-23 13:51
 " Filename:       vimrc
 " =============================================================================
 set cursorline "顯示當前游標列
@@ -58,6 +58,7 @@ set tags=./tags;/  " This will look in the current directory for tags, and work 
 let g:mapleader = ','
 set ttimeout
 set ttimeoutlen=100
+set updatetime=1000
 
 " replace settings
 function! Replace(confirm,replace) abort
