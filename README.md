@@ -4,7 +4,6 @@
 
 # Plugins
 - [X] [.zplug](https://github.com/$HOME/.zplug/repos/junegunn/fzf)
-- [X] [STL-Syntax](https://github.com/Mizuchi/STL-Syntax)
 - [ ] [SrcExpl](https://github.com/wesleyche/SrcExpl)
 - [X] [YCM-Generator](https://github.com/rdnetto/YCM-Generator)
 - [X] [YouCompleteMe](https://github.com/oblitum/YouCompleteMe)
@@ -29,15 +28,15 @@
 - [ ] [neocomplete.vim](https://github.com/Shougo/neocomplete.vim)
 - [X] [nerdtree](https://github.com/scrooloose/nerdtree)
 - [X] [nerdtree-git-plugin](https://github.com/Xuyuanp/nerdtree-git-plugin)
-- [X] [open-browser-github.vim](https://github.com/tyru/open-browser-github.vim)
-- [X] [open-browser.vim](https://github.com/tyru/open-browser.vim)
+- [ ] [open-browser-github.vim](https://github.com/tyru/open-browser-github.vim)
+- [ ] [open-browser.vim](https://github.com/tyru/open-browser.vim)
 - [X] [snippets](https://github.com/scps950707/snippets)
 - [ ] [syntastic](https://github.com/scrooloose/syntastic)
 - [X] [tabular](https://github.com/godlygeek/tabular)
 - [X] [tagbar](https://github.com/majutsushi/tagbar)
 - [ ] [taglist.vim](https://github.com/vim-scripts/taglist.vim)
 - [X] [ultisnips](https://github.com/SirVer/ultisnips)
-- [X] [undotree](https://github.com/mbbill/undotree)
+- [ ] [undotree](https://github.com/mbbill/undotree)
 - [ ] [unite.vim](https://github.com/Shougo/unite.vim)
 - [ ] [v](https://github.com/rupa/v)
 - [X] [vader.vim](https://github.com/junegunn/vader.vim)
@@ -69,7 +68,7 @@
 - [ ] [vim-snippets](https://github.com/scps950707/vim-snippets)
 - [X] [vim-startify](https://github.com/mhinz/vim-startify)
 - [ ] [vim-superman](https://github.com/jez/vim-superman)
-- [X] [vim-surround](https://github.com/tpope/vim-surround)
+- [ ] [vim-surround](https://github.com/tpope/vim-surround)
 - [ ] [vim-timestamp](https://github.com/scps950707/vim-timestamp)
 - [ ] [vim-trailing-whitespace](https://github.com/bronson/vim-trailing-whitespace)
 - [X] [vimagit](https://github.com/jreybert/vimagit)
@@ -100,7 +99,6 @@
 |map|\<F5\>|gcc|
 |map|\<F6\>|gc|
 |nnoremap|\<F7\>|:\<C-u\>call Replace(0,input('Replace '.expand('\<cword\>').' with: '))\<CR\>|
-|nnoremap|\<F8\>|:\<C-u\>UndotreeToggle\<cr\>|
 |nnoremap|\<S-x\>|:\<C-u\>bnext\<CR\>|
 |nnoremap|\<S-z\>|:\<C-u\>bprevious\<CR\>|
 |inoremap|\<expr\>\<CR\>|pumvisible() ? "\<C-R\>=ExpandSnippetOrCarriageReturn()\<CR\>" : "\\<CR\>"|

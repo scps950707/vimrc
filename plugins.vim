@@ -2,11 +2,10 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2018-04-23 14:49
+" Last Modified:  2018-04-27 23:20
 " Filename:       plugins.vim
 " =============================================================================
 Plug '$HOME/.zplug/repos/junegunn/fzf'
-Plug 'Mizuchi/STL-Syntax', { 'for': 'cpp' }
 Plug 'Raimondi/delimitMate'
 Plug 'SirVer/ultisnips'
 let g:UltiSnipsJumpForwardTrigger='<s-j>'
@@ -82,9 +81,6 @@ let g:gist_clip_command = 'xclip -selection clipboard'
 Plug 'mattn/webapi-vim', { 'on': 'Gist' }
 Plug 'matze/vim-move'
 let g:move_key_modifier = 'C'
-Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }
-let g:undotree_SetFocusWhenToggle = 1
-nnoremap <F8> :<C-u>UndotreeToggle<cr>
 Plug 'mhinz/vim-sayonara', { 'on': 'Sayonara' }
 nnoremap <leader>q :<C-u>Sayonara<CR>
 Plug 'mhinz/vim-startify'
@@ -149,9 +145,6 @@ Plug 'tpope/vim-dispatch'
 nnoremap <F10> :<C-u>Dispatch<CR>
 nnoremap <C-F10> :<C-u>Dispatch!<CR>
 Plug 'tpope/vim-obsession'
-Plug 'tpope/vim-surround'
-Plug 'tyru/open-browser-github.vim'
-Plug 'tyru/open-browser.vim'
 Plug 'vim-airline/vim-airline'
 function! AirlineInit() abort
     let g:airline_section_b = airline#section#create(['hunks', '%{gitbranch#name()}'])
@@ -223,6 +216,9 @@ let g:ale_linters = {
 " Plug 'garbas/vim-snipmate'
 " Plug 'jez/vim-superman'
 " Plug 'ludovicchabant/vim-gutentags'
+" Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }
+" let g:undotree_SetFocusWhenToggle = 1
+" nnoremap <F8> :<C-u>UndotreeToggle<cr>
 " Plug 'mhinz/vim-grepper', { 'on': ['Grepper', '<plug>(GrepperOperator)'] }
 " nnoremap <leader>g :<C-u>Grepper<CR>
 " let g:grepper               = {}
@@ -261,5 +257,8 @@ let g:ale_linters = {
 " let g:gundo_close_on_revert=1
 " nnoremap <F8> :GundoToggle<CR>
 " Plug 'tpope/vim-fugitive'
+" Plug 'tpope/vim-surround'
+" Plug 'tyru/open-browser-github.vim'
+" Plug 'tyru/open-browser.vim'
 " Plug 'vim-scripts/taglist.vim'
 " Plug 'wesleyche/SrcExpl'
