@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2018-05-12 16:16
+" Last Modified:  2018-05-12 18:13
 " Filename:       plugins.vim
 " =============================================================================
 Plug '$HOME/.zplug/repos/junegunn/fzf'
@@ -135,6 +135,7 @@ Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable', 'on': 'YcmGenerateConfig' }
 Plug 'scps950707/cscope_maps.vim'
 Plug 'scps950707/snippets'
+Plug 'scps950707/vim-airline-themes'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 nnoremap <F2> :<C-u>NERDTreeToggle<CR>
 let g:NERDTreeIgnore=['\.pyc$', '\.o$']
@@ -159,7 +160,6 @@ let g:airline#extensions#ycm#enabled = 1
 let g:airline#extensions#vimagit#enabled = 1
 let g:airline#extensions#ale#enabled = 1
 let g:airline_theme='base16'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'w0rp/ale'
 let g:ale_echo_msg_error_str = 'E'
 let g:ale_echo_msg_warning_str = 'W'

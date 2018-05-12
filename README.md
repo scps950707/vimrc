@@ -41,7 +41,7 @@
 - [ ] [v](https://github.com/rupa/v)
 - [X] [vader.vim](https://github.com/junegunn/vader.vim)
 - [X] [vim-airline](https://github.com/vim-airline/vim-airline)
-- [X] [vim-airline-themes](https://github.com/vim-airline/vim-airline-themes)
+- [X] [vim-airline-themes](https://github.com/scps950707/vim-airline-themes)
 - [ ] [vim-autocomplpop](https://github.com/othree/vim-autocomplpop)
 - [ ] [vim-autoread](https://github.com/djoshea/vim-autoread)
 - [ ] [vim-bbye](https://github.com/moll/vim-bbye)
