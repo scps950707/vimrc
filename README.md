@@ -82,6 +82,7 @@
 # Key Mappings
 |Mappings|Key|Target|
 |-----------|----------|---------|
+|map|*| \<Plug\>(incsearch-nohl-*)|
 |map|/|\<Plug\>(incsearch-forward)|
 |nnoremap|\<C-F10\>|:\<C-u\>Dispatch!\<CR\>|
 |vnoremap|\<C-c\>|"+y|

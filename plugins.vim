@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2018-04-27 23:21
+" Last Modified:  2018-05-12 16:16
 " Filename:       plugins.vim
 " =============================================================================
 Plug '$HOME/.zplug/repos/junegunn/fzf'
@@ -59,6 +59,7 @@ let g:incsearch#auto_nohlsearch = 1
 map / <Plug>(incsearch-forward)
 map ?  <Plug>(incsearch-backward)
 map g/ <Plug>(incsearch-stay)
+map *  <Plug>(incsearch-nohl-*)
 Plug 'itchyny/vim-gitbranch'
 Plug 'jreybert/vimagit'
 let g:magit_default_fold_level=0
