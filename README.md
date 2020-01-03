@@ -6,7 +6,7 @@
 - [X] [.zplug](https://github.com/$HOME/.zplug/repos/junegunn/fzf)
 - [ ] [SrcExpl](https://github.com/wesleyche/SrcExpl)
 - [X] [YCM-Generator](https://github.com/rdnetto/YCM-Generator)
-- [X] [YouCompleteMe](https://github.com/oblitum/YouCompleteMe)
+- [X] [YouCompleteMe](https://github.com/ycm-core/YouCompleteMe)
 - [X] [ale](https://github.com/w0rp/ale)
 - [ ] [clang_complete](https://github.com/Rip-Rip/clang_complete)
 - [ ] [colorselector.vim](https://github.com/scps950707/colorselector.vim)

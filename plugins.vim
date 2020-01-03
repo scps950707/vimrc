@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2018-05-12 18:13
+" Last Modified:  2020-01-04 01:34
 " Filename:       plugins.vim
 " =============================================================================
 Plug '$HOME/.zplug/repos/junegunn/fzf'
@@ -105,28 +105,6 @@ let g:startify_change_to_dir = 0
 let g:startify_files_number = 8
 let g:startify_custom_header = []
 Plug 'ntpeters/vim-better-whitespace'
-Plug 'oblitum/YouCompleteMe', { 'do': './install.py --clang-completer' }
-let g:ycm_error_symbol='✗'
-let g:ycm_warning_symbol='⚠'
-let g:ycm_global_ycm_extra_conf= '~/.ycm_extra_conf.py'
-let g:ycm_confirm_extra_conf = 0
-let g:ycm_filetype_specific_completion_to_disable = {}
-let g:ycm_collect_identifiers_from_tags_files = 1
-let g:ycm_complete_in_comments = 1
-let g:ycm_seed_identifiers_with_syntax = 1
-let g:ycm_filetype_blacklist = {
-            \ 'tagbar' : 1,
-            \ 'qf' : 1,
-            \ 'notes' : 1,
-            \ 'markdown' : 1,
-            \ 'unite' : 1,
-            \ 'text' : 1,
-            \ 'vimwiki' : 1,
-            \ 'pandoc' : 1,
-            \ 'infolog' : 1,
-            \ 'mail' : 1,
-            \ 'vimshell' : 1
-            \ }
 Plug 'octol/vim-cpp-enhanced-highlight', { 'for': 'cpp' }
 let g:cpp_class_scope_highlight = 1
 let g:cpp_experimental_template_highlight = 1
@@ -172,6 +150,28 @@ let g:ale_linters = {
 \	'c': ['cppcheck', 'flawfinder', 'clangtidy'],
 \	'cpp': ['cppcheck', 'flawfinder', 'clangtidy'],
 \}
+Plug 'ycm-core/YouCompleteMe', { 'do': './install.py --clang-completer' }
+let g:ycm_error_symbol='✗'
+let g:ycm_warning_symbol='⚠'
+let g:ycm_global_ycm_extra_conf= '~/.ycm_extra_conf.py'
+let g:ycm_confirm_extra_conf = 0
+let g:ycm_filetype_specific_completion_to_disable = {}
+let g:ycm_collect_identifiers_from_tags_files = 1
+let g:ycm_complete_in_comments = 1
+let g:ycm_seed_identifiers_with_syntax = 1
+let g:ycm_filetype_blacklist = {
+            \ 'tagbar' : 1,
+            \ 'qf' : 1,
+            \ 'notes' : 1,
+            \ 'markdown' : 1,
+            \ 'unite' : 1,
+            \ 'text' : 1,
+            \ 'vimwiki' : 1,
+            \ 'pandoc' : 1,
+            \ 'infolog' : 1,
+            \ 'mail' : 1,
+            \ 'vimshell' : 1
+            \ }
 " Plug 'Lokaltog/vim-powerline'
 " Plug 'Rip-Rip/clang_complete'
 " let g:clang_close_preview=1
