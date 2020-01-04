@@ -2,7 +2,7 @@
 " Author:         scps950707
 " Email:          scps950707@gmail.com
 " Created:        2015-04-18 01:55
-" Last Modified:  2020-01-04 01:34
+" Last Modified:  2020-01-04 23:19
 " Filename:       plugins.vim
 " =============================================================================
 Plug '$HOME/.zplug/repos/junegunn/fzf'
@@ -37,6 +37,7 @@ Plug 'Yggdroot/indentLine'
 let g:indentLine_char = '|'
 let g:indentLine_leadingSpaceChar = '·'
 let g:indentLine_leadingSpaceEnabled = 1
+let g:indentLine_bufNameExclude = ['_.*', 'NERD_tree.*']
 Plug 'airblade/vim-gitgutter'
 Plug 'davidhalter/jedi-vim', { 'for': 'python' }
 let g:jedi#auto_initialization = 1
