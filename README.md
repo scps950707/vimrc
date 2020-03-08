@@ -20,8 +20,6 @@
 - [X] [gist-vim](https://github.com/mattn/gist-vim)
 - [ ] [gundo.vim](https://github.com/sjl/gundo.vim)
 - [X] [html5.vim](https://github.com/othree/html5.vim)
-- [X] [incsearch-fuzzy.vim](https://github.com/haya14busa/incsearch-fuzzy.vim)
-- [X] [incsearch.vim](https://github.com/haya14busa/incsearch.vim)
 - [X] [indentLine](https://github.com/Yggdroot/indentLine)
 - [X] [jedi-vim](https://github.com/davidhalter/jedi-vim)
 - [ ] [minibufexpl.vim](https://github.com/fholgado/minibufexpl.vim)
@@ -82,8 +80,6 @@
 # Key Mappings
 |Mappings|Key|Target|
 |-----------|----------|---------|
-|map|*| \<Plug\>(incsearch-nohl-*)|
-|map|/|\<Plug\>(incsearch-forward)|
 |nnoremap|\<C-F10\>|:\<C-u\>Dispatch!\<CR\>|
 |vnoremap|\<C-c\>|"+y|
 |nnoremap|\<C-d\>|:\<C-u\>Buffers\<CR\>|
@@ -106,13 +102,8 @@
 |nnoremap|\<leader\>g|:\<C-u\>Ag\<CR\>|
 |nnoremap|\<leader\>m|:\<C-u\>Magit\<CR\>|
 |nnoremap|\<leader\>q|:\<C-u\>Sayonara\<CR\>|
-|map|?| \<Plug\>(incsearch-backward)|
 |map|Q|\<Nop\>|
-|map|g/|\<Plug\>(incsearch-stay)|
 |cnoremap|help|vert help|
-|map|z/|\<Plug\>(incsearch-fuzzy-/)|
-|map|z?|\<Plug\>(incsearch-fuzzy-?)|
-|map|zg/|\<Plug\>(incsearch-fuzzy-stay)|
 
 
 # Colorscheme
